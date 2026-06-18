@@ -1,21 +1,18 @@
-"""一致性校验：检查 CLAUDE.md 与 interview.md 之间的引用一致性
+"""一致性校验：检查 Codex、Claude Code Skill 与项目路径。"""
 
-校验项：
-  1. CLAUDE.md 中引用的 skill 文件路径是否存在
-  2. interview.md 中引用的路径是否存在
-  3. 两个文件中高频命令（python src/pick.py）的引用一致
-  4. skill 描述中的路径引用是否匹配实际目录结构
-"""
-
-import re, sys
+import re
+import sys
 from pathlib import Path
 
-# ── 配置 ──────────────────────────────────────────────────────────────────
-_BASE = Path(__file__).resolve().parent.parent  # interview/
-CLAUDE_MD = _BASE / "CLAUDE.md"
-INTERVIEW_MD = _BASE / ".claude/skills/interview/SKILL.md"
-INTERVIEW_PREP_MD = _BASE / ".claude/skills/interview-prep/SKILL.md"
-README_MD = _BASE / "README.md"
+
+BASE = Path(__file__).resolve().parent.parent
+AGENTS_MD = BASE / "AGENTS.md"
+README_MD = BASE / "README.md"
+SKILL_ROOTS = {
+    "Codex": BASE / ".agents/skills",
+    "Claude Code": BASE / ".claude/skills",
+}
+SKILL_NAMES = ("build-knowledge", "interview", "interview-prep")
 
 ERRORS = []
 WARNINGS = []
@@ -35,61 +32,25 @@ def ok(msg: str):
     print(f"  [OK]    {msg}")
 
 
-# ── 1. 核心文件存在性检查 ────────────────────────────────────────────────
-
 def check_file_exists(path: Path, label: str):
-    if path.exists():
+    if path.is_file():
         ok(f"{label} 存在")
     else:
         err(f"{label} 不存在: {path}")
 
 
-# ── 2. 命令引用一致性 ────────────────────────────────────────────────────
-
-def check_command_refs():
-    """检查所有 python src/pick.py 引用一致"""
-    if not CLAUDE_MD.exists() or not INTERVIEW_MD.exists():
-        return
-
-    claude_text = CLAUDE_MD.read_text(encoding="utf-8")
-    interview_text = INTERVIEW_MD.read_text(encoding="utf-8")
-
-    # 统计 pick.py 引用
-    claude_refs = re.findall(r"python\s+(src/pick\.py)", claude_text)
-    interview_refs = re.findall(r"python\s+(src/pick\.py)", interview_text)
-
-    if claude_refs:
-        ok(f"CLAUDE.md 中 {len(claude_refs)} 处 src/pick.py 引用")
-    else:
-        warn("CLAUDE.md 中未找到 src/pick.py 引用")
-
-    if interview_refs:
-        ok(f"interview.md 中 {len(interview_refs)} 处 src/pick.py 引用")
-    else:
-        warn("interview.md 中未找到 src/pick.py 引用")
+def iter_skill_files():
+    for platform, root in SKILL_ROOTS.items():
+        for skill_name in SKILL_NAMES:
+            yield platform, skill_name, root / skill_name / "SKILL.md"
 
 
-# ── 3. 交叉引用路径完整性 ────────────────────────────────────────────────
+def check_core_files():
+    check_file_exists(AGENTS_MD, "AGENTS.md")
+    check_file_exists(README_MD, "README.md")
+    for platform, skill_name, path in iter_skill_files():
+        check_file_exists(path, f"{platform} {skill_name}/SKILL.md")
 
-def check_cross_refs():
-    """检查 CLAUDE.md 中的引用路径是否可访问"""
-    if not CLAUDE_MD.exists():
-        return
-
-    text = CLAUDE_MD.read_text(encoding="utf-8")
-    # 匹配 markdown 链接: [text](path)
-    refs = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", text)
-    for link_text, link_path in refs:
-        if link_path.startswith("http"):
-            continue
-        full = (_BASE / link_path).resolve()
-        if full.exists() or full.with_suffix(".md").exists():
-            ok(f"引用有效: {link_text} -> {link_path}")
-        else:
-            warn(f"引用路径不存在: {link_text} -> {link_path} (full: {full})")
-
-
-# ── 4. 目录结构完整性 ────────────────────────────────────────────────────
 
 def check_directory_structure():
     required_dirs = [
@@ -98,42 +59,81 @@ def check_directory_structure():
         "data",
         "resumes",
         "records",
-        ".claude/skills/interview",
-        ".claude/skills/interview-prep",
+        ".agents/skills",
+        ".claude/skills",
     ]
-    for d in required_dirs:
-        path = _BASE / d
+    for relative_path in required_dirs:
+        path = BASE / relative_path
         if path.is_dir():
-            ok(f"目录存在: {d}/")
+            ok(f"目录存在: {relative_path}/")
         else:
-            err(f"目录缺失: {d}/")
+            err(f"目录缺失: {relative_path}/")
 
 
-# ── 5. Pick.py 路径解析自检 ──────────────────────────────────────────────
+def check_skill_frontmatter():
+    pattern = re.compile(
+        r"\A---\s*\n(?=[\s\S]*?^name:\s*\S)(?=[\s\S]*?^description:\s*\S)[\s\S]*?\n---",
+        re.MULTILINE,
+    )
+    for platform, skill_name, path in iter_skill_files():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        if pattern.search(text):
+            ok(f"{platform} {skill_name} frontmatter 有效")
+        else:
+            err(f"{platform} {skill_name} 缺少 name 或 description frontmatter")
+
+
+def check_command_refs():
+    for platform, root in SKILL_ROOTS.items():
+        interview_skill = root / "interview/SKILL.md"
+        if not interview_skill.is_file():
+            continue
+        text = interview_skill.read_text(encoding="utf-8")
+        refs = re.findall(r"python\s+src/pick\.py", text)
+        if refs:
+            ok(f"{platform} interview Skill 中有 {len(refs)} 处 src/pick.py 引用")
+        else:
+            err(f"{platform} interview Skill 中未找到 src/pick.py 引用")
+
+
+def check_markdown_refs():
+    link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+    for platform, skill_name, path in iter_skill_files():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for link_text, link_path in link_pattern.findall(text):
+            if link_path.startswith(("http://", "https://", "#")):
+                continue
+            target = (path.parent / link_path).resolve()
+            if target.exists():
+                ok(f"{platform} {skill_name} 引用有效: {link_text} -> {link_path}")
+            else:
+                err(
+                    f"{platform} {skill_name} 引用不存在: "
+                    f"{link_text} -> {link_path}"
+                )
+
 
 def check_pick_path():
-    """验证 pick.py 的数据路径解析是否正确指向 data/"""
-    pick_py = _BASE / "src/pick.py"
-    if not pick_py.exists():
-        warn("pick.py 不存在，跳过路径检查")
+    pick_py = BASE / "src/pick.py"
+    if not pick_py.is_file():
+        err("pick.py 不存在")
         return
 
-    # 检查 pick.py 中 BASE 或 DATA_DIR 的路径解析
     text = pick_py.read_text(encoding="utf-8")
-    # 检查是否使用 parent.parent / "data"
     if "parent.parent" in text and "data" in text:
         ok("pick.py 路径解析指向 parent.parent/data/")
     else:
         warn("pick.py 路径解析未使用 parent.parent/data/ 模式，请人工确认")
 
 
-# ── 6. Build-Knowledge.ps1 脚本一致性 ────────────────────────────────────
-
 def check_build_script():
-    """验证 Build-Knowledge.ps1 引用 src/ 而不是 scripts/"""
-    script = _BASE / "Build-Knowledge.ps1"
-    if not script.exists():
-        warn("Build-Knowledge.ps1 不存在")
+    script = BASE / "Build-Knowledge.ps1"
+    if not script.is_file():
+        err("Build-Knowledge.ps1 不存在")
         return
 
     text = script.read_text(encoding="utf-8")
@@ -145,53 +145,41 @@ def check_build_script():
         warn("Build-Knowledge.ps1 包含 scripts/ 引用（应为 src/）")
 
 
-# ── 主流程 ────────────────────────────────────────────────────────────────
-
 def main():
-    print(f"=== 一致性校验: {_BASE} ===\n")
+    print(f"=== 一致性校验: {BASE} ===\n")
 
-    # 1. 核心文件
     print("--- 核心文件 ---")
-    check_file_exists(CLAUDE_MD, "CLAUDE.md")
-    check_file_exists(INTERVIEW_MD, "interview.md")
-    check_file_exists(README_MD, "README.md")
-    if INTERVIEW_PREP_MD.exists():
-        ok("interview-prep/SKILL.md 存在")
-    else:
-        warn("interview-prep/SKILL.md 不存在")
+    check_core_files()
 
-    # 2. 目录结构
     print("\n--- 目录结构 ---")
     check_directory_structure()
 
-    # 3. 命令引用
+    print("\n--- Skill frontmatter ---")
+    check_skill_frontmatter()
+
     print("\n--- 命令引用 ---")
     check_command_refs()
 
-    # 4. 交叉引用
-    print("\n--- 交叉引用 ---")
-    check_cross_refs()
+    print("\n--- Skill 交叉引用 ---")
+    check_markdown_refs()
 
-    # 5. pick.py 路径
     print("\n--- pick.py 路径 ---")
     check_pick_path()
 
-    # 6. 构建脚本
     print("\n--- 构建脚本 ---")
     check_build_script()
 
-    # 汇总
-    print(f"\n=== 结果 ===")
+    print("\n=== 结果 ===")
     if ERRORS:
-        print(f"错误: {len(ERRORS)} 项 — 请修复")
-        for e in ERRORS:
-            print(f"  {e}")
+        print(f"错误: {len(ERRORS)} 项 - 请修复")
+        for message in ERRORS:
+            print(f"  {message}")
     else:
         print("无错误")
     if WARNINGS:
-        print(f"警告: {len(WARNINGS)} 项 — 建议人工检查")
-        for w in WARNINGS:
-            print(f"  {w}")
+        print(f"警告: {len(WARNINGS)} 项 - 建议人工检查")
+        for message in WARNINGS:
+            print(f"  {message}")
     else:
         print("无警告")
 
