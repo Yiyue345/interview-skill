@@ -1,0 +1,3283 @@
+{
+  "八股": [
+    {
+      "id": 1,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "基本类型",
+      "text": "int 和 long 的区别，long long 的大小"
+    },
+    {
+      "id": 2,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "基本类型",
+      "text": "指针在不同位系统下的字节数（32 位 4 字节，64 位 8 字节，兼容模式仍为 4 字节）"
+    },
+    {
+      "id": 3,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类与对象",
+      "text": "struct和class的区别 在开发中如何使用"
+    },
+    {
+      "id": 4,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类与对象",
+      "text": "三种继承方式对成员访问权限的影响"
+    },
+    {
+      "id": 5,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类与对象",
+      "text": "C++ 和 C 的区别"
+    },
+    {
+      "id": 6,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类与对象",
+      "text": "空类占多大内存"
+    },
+    {
+      "id": 7,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类与对象",
+      "text": "如何调用父类的虚函数？"
+    },
+    {
+      "id": 8,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类与对象",
+      "text": "继承（内存长什么样，有/无虚函数时又长什么样）"
+    },
+    {
+      "id": 9,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类与对象",
+      "text": "菱形继承（有什么问题、虚继承、内存长什么样）"
+    },
+    {
+      "id": 10,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类与对象",
+      "text": "菱形问题怎么解决"
+    },
+    {
+      "id": 11,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类与对象",
+      "text": "如果类中添加了静态成员变量、函数、虚函数，类的内存布局会怎样"
+    },
+    {
+      "id": 12,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多态",
+      "text": "函数重载 vs 函数重写"
+    },
+    {
+      "id": 13,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "虚函数的实现原理（虚表 / 多态）"
+    },
+    {
+      "id": 14,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "多态（静态/动态多态，虚函数，虚表，原理）"
+    },
+    {
+      "id": 15,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "虚函数指针存储在哪里"
+    },
+    {
+      "id": 16,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "虚函数表存储在哪里"
+    },
+    {
+      "id": 17,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "虚函数表指针什么时候创建的"
+    },
+    {
+      "id": 18,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "虚函数表存储在内存中的哪个区域？"
+    },
+    {
+      "id": 19,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "多态里的虚函数底层是怎么实现的？"
+    },
+    {
+      "id": 20,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "假如有十个同一个类的对象，虚函数表有几份"
+    },
+    {
+      "id": 21,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "构造函数能声明为虚函数吗？析构函数呢"
+    },
+    {
+      "id": 22,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多态",
+      "text": "父类构造函数调用父类 virtual 时，调用的是哪个函数（父的还是子类重写的）"
+    },
+    {
+      "id": 23,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "C++ 内存分区有哪些？"
+    },
+    {
+      "id": 24,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "栈和堆的区别（举例）"
+    },
+    {
+      "id": 25,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "使用堆/栈的注意事项：堆需手动释放（C++）或避免 GC（C#），栈避免递归太深或过大局部变量导致溢出"
+    },
+    {
+      "id": 26,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "堆和栈有什么区别？为什么要有栈？为什么要有堆？"
+    },
+    {
+      "id": 27,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "堆和栈开辟内存"
+    },
+    {
+      "id": 28,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "全局变量存在哪"
+    },
+    {
+      "id": 29,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "const 修饰的全局常量存储在哪里（常量存储区 / data 段）"
+    },
+    {
+      "id": 30,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "函数调用栈上存储了哪些内容（参数、局部变量、返回地址、调用约定信息）"
+    },
+    {
+      "id": 31,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "函数参数的入栈顺序（从右至左）"
+    },
+    {
+      "id": 32,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "A a；和 A *p = new a；的区别（a 存在哪，p 存在哪，new a 存在哪）"
+    },
+    {
+      "id": 33,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "局部数组 / new 分配分别在哪？"
+    },
+    {
+      "id": 34,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "new/malloc 区别"
+    },
+    {
+      "id": 35,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "内存管理",
+      "text": "内存布局（堆、栈等）"
+    },
+    {
+      "id": 36,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "内存对齐原理 + 计算"
+    },
+    {
+      "id": 37,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "内存对齐的规则"
+    },
+    {
+      "id": 38,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "类大小计算（内存对齐）"
+    },
+    {
+      "id": 39,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "栈什么情况会爆"
+    },
+    {
+      "id": 40,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "内存碎片，怎么设计一个内存管理系统避免内存碎片"
+    },
+    {
+      "id": 41,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "delete 是怎么知道要 delete 多少字节"
+    },
+    {
+      "id": 42,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "new int() 和 new int 的区别"
+    },
+    {
+      "id": 43,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "placement new"
+    },
+    {
+      "id": 44,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "如何检查内存泄漏"
+    },
+    {
+      "id": 45,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "如何通过重载 new 和 delete 检测内存泄漏"
+    },
+    {
+      "id": 46,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "C++ 的内存模型"
+    },
+    {
+      "id": 47,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "内存管理",
+      "text": "类的成员变量存储位置：类定义本身在代码区，实例化对象的成员在堆/栈上取决于对象分配方式"
+    },
+    {
+      "id": 48,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "STL 有哪几个部分？"
+    },
+    {
+      "id": 49,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "介绍平时使用的容器"
+    },
+    {
+      "id": 50,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "STL 你常用哪些容器？"
+    },
+    {
+      "id": 51,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 是如何动态扩容的？"
+    },
+    {
+      "id": 52,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 扩容机制"
+    },
+    {
+      "id": 53,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 和 list 的区别（局部性、性能、结构）"
+    },
+    {
+      "id": 54,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 中去重（erase 会有什么问题、迭代器）"
+    },
+    {
+      "id": 55,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "如果自己实现一个 vector，你会怎么考虑"
+    },
+    {
+      "id": 56,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "map 的底层是什么，复杂度（红黑树）"
+    },
+    {
+      "id": 57,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "unordered_map / map（底层结构、哈希冲突怎么解决）"
+    },
+    {
+      "id": 58,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "STL 的排序算法用的是什么？"
+    },
+    {
+      "id": 59,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 是被声明在栈上还是堆上"
+    },
+    {
+      "id": 60,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "list&lt; T &gt; 底层结构"
+    },
+    {
+      "id": 61,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "遍历数组和链表哪个更快（局部性、cache 命中、cacheline）"
+    },
+    {
+      "id": 62,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "其他键值对存储结构：unordered_map，底层用哈希表"
+    },
+    {
+      "id": 63,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "哈希表底层，map 底层存储结构，为什么要用红黑树？"
+    },
+    {
+      "id": 64,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "emplace_back 和 push_back 的区别（emplace_back 直接在容器内构造，避免临时对象拷贝）"
+    },
+    {
+      "id": 65,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "map 迭代遍历结果是有序的（红黑树中序遍历）"
+    },
+    {
+      "id": 66,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "模板",
+      "text": "模板有什么好处"
+    },
+    {
+      "id": 67,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "模板",
+      "text": "模板的特化与偏特化"
+    },
+    {
+      "id": 68,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "模板",
+      "text": "模板能不能声明定义分开写"
+    },
+    {
+      "id": 69,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "模板",
+      "text": "模板什么时候知道 T 的具体类型"
+    },
+    {
+      "id": 70,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "模板",
+      "text": "模板在编译后在代码中是什么样子"
+    },
+    {
+      "id": 71,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "Lambda 与函数对象",
+      "text": "Lambda 表达式编译后的结果（编译为匿名类，捕获的变量转为成员变量）"
+    },
+    {
+      "id": 72,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "智能指针",
+      "text": "智能指针的原理及使用场景（shared_ptr、unique_ptr、weak_ptr）"
+    },
+    {
+      "id": 73,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "智能指针",
+      "text": "auto_ptr 被弃用的原因：operator= 转移管理权限，函数传参导致意外释放"
+    },
+    {
+      "id": 74,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "智能指针",
+      "text": "智能指针的引用计数原理，循环引用怎么解决"
+    },
+    {
+      "id": 75,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "智能指针",
+      "text": "shared_ptr 的引用计数是线程安全的吗（控制块线程安全，指向的对象不保证）"
+    },
+    {
+      "id": 76,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "构造与析构",
+      "text": "构造函数、析构函数在继承下的调用顺序"
+    },
+    {
+      "id": 77,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "构造与析构",
+      "text": "构造函数能不能为 virtual"
+    },
+    {
+      "id": 78,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "构造与析构",
+      "text": "析构函数为什么要是虚函数"
+    },
+    {
+      "id": 79,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "构造与析构",
+      "text": "如果不通过 delete，离开作用域时自动销毁，会调用派生类的析构函数吗"
+    },
+    {
+      "id": 80,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "构造与析构",
+      "text": "析构时先析构子还是父"
+    },
+    {
+      "id": 81,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "指针和引用的区别"
+    },
+    {
+      "id": 82,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "const 常常用来处理哪些字段？"
+    },
+    {
+      "id": 83,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "常量指针和指针常量"
+    },
+    {
+      "id": 84,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "static / const 用法"
+    },
+    {
+      "id": 85,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "const 常量能用 const_cast 修改值吗？在什么场景下可以"
+    },
+    {
+      "id": 86,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "引用返回值的注意事项：不能返回局部变量的引用，参数需为引用类型才能返回其引用"
+    },
+    {
+      "id": 87,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "C++ 四种 cast"
+    },
+    {
+      "id": 88,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "static_cast 和 dynamic_cast 转换失败的区别（编译报错 / 指针返 null / 引用抛 bad_cast）"
+    },
+    {
+      "id": 89,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "两个无关联的 class 如何互相转换（需提供构造函数或类型转换运算符）"
+    },
+    {
+      "id": 90,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "类型与转换",
+      "text": "引用传参传的是什么"
+    },
+    {
+      "id": 91,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "i++ 和 ++i 哪个是左值哪个是右值"
+    },
+    {
+      "id": 92,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "左值右值、移动语义"
+    },
+    {
+      "id": 93,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "类型与转换",
+      "text": "移动构造后需要将原对象的指针置空"
+    },
+    {
+      "id": 94,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "进程和线程的区别"
+    },
+    {
+      "id": 95,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "进程间有哪些通讯方式"
+    },
+    {
+      "id": 96,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "线程间的通讯方式"
+    },
+    {
+      "id": 97,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "原子操作与无锁队列：将取改写合并为一步，适用于高性能场景"
+    },
+    {
+      "id": 98,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "多线程下避免频繁访问同一内存（缓存一致性导致缓存行失效，增加访问延迟）"
+    },
+    {
+      "id": 99,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "讲讲死锁"
+    },
+    {
+      "id": 100,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "讲讲虚拟内存"
+    },
+    {
+      "id": 101,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "什么是系统调用"
+    },
+    {
+      "id": 102,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "系统调用会发生栈切换吗（用户态→内核态上下文切换需要切换栈）"
+    },
+    {
+      "id": 103,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "死锁，线程同步"
+    },
+    {
+      "id": 104,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "进程崩溃和线程崩溃有什么区别"
+    },
+    {
+      "id": 105,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "进程访问的内存地址是实际的真实的内存地址吗"
+    },
+    {
+      "id": 106,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "多线程与并发",
+      "text": "有没有使用过多线程编程"
+    },
+    {
+      "id": 107,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "编译与底层",
+      "text": "编译语言与非编译语言的区别"
+    },
+    {
+      "id": 108,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "编译与底层",
+      "text": "C++ 编译过程"
+    },
+    {
+      "id": 109,
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "编译与底层",
+      "text": "静态链接库和动态链接库的区别"
+    },
+    {
+      "id": 110,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "编译与底层",
+      "text": "动态链接库能被多个进程共享吗（代码段共享，数据段独立）"
+    },
+    {
+      "id": 111,
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "编译与底层",
+      "text": "动态链接库分配的内存属于哪个进程（属于调用进程的堆空间）"
+    },
+    {
+      "id": 112,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "值类型和引用类型的区别"
+    },
+    {
+      "id": 113,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "struct 和 class 的区别"
+    },
+    {
+      "id": 114,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "string 是值类型还是引用类型，如何避免 GC"
+    },
+    {
+      "id": 115,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "C# 的堆和栈"
+    },
+    {
+      "id": 116,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "static 和 const 的区别"
+    },
+    {
+      "id": 117,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "装箱 / 拆箱"
+    },
+    {
+      "id": 118,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "结构体是否可以继承 / 实现接口？"
+    },
+    {
+      "id": 119,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "把一个实现接口的结构体实例赋值给接口变量可以吗？如果可以会产生什么问题？"
+    },
+    {
+      "id": 120,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "值类型与引用类型",
+      "text": "一个值类型可以存储在堆上吗"
+    },
+    {
+      "id": 121,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "委托与事件",
+      "text": "委托和事件的关系，如何用 Action 编写一个简单的事件订阅系统"
+    },
+    {
+      "id": 122,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "委托与事件",
+      "text": "你对 C# 的委托理解"
+    },
+    {
+      "id": 123,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "委托与事件",
+      "text": "委托和事件的区别是什么？在实际项目中如何选择使用"
+    },
+    {
+      "id": 124,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "委托与事件",
+      "text": "委托怎么删除某个方法"
+    },
+    {
+      "id": 125,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "C# GC 的触发机制和常见优化手段"
+    },
+    {
+      "id": 126,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "内存泄漏有了解过吗？怎么会产生内存泄漏？"
+    },
+    {
+      "id": 127,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "C# GC 的分代回收机制（0/1/2 三代，存活升级），大对象堆（LOH）单独管理、回收频率低"
+    },
+    {
+      "id": 128,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "假如有一个算法需要多次生成数组（每个 ~20 元素），如何避免频繁 GC"
+    },
+    {
+      "id": 129,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "GC 触发与实践中怎么避免？"
+    },
+    {
+      "id": 130,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "C# 的 GC 是什么，平时有什么编码习惯可以减少 GC"
+    },
+    {
+      "id": 131,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "C# 非托管内存"
+    },
+    {
+      "id": 132,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "如果对象 A 和对象 B 相互依赖并且确定要被 GC 收集，会发生什么"
+    },
+    {
+      "id": 133,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "GC 与内存管理",
+      "text": "GC 原理，Unity GC 和 C# GC 有什么不同，循环引用，可达性分析，举例说明哪些场景能被 GC 清除"
+    },
+    {
+      "id": 134,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "说说数组和列表的区别"
+    },
+    {
+      "id": 135,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "C# 的 array 和 list 区别，LinkedList、Stack、Dictionary"
+    },
+    {
+      "id": 136,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "泛型委托使用的方法"
+    },
+    {
+      "id": 137,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "C# 中 List 的底层实现，增删改的时间复杂度，不保证顺序时怎么优化删除"
+    },
+    {
+      "id": 138,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "C# List 和 C++ vector 扩容区别：C# 不立即释放原数组（依赖 GC），C++ 立即 delete"
+    },
+    {
+      "id": 139,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "C# Dictionary 对标 C++ unordered_map（哈希表 O(1)），C++ map 为红黑树 O(logn)"
+    },
+    {
+      "id": 140,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "Unity 字典 Dictionary 的底层实现"
+    },
+    {
+      "id": 141,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "泛型与集合",
+      "text": "StringBuilder 底层是怎么实现拼接的"
+    },
+    {
+      "id": 142,
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "接口与抽象类",
+      "text": "接口与抽象类的区别"
+    },
+    {
+      "id": 143,
+      "tags": [
+        "C#",
+        "Advanced"
+      ],
+      "subtopic": "反射",
+      "text": "C# 反射的原理，怎么在实际项目中使用"
+    },
+    {
+      "id": 144,
+      "tags": [
+        "Lua",
+        "basic"
+      ],
+      "subtopic": "闭包与 upvalue",
+      "text": "Lua 闭包的概念（函数 + 环境引用）"
+    },
+    {
+      "id": 145,
+      "tags": [
+        "Lua",
+        "Advanced"
+      ],
+      "subtopic": "闭包与 upvalue",
+      "text": "Lua 闭包的实现机制（upvalue，open 状态引用栈变量、close 状态拷贝到自身结构体）"
+    },
+    {
+      "id": 146,
+      "tags": [
+        "Lua",
+        "basic"
+      ],
+      "subtopic": "元表与元方法",
+      "text": "元表的作用和常见元方法（__index、__add、__tostring 等）"
+    },
+    {
+      "id": 147,
+      "tags": [
+        "Lua",
+        "Advanced"
+      ],
+      "subtopic": "元表与元方法",
+      "text": "Lua 如何用 table + 元表实现面向对象（__index 实现继承，重写元方法实现多态）"
+    },
+    {
+      "id": 148,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "生命周期",
+      "text": "Unity 生命周期"
+    },
+    {
+      "id": 149,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "生命周期",
+      "text": "Awake 和 Start 的区别"
+    },
+    {
+      "id": 150,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "生命周期",
+      "text": "为什么 Awake 访问对象会是 null"
+    },
+    {
+      "id": 151,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "生命周期",
+      "text": "如何解决初始化顺序问题"
+    },
+    {
+      "id": 152,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "协程",
+      "text": "协程是什么？它和多线程有什么本质区别？"
+    },
+    {
+      "id": 153,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "协程",
+      "text": "协程会在什么时候执行"
+    },
+    {
+      "id": 154,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "协程",
+      "text": "return null 和 return 0 的区别是什么"
+    },
+    {
+      "id": 155,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "协程",
+      "text": "协程套协程的应用场景是什么"
+    },
+    {
+      "id": 156,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "协程",
+      "text": "Unity 的协程和线程、进程有啥区别？"
+    },
+    {
+      "id": 157,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "协程",
+      "text": "100 个协程被挂起，现在有 10 个协程满足条件，应该先执行哪一个"
+    },
+    {
+      "id": 158,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UGUI",
+      "text": "Image 和 RawImage 的区别"
+    },
+    {
+      "id": 159,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UGUI",
+      "text": "RectTransform 和 Transform 的区别"
+    },
+    {
+      "id": 160,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UGUI",
+      "text": "你比较常用的 UGUI 组件是什么？"
+    },
+    {
+      "id": 161,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UGUI",
+      "text": "手机不同型号分辨率不同，怎么保障 UI 一直维持在正确位置？图片呢？"
+    },
+    {
+      "id": 162,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UGUI",
+      "text": "UGUI 锚点的作用（基于父对象的相对定位，影响位置计算和自适应）"
+    },
+    {
+      "id": 163,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "UGUI 的理解（底层 / 怎么用）"
+    },
+    {
+      "id": 164,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "UGUI 事件响应流程：点击屏幕 → 射线检测（Raycast） → 命中 UI 元素 → 触发 IPointerClickHandler 等回调"
+    },
+    {
+      "id": 165,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "Mask 和 RectMask2D 的区别"
+    },
+    {
+      "id": 166,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "UGUI 中的 Mask 遮罩是怎么实现的"
+    },
+    {
+      "id": 167,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "UGUI 重绘"
+    },
+    {
+      "id": 168,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "Text 和 TextMeshPro 的区别是什么？TextMeshPro 是如何渲染一个汉字的？"
+    },
+    {
+      "id": 169,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UGUI",
+      "text": "动态循环列表是怎么实现的？为什么要用？有什么优点？"
+    },
+    {
+      "id": 170,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UI 优化",
+      "text": "UI 为什么要分多个 Canvas"
+    },
+    {
+      "id": 171,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UI 优化",
+      "text": "一百个小兵一百个血条，只有一个小兵在动，为什么不把血条分在 100 个 Canvas 下实现完全动静分离"
+    },
+    {
+      "id": 172,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "UI 优化",
+      "text": "比如说有个 UI 会一直播放缩放效果，很多时候会把它单独拆成一个 Canvas，为什么"
+    },
+    {
+      "id": 173,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UI 优化",
+      "text": "UGUI 优化的方法"
+    },
+    {
+      "id": 174,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UI 优化",
+      "text": "UI 合批条件：不能被打断、不能穿插、要一个图集"
+    },
+    {
+      "id": 175,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UI 优化",
+      "text": "UI 元素重叠（图片+文字）会打断合批，增加 DrawCall"
+    },
+    {
+      "id": 176,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UI 优化",
+      "text": "UI Rebuild 优化：减少 Canvas 网格重新构建，避免 CPU 频繁计算"
+    },
+    {
+      "id": 177,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "UI 优化",
+      "text": "一个复杂的 UI 场景里，两个静态 UI 之间有很多动态 UI 且有遮挡，按动静分离是不是要打很多子 Canvas"
+    },
+    {
+      "id": 178,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "物理系统",
+      "text": "Collider 和 Trigger 的区别"
+    },
+    {
+      "id": 179,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "物理系统",
+      "text": "如何使用 2D 射线检测到一个玩家"
+    },
+    {
+      "id": 180,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "物理系统",
+      "text": "如何实现检测碰撞"
+    },
+    {
+      "id": 181,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "物理系统",
+      "text": "在 2D AI 物理移动时，为什么通常将逻辑写在 FixedUpdate 而不是 Update 中"
+    },
+    {
+      "id": 182,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "物理系统",
+      "text": "FixedUpdate 是如何执行的？如果 FixedUpdate 的间隔特别短，如何保证严格根据物理时间执行"
+    },
+    {
+      "id": 183,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "物理系统",
+      "text": "高速移动下的物体，如何避免穿模"
+    },
+    {
+      "id": 184,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "物理系统",
+      "text": "Unity 物理系统的原理"
+    },
+    {
+      "id": 185,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "物理系统",
+      "text": "射线检测的原理，如何自己实现"
+    },
+    {
+      "id": 186,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "资源加载的方法"
+    },
+    {
+      "id": 187,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "同步加载和异步加载的区别"
+    },
+    {
+      "id": 188,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "AB 包（打包注意什么、加载卸载要注意什么、引用计数）"
+    },
+    {
+      "id": 189,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "Unity 预制体记录资源引用的方式"
+    },
+    {
+      "id": 190,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "打包时如何获取到资源在哪个 AB 上面"
+    },
+    {
+      "id": 191,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "读取 AB 时，如何知道资源属于哪个 AB"
+    },
+    {
+      "id": 192,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "AB 包的颗粒度是怎么拆分的"
+    },
+    {
+      "id": 193,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "同步加载和异步加载都会产生内存方面的问题，怎么优化？异步产生的内存用什么方式释放"
+    },
+    {
+      "id": 194,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "Unity 打包的流程和注意事项（AssetBundle 构建、资源冗余如何处理）"
+    },
+    {
+      "id": 195,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "Unity 什么操作会产生大量 GC"
+    },
+    {
+      "id": 196,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "资源管理与 AB 包",
+      "text": "类似 AssetBundle，什么操作会产生内存泄漏"
+    },
+    {
+      "id": 197,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "合批与渲染优化",
+      "text": "图集是怎么分类的？"
+    },
+    {
+      "id": 198,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "合批与渲染优化",
+      "text": "静态图集和动态图集的区别是什么"
+    },
+    {
+      "id": 199,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "合批与渲染优化",
+      "text": "介绍一下 UI 合批"
+    },
+    {
+      "id": 200,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "合批与渲染优化",
+      "text": "静态 / 动态合批及条件（动态小物体，不超过 300 顶点）"
+    },
+    {
+      "id": 201,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "合批与渲染优化",
+      "text": "合批（静态 / 动态 / UI）"
+    },
+    {
+      "id": 202,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "动画系统",
+      "text": "Animator 和 Animation 的区别"
+    },
+    {
+      "id": 203,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "动画系统",
+      "text": "Unity 动画系统的原理"
+    },
+    {
+      "id": 204,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "动画系统",
+      "text": "Animation 和 Animator 的区别，在只有几个简单动画切换情况下哪种性能更好，为什么"
+    },
+    {
+      "id": 205,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "动画系统",
+      "text": "Unity 的 Animator 中的动画会全部加载到内存中吗？怎么优化"
+    },
+    {
+      "id": 206,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "动画系统",
+      "text": "Playable 相关"
+    },
+    {
+      "id": 207,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "寻路与 NavMesh",
+      "text": "NavMesh 是离线状态下烘焙好寻路网格的，遇到移动的障碍物如何让 NPC 不撞墙"
+    },
+    {
+      "id": 208,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "寻路与 NavMesh",
+      "text": "假设有两层楼，二楼有一个洞，如何让 NPC 从洞掉到一楼还能继续正常寻路"
+    },
+    {
+      "id": 209,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "寻路与 NavMesh",
+      "text": "Unity Navigation 寻路的原理"
+    },
+    {
+      "id": 210,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "ScriptableObject",
+      "text": "什么是 ScriptableObject？相比于在 Prefab 的 MonoBehaviour 面板上直接配置数值有什么优势"
+    },
+    {
+      "id": 211,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "ScriptableObject",
+      "text": "ScriptableObject 的优劣势，什么情况下用，什么情况下不用"
+    },
+    {
+      "id": 212,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "碰撞检测",
+      "text": "AABB 包围盒和 OBB 包围盒的区别，在 Unity 中如何使用它们进行碰撞检测"
+    },
+    {
+      "id": 213,
+      "tags": [
+        "Unity",
+        "basic"
+      ],
+      "subtopic": "碰撞检测",
+      "text": "除了 AABB 和 OBB 还有什么碰撞检测方式？优缺点？适合什么情况"
+    },
+    {
+      "id": 214,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "碰撞检测",
+      "text": "在 Unity 中实现一个简单的碰撞检测系统，要求能检测球体、盒子、胶囊等碰撞体并处理响应"
+    },
+    {
+      "id": 215,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "JobSystem / Burst / ECS",
+      "text": "JobSystem"
+    },
+    {
+      "id": 216,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "JobSystem / Burst / ECS",
+      "text": "Burst"
+    },
+    {
+      "id": 217,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "JobSystem / Burst / ECS",
+      "text": "GPU Instancing，JobSystem，Burst，Drawcall 具体优化了多少？适合什么场景？依据什么判断的"
+    },
+    {
+      "id": 218,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "JobSystem / Burst / ECS",
+      "text": "ECS 架构的原理，Component 在内存中的布局方式"
+    },
+    {
+      "id": 219,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "摄像机",
+      "text": "在 3D 角色到墙角后，怎么调试可以让摄像机不被挤到外面或穿模"
+    },
+    {
+      "id": 220,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "摄像机",
+      "text": "摄像机避开障碍物的实现"
+    },
+    {
+      "id": 221,
+      "tags": [
+        "Unity",
+        "Advanced"
+      ],
+      "subtopic": "技能与系统设计",
+      "text": "注：原「Unity 中的 Skill（技能系统）通常如何设计和实现」已归入 GameDesign"
+    },
+    {
+      "id": 222,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "渲染管线的流程"
+    },
+    {
+      "id": 223,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "渲染管线，光栅化后输出的是什么"
+    },
+    {
+      "id": 224,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "图形渲染管线的各个阶段是什么？每个阶段的作用是什么"
+    },
+    {
+      "id": 225,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "什么是渲染管线？Unity 的 SRP 是什么？与传统渲染管线有什么区别"
+    },
+    {
+      "id": 226,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "什么是双缓存"
+    },
+    {
+      "id": 227,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "为什么有了 VAO 和 VBO 之后还有 IBO"
+    },
+    {
+      "id": 228,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "渲染管线",
+      "text": "光栅化流程"
+    },
+    {
+      "id": 229,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "渲染管线",
+      "text": "CPU 和 GPU 间的通信"
+    },
+    {
+      "id": 230,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "渲染管线",
+      "text": "渲染管线的各阶段在 Unity 中是如何实现的"
+    },
+    {
+      "id": 231,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "光照模型",
+      "text": "图形学中常见的光照模型"
+    },
+    {
+      "id": 232,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "光照模型",
+      "text": "经典光照模型（漫反射-兰伯特/半兰伯特，高光反射-Phong/Blinn-Phong）与现代 PBR 的区别"
+    },
+    {
+      "id": 233,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "光照模型",
+      "text": "Blinn-Phong 光照模型"
+    },
+    {
+      "id": 234,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "光照模型",
+      "text": "Phong 光照模型和 Blinn-Phong 的区别是什么？为什么 Blinn-Phong 更快"
+    },
+    {
+      "id": 235,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "光照模型",
+      "text": "光照模型"
+    },
+    {
+      "id": 236,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "PBR",
+      "text": "辐射度量学的基本概念"
+    },
+    {
+      "id": 237,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "PBR",
+      "text": "BRDF 的定义及作用"
+    },
+    {
+      "id": 238,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "PBR",
+      "text": "渲染方程"
+    },
+    {
+      "id": 239,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "PBR",
+      "text": "反射方程"
+    },
+    {
+      "id": 240,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "PBR",
+      "text": "PBR 基础理念概括，PBR 的基本概念，BRDF"
+    },
+    {
+      "id": 241,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "PBR",
+      "text": "PBR 的原理，金属度"
+    },
+    {
+      "id": 242,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "PBR",
+      "text": "PBR 光照模型的核心原理"
+    },
+    {
+      "id": 243,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "阴影",
+      "text": "阴影（Light Map、Shadow Map 原理）"
+    },
+    {
+      "id": 244,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "抗锯齿",
+      "text": "锯齿产生的原因"
+    },
+    {
+      "id": 245,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "抗锯齿",
+      "text": "SSAA、MSAA、FXAA"
+    },
+    {
+      "id": 246,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "抗锯齿",
+      "text": "MSAA 的原理"
+    },
+    {
+      "id": 247,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "抗锯齿",
+      "text": "什么是抗锯齿？常见算法有哪些？优缺点是什么"
+    },
+    {
+      "id": 248,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "变换与坐标",
+      "text": "向量点乘、叉乘相关"
+    },
+    {
+      "id": 249,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "变换与坐标",
+      "text": "MVP 变换矩阵"
+    },
+    {
+      "id": 250,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "变换与坐标",
+      "text": "MVP 矩阵的作用及推导"
+    },
+    {
+      "id": 251,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "变换与坐标",
+      "text": "如何解决屏幕 2D 点击坐标转换成 3D 世界坐标的问题"
+    },
+    {
+      "id": 252,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "变换与坐标",
+      "text": "欧拉角、四元数、旋转矩阵的区别和联系"
+    },
+    {
+      "id": 253,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "深度测试",
+      "text": "什么是深度测试？在渲染管线的哪个阶段进行"
+    },
+    {
+      "id": 254,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "深度测试",
+      "text": "深度测试是在什么阶段实现的"
+    },
+    {
+      "id": 255,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "深度测试",
+      "text": "Early-Z 什么时候会失效"
+    },
+    {
+      "id": 256,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "透明混合",
+      "text": "透明混合"
+    },
+    {
+      "id": 257,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "透明混合",
+      "text": "如果要实现半透明的话 Shader 代码怎么写"
+    },
+    {
+      "id": 258,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "前向 / 延迟渲染",
+      "text": "前向渲染和延迟渲染的区别、各自优缺点、适用场景"
+    },
+    {
+      "id": 259,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "前向 / 延迟渲染",
+      "text": "延迟渲染的原理、优缺点"
+    },
+    {
+      "id": 260,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "光线追踪",
+      "text": "光线追踪是什么？原理？与传统光栅化对比的优缺点？游戏中的应用场景"
+    },
+    {
+      "id": 261,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "几何与检测",
+      "text": "AABB 包围盒和 OBB 包围盒的区别"
+    },
+    {
+      "id": 262,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "几何与检测",
+      "text": "判断点在三角形内（叉积、重心坐标、面积法）"
+    },
+    {
+      "id": 263,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "几何与检测",
+      "text": "判断点是否在三角形内部"
+    },
+    {
+      "id": 264,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "几何与检测",
+      "text": "射线检测的原理，如何自己实现"
+    },
+    {
+      "id": 265,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "法线贴图",
+      "text": "什么是法线贴图？它是如何工作的？为什么通常看起来是蓝色的"
+    },
+    {
+      "id": 266,
+      "tags": [
+        "Graphics",
+        "Advanced"
+      ],
+      "subtopic": "法线贴图",
+      "text": "法线贴图（法线怎么存的、为什么多为蓝色）"
+    },
+    {
+      "id": 267,
+      "tags": [
+        "Graphics",
+        "basic"
+      ],
+      "subtopic": "其他",
+      "text": "什么是 Mipmap？如何工作？为什么能提高渲染性能和图像质量？Unity 中如何生成和使用"
+    },
+    {
+      "id": 268,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "常见排序算法 + 复杂度"
+    },
+    {
+      "id": 269,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "你知道什么样的排序方式，最熟悉哪个"
+    },
+    {
+      "id": 270,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "快速排序的原理"
+    },
+    {
+      "id": 271,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "快速排序最坏、最优、平均时间复杂度"
+    },
+    {
+      "id": 272,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "快速排序最差情况、空间复杂度"
+    },
+    {
+      "id": 273,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "排序",
+      "text": "最差情况下都有 O(nlogn) 的排序算法"
+    },
+    {
+      "id": 274,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "哈希",
+      "text": "哈希冲突怎么解决？"
+    },
+    {
+      "id": 275,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "哈希",
+      "text": "除了开放寻址和链地址还有吗（再哈希）"
+    },
+    {
+      "id": 276,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "哈希",
+      "text": "哈希表最差情况复杂度，哈希冲突怎么解决"
+    },
+    {
+      "id": 277,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "找最短路径用什么算法、数据结构（BFS、FIFO）"
+    },
+    {
+      "id": 278,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "A* 算法的原理"
+    },
+    {
+      "id": 279,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "A* 原理、优点"
+    },
+    {
+      "id": 280,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "AStar（流程、是否最优）"
+    },
+    {
+      "id": 281,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "A* 算法的优势"
+    },
+    {
+      "id": 282,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "A* 与寻路",
+      "text": "A* 原理及与流场寻路对比"
+    },
+    {
+      "id": 283,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "链表",
+      "text": "链表与数组的区别"
+    },
+    {
+      "id": 284,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "链表",
+      "text": "判断链表是否有环、找到环入口（怎么证明）"
+    },
+    {
+      "id": 285,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "链表",
+      "text": "不使用快慢指针呢？链表中每个节点值不同（存哈希表）"
+    },
+    {
+      "id": 286,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "红黑树与平衡树",
+      "text": "平衡二叉树的概念、左右子树深度差值是多少"
+    },
+    {
+      "id": 287,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "红黑树与平衡树",
+      "text": "AVL 树"
+    },
+    {
+      "id": 288,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "红黑树与平衡树",
+      "text": "AVL 树如何保证平衡性质"
+    },
+    {
+      "id": 289,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "红黑树与平衡树",
+      "text": "手撕平衡二叉树的判断，要求自己构建树结构"
+    },
+    {
+      "id": 290,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "红黑树与平衡树",
+      "text": "红黑树的原理"
+    },
+    {
+      "id": 291,
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "Top-K",
+      "text": "Top-K 问题（找前 10 最小），复杂度"
+    },
+    {
+      "id": 292,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "Top-K",
+      "text": "有 1 万个玩家的排名数据（分数），想取前 100 名，有什么快速方法"
+    },
+    {
+      "id": 293,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "空间划分",
+      "text": "有一堆 2D 坐标，快速找有哪些落在半径为 r 的圆范围内"
+    },
+    {
+      "id": 294,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "空间划分",
+      "text": "了解过空间划分吗"
+    },
+    {
+      "id": 295,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "空间划分",
+      "text": "八叉树，AABB，SAT"
+    },
+    {
+      "id": 296,
+      "tags": [
+        "Algorithms",
+        "Advanced"
+      ],
+      "subtopic": "空间划分",
+      "text": "SAT（分离轴算法）三维实现：面检测 + 边检测，与 GJK 算法的联系（闵可夫斯基差空间）"
+    },
+    {
+      "id": 297,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "TCP / UDP",
+      "text": "TCP/UDP 区别是什么？在游戏中有哪些具体的应用场景？如何让 UDP 更可靠"
+    },
+    {
+      "id": 298,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "TCP / UDP",
+      "text": "TCP/UDP 区别"
+    },
+    {
+      "id": 299,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "TCP / UDP",
+      "text": "它们属于哪一层"
+    },
+    {
+      "id": 300,
+      "tags": [
+        "Networking",
+        "Advanced"
+      ],
+      "subtopic": "TCP / UDP",
+      "text": "如何实现一个轻量的可靠 UDP"
+    },
+    {
+      "id": 301,
+      "tags": [
+        "Networking",
+        "Advanced"
+      ],
+      "subtopic": "TCP / UDP",
+      "text": "UDP TCP 具体的应用，哪些模块适合用哪一种，具体游戏开发中如何保证可靠性"
+    },
+    {
+      "id": 302,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "可靠传输",
+      "text": "三次握手（TCP）"
+    },
+    {
+      "id": 303,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "可靠传输",
+      "text": "TCP 通过什么保证可靠连接"
+    },
+    {
+      "id": 304,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "可靠传输",
+      "text": "讲讲 TCP 的四次挥手"
+    },
+    {
+      "id": 305,
+      "tags": [
+        "Networking",
+        "Advanced"
+      ],
+      "subtopic": "可靠传输",
+      "text": "TCP 的四次挥手能不能改成三次，为什么"
+    },
+    {
+      "id": 306,
+      "tags": [
+        "Networking",
+        "Advanced"
+      ],
+      "subtopic": "可靠传输",
+      "text": "既然 UDP 不可靠，有没有方式让它变得可靠一点"
+    },
+    {
+      "id": 307,
+      "tags": [
+        "Networking",
+        "Advanced"
+      ],
+      "subtopic": "可靠传输",
+      "text": "超时重传失败后会怎样"
+    },
+    {
+      "id": 308,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "HTTP",
+      "text": "知道 HTTP 和 HTTPS 吗"
+    },
+    {
+      "id": 309,
+      "tags": [
+        "Networking",
+        "basic"
+      ],
+      "subtopic": "Socket 编程",
+      "text": "Socket 编程的基本流程（创建 socket、绑定端口、监听、接收连接、处理、关闭）"
+    },
+    {
+      "id": 310,
+      "tags": [
+        "DesignPatterns",
+        "basic"
+      ],
+      "subtopic": "观察者模式",
+      "text": "了解哪些设计模式"
+    },
+    {
+      "id": 311,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "观察者模式",
+      "text": "观察者模式什么时候使用、怎么使用、方法封装使用哪些 API"
+    },
+    {
+      "id": 312,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "观察者模式",
+      "text": "观察者和单例，优缺点，在项目中的应用"
+    },
+    {
+      "id": 313,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "单例模式",
+      "text": "观察者和单例，优缺点，在项目中的应用"
+    },
+    {
+      "id": 314,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "单例模式",
+      "text": "单例模式有什么缺点"
+    },
+    {
+      "id": 315,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "享元模式",
+      "text": "享元模式怎么实现"
+    },
+    {
+      "id": 316,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "享元模式",
+      "text": "享元模式的其他数据存在哪里"
+    },
+    {
+      "id": 317,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "对象池",
+      "text": "对象池要提供哪些接口"
+    },
+    {
+      "id": 318,
+      "tags": [
+        "DesignPatterns",
+        "basic"
+      ],
+      "subtopic": "MVC / MVVM",
+      "text": "MVC"
+    },
+    {
+      "id": 319,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "MVC / MVVM",
+      "text": "MVC 与 MVVM 区别"
+    },
+    {
+      "id": 320,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "MVC / MVVM",
+      "text": "MVVM 怎么做到 UI 绑定的"
+    },
+    {
+      "id": 321,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "工厂模式",
+      "text": "工厂模式的使用场景和实现方式"
+    },
+    {
+      "id": 322,
+      "tags": [
+        "DesignPatterns",
+        "basic"
+      ],
+      "subtopic": "事件系统",
+      "text": "简单说一下你们的事件管理是怎么做的"
+    },
+    {
+      "id": 323,
+      "tags": [
+        "DesignPatterns",
+        "Advanced"
+      ],
+      "subtopic": "事件系统",
+      "text": "数据驱动"
+    },
+    {
+      "id": 324,
+      "tags": [
+        "GameDesign",
+        "basic"
+      ],
+      "subtopic": "FSM 与行为树",
+      "text": "介绍一下有限状态机"
+    },
+    {
+      "id": 325,
+      "tags": [
+        "GameDesign",
+        "basic"
+      ],
+      "subtopic": "FSM 与行为树",
+      "text": "有限状态机的好处：同一时间单一状态，节点跳转逻辑清晰，增删节点方便"
+    },
+    {
+      "id": 326,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "FSM 与行为树",
+      "text": "FSM 和行为树的差异，实现简单的巡逻保安 AI 会选择什么模式"
+    },
+    {
+      "id": 327,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "FSM 与行为树",
+      "text": "多层级 FSM"
+    },
+    {
+      "id": 328,
+      "tags": [
+        "GameDesign",
+        "basic"
+      ],
+      "subtopic": "攻击判定",
+      "text": "获取攻击目标的方法是怎样的"
+    },
+    {
+      "id": 329,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "攻击判定",
+      "text": "两种近战攻击判定机制：碰撞器检测 vs 帧动画关键帧范围检测，优缺点"
+    },
+    {
+      "id": 330,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "攻击判定",
+      "text": "如果攻击判定依赖帧实现，网络波动导致攻击丢失怎么办"
+    },
+    {
+      "id": 331,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "攻击判定",
+      "text": "如果实现类似《空洞骑士》里面怪物遇到墙壁或走到平台边缘掉头，实现方法是什么"
+    },
+    {
+      "id": 332,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "背包系统",
+      "text": "背包系统的实现"
+    },
+    {
+      "id": 333,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "背包系统",
+      "text": "背包中使用了一个物品的逻辑"
+    },
+    {
+      "id": 334,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "Buff 系统",
+      "text": "Buff 系统怎么设计"
+    },
+    {
+      "id": 335,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "防作弊",
+      "text": "如果有人用外挂篡改客户端数据，怎么保证外挂无法得逞"
+    },
+    {
+      "id": 336,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "场景与内存",
+      "text": "一个跑酷游戏不断生成场景，怎么设置让内存不崩溃"
+    },
+    {
+      "id": 337,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "技能系统",
+      "text": "技能系统通常如何设计和实现"
+    },
+    {
+      "id": 338,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "大世界",
+      "text": "大世界中应该怎么去做碰撞检测"
+    },
+    {
+      "id": 339,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "帧同步与状态同步",
+      "text": "帧同步和状态同步"
+    },
+    {
+      "id": 340,
+      "tags": [
+        "GameDesign",
+        "Advanced"
+      ],
+      "subtopic": "帧同步与状态同步",
+      "text": "帧同步和状态同步向服务器端发送的内容"
+    },
+    {
+      "id": 341,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "DrawCall 优化",
+      "text": "DrawCall 优化的方法"
+    },
+    {
+      "id": 342,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "DrawCall 优化",
+      "text": "一个游戏场景中有一百个人，要怎么渲染才能不卡顿"
+    },
+    {
+      "id": 343,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "DrawCall 优化",
+      "text": "战斗场景性能排查流程：Profiler 定位热点 → 针对性优化（渲染/物理/CPU）"
+    },
+    {
+      "id": 344,
+      "tags": [
+        "Performance",
+        "basic"
+      ],
+      "subtopic": "CPU / GPU 瓶颈",
+      "text": "导致游戏卡顿的因素有哪些？如何定位和解决"
+    },
+    {
+      "id": 345,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "CPU / GPU 瓶颈",
+      "text": "游戏开发中常见的 CPU 瓶颈原因"
+    },
+    {
+      "id": 346,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "CPU / GPU 瓶颈",
+      "text": "我们要上线一个手游，在低端机上运行会发热，怎么解决"
+    },
+    {
+      "id": 347,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "GC 优化",
+      "text": "Lua GC"
+    },
+    {
+      "id": 348,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "场景管理",
+      "text": "碰撞检测优化：BVH / 空间划分（八叉树）"
+    },
+    {
+      "id": 349,
+      "tags": [
+        "Performance",
+        "Advanced"
+      ],
+      "subtopic": "场景管理",
+      "text": "CPU 预裁剪：不提交视锥体外物体的 DrawCall"
+    }
+  ],
+  "手撕": [
+    {
+      "id": 1,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "手写快排"
+    },
+    {
+      "id": 2,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "LeetCode35 搜索插入位置"
+    },
+    {
+      "id": 3,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "LeetCode1302 层数最深叶子节点的和"
+    },
+    {
+      "id": 4,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "链表找环入口（快慢指针、数学证明）"
+    },
+    {
+      "id": 5,
+      "tags": [
+        "DesignPatterns"
+      ],
+      "subtopic": "",
+      "text": "手撕：单例模式"
+    },
+    {
+      "id": 6,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "找到有环链表的入环口，然后反转从头到环口这一段（就是找环口+反转链表、数学证明）"
+    },
+    {
+      "id": 7,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "如果链表有奇数个结点, 反转中间结点的前面部分和后面部分, 如果有偶数个结点, 分别反转前半部分和后半部分"
+    },
+    {
+      "id": 8,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "无重复最长字串"
+    },
+    {
+      "id": 9,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "表达式计算 + - * /"
+    },
+    {
+      "id": 10,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "写一下斐波那契数列前N项和"
+    },
+    {
+      "id": 11,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "给出1~100一百个正整数作为卡牌，要求实现一百张牌的洗牌，每次传入的数组必须和输出的数组不一样。洗完牌后要求将该一百张牌分别发给四个人，要求第二个人的胜率达到26.8%，第二人幸运值为11，其余三人幸运值为10。有5分钟自由提问时间，提问结束后要求在25分钟之内完成这道题目。"
+    },
+    {
+      "id": 12,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "O(1)空间实现链表升序排列"
+    },
+    {
+      "id": 13,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "39、组合总和"
+    },
+    {
+      "id": 14,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "31、下一个排列。"
+    },
+    {
+      "id": 15,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "739. 每日温度"
+    },
+    {
+      "id": 16,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "排序双向链表"
+    },
+    {
+      "id": 17,
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "二叉树的最大深度"
+    }
+  ]
+}

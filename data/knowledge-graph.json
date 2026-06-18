@@ -1,0 +1,1215 @@
+{
+  "edges": [
+    {
+      "from": "Algorithms:A* 与寻路",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Algorithms:A* 与寻路",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Algorithms:A* 与寻路",
+      "to": "Unity:寻路与 NavMesh",
+      "label": "A*在NavMesh中的应用",
+      "weight": 0.8
+    },
+    {
+      "from": "Algorithms:Top-K",
+      "to": "Algorithms:红黑树与平衡树",
+      "label": "堆/树选型",
+      "weight": 0.4
+    },
+    {
+      "from": "Algorithms:哈希",
+      "to": "Algorithms:红黑树与平衡树",
+      "label": "哈希vs树结构选型",
+      "weight": 0.5
+    },
+    {
+      "from": "Algorithms:哈希",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Algorithms:排序",
+      "to": "Algorithms:Top-K",
+      "label": "排序解决Top-K",
+      "weight": 0.5
+    },
+    {
+      "from": "Algorithms:排序",
+      "to": "C++:STL 容器",
+      "label": "STL sort实现",
+      "weight": 0.6
+    },
+    {
+      "from": "Algorithms:空间划分",
+      "to": "Graphics:几何与检测",
+      "label": "加速几何检测",
+      "weight": 0.6
+    },
+    {
+      "from": "Algorithms:空间划分",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Algorithms:空间划分",
+      "to": "Performance:场景管理",
+      "label": "BVH/八叉树优化场景",
+      "weight": 0.7
+    },
+    {
+      "from": "Algorithms:红黑树与平衡树",
+      "to": "Algorithms:排序",
+      "label": "树排序",
+      "weight": 0.3
+    },
+    {
+      "from": "Algorithms:红黑树与平衡树",
+      "to": "C++",
+      "label": "跨栈: C++",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Algorithms:链表",
+      "to": "C++:STL 容器",
+      "label": "list底层双向链表",
+      "weight": 0.7
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "C++",
+      "label": "跨栈: C++",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "DesignPatterns",
+      "label": "跨栈: 设计模式",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "DesignPatterns:对象池",
+      "label": "对象池减少GC",
+      "weight": 0.6
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "GameDesign:背包系统",
+      "label": "背包物品GC优化",
+      "weight": 0.5
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "Performance:CPU / GPU 瓶颈",
+      "label": "GC频繁导致卡顿",
+      "weight": 0.5
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "Performance:GC 优化",
+      "label": "对比Lua GC",
+      "weight": 0.6
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:GC 与内存管理",
+      "to": "Unity:资源管理与 AB 包",
+      "label": "AB包加载产生GC",
+      "weight": 0.9
+    },
+    {
+      "from": "C#:值类型与引用类型",
+      "to": "C#:GC 与内存管理",
+      "label": "装箱拆箱产生GC",
+      "weight": 0.8
+    },
+    {
+      "from": "C#:值类型与引用类型",
+      "to": "C++:类型与转换",
+      "label": "跨语言类型系统",
+      "weight": 0.5
+    },
+    {
+      "from": "C#:反射",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:反射",
+      "to": "Unity:ScriptableObject",
+      "label": "SO序列化与反射",
+      "weight": 0.5
+    },
+    {
+      "from": "C#:委托与事件",
+      "to": "DesignPatterns",
+      "label": "跨栈: 设计模式",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:委托与事件",
+      "to": "DesignPatterns:事件系统",
+      "label": "底层事件机制",
+      "weight": 0.6
+    },
+    {
+      "from": "C#:委托与事件",
+      "to": "DesignPatterns:观察者模式",
+      "label": "事件驱动观察者",
+      "weight": 0.8
+    },
+    {
+      "from": "C#:委托与事件",
+      "to": "Lua:元表与元方法",
+      "label": "事件回调与元方法",
+      "weight": 0.4
+    },
+    {
+      "from": "C#:接口与抽象类",
+      "to": "C++",
+      "label": "跨栈: C++",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:泛型与集合",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C#:泛型与集合",
+      "to": "Algorithms:哈希",
+      "label": "Dictionary哈希实现",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:Lambda 与函数对象",
+      "to": "C++:模板",
+      "label": "Lambda模板化与泛型",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:Lambda 与函数对象",
+      "to": "C++:类型与转换",
+      "label": "捕获与移动语义",
+      "weight": 0.6
+    },
+    {
+      "from": "C++:STL 容器",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C++:STL 容器",
+      "to": "Algorithms:红黑树与平衡树",
+      "label": "map底层红黑树",
+      "weight": 0.7
+    },
+    {
+      "from": "C++:STL 容器",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C++:STL 容器",
+      "to": "C#:泛型与集合",
+      "label": "跨语言容器对比",
+      "weight": 0.7
+    },
+    {
+      "from": "C++:STL 容器",
+      "to": "C++:模板",
+      "label": "STL基于模板",
+      "weight": 0.6
+    },
+    {
+      "from": "C++:内存管理",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C++:内存管理",
+      "to": "C#:GC 与内存管理",
+      "label": "跨语言GC机制对比",
+      "weight": 0.7
+    },
+    {
+      "from": "C++:内存管理",
+      "to": "C++:智能指针",
+      "label": "智能指针管理动态内存",
+      "weight": 0.8
+    },
+    {
+      "from": "C++:内存管理",
+      "to": "C++:编译与底层",
+      "label": "内存布局与编译",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:内存管理",
+      "to": "Lua:闭包与 upvalue",
+      "label": "upvalue内存管理",
+      "weight": 0.4
+    },
+    {
+      "from": "C++:基本类型",
+      "to": "C++:内存管理",
+      "label": "基本类型内存布局",
+      "weight": 0.6
+    },
+    {
+      "from": "C++:基本类型",
+      "to": "C++:类型与转换",
+      "label": "类型系统基础",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:多态",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C++:多态",
+      "to": "C#:接口与抽象类",
+      "label": "跨语言多态对比",
+      "weight": 0.6
+    },
+    {
+      "from": "C++:多态",
+      "to": "C++:构造与析构",
+      "label": "虚析构",
+      "weight": 0.7
+    },
+    {
+      "from": "C++:多线程与并发",
+      "to": "Algorithms:排序",
+      "label": "并行排序算法",
+      "weight": 0.4
+    },
+    {
+      "from": "C++:多线程与并发",
+      "to": "Networking",
+      "label": "跨栈: 网络",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "C++:多线程与并发",
+      "to": "Networking:TCP / UDP",
+      "label": "网络编程与多线程",
+      "weight": 0.4
+    },
+    {
+      "from": "C++:类与对象",
+      "to": "C++:多态",
+      "label": "继承与多态",
+      "weight": 0.9
+    },
+    {
+      "from": "C++:类与对象",
+      "to": "C++:构造与析构",
+      "label": "构造析构与继承",
+      "weight": 0.8
+    },
+    {
+      "from": "C++:类型与转换",
+      "to": "C++:Lambda 与函数对象",
+      "label": "左值右值与捕获",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:类型与转换",
+      "to": "C++:内存管理",
+      "label": "引用/指针与内存",
+      "weight": 0.5
+    },
+    {
+      "from": "C++:类型与转换",
+      "to": "C++:多态",
+      "label": "dynamic_cast实现多态",
+      "weight": 0.7
+    },
+    {
+      "from": "C++:编译与底层",
+      "to": "C++:内存管理",
+      "label": "编译链接与内存布局",
+      "weight": 0.6
+    },
+    {
+      "from": "C++:编译与底层",
+      "to": "C++:类型与转换",
+      "label": "编译时类型处理",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:MVC / MVVM",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:MVC / MVVM",
+      "to": "C#:反射",
+      "label": "MVVM绑定实现",
+      "weight": 0.6
+    },
+    {
+      "from": "DesignPatterns:MVC / MVVM",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:MVC / MVVM",
+      "to": "Unity:UGUI",
+      "label": "MVVM在UI中的应用",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:事件系统",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:享元模式",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:享元模式",
+      "to": "Unity:合批与渲染优化",
+      "label": "数据分离与合批",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:单例模式",
+      "to": "DesignPatterns:观察者模式",
+      "label": "单例vs观察者选型",
+      "weight": 0.6
+    },
+    {
+      "from": "DesignPatterns:单例模式",
+      "to": "Unity:生命周期",
+      "label": "单例生命周期管理",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:对象池",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:对象池",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:对象池",
+      "to": "Performance:GC 优化",
+      "label": "对象池减少GC",
+      "weight": 0.8
+    },
+    {
+      "from": "DesignPatterns:工厂模式",
+      "to": "C#:反射",
+      "label": "反射工厂创建对象",
+      "weight": 0.6
+    },
+    {
+      "from": "DesignPatterns:工厂模式",
+      "to": "DesignPatterns:MVC / MVVM",
+      "label": "ViewModel工厂创建",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:观察者模式",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:观察者模式",
+      "to": "DesignPatterns:事件系统",
+      "label": "事件系统扩展",
+      "weight": 0.5
+    },
+    {
+      "from": "DesignPatterns:观察者模式",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesignPatterns:观察者模式",
+      "to": "Unity:UGUI",
+      "label": "UI事件绑定",
+      "weight": 0.5
+    },
+    {
+      "from": "GameDesign:Buff 系统",
+      "to": "DesignPatterns:观察者模式",
+      "label": "Buff事件通知",
+      "weight": 0.6
+    },
+    {
+      "from": "GameDesign:Buff 系统",
+      "to": "GameDesign:FSM 与行为树",
+      "label": "Buff影响AI行为",
+      "weight": 0.5
+    },
+    {
+      "from": "GameDesign:FSM 与行为树",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:FSM 与行为树",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:场景与内存",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:场景与内存",
+      "to": "Unity:资源管理与 AB 包",
+      "label": "场景资源生命周期",
+      "weight": 0.7
+    },
+    {
+      "from": "GameDesign:大世界",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:帧同步与状态同步",
+      "to": "GameDesign:防作弊",
+      "label": "帧同步服务端校验",
+      "weight": 0.5
+    },
+    {
+      "from": "GameDesign:帧同步与状态同步",
+      "to": "Networking",
+      "label": "跨栈: 网络",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:帧同步与状态同步",
+      "to": "Networking:TCP / UDP",
+      "label": "同步协议选型",
+      "weight": 0.6
+    },
+    {
+      "from": "GameDesign:帧同步与状态同步",
+      "to": "Networking:可靠传输",
+      "label": "帧同步可靠性要求",
+      "weight": 0.7
+    },
+    {
+      "from": "GameDesign:帧同步与状态同步",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:技能系统",
+      "to": "DesignPatterns:工厂模式",
+      "label": "工厂创建技能",
+      "weight": 0.7
+    },
+    {
+      "from": "GameDesign:技能系统",
+      "to": "DesignPatterns:观察者模式",
+      "label": "技能触发事件",
+      "weight": 0.5
+    },
+    {
+      "from": "GameDesign:技能系统",
+      "to": "GameDesign:FSM 与行为树",
+      "label": "技能状态管理",
+      "weight": 0.6
+    },
+    {
+      "from": "GameDesign:攻击判定",
+      "to": "GameDesign:帧同步与状态同步",
+      "label": "帧同步攻击判定",
+      "weight": 0.5
+    },
+    {
+      "from": "GameDesign:攻击判定",
+      "to": "Networking",
+      "label": "跨栈: 网络",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameDesign:背包系统",
+      "to": "C#:泛型与集合",
+      "label": "背包数据结构设计",
+      "weight": 0.6
+    },
+    {
+      "from": "GameDesign:背包系统",
+      "to": "DesignPatterns:观察者模式",
+      "label": "背包变化通知",
+      "weight": 0.6
+    },
+    {
+      "from": "GameDesign:背包系统",
+      "to": "Unity:UGUI",
+      "label": "背包UI实现",
+      "weight": 0.7
+    },
+    {
+      "from": "GameDesign:防作弊",
+      "to": "Networking",
+      "label": "跨栈: 网络",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Graphics:PBR",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Graphics:PBR",
+      "to": "Unity:合批与渲染优化",
+      "label": "PBR材质合批限制",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:光照模型",
+      "to": "Graphics:PBR",
+      "label": "Blinn-Phong到PBR",
+      "weight": 0.7
+    },
+    {
+      "from": "Graphics:光照模型",
+      "to": "Graphics:前向 / 延迟渲染",
+      "label": "多光源渲染策略",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:光照模型",
+      "to": "Graphics:阴影",
+      "label": "光照产生阴影",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:光线追踪",
+      "to": "Graphics:光照模型",
+      "label": "光线追踪光照计算",
+      "weight": 0.7
+    },
+    {
+      "from": "Graphics:光线追踪",
+      "to": "Graphics:渲染管线",
+      "label": "光线追踪管线对比",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:其他",
+      "to": "Graphics:渲染管线",
+      "label": "Mipmap在管线中的使用",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:其他",
+      "to": "Performance:CPU / GPU 瓶颈",
+      "label": "Mipmap带宽优化",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:几何与检测",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Graphics:几何与检测",
+      "to": "Unity:物理系统",
+      "label": "碰撞检测几何算法",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:几何与检测",
+      "to": "Unity:碰撞检测",
+      "label": "AABB/OBB检测实现",
+      "weight": 0.8
+    },
+    {
+      "from": "Graphics:变换与坐标",
+      "to": "Graphics:几何与检测",
+      "label": "MVP→空间判断",
+      "weight": 0.7
+    },
+    {
+      "from": "Graphics:变换与坐标",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Graphics:变换与坐标",
+      "to": "Unity:摄像机",
+      "label": "坐标转换与摄像机",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:抗锯齿",
+      "to": "Graphics:深度测试",
+      "label": "MSAA与深度缓冲",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:抗锯齿",
+      "to": "Graphics:渲染管线",
+      "label": "抗锯齿在管线中的位置",
+      "weight": 0.6
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:光线追踪",
+      "label": "混合渲染管线",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:前向 / 延迟渲染",
+      "label": "渲染路径选择",
+      "weight": 0.7
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:抗锯齿",
+      "label": "光栅化阶段抗锯齿",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:法线贴图",
+      "label": "法线贴图在管线中的应用",
+      "weight": 0.4
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:深度测试",
+      "label": "渲染阶段中的深度",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Graphics:透明混合",
+      "label": "渲染顺序与混合",
+      "weight": 0.5
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Graphics:渲染管线",
+      "to": "Unity:合批与渲染优化",
+      "label": "渲染管线在Unity的实现",
+      "weight": 0.8
+    },
+    {
+      "from": "Lua:元表与元方法",
+      "to": "C#:反射",
+      "label": "动态查找机制对比",
+      "weight": 0.5
+    },
+    {
+      "from": "Lua:元表与元方法",
+      "to": "C++:多态",
+      "label": "元表动态分派 vs 虚函数",
+      "weight": 0.6
+    },
+    {
+      "from": "Lua:闭包与 upvalue",
+      "to": "C++:Lambda 与函数对象",
+      "label": "跨语言闭包对比",
+      "weight": 0.6
+    },
+    {
+      "from": "Lua:闭包与 upvalue",
+      "to": "Unity:协程",
+      "label": "Lua协程与Unity协程",
+      "weight": 0.5
+    },
+    {
+      "from": "Networking:HTTP",
+      "to": "Networking:TCP / UDP",
+      "label": "HTTP基于TCP",
+      "weight": 0.7
+    },
+    {
+      "from": "Networking:Socket 编程",
+      "to": "C++:多线程与并发",
+      "label": "Socket多线程编程",
+      "weight": 0.6
+    },
+    {
+      "from": "Networking:Socket 编程",
+      "to": "Networking:TCP / UDP",
+      "label": "Socket实现传输层协议",
+      "weight": 0.8
+    },
+    {
+      "from": "Networking:TCP / UDP",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Networking:TCP / UDP",
+      "to": "GameDesign:防作弊",
+      "label": "服务器校验防篡改",
+      "weight": 0.4
+    },
+    {
+      "from": "Networking:TCP / UDP",
+      "to": "Networking:Socket 编程",
+      "label": "传输层Socket实现",
+      "weight": 0.7
+    },
+    {
+      "from": "Networking:TCP / UDP",
+      "to": "Networking:可靠传输",
+      "label": "可靠UDP实现",
+      "weight": 0.8
+    },
+    {
+      "from": "Networking:可靠传输",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Networking:可靠传输",
+      "to": "GameDesign:帧同步与状态同步",
+      "label": "传输可靠性保证",
+      "weight": 0.6
+    },
+    {
+      "from": "Networking:可靠传输",
+      "to": "GameDesign:攻击判定",
+      "label": "网络延迟下攻击判定",
+      "weight": 0.5
+    },
+    {
+      "from": "Performance:CPU / GPU 瓶颈",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:CPU / GPU 瓶颈",
+      "to": "Performance:DrawCall 优化",
+      "label": "瓶颈定位后优化",
+      "weight": 0.7
+    },
+    {
+      "from": "Performance:CPU / GPU 瓶颈",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:CPU / GPU 瓶颈",
+      "to": "Unity:JobSystem / Burst / ECS",
+      "label": "CPU优化利用多核",
+      "weight": 0.6
+    },
+    {
+      "from": "Performance:DrawCall 优化",
+      "to": "Graphics:光线追踪",
+      "label": "光线追踪DrawCall",
+      "weight": 0.3
+    },
+    {
+      "from": "Performance:DrawCall 优化",
+      "to": "Graphics:抗锯齿",
+      "label": "抗锯齿对DrawCall影响",
+      "weight": 0.4
+    },
+    {
+      "from": "Performance:DrawCall 优化",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:GC 优化",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:GC 优化",
+      "to": "C#:GC 与内存管理",
+      "label": "GC机制反向理解",
+      "weight": 0.5
+    },
+    {
+      "from": "Performance:GC 优化",
+      "to": "DesignPatterns",
+      "label": "跨栈: 设计模式",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:场景管理",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Performance:场景管理",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:JobSystem / Burst / ECS",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:JobSystem / Burst / ECS",
+      "to": "Performance:CPU / GPU 瓶颈",
+      "label": "利用多核优化CPU",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:JobSystem / Burst / ECS",
+      "to": "Unity:动画系统",
+      "label": "ECS动画系统",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:ScriptableObject",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:UGUI",
+      "to": "DesignPatterns",
+      "label": "跨栈: 设计模式",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:UGUI",
+      "to": "DesignPatterns:工厂模式",
+      "label": "UI元素工厂创建",
+      "weight": 0.4
+    },
+    {
+      "from": "Unity:UGUI",
+      "to": "Unity:UI 优化",
+      "label": "UI性能优化",
+      "weight": 0.8
+    },
+    {
+      "from": "Unity:动画系统",
+      "to": "GameDesign:FSM 与行为树",
+      "label": "动画状态机",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:动画系统",
+      "to": "Performance:CPU / GPU 瓶颈",
+      "label": "动画性能优化",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:协程",
+      "to": "C++",
+      "label": "跨栈: C++",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:协程",
+      "to": "C++:多线程与并发",
+      "label": "跨语言异步对比",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:协程",
+      "to": "Lua:闭包与 upvalue",
+      "label": "协程中的闭包",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:协程",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:协程",
+      "to": "Unity:JobSystem / Burst / ECS",
+      "label": "协程 vs JobSystem",
+      "weight": 0.6
+    },
+    {
+      "from": "Unity:合批与渲染优化",
+      "to": "DesignPatterns",
+      "label": "跨栈: 设计模式",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:合批与渲染优化",
+      "to": "Graphics",
+      "label": "跨栈: 图形学",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:合批与渲染优化",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:合批与渲染优化",
+      "to": "Performance:DrawCall 优化",
+      "label": "合批减少DrawCall",
+      "weight": 0.9
+    },
+    {
+      "from": "Unity:合批与渲染优化",
+      "to": "Unity:UI 优化",
+      "label": "UI合批条件",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:寻路与 NavMesh",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:寻路与 NavMesh",
+      "to": "Algorithms:A* 与寻路",
+      "label": "寻路算法原理回顾",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:寻路与 NavMesh",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:寻路与 NavMesh",
+      "to": "GameDesign:FSM 与行为树",
+      "label": "寻路驱动AI决策",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:寻路与 NavMesh",
+      "to": "GameDesign:大世界",
+      "label": "大世界寻路",
+      "weight": 0.6
+    },
+    {
+      "from": "Unity:摄像机",
+      "to": "Graphics",
+      "label": "跨栈: 图形学",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:物理系统",
+      "to": "Algorithms:空间划分",
+      "label": "物理引擎空间划分",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:物理系统",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:物理系统",
+      "to": "GameDesign:大世界",
+      "label": "大世界碰撞检测",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:物理系统",
+      "to": "Graphics",
+      "label": "跨栈: 图形学",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:物理系统",
+      "to": "Unity:碰撞检测",
+      "label": "物理引擎碰撞检测",
+      "weight": 0.8
+    },
+    {
+      "from": "Unity:生命周期",
+      "to": "Unity:ScriptableObject",
+      "label": "SO初始化时机",
+      "weight": 0.4
+    },
+    {
+      "from": "Unity:生命周期",
+      "to": "Unity:协程",
+      "label": "生命周期中的协程执行",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:碰撞检测",
+      "to": "Algorithms",
+      "label": "跨栈: 算法",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:碰撞检测",
+      "to": "Algorithms:空间划分",
+      "label": "空间划分加速碰撞检测",
+      "weight": 0.7
+    },
+    {
+      "from": "Unity:碰撞检测",
+      "to": "Graphics",
+      "label": "跨栈: 图形学",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:资源管理与 AB 包",
+      "to": "C#",
+      "label": "跨栈: C#",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:资源管理与 AB 包",
+      "to": "GameDesign",
+      "label": "跨栈: 游戏设计",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:资源管理与 AB 包",
+      "to": "GameDesign:场景与内存",
+      "label": "场景资源管理",
+      "weight": 0.5
+    },
+    {
+      "from": "Unity:资源管理与 AB 包",
+      "to": "Performance",
+      "label": "跨栈: 性能优化",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Unity:资源管理与 AB 包",
+      "to": "Performance:CPU / GPU 瓶颈",
+      "label": "资源加载导致卡顿",
+      "weight": 0.6
+    }
+  ]
+}
