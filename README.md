@@ -1,4 +1,4 @@
-# Unity 面试 Skill
+# 面试 Skill
 
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2)](#)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python)](#)
@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](#)
 
 **Unity 客户端面试系统。** 从题库随机抽题，覆盖技术深挖 → 项目深挖 → 手撕代码全流程，自动输出结构化面试总结。
+> 实际上可以将知识库,索引,图谱等内容重新转化为相对应的技术栈与学习方向,微调 skill 即可复用
 
 ---
 
