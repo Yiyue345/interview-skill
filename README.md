@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-4A90D9)](#)
 [![License](https://img.shields.io/badge/License-MIT-green)](#)
 
-**AI 驱动的 Unity 客户端面试系统。** Claude 充当面试官，从题库随机抽题，覆盖技术深挖 → 项目深挖 → 手撕代码全流程，自动输出结构化面试总结。
+**Unity 客户端面试系统。** 从题库随机抽题，覆盖技术深挖 → 项目深挖 → 手撕代码全流程，自动输出结构化面试总结。
 
 ---
 
@@ -50,12 +50,12 @@
 #    输入：开始面试
 ```
 
-> 就是这么简单。Claude 会自动加载面试 Skill，以面试官身份开始提问。
+> Claude 会自动加载面试 Skill，以面试官身份开始提问。
 
 ### 首次使用 Checklist
 
 - [ ] 运行 `Build-Knowledge.ps1` 生成索引
-- [ ] （可选）将候选人信息填入 `resumes/template.md`
+- [ ] 将面试信息填入 `resumes/template.md`
 - [ ] 在 Claude Code 中输入 `开始面试` 或 `模拟面试`
 
 ## 前置条件
@@ -236,7 +236,7 @@ interview/                          # 项目根目录
 ## FAQ
 
 **Q: 必须用 Claude Code 吗？**
-A: 是的，这套系统是 Claude Code 的 Skill，依赖 Claude 的 AI 能力运行。
+A: 是的，这套系统是 Claude Code 的 Skill，依赖 Claude 的 AI 能力运行。如果想用其他的 IDE,可以将 CLAUDE.md 中的内容复制到 agent.md,再将 .claude 文件夹转换为相对应的文件夹
 
 **Q: 可以和其他 AI 工具一起用吗？**
 A: 核心选题脚本（`pick.py`）和索引构建（`build_index.py`）是纯 Python 工具，可以在任何环境中运行。但面试流程本身需要 Claude Code 的 Skill 系统支持。
@@ -245,13 +245,11 @@ A: 核心选题脚本（`pick.py`）和索引构建（`build_index.py`）是纯 
 A: 按照 `fundamentals.md` 的格式添加题目，确保标签和难度标记正确，然后运行 `Build-Knowledge.ps1` 重建索引即可。
 
 **Q: 面试记录保存在哪里？**
-A: 自动保存到 `records/` 目录，文件名格式为 `YYYY-MM-DD_候选人.md`。
+A: 自动保存到 `records/` 目录，文件名格式为 `YYYY-MM-DD_面试者.md`。
 
 **Q: 如何重置状态（比如换一位面试者）？**
 A: 在 Claude Code 中开始新对话即可。所有面试状态（已问题号、计数器等）都是对话级的。
 
-**Q: 可以多人共用一套题库吗？**
-A: 可以。将 `interview/` 文件夹推送到 Git 仓库，团队成员各自 clone 即可共用题库和 Skill 配置。
 
 ## 贡献指南
 
