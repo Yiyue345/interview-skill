@@ -1,28 +1,34 @@
-"""随机选题脚本 — 从索引中按标签/子话题/难度筛选后随机抽取"""
-import json, random, sys, argparse
+"""按岗位、标签、难度和历史曝光权重抽取面试题。"""
+
+import argparse
+import json
+import os
+import random
+import sys
+import tempfile
+import time
 from pathlib import Path
+from typing import Any, Dict, List, Optional, Set
 
-BASE = Path(__file__).parent.parent / "data"
-INDEX_FILE = BASE / "index.json"
+from profiles import detect_profile_from_file, load_profiles
+from project_paths import (
+    DEFAULT_RESUME,
+    GRAPH_FILE,
+    INDEX_FILE,
+    PROFILE_CONFIG,
+    QUESTION_HISTORY_FILE,
+)
 
-# 相近领域映射（fallback 时使用）
-APPROXIMATE = {
-    "Unity": {"Performance"},
-    "Performance": {"Unity"},
-    "Graphics": {"Unity"},
-    "GameDesign": {"Unity"},
-}
 
 DIFFICULTY_ORDER = ["advanced", "intermediate", "basic"]
 
 
-def load_index(source: str) -> list[dict]:
-    data = json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+def load_index(source: str, index_file: Path = INDEX_FILE) -> List[Dict[str, Any]]:
+    data = json.loads(Path(index_file).read_text(encoding="utf-8"))
     return data.get(source, [])
 
 
-def parse_asked(raw: str) -> set[int]:
-    """解析 --asked 参数："1,2,5-10" → {1,2,5,6,7,8,9,10}"""
+def parse_asked(raw: str) -> Set[int]:
     asked = set()
     if not raw:
         return asked
@@ -31,9 +37,9 @@ def parse_asked(raw: str) -> set[int]:
         if not part:
             continue
         if "-" in part:
-            a, b = part.split("-", 1)
+            start, end = part.split("-", 1)
             try:
-                asked.update(range(int(a.strip()), int(b.strip()) + 1))
+                asked.update(range(int(start.strip()), int(end.strip()) + 1))
             except ValueError:
                 continue
         else:
@@ -45,123 +51,245 @@ def parse_asked(raw: str) -> set[int]:
 
 
 def filter_candidates(
-    questions: list[dict], tags: list[str], level: str,
-    asked: set[int], subtopic: str = "",
-) -> list[dict]:
-    """按标签、难度、已问、子话题过滤候选"""
+    questions: List[Dict[str, Any]],
+    profile_id: str,
+    tags: List[str],
+    level: str,
+    asked: Set[int],
+    subtopic: str = "",
+) -> List[Dict[str, Any]]:
     level_lower = level.lower() if level else ""
-    def match(q: dict) -> bool:
-        if q["id"] in asked:
-            return False
-        q_tags = q.get("tags", [])
-        q_tag_set = set(q_tags)
-        # 技术栈标签（只要匹配一个）
-        has_tag = any(t in q_tag_set for t in tags) if tags else True
-        # 难度（空字符串表示不限难度），大小写不敏感
-        has_level = True
-        if level_lower:
-            has_level = any(t.lower() == level_lower for t in q_tags)
-        # 子话题精确匹配
-        if subtopic and q.get("subtopic", "") != subtopic:
-            return False
-        return has_tag and has_level
-    return [q for q in questions if match(q)]
+    result = []
+    for question in questions:
+        if profile_id not in question.get("profiles", []):
+            continue
+        if question.get("id") in asked:
+            continue
+        question_tags = set(question.get("tags", []))
+        if tags and not any(tag in question_tags for tag in tags):
+            continue
+        if level_lower and not any(tag.lower() == level_lower for tag in question_tags):
+            continue
+        if subtopic and question.get("subtopic", "") != subtopic:
+            continue
+        result.append(question)
+    return result
 
 
-def pick(questions: list[dict], tags: list[str], level: str,
-         asked: set[int], subtopic: str = "",
-         fallback: bool = False) -> dict | None:
-    """核心选题逻辑，fallback=True 时自动降级"""
-    candidates = filter_candidates(questions, tags, level, asked, subtopic)
-    if candidates:
-        return random.choice(candidates)
+def load_history(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {"schema_version": 1, "profiles": {}}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if data.get("schema_version") != 1 or not isinstance(data.get("profiles"), dict):
+            raise ValueError("schema mismatch")
+        return data
+    except (OSError, UnicodeError, ValueError, json.JSONDecodeError) as exc:
+        print("Warning: 抽题历史无法读取，将忽略历史: {}".format(exc), file=sys.stderr)
+        return {"schema_version": 1, "profiles": {}}
 
-    if not fallback:
+
+def question_weight(entry: Optional[Dict[str, Any]], now: Optional[float] = None) -> float:
+    if not entry:
+        return 1.5
+    current_time = time.time() if now is None else now
+    count = max(int(entry.get("count", 0)), 0)
+    age = max(current_time - float(entry.get("last_asked", 0)), 0)
+    if age < 24 * 60 * 60:
+        recency = 0.1
+    elif age < 7 * 24 * 60 * 60:
+        recency = 0.35
+    elif age < 30 * 24 * 60 * 60:
+        recency = 0.7
+    else:
+        recency = 1.0
+    return (1.0 / (1 + count)) * recency
+
+
+def weighted_choice(
+    candidates: List[Dict[str, Any]],
+    profile_history: Dict[str, Any],
+    rng: random.Random,
+    now: Optional[float] = None,
+) -> Optional[Dict[str, Any]]:
+    if not candidates:
         return None
-
-    # Fallback 1: 降难度
-    if level:
-        current_idx = DIFFICULTY_ORDER.index(level) if level in DIFFICULTY_ORDER else -1
-        for lower_level in DIFFICULTY_ORDER[current_idx + 1:]:
-            candidates = filter_candidates(questions, tags, lower_level, asked, subtopic)
-            if candidates:
-                return random.choice(candidates)
-
-    # Fallback 2: 扩展到相近领域
-    expanded_tags = set(tags)
-    for t in tags:
-        expanded_tags.update(APPROXIMATE.get(t, set()))
-    if expanded_tags != set(tags):
-        candidates = filter_candidates(questions, list(expanded_tags), level, asked, subtopic)
-        if candidates:
-            return random.choice(candidates)
-
-        # Fallback 2.5: 相近领域 + 降难度
-        if level:
-            for lower_level in DIFFICULTY_ORDER[current_idx + 1:]:
-                candidates = filter_candidates(
-                    questions, list(expanded_tags), lower_level, asked, subtopic)
-                if candidates:
-                    return random.choice(candidates)
-
-    # Fallback 3: 完全去掉子话题限制（仅当指定了 --subtopic 时）
-    if subtopic:
-        candidates = filter_candidates(questions, tags, level, asked, subtopic="")
-        if candidates:
-            return random.choice(candidates)
-
-    # Fallback 4: 不限制技术栈
-    candidates = filter_candidates(questions, [], level, asked, subtopic)
-    if candidates:
-        return random.choice(candidates)
-
-    # Fallback 5: 不限技术栈 + 不限难度 + 不限子话题
-    return random.choice(questions) if questions else None
+    weights = [question_weight(profile_history.get(item["qid"]), now) for item in candidates]
+    return rng.choices(candidates, weights=weights, k=1)[0]
 
 
-def main():
-    sys.stdout.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="随机选题")
-    parser.add_argument("--source", choices=["八股", "手撕"], default="八股",
-                        help="题库：八股 | 手撕")
-    parser.add_argument("--tag", default="",
-                        help="技术栈标签，多个用逗号分隔，如 C++,Unity")
-    parser.add_argument("--level", default="", choices=["", "basic", "intermediate", "advanced", "Advanced"],
-                        help="难度：basic / intermediate / advanced，留空不限")
-    parser.add_argument("--subtopic", default="",
-                        help="子话题精确匹配，如 '多态'，留空不限")
-    parser.add_argument("--asked", default="",
-                        help="已问题号，如 '1,3,5-10'")
-    parser.add_argument("--fallback", action="store_true",
-                        help="候选为空时自动降级")
-    parser.add_argument("--graph-from", default="",
-                        help="查询节点的出边，如 C#:GC与内存管理")
+def save_history(path: Path, history: Dict[str, Any]) -> bool:
+    temporary_path = None
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", dir=str(path.parent), delete=False, suffix=".tmp"
+        ) as temporary:
+            temporary_path = Path(temporary.name)
+            json.dump(history, temporary, ensure_ascii=False, indent=2)
+        os.replace(str(temporary_path), str(path))
+        return True
+    except OSError as exc:
+        print("Warning: 抽题历史无法写入，本次结果仍然有效: {}".format(exc), file=sys.stderr)
+        if temporary_path and temporary_path.exists():
+            try:
+                temporary_path.unlink()
+            except OSError:
+                pass
+        return False
+
+
+def record_exposure(
+    history: Dict[str, Any], profile_id: str, question: Dict[str, Any], now: Optional[float] = None
+) -> None:
+    timestamp = time.time() if now is None else now
+    profile_history = history.setdefault("profiles", {}).setdefault(profile_id, {})
+    entry = profile_history.setdefault(question["qid"], {"count": 0, "last_asked": 0})
+    entry["count"] = int(entry.get("count", 0)) + 1
+    entry["last_asked"] = timestamp
+
+
+def _levels_below(level: str) -> List[str]:
+    if not level:
+        return []
+    normalized = level.lower()
+    try:
+        current = DIFFICULTY_ORDER.index(normalized)
+    except ValueError:
+        return []
+    return DIFFICULTY_ORDER[current + 1:]
+
+
+def pick_question(
+    questions: List[Dict[str, Any]],
+    profile_id: str,
+    profile: Dict[str, Any],
+    tags: List[str],
+    level: str,
+    asked: Set[int],
+    subtopic: str,
+    fallback: bool,
+    profile_history: Dict[str, Any],
+    rng: random.Random,
+) -> Optional[Dict[str, Any]]:
+    attempts = [(tags, level, subtopic)]
+    if fallback:
+        for lower_level in _levels_below(level):
+            attempts.append((tags, lower_level, subtopic))
+        expanded = set(tags)
+        related = profile.get("related_tags", {})
+        for tag in tags:
+            expanded.update(related.get(tag, []))
+        if expanded != set(tags):
+            attempts.append((sorted(expanded), level, subtopic))
+            for lower_level in _levels_below(level):
+                attempts.append((sorted(expanded), lower_level, subtopic))
+        if subtopic:
+            attempts.append((tags, level, ""))
+        attempts.append(([], level, ""))
+        attempts.append(([], "", ""))
+
+    seen_attempts = set()
+    for attempt_tags, attempt_level, attempt_subtopic in attempts:
+        key = (tuple(attempt_tags), attempt_level, attempt_subtopic)
+        if key in seen_attempts:
+            continue
+        seen_attempts.add(key)
+        candidates = filter_candidates(
+            questions, profile_id, attempt_tags, attempt_level, asked, attempt_subtopic
+        )
+        selected = weighted_choice(candidates, profile_history, rng)
+        if selected:
+            return selected
+    return None
+
+
+def resolve_profile(
+    explicit_profile: str, resume_path: Path, config: Dict[str, Any]
+) -> Dict[str, Any]:
+    if explicit_profile:
+        if explicit_profile not in config["profiles"]:
+            return {
+                "error": "unknown_profile",
+                "profile": explicit_profile,
+                "available_profiles": sorted(config["profiles"]),
+            }
+        return {"profile": explicit_profile}
+    return detect_profile_from_file(resume_path, config)
+
+
+def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    parser = argparse.ArgumentParser(description="多岗位加权抽题")
+    parser.add_argument("--source", choices=["八股", "手撕"], default="八股")
+    parser.add_argument("--profile", default="", help="岗位 ID，显式指定时覆盖简历识别")
+    parser.add_argument("--resume", default=str(DEFAULT_RESUME), help="用于识别岗位的简历路径")
+    parser.add_argument("--detect-profile", action="store_true", help="仅识别岗位，不抽题")
+    parser.add_argument("--tag", default="", help="技术标签，多个用逗号分隔")
+    parser.add_argument(
+        "--level", default="", choices=["", "basic", "intermediate", "advanced", "Advanced"]
+    )
+    parser.add_argument("--subtopic", default="")
+    parser.add_argument("--asked", default="")
+    parser.add_argument("--fallback", action="store_true")
+    parser.add_argument("--graph-from", default="")
+    parser.add_argument("--config", default=str(PROFILE_CONFIG))
+    parser.add_argument("--index", default=str(INDEX_FILE))
+    parser.add_argument("--history-file", default=str(QUESTION_HISTORY_FILE))
+    parser.add_argument("--no-history", action="store_true")
+    parser.add_argument("--seed", type=int)
     args = parser.parse_args()
 
-    # --graph-from: 查询节点的出边，返回后立即退出
     if args.graph_from:
-        graph_file = BASE / "knowledge-graph.json"
-        if graph_file.exists():
-            graph = json.loads(graph_file.read_text(encoding="utf-8"))
-            edges = [e for e in graph.get("edges", []) if e.get("from") == args.graph_from]
-            edges.sort(key=lambda e: e.get("weight", 0.5), reverse=True)
-        else:
-            edges = []
+        edges = []
+        if GRAPH_FILE.exists():
+            graph = json.loads(GRAPH_FILE.read_text(encoding="utf-8"))
+            edges = [edge for edge in graph.get("edges", []) if edge.get("from") == args.graph_from]
+            edges.sort(key=lambda edge: edge.get("weight", 0.5), reverse=True)
         print(json.dumps({"node": args.graph_from, "edges": edges}, ensure_ascii=False))
-        return
+        return 0
 
-    tags = [t.strip() for t in args.tag.split(",") if t.strip()]
-    asked = parse_asked(args.asked)
-    level = args.level.lower() if args.level else ""
-    questions = load_index(args.source)
+    config = load_profiles(Path(args.config))
+    resolution = resolve_profile(args.profile, Path(args.resume), config)
+    if args.detect_profile:
+        print(json.dumps(resolution, ensure_ascii=False))
+        return 2 if resolution.get("error") else 0
+    if "profile" not in resolution or resolution.get("error"):
+        print(json.dumps(resolution, ensure_ascii=False))
+        return 2
 
-    result = pick(questions, tags, level, asked,
-                  subtopic=args.subtopic, fallback=args.fallback)
-    if result:
-        print(json.dumps(result, ensure_ascii=False))
-    else:
-        print(json.dumps({"empty": True}, ensure_ascii=False))
+    profile_id = resolution["profile"]
+    profile = config["profiles"][profile_id]
+    history_path = Path(args.history_file)
+    history = {"schema_version": 1, "profiles": {}} if args.no_history else load_history(history_path)
+    profile_history = history.get("profiles", {}).get(profile_id, {})
+    rng = random.Random(args.seed)
+    tags = [tag.strip() for tag in args.tag.split(",") if tag.strip()]
+    question = pick_question(
+        load_index(args.source, Path(args.index)),
+        profile_id,
+        profile,
+        tags,
+        args.level.lower() if args.level else "",
+        parse_asked(args.asked),
+        args.subtopic,
+        args.fallback,
+        profile_history,
+        rng,
+    )
+    if not question:
+        print(json.dumps({"empty": True, "profile": profile_id}, ensure_ascii=False))
+        return 0
+
+    result = dict(question)
+    result["profile"] = profile_id
+    if not args.no_history:
+        record_exposure(history, profile_id, question)
+        save_history(history_path, history)
+    print(json.dumps(result, ensure_ascii=False))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -1,0 +1,32 @@
+# Interview runtime and private candidate data
+.interview-state/
+records/*.md
+!records/template.md
+resumes/*.md
+!resumes/template.md
+
+# Test runtime
+tests/runtime/*
+!tests/runtime/.gitkeep
+.test-tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

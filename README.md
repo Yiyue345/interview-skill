@@ -6,8 +6,9 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-4A90D9)](#)
 [![License](https://img.shields.io/badge/License-MIT-green)](#)
 
-**Unity 客户端面试系统。** 从题库随机抽题，覆盖技术深挖 → 项目深挖 → 手撕代码全流程，自动输出结构化面试总结。
-> 实际上可以将知识库,索引,图谱等内容重新转化为相对应的技术栈与学习方向,微调 skill 即可复用
+**可配置的通用软件技术面试系统。** 根据简历识别岗位，从对应题库加权抽题，覆盖技术深挖 → 项目深挖 → 编程/设计题全流程，并自动输出岗位化面试总结。
+
+内置 `unity-client`、`backend`、`frontend`、`client` 四个岗位预设，也可以只添加配置和 Markdown 题库扩展新岗位。
 
 ---
 
@@ -35,7 +36,8 @@
 
 ## 特点
 
-- **智能命题** — 从题库按标签、难度、子话题精确筛选，同题不重复
+- **岗位识别** — 从期望岗位、技术栈和简历全文识别方向，歧义时只询问一次
+- **加权命题** — 新题优先，近期高频题自动衰减，当前面试同题不重复
 - **自适应调整** — 根据候选人表现动态调整难度和领域覆盖
 - **标准化评估** — 概念题 / 原理题 / 设计题 / 编程题各有明确评分标准
 - **知识图谱联动** — 知识点间的跨栈关联辅助面试官自然过渡话题
@@ -55,6 +57,13 @@
 
 > Codex 会从 `.agents/skills/` 加载 Skill，Claude Code 会从 `.claude/skills/` 加载 Skill。
 
+系统默认读取 `resumes/template.md` 识别岗位。也可以直接指定：
+
+```powershell
+python src/pick.py --profile backend --source 八股 --tag Java --level basic --fallback
+python src/pick.py --resume resumes/template.md --detect-profile
+```
+
 ### 首次使用 Checklist
 
 - [ ] 运行 `Build-Knowledge.ps1` 生成索引
@@ -73,7 +82,7 @@
 
 ### 模拟面试
 
-在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。面试按以下阶段进行：
+在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。系统先识别岗位；无可靠结果时会请你从候选岗位中选择一次。面试按以下阶段进行：
 
 ```
 自我介绍 → 技术深挖 → 项目深挖 → 手撕代码 → 总结评估 → 反问 → 归档
@@ -83,10 +92,10 @@
 
 ```powershell
 # 技术深挖：按标签和难度抽题
-python src/pick.py --source 八股 --tag C++ --level basic --fallback
+python src/pick.py --profile unity-client --source 八股 --tag C++ --level basic --fallback
 
 # 手撕代码：随机出编程题
-python src/pick.py --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
+python src/pick.py --profile unity-client --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
 ```
 
 ### 答题指导
@@ -114,8 +123,8 @@ python src/pick.py --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
 ```
 
 索引构建过程：
-1. `build_index.py` — 从 markdown 解析题目，生成 `data/index.json`
-2. `build_graph.py` — 自动提取知识点关联，生成 `data/knowledge-graph.json`
+1. `build_index.py` — 从 `config/interview-profiles.json` 声明的 Markdown 题库生成统一索引
+2. `build_graph.py` — 从全部岗位题库自动提取知识点关联
 3. `validate_consistency.py` — 校验路径引用一致性
 
 #### 题目格式示例
@@ -135,18 +144,23 @@ python src/pick.py --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
 interview/                          # 项目根目录
 ├── AGENTS.md                       # Codex 项目级行为约束
 ├── Build-Knowledge.ps1             # 一键构建索引 + 知识图谱
+├── config/interview-profiles.json  # 岗位、题库、标签、识别词和评分维度
 ├── README.md                       # 本文件
 ├── weak-areas.md                   # 历史薄弱知识点汇总（自动更新）
 │
 ├── src/                            # Python 工具脚本
-│   ├── pick.py                     # 随机选题引擎
+│   ├── pick.py                     # 岗位过滤与加权抽题引擎
+│   ├── profiles.py                 # 简历岗位识别
+│   ├── project_paths.py            # 稳定项目路径
 │   ├── build_index.py              # 从 markdown 解析生成索引
 │   ├── build_graph.py              # 自动提取知识图谱关联
 │   └── validate_consistency.py     # 路径与引用一致性校验
 │
 ├── knowledge-base/                 # 题库（由你维护）
-│   ├── fundamentals.md             # 概念/原理/设计题
-│   └── coding-challenges.md        # 编程题
+│   ├── fundamentals.md             # Unity 客户端原有题库
+│   ├── backend-*.md                # 后端题库
+│   ├── frontend-*.md               # Web 前端题库
+│   └── client-*.md                 # 通用客户端题库
 │
 ├── data/                           # 自动生成的索引文件
 │   ├── index.json                  # 结构化题库索引
@@ -221,6 +235,10 @@ interview/                          # 项目根目录
 
 ## 自定义你的 Skill
 
+### 添加岗位预设
+
+在 `config/interview-profiles.json` 中新增 profile，声明简历关键词、题库文件、标签、覆盖顺序、相近领域和评分维度；题库使用现有 Markdown 格式。无需修改 Python 标签白名单。
+
 ### 修改面试官风格
 
 编辑对应平台的 `skills/interview/SKILL.md` 中「角色定义」和「核心约束」部分，可以调整面试官的语气、追问深度、严格程度等。共享规则应同步修改 `.agents/skills/` 与 `.claude/skills/`。
@@ -280,13 +298,13 @@ python src/validate_consistency.py
 
 ### P0 架构缺陷
 
-- [ ] **加权抽题替代纯随机**
-  `pick.py` 的 `random.choice()` 不考虑题目区分度和历史曝光。可以引入权重：新题权重高，近期出过的权重衰减。
+- [x] **加权抽题替代纯随机**
+  使用岗位级本地历史记录曝光次数和时间，新题优先，近期题目衰减。
   → `src/pick.py`
 
-- [ ] **路径解析硬编码**
-  `build_index.py` 和 `build_graph.py` 中 `for _ in range(6)` 爬目录找 root 的做法脆弱。
-  → `src/build_index.py` `src/build_graph.py`
+- [x] **路径解析硬编码**
+  所有脚本通过 `src/project_paths.py` 从固定文件位置确定项目根目录。
+  → `src/project_paths.py`
 
 ### P1 能力缺失
 

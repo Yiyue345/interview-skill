@@ -1,3283 +1,6133 @@
 {
   "八股": [
     {
-      "id": 1,
+      "qid": "4531c43a21366a60",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "基本类型",
-      "text": "int 和 long 的区别，long long 的大小"
+      "text": "int 和 long 的区别，long long 的大小",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 1
     },
     {
-      "id": 2,
+      "qid": "182857ef25cdd1e8",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "基本类型",
-      "text": "指针在不同位系统下的字节数（32 位 4 字节，64 位 8 字节，兼容模式仍为 4 字节）"
+      "text": "指针在不同位系统下的字节数（32 位 4 字节，64 位 8 字节，兼容模式仍为 4 字节）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 2
     },
     {
-      "id": 3,
+      "qid": "e64d8d0e59f11da5",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类与对象",
-      "text": "struct和class的区别 在开发中如何使用"
+      "text": "struct和class的区别 在开发中如何使用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 3
     },
     {
-      "id": 4,
+      "qid": "f5448b3853b4d541",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类与对象",
-      "text": "三种继承方式对成员访问权限的影响"
+      "text": "三种继承方式对成员访问权限的影响",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 4
     },
     {
-      "id": 5,
+      "qid": "6138d14d5f7c761f",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类与对象",
-      "text": "C++ 和 C 的区别"
+      "text": "C++ 和 C 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 5
     },
     {
-      "id": 6,
+      "qid": "0ccb4ee7b4be28d8",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类与对象",
-      "text": "空类占多大内存"
+      "text": "空类占多大内存",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 6
     },
     {
-      "id": 7,
+      "qid": "772760db6d256f6f",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类与对象",
-      "text": "如何调用父类的虚函数？"
+      "text": "如何调用父类的虚函数？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 7
     },
     {
-      "id": 8,
+      "qid": "3c686ef4bde5ec0b",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类与对象",
-      "text": "继承（内存长什么样，有/无虚函数时又长什么样）"
+      "text": "继承（内存长什么样，有/无虚函数时又长什么样）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 8
     },
     {
-      "id": 9,
+      "qid": "7b7136577ef148ac",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类与对象",
-      "text": "菱形继承（有什么问题、虚继承、内存长什么样）"
+      "text": "菱形继承（有什么问题、虚继承、内存长什么样）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 9
     },
     {
-      "id": 10,
+      "qid": "6b5aa33daa41a663",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类与对象",
-      "text": "菱形问题怎么解决"
+      "text": "菱形问题怎么解决",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 10
     },
     {
-      "id": 11,
+      "qid": "cdf5674486c9e990",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类与对象",
-      "text": "如果类中添加了静态成员变量、函数、虚函数，类的内存布局会怎样"
+      "text": "如果类中添加了静态成员变量、函数、虚函数，类的内存布局会怎样",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 11
     },
     {
-      "id": 12,
+      "qid": "e996f040dc43aff1",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多态",
-      "text": "函数重载 vs 函数重写"
+      "text": "函数重载 vs 函数重写",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 12
     },
     {
-      "id": 13,
+      "qid": "acc87a2396886bd5",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "虚函数的实现原理（虚表 / 多态）"
+      "text": "虚函数的实现原理（虚表 / 多态）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 13
     },
     {
-      "id": 14,
+      "qid": "bb94a29bdd99d16f",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "多态（静态/动态多态，虚函数，虚表，原理）"
+      "text": "多态（静态/动态多态，虚函数，虚表，原理）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 14
     },
     {
-      "id": 15,
+      "qid": "c9d5d56ce896dbf6",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "虚函数指针存储在哪里"
+      "text": "虚函数指针存储在哪里",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 15
     },
     {
-      "id": 16,
+      "qid": "3977e71856650cb2",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "虚函数表存储在哪里"
+      "text": "虚函数表存储在哪里",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 16
     },
     {
-      "id": 17,
+      "qid": "9711661c3231c281",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "虚函数表指针什么时候创建的"
+      "text": "虚函数表指针什么时候创建的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 17
     },
     {
-      "id": 18,
+      "qid": "0663152c6729e25e",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "虚函数表存储在内存中的哪个区域？"
+      "text": "虚函数表存储在内存中的哪个区域？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 18
     },
     {
-      "id": 19,
+      "qid": "863109654e6aaca5",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "多态里的虚函数底层是怎么实现的？"
+      "text": "多态里的虚函数底层是怎么实现的？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 19
     },
     {
-      "id": 20,
+      "qid": "3fdcbbcda1147b05",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "假如有十个同一个类的对象，虚函数表有几份"
+      "text": "假如有十个同一个类的对象，虚函数表有几份",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 20
     },
     {
-      "id": 21,
+      "qid": "85e4ffe574275077",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "构造函数能声明为虚函数吗？析构函数呢"
+      "text": "构造函数能声明为虚函数吗？析构函数呢",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 21
     },
     {
-      "id": 22,
+      "qid": "4412f459bc568954",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多态",
-      "text": "父类构造函数调用父类 virtual 时，调用的是哪个函数（父的还是子类重写的）"
+      "text": "父类构造函数调用父类 virtual 时，调用的是哪个函数（父的还是子类重写的）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 22
     },
     {
-      "id": 23,
+      "qid": "e2e718992592148c",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "C++ 内存分区有哪些？"
+      "text": "C++ 内存分区有哪些？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 23
     },
     {
-      "id": 24,
+      "qid": "2dfa5083fa7aec6c",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "栈和堆的区别（举例）"
+      "text": "栈和堆的区别（举例）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 24
     },
     {
-      "id": 25,
+      "qid": "60bb0661542852f5",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "使用堆/栈的注意事项：堆需手动释放（C++）或避免 GC（C#），栈避免递归太深或过大局部变量导致溢出"
+      "text": "使用堆/栈的注意事项：堆需手动释放（C++）或避免 GC（C#），栈避免递归太深或过大局部变量导致溢出",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 25
     },
     {
-      "id": 26,
+      "qid": "c5767f6859074c8a",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "堆和栈有什么区别？为什么要有栈？为什么要有堆？"
+      "text": "堆和栈有什么区别？为什么要有栈？为什么要有堆？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 26
     },
     {
-      "id": 27,
+      "qid": "59d4969c317b2207",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "堆和栈开辟内存"
+      "text": "堆和栈开辟内存",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 27
     },
     {
-      "id": 28,
+      "qid": "abc2e32f197db1d9",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "全局变量存在哪"
+      "text": "全局变量存在哪",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 28
     },
     {
-      "id": 29,
+      "qid": "8ccd3570c39d029a",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "const 修饰的全局常量存储在哪里（常量存储区 / data 段）"
+      "text": "const 修饰的全局常量存储在哪里（常量存储区 / data 段）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 29
     },
     {
-      "id": 30,
+      "qid": "f184afa73fdbed26",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "函数调用栈上存储了哪些内容（参数、局部变量、返回地址、调用约定信息）"
+      "text": "函数调用栈上存储了哪些内容（参数、局部变量、返回地址、调用约定信息）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 30
     },
     {
-      "id": 31,
+      "qid": "4b302f6767c6da10",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "函数参数的入栈顺序（从右至左）"
+      "text": "函数参数的入栈顺序（从右至左）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 31
     },
     {
-      "id": 32,
+      "qid": "c3ba5a25102f6b07",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "A a；和 A *p = new a；的区别（a 存在哪，p 存在哪，new a 存在哪）"
+      "text": "A a；和 A *p = new a；的区别（a 存在哪，p 存在哪，new a 存在哪）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 32
     },
     {
-      "id": 33,
+      "qid": "631b65eefe552a10",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "局部数组 / new 分配分别在哪？"
+      "text": "局部数组 / new 分配分别在哪？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 33
     },
     {
-      "id": 34,
+      "qid": "68862c943cf00ac7",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "new/malloc 区别"
+      "text": "new/malloc 区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 34
     },
     {
-      "id": 35,
+      "qid": "1bf82dc5dd7c6e7e",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "内存管理",
-      "text": "内存布局（堆、栈等）"
+      "text": "内存布局（堆、栈等）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 35
     },
     {
-      "id": 36,
+      "qid": "e849c796ed12e8dd",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "内存对齐原理 + 计算"
+      "text": "内存对齐原理 + 计算",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 36
     },
     {
-      "id": 37,
+      "qid": "4f6a58239a1ade36",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "内存对齐的规则"
+      "text": "内存对齐的规则",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 37
     },
     {
-      "id": 38,
+      "qid": "463fc9b5b8464bd4",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "类大小计算（内存对齐）"
+      "text": "类大小计算（内存对齐）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 38
     },
     {
-      "id": 39,
+      "qid": "2aa38b5e377a573f",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "栈什么情况会爆"
+      "text": "栈什么情况会爆",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 39
     },
     {
-      "id": 40,
+      "qid": "bd6ca77586aece27",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "内存碎片，怎么设计一个内存管理系统避免内存碎片"
+      "text": "内存碎片，怎么设计一个内存管理系统避免内存碎片",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 40
     },
     {
-      "id": 41,
+      "qid": "29fda1e5c4786013",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "delete 是怎么知道要 delete 多少字节"
+      "text": "delete 是怎么知道要 delete 多少字节",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 41
     },
     {
-      "id": 42,
+      "qid": "d1220285f9261be5",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "new int() 和 new int 的区别"
+      "text": "new int() 和 new int 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 42
     },
     {
-      "id": 43,
+      "qid": "21a72fb36d0a2563",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "placement new"
+      "text": "placement new",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 43
     },
     {
-      "id": 44,
+      "qid": "70e65f9f3f6bfc1e",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "如何检查内存泄漏"
+      "text": "如何检查内存泄漏",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 44
     },
     {
-      "id": 45,
+      "qid": "09bb023598e58b35",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "如何通过重载 new 和 delete 检测内存泄漏"
+      "text": "如何通过重载 new 和 delete 检测内存泄漏",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 45
     },
     {
-      "id": 46,
+      "qid": "36a58582ba76eaf9",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "C++ 的内存模型"
+      "text": "C++ 的内存模型",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 46
     },
     {
-      "id": 47,
+      "qid": "1bab90d186987117",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "内存管理",
-      "text": "类的成员变量存储位置：类定义本身在代码区，实例化对象的成员在堆/栈上取决于对象分配方式"
-    },
-    {
-      "id": 48,
-      "tags": [
-        "C++",
-        "basic"
+      "text": "类的成员变量存储位置：类定义本身在代码区，实例化对象的成员在堆/栈上取决于对象分配方式",
+      "profiles": [
+        "unity-client"
       ],
-      "subtopic": "STL 容器",
-      "text": "STL 有哪几个部分？"
+      "id": 47
     },
     {
-      "id": 49,
-      "tags": [
-        "C++",
-        "basic"
-      ],
-      "subtopic": "STL 容器",
-      "text": "介绍平时使用的容器"
-    },
-    {
-      "id": 50,
-      "tags": [
-        "C++",
-        "basic"
-      ],
-      "subtopic": "STL 容器",
-      "text": "STL 你常用哪些容器？"
-    },
-    {
-      "id": 51,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "vector 是如何动态扩容的？"
-    },
-    {
-      "id": 52,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "vector 扩容机制"
-    },
-    {
-      "id": 53,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "vector 和 list 的区别（局部性、性能、结构）"
-    },
-    {
-      "id": 54,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "vector 中去重（erase 会有什么问题、迭代器）"
-    },
-    {
-      "id": 55,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "如果自己实现一个 vector，你会怎么考虑"
-    },
-    {
-      "id": 56,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "map 的底层是什么，复杂度（红黑树）"
-    },
-    {
-      "id": 57,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "unordered_map / map（底层结构、哈希冲突怎么解决）"
-    },
-    {
-      "id": 58,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "STL 的排序算法用的是什么？"
-    },
-    {
-      "id": 59,
-      "tags": [
-        "C++",
-        "basic"
-      ],
-      "subtopic": "STL 容器",
-      "text": "vector 是被声明在栈上还是堆上"
-    },
-    {
-      "id": 60,
+      "qid": "f4e8121dfd459bde",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "STL 容器",
-      "text": "list&lt; T &gt; 底层结构"
-    },
-    {
-      "id": 61,
-      "tags": [
-        "C++",
-        "Advanced"
+      "text": "STL 有哪几个部分？",
+      "profiles": [
+        "unity-client"
       ],
-      "subtopic": "STL 容器",
-      "text": "遍历数组和链表哪个更快（局部性、cache 命中、cacheline）"
+      "id": 48
     },
     {
-      "id": 62,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "其他键值对存储结构：unordered_map，底层用哈希表"
-    },
-    {
-      "id": 63,
-      "tags": [
-        "C++",
-        "Advanced"
-      ],
-      "subtopic": "STL 容器",
-      "text": "哈希表底层，map 底层存储结构，为什么要用红黑树？"
-    },
-    {
-      "id": 64,
+      "qid": "511e856c05a98d41",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "STL 容器",
-      "text": "emplace_back 和 push_back 的区别（emplace_back 直接在容器内构造，避免临时对象拷贝）"
+      "text": "介绍平时使用的容器",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 49
     },
     {
-      "id": 65,
+      "qid": "b80cd95e4e36ca99",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "STL 你常用哪些容器？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 50
+    },
+    {
+      "qid": "743220e814326c1b",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "STL 容器",
-      "text": "map 迭代遍历结果是有序的（红黑树中序遍历）"
+      "text": "vector 是如何动态扩容的？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 51
     },
     {
-      "id": 66,
+      "qid": "d7aa21d28050deb3",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 扩容机制",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 52
+    },
+    {
+      "qid": "46e4fe3be8794b33",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 和 list 的区别（局部性、性能、结构）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 53
+    },
+    {
+      "qid": "1da31d13c287bae1",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 中去重（erase 会有什么问题、迭代器）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 54
+    },
+    {
+      "qid": "05331a97bb3766c3",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "如果自己实现一个 vector，你会怎么考虑",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 55
+    },
+    {
+      "qid": "87285facf7b64089",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "map 的底层是什么，复杂度（红黑树）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 56
+    },
+    {
+      "qid": "54b135313d08e484",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "unordered_map / map（底层结构、哈希冲突怎么解决）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 57
+    },
+    {
+      "qid": "065b9dced8fac2eb",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "STL 的排序算法用的是什么？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 58
+    },
+    {
+      "qid": "16b84157e37bc185",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "vector 是被声明在栈上还是堆上",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 59
+    },
+    {
+      "qid": "1902d6bb03cd9cce",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "list&lt; T &gt; 底层结构",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 60
+    },
+    {
+      "qid": "e45469a1721c7226",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "遍历数组和链表哪个更快（局部性、cache 命中、cacheline）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 61
+    },
+    {
+      "qid": "f33acf175b79d42f",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "其他键值对存储结构：unordered_map，底层用哈希表",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 62
+    },
+    {
+      "qid": "fbcbc3b773c987d3",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "哈希表底层，map 底层存储结构，为什么要用红黑树？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 63
+    },
+    {
+      "qid": "2d5bcb00adcb4d4c",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "STL 容器",
+      "text": "emplace_back 和 push_back 的区别（emplace_back 直接在容器内构造，避免临时对象拷贝）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 64
+    },
+    {
+      "qid": "6682533ce2a1696c",
+      "tags": [
+        "C++",
+        "Advanced"
+      ],
+      "subtopic": "STL 容器",
+      "text": "map 迭代遍历结果是有序的（红黑树中序遍历）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 65
+    },
+    {
+      "qid": "0f7d7ee8ec8e6d3c",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "模板",
-      "text": "模板有什么好处"
+      "text": "模板有什么好处",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 66
     },
     {
-      "id": 67,
+      "qid": "84e0e4725420df57",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "模板",
-      "text": "模板的特化与偏特化"
+      "text": "模板的特化与偏特化",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 67
     },
     {
-      "id": 68,
+      "qid": "6f0a00a613c16a6c",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "模板",
-      "text": "模板能不能声明定义分开写"
+      "text": "模板能不能声明定义分开写",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 68
     },
     {
-      "id": 69,
+      "qid": "e15c7fd6ac8a1743",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "模板",
-      "text": "模板什么时候知道 T 的具体类型"
+      "text": "模板什么时候知道 T 的具体类型",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 69
     },
     {
-      "id": 70,
+      "qid": "e070d6bb473fb53a",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "模板",
-      "text": "模板在编译后在代码中是什么样子"
+      "text": "模板在编译后在代码中是什么样子",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 70
     },
     {
-      "id": 71,
+      "qid": "22620a055ace9ee6",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "Lambda 与函数对象",
-      "text": "Lambda 表达式编译后的结果（编译为匿名类，捕获的变量转为成员变量）"
+      "text": "Lambda 表达式编译后的结果（编译为匿名类，捕获的变量转为成员变量）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 71
     },
     {
-      "id": 72,
+      "qid": "fbbb21529cb2b591",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "智能指针",
-      "text": "智能指针的原理及使用场景（shared_ptr、unique_ptr、weak_ptr）"
+      "text": "智能指针的原理及使用场景（shared_ptr、unique_ptr、weak_ptr）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 72
     },
     {
-      "id": 73,
+      "qid": "8ee36b79042b1557",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "智能指针",
-      "text": "auto_ptr 被弃用的原因：operator= 转移管理权限，函数传参导致意外释放"
+      "text": "auto_ptr 被弃用的原因：operator= 转移管理权限，函数传参导致意外释放",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 73
     },
     {
-      "id": 74,
+      "qid": "5b9377100c9495a8",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "智能指针",
-      "text": "智能指针的引用计数原理，循环引用怎么解决"
+      "text": "智能指针的引用计数原理，循环引用怎么解决",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 74
     },
     {
-      "id": 75,
+      "qid": "738cd928b4fe49e9",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "智能指针",
-      "text": "shared_ptr 的引用计数是线程安全的吗（控制块线程安全，指向的对象不保证）"
+      "text": "shared_ptr 的引用计数是线程安全的吗（控制块线程安全，指向的对象不保证）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 75
     },
     {
-      "id": 76,
+      "qid": "129ed9f59abb38f1",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "构造与析构",
-      "text": "构造函数、析构函数在继承下的调用顺序"
+      "text": "构造函数、析构函数在继承下的调用顺序",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 76
     },
     {
-      "id": 77,
+      "qid": "a57552a3187d4bcb",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "构造与析构",
-      "text": "构造函数能不能为 virtual"
+      "text": "构造函数能不能为 virtual",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 77
     },
     {
-      "id": 78,
+      "qid": "27e9f7a8ebd0a430",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "构造与析构",
-      "text": "析构函数为什么要是虚函数"
+      "text": "析构函数为什么要是虚函数",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 78
     },
     {
-      "id": 79,
+      "qid": "e89a969af713a645",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "构造与析构",
-      "text": "如果不通过 delete，离开作用域时自动销毁，会调用派生类的析构函数吗"
+      "text": "如果不通过 delete，离开作用域时自动销毁，会调用派生类的析构函数吗",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 79
     },
     {
-      "id": 80,
+      "qid": "993489933d73129c",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "构造与析构",
-      "text": "析构时先析构子还是父"
+      "text": "析构时先析构子还是父",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 80
     },
     {
-      "id": 81,
+      "qid": "4c7255a724dfe98a",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "指针和引用的区别"
+      "text": "指针和引用的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 81
     },
     {
-      "id": 82,
+      "qid": "0d2b1a07405fc744",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "const 常常用来处理哪些字段？"
+      "text": "const 常常用来处理哪些字段？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 82
     },
     {
-      "id": 83,
+      "qid": "7107e96817f36cd7",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "常量指针和指针常量"
+      "text": "常量指针和指针常量",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 83
     },
     {
-      "id": 84,
+      "qid": "103e7dc9ea8b6c6e",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "static / const 用法"
+      "text": "static / const 用法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 84
     },
     {
-      "id": 85,
+      "qid": "f67254a04304141c",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "const 常量能用 const_cast 修改值吗？在什么场景下可以"
+      "text": "const 常量能用 const_cast 修改值吗？在什么场景下可以",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 85
     },
     {
-      "id": 86,
+      "qid": "1c85df04d516aa6f",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "引用返回值的注意事项：不能返回局部变量的引用，参数需为引用类型才能返回其引用"
+      "text": "引用返回值的注意事项：不能返回局部变量的引用，参数需为引用类型才能返回其引用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 86
     },
     {
-      "id": 87,
+      "qid": "e1bdfba4dc4b429d",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "C++ 四种 cast"
+      "text": "C++ 四种 cast",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 87
     },
     {
-      "id": 88,
+      "qid": "4c811fdbd07451dd",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "static_cast 和 dynamic_cast 转换失败的区别（编译报错 / 指针返 null / 引用抛 bad_cast）"
+      "text": "static_cast 和 dynamic_cast 转换失败的区别（编译报错 / 指针返 null / 引用抛 bad_cast）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 88
     },
     {
-      "id": 89,
+      "qid": "4a785f3901239218",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "两个无关联的 class 如何互相转换（需提供构造函数或类型转换运算符）"
+      "text": "两个无关联的 class 如何互相转换（需提供构造函数或类型转换运算符）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 89
     },
     {
-      "id": 90,
+      "qid": "abb3a6e8d9db2c4c",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "类型与转换",
-      "text": "引用传参传的是什么"
+      "text": "引用传参传的是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 90
     },
     {
-      "id": 91,
+      "qid": "26633a9544832acb",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "i++ 和 ++i 哪个是左值哪个是右值"
+      "text": "i++ 和 ++i 哪个是左值哪个是右值",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 91
     },
     {
-      "id": 92,
+      "qid": "6b01cc2259c74b18",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "左值右值、移动语义"
+      "text": "左值右值、移动语义",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 92
     },
     {
-      "id": 93,
+      "qid": "3a9f6a8a7bf8d427",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "类型与转换",
-      "text": "移动构造后需要将原对象的指针置空"
+      "text": "移动构造后需要将原对象的指针置空",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 93
     },
     {
-      "id": 94,
+      "qid": "d68dd8fb8080c309",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "进程和线程的区别"
+      "text": "进程和线程的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 94
     },
     {
-      "id": 95,
+      "qid": "4a1b0d7235de9d59",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "进程间有哪些通讯方式"
+      "text": "进程间有哪些通讯方式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 95
     },
     {
-      "id": 96,
+      "qid": "74985dfb6a9b1229",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "线程间的通讯方式"
+      "text": "线程间的通讯方式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 96
     },
     {
-      "id": 97,
+      "qid": "198b30dd310384c4",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "原子操作与无锁队列：将取改写合并为一步，适用于高性能场景"
+      "text": "原子操作与无锁队列：将取改写合并为一步，适用于高性能场景",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 97
     },
     {
-      "id": 98,
+      "qid": "7fec58a9a035b9e3",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "多线程下避免频繁访问同一内存（缓存一致性导致缓存行失效，增加访问延迟）"
+      "text": "多线程下避免频繁访问同一内存（缓存一致性导致缓存行失效，增加访问延迟）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 98
     },
     {
-      "id": 99,
+      "qid": "ca64e396da8eceec",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "讲讲死锁"
+      "text": "讲讲死锁",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 99
     },
     {
-      "id": 100,
+      "qid": "829937c1d3ae5be3",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "讲讲虚拟内存"
+      "text": "讲讲虚拟内存",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 100
     },
     {
-      "id": 101,
+      "qid": "9af5a4accd94cff6",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "多线程与并发",
-      "text": "什么是系统调用"
+      "text": "什么是系统调用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 101
     },
     {
-      "id": 102,
+      "qid": "f63f09388db5210d",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "系统调用会发生栈切换吗（用户态→内核态上下文切换需要切换栈）"
+      "text": "系统调用会发生栈切换吗（用户态→内核态上下文切换需要切换栈）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 102
     },
     {
-      "id": 103,
+      "qid": "d75e1711e0c778e2",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "死锁，线程同步"
+      "text": "死锁，线程同步",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 103
     },
     {
-      "id": 104,
+      "qid": "a35751e7f137e7fb",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "进程崩溃和线程崩溃有什么区别"
+      "text": "进程崩溃和线程崩溃有什么区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 104
     },
     {
-      "id": 105,
+      "qid": "c0a2b4803f935520",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "进程访问的内存地址是实际的真实的内存地址吗"
+      "text": "进程访问的内存地址是实际的真实的内存地址吗",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 105
     },
     {
-      "id": 106,
+      "qid": "d76d0c76e5c1a904",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "多线程与并发",
-      "text": "有没有使用过多线程编程"
+      "text": "有没有使用过多线程编程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 106
     },
     {
-      "id": 107,
+      "qid": "083ba83a3b63f172",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "编译与底层",
-      "text": "编译语言与非编译语言的区别"
+      "text": "编译语言与非编译语言的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 107
     },
     {
-      "id": 108,
+      "qid": "5869203425a2b9fc",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "编译与底层",
-      "text": "C++ 编译过程"
+      "text": "C++ 编译过程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 108
     },
     {
-      "id": 109,
+      "qid": "fd003a69f5ccbd57",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "编译与底层",
-      "text": "静态链接库和动态链接库的区别"
+      "text": "静态链接库和动态链接库的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 109
     },
     {
-      "id": 110,
+      "qid": "8b9004c725cc8bea",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "编译与底层",
-      "text": "动态链接库能被多个进程共享吗（代码段共享，数据段独立）"
+      "text": "动态链接库能被多个进程共享吗（代码段共享，数据段独立）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 110
     },
     {
-      "id": 111,
+      "qid": "e3d57c1174e0008e",
       "tags": [
         "C++",
         "Advanced"
       ],
       "subtopic": "编译与底层",
-      "text": "动态链接库分配的内存属于哪个进程（属于调用进程的堆空间）"
+      "text": "动态链接库分配的内存属于哪个进程（属于调用进程的堆空间）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 111
     },
     {
-      "id": 112,
+      "qid": "c501e2b5b919f9b5",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "值类型和引用类型的区别"
+      "text": "值类型和引用类型的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 112
     },
     {
-      "id": 113,
+      "qid": "907b082854fca085",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "struct 和 class 的区别"
+      "text": "struct 和 class 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 113
     },
     {
-      "id": 114,
+      "qid": "5d0e6ff6b1240d4d",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "string 是值类型还是引用类型，如何避免 GC"
+      "text": "string 是值类型还是引用类型，如何避免 GC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 114
     },
     {
-      "id": 115,
+      "qid": "65bdeadc64ca48d9",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "C# 的堆和栈"
+      "text": "C# 的堆和栈",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 115
     },
     {
-      "id": 116,
+      "qid": "132efff2cb92c77e",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "static 和 const 的区别"
+      "text": "static 和 const 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 116
     },
     {
-      "id": 117,
+      "qid": "b40f056684cd08ad",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "装箱 / 拆箱"
+      "text": "装箱 / 拆箱",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 117
     },
     {
-      "id": 118,
+      "qid": "d1d01113e728baef",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "结构体是否可以继承 / 实现接口？"
+      "text": "结构体是否可以继承 / 实现接口？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 118
     },
     {
-      "id": 119,
+      "qid": "072462bfe5d9236c",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "把一个实现接口的结构体实例赋值给接口变量可以吗？如果可以会产生什么问题？"
+      "text": "把一个实现接口的结构体实例赋值给接口变量可以吗？如果可以会产生什么问题？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 119
     },
     {
-      "id": 120,
+      "qid": "13736e1533be3a5f",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "值类型与引用类型",
-      "text": "一个值类型可以存储在堆上吗"
+      "text": "一个值类型可以存储在堆上吗",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 120
     },
     {
-      "id": 121,
+      "qid": "92308bca40ddf917",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "委托与事件",
-      "text": "委托和事件的关系，如何用 Action 编写一个简单的事件订阅系统"
+      "text": "委托和事件的关系，如何用 Action 编写一个简单的事件订阅系统",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 121
     },
     {
-      "id": 122,
+      "qid": "1cb1f9cee3841663",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "委托与事件",
-      "text": "你对 C# 的委托理解"
+      "text": "你对 C# 的委托理解",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 122
     },
     {
-      "id": 123,
+      "qid": "9f1637694f6c3713",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "委托与事件",
-      "text": "委托和事件的区别是什么？在实际项目中如何选择使用"
+      "text": "委托和事件的区别是什么？在实际项目中如何选择使用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 123
     },
     {
-      "id": 124,
+      "qid": "f03cd513bba2a5b2",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "委托与事件",
-      "text": "委托怎么删除某个方法"
+      "text": "委托怎么删除某个方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 124
     },
     {
-      "id": 125,
+      "qid": "aaede7a75450477d",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "C# GC 的触发机制和常见优化手段"
+      "text": "C# GC 的触发机制和常见优化手段",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 125
     },
     {
-      "id": 126,
+      "qid": "ac48614260d01a13",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "内存泄漏有了解过吗？怎么会产生内存泄漏？"
+      "text": "内存泄漏有了解过吗？怎么会产生内存泄漏？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 126
     },
     {
-      "id": 127,
+      "qid": "084e3acbc76a0cfd",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "C# GC 的分代回收机制（0/1/2 三代，存活升级），大对象堆（LOH）单独管理、回收频率低"
+      "text": "C# GC 的分代回收机制（0/1/2 三代，存活升级），大对象堆（LOH）单独管理、回收频率低",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 127
     },
     {
-      "id": 128,
+      "qid": "bef41a96ca452437",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "假如有一个算法需要多次生成数组（每个 ~20 元素），如何避免频繁 GC"
+      "text": "假如有一个算法需要多次生成数组（每个 ~20 元素），如何避免频繁 GC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 128
     },
     {
-      "id": 129,
+      "qid": "9d60abdcde5ff3e6",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "GC 触发与实践中怎么避免？"
+      "text": "GC 触发与实践中怎么避免？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 129
     },
     {
-      "id": 130,
+      "qid": "7002a0fd895f3289",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "C# 的 GC 是什么，平时有什么编码习惯可以减少 GC"
+      "text": "C# 的 GC 是什么，平时有什么编码习惯可以减少 GC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 130
     },
     {
-      "id": 131,
+      "qid": "d3cf2db4a4b34e3c",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "C# 非托管内存"
+      "text": "C# 非托管内存",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 131
     },
     {
-      "id": 132,
+      "qid": "b567dce9330efcec",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "如果对象 A 和对象 B 相互依赖并且确定要被 GC 收集，会发生什么"
+      "text": "如果对象 A 和对象 B 相互依赖并且确定要被 GC 收集，会发生什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 132
     },
     {
-      "id": 133,
+      "qid": "da5a414420a42de1",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "GC 与内存管理",
-      "text": "GC 原理，Unity GC 和 C# GC 有什么不同，循环引用，可达性分析，举例说明哪些场景能被 GC 清除"
+      "text": "GC 原理，Unity GC 和 C# GC 有什么不同，循环引用，可达性分析，举例说明哪些场景能被 GC 清除",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 133
     },
     {
-      "id": 134,
+      "qid": "3924d7aadbfe05c8",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "泛型与集合",
-      "text": "说说数组和列表的区别"
+      "text": "说说数组和列表的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 134
     },
     {
-      "id": 135,
+      "qid": "a83a50277b044b17",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "泛型与集合",
-      "text": "C# 的 array 和 list 区别，LinkedList、Stack、Dictionary"
+      "text": "C# 的 array 和 list 区别，LinkedList、Stack、Dictionary",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 135
     },
     {
-      "id": 136,
+      "qid": "780c158087466463",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "泛型委托使用的方法"
+      "text": "泛型委托使用的方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 136
     },
     {
-      "id": 137,
+      "qid": "f7545768fa8e7a2d",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "C# 中 List 的底层实现，增删改的时间复杂度，不保证顺序时怎么优化删除"
+      "text": "C# 中 List 的底层实现，增删改的时间复杂度，不保证顺序时怎么优化删除",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 137
     },
     {
-      "id": 138,
+      "qid": "bb360567af586308",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "C# List 和 C++ vector 扩容区别：C# 不立即释放原数组（依赖 GC），C++ 立即 delete"
+      "text": "C# List 和 C++ vector 扩容区别：C# 不立即释放原数组（依赖 GC），C++ 立即 delete",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 138
     },
     {
-      "id": 139,
+      "qid": "76cb22d3e6652b67",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "C# Dictionary 对标 C++ unordered_map（哈希表 O(1)），C++ map 为红黑树 O(logn)"
+      "text": "C# Dictionary 对标 C++ unordered_map（哈希表 O(1)），C++ map 为红黑树 O(logn)",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 139
     },
     {
-      "id": 140,
+      "qid": "e4b357b0545cd9da",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "Unity 字典 Dictionary 的底层实现"
+      "text": "Unity 字典 Dictionary 的底层实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 140
     },
     {
-      "id": 141,
+      "qid": "e23b2a67b3290afc",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "泛型与集合",
-      "text": "StringBuilder 底层是怎么实现拼接的"
+      "text": "StringBuilder 底层是怎么实现拼接的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 141
     },
     {
-      "id": 142,
+      "qid": "aaa44a67062eec6a",
       "tags": [
         "C#",
         "basic"
       ],
       "subtopic": "接口与抽象类",
-      "text": "接口与抽象类的区别"
+      "text": "接口与抽象类的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 142
     },
     {
-      "id": 143,
+      "qid": "710a153b6c451cbf",
       "tags": [
         "C#",
         "Advanced"
       ],
       "subtopic": "反射",
-      "text": "C# 反射的原理，怎么在实际项目中使用"
+      "text": "C# 反射的原理，怎么在实际项目中使用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 143
     },
     {
-      "id": 144,
+      "qid": "576edfe221d801d6",
       "tags": [
         "Lua",
         "basic"
       ],
       "subtopic": "闭包与 upvalue",
-      "text": "Lua 闭包的概念（函数 + 环境引用）"
+      "text": "Lua 闭包的概念（函数 + 环境引用）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 144
     },
     {
-      "id": 145,
+      "qid": "445d6c95be336f85",
       "tags": [
         "Lua",
         "Advanced"
       ],
       "subtopic": "闭包与 upvalue",
-      "text": "Lua 闭包的实现机制（upvalue，open 状态引用栈变量、close 状态拷贝到自身结构体）"
+      "text": "Lua 闭包的实现机制（upvalue，open 状态引用栈变量、close 状态拷贝到自身结构体）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 145
     },
     {
-      "id": 146,
+      "qid": "9585e4e01c28b81a",
       "tags": [
         "Lua",
         "basic"
       ],
       "subtopic": "元表与元方法",
-      "text": "元表的作用和常见元方法（__index、__add、__tostring 等）"
+      "text": "元表的作用和常见元方法（__index、__add、__tostring 等）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 146
     },
     {
-      "id": 147,
+      "qid": "09a800fa33eda7fe",
       "tags": [
         "Lua",
         "Advanced"
       ],
       "subtopic": "元表与元方法",
-      "text": "Lua 如何用 table + 元表实现面向对象（__index 实现继承，重写元方法实现多态）"
+      "text": "Lua 如何用 table + 元表实现面向对象（__index 实现继承，重写元方法实现多态）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 147
     },
     {
-      "id": 148,
+      "qid": "d1350ca7bd669279",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "生命周期",
-      "text": "Unity 生命周期"
+      "text": "Unity 生命周期",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 148
     },
     {
-      "id": 149,
+      "qid": "857317b0c94bf9ae",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "生命周期",
-      "text": "Awake 和 Start 的区别"
+      "text": "Awake 和 Start 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 149
     },
     {
-      "id": 150,
+      "qid": "4212cd8e228a3de6",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "生命周期",
-      "text": "为什么 Awake 访问对象会是 null"
+      "text": "为什么 Awake 访问对象会是 null",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 150
     },
     {
-      "id": 151,
+      "qid": "01cc1190f25fc13e",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "生命周期",
-      "text": "如何解决初始化顺序问题"
+      "text": "如何解决初始化顺序问题",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 151
     },
     {
-      "id": 152,
+      "qid": "0181dd86dca53cc6",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "协程",
-      "text": "协程是什么？它和多线程有什么本质区别？"
+      "text": "协程是什么？它和多线程有什么本质区别？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 152
     },
     {
-      "id": 153,
+      "qid": "022da936baceef72",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "协程",
-      "text": "协程会在什么时候执行"
+      "text": "协程会在什么时候执行",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 153
     },
     {
-      "id": 154,
+      "qid": "f874c1ac0dad27da",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "协程",
-      "text": "return null 和 return 0 的区别是什么"
+      "text": "return null 和 return 0 的区别是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 154
     },
     {
-      "id": 155,
+      "qid": "4708a5e64c88370b",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "协程",
-      "text": "协程套协程的应用场景是什么"
+      "text": "协程套协程的应用场景是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 155
     },
     {
-      "id": 156,
+      "qid": "12c1510bf17b1240",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "协程",
-      "text": "Unity 的协程和线程、进程有啥区别？"
+      "text": "Unity 的协程和线程、进程有啥区别？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 156
     },
     {
-      "id": 157,
+      "qid": "1770a8ff3626fe77",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "协程",
-      "text": "100 个协程被挂起，现在有 10 个协程满足条件，应该先执行哪一个"
+      "text": "100 个协程被挂起，现在有 10 个协程满足条件，应该先执行哪一个",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 157
     },
     {
-      "id": 158,
+      "qid": "d0e6abc4a32d494a",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UGUI",
-      "text": "Image 和 RawImage 的区别"
+      "text": "Image 和 RawImage 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 158
     },
     {
-      "id": 159,
+      "qid": "072b98900c97f21b",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UGUI",
-      "text": "RectTransform 和 Transform 的区别"
+      "text": "RectTransform 和 Transform 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 159
     },
     {
-      "id": 160,
+      "qid": "c5c14e27f56ba52a",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UGUI",
-      "text": "你比较常用的 UGUI 组件是什么？"
+      "text": "你比较常用的 UGUI 组件是什么？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 160
     },
     {
-      "id": 161,
+      "qid": "24b1bbba3de76435",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UGUI",
-      "text": "手机不同型号分辨率不同，怎么保障 UI 一直维持在正确位置？图片呢？"
+      "text": "手机不同型号分辨率不同，怎么保障 UI 一直维持在正确位置？图片呢？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 161
     },
     {
-      "id": 162,
+      "qid": "37fc8cbd7746082d",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UGUI",
-      "text": "UGUI 锚点的作用（基于父对象的相对定位，影响位置计算和自适应）"
+      "text": "UGUI 锚点的作用（基于父对象的相对定位，影响位置计算和自适应）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 162
     },
     {
-      "id": 163,
+      "qid": "194aecde793ca514",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "UGUI 的理解（底层 / 怎么用）"
+      "text": "UGUI 的理解（底层 / 怎么用）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 163
     },
     {
-      "id": 164,
+      "qid": "9395ffa31d007bcd",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "UGUI 事件响应流程：点击屏幕 → 射线检测（Raycast） → 命中 UI 元素 → 触发 IPointerClickHandler 等回调"
+      "text": "UGUI 事件响应流程：点击屏幕 → 射线检测（Raycast） → 命中 UI 元素 → 触发 IPointerClickHandler 等回调",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 164
     },
     {
-      "id": 165,
+      "qid": "945beaa4424c58ae",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "Mask 和 RectMask2D 的区别"
+      "text": "Mask 和 RectMask2D 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 165
     },
     {
-      "id": 166,
+      "qid": "af824056d2707289",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "UGUI 中的 Mask 遮罩是怎么实现的"
+      "text": "UGUI 中的 Mask 遮罩是怎么实现的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 166
     },
     {
-      "id": 167,
+      "qid": "526df55ea1958d80",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "UGUI 重绘"
+      "text": "UGUI 重绘",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 167
     },
     {
-      "id": 168,
+      "qid": "b86ffc965f2e9733",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "Text 和 TextMeshPro 的区别是什么？TextMeshPro 是如何渲染一个汉字的？"
+      "text": "Text 和 TextMeshPro 的区别是什么？TextMeshPro 是如何渲染一个汉字的？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 168
     },
     {
-      "id": 169,
+      "qid": "0a567d3b4effae26",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UGUI",
-      "text": "动态循环列表是怎么实现的？为什么要用？有什么优点？"
+      "text": "动态循环列表是怎么实现的？为什么要用？有什么优点？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 169
     },
     {
-      "id": 170,
+      "qid": "17542f39816ad140",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UI 优化",
-      "text": "UI 为什么要分多个 Canvas"
+      "text": "UI 为什么要分多个 Canvas",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 170
     },
     {
-      "id": 171,
+      "qid": "4f6e8fa6a40105e3",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UI 优化",
-      "text": "一百个小兵一百个血条，只有一个小兵在动，为什么不把血条分在 100 个 Canvas 下实现完全动静分离"
+      "text": "一百个小兵一百个血条，只有一个小兵在动，为什么不把血条分在 100 个 Canvas 下实现完全动静分离",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 171
     },
     {
-      "id": 172,
+      "qid": "086ef4ad7206c077",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "UI 优化",
-      "text": "比如说有个 UI 会一直播放缩放效果，很多时候会把它单独拆成一个 Canvas，为什么"
+      "text": "比如说有个 UI 会一直播放缩放效果，很多时候会把它单独拆成一个 Canvas，为什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 172
     },
     {
-      "id": 173,
+      "qid": "dba19dc1c172da59",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UI 优化",
-      "text": "UGUI 优化的方法"
+      "text": "UGUI 优化的方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 173
     },
     {
-      "id": 174,
+      "qid": "bd7c94c3a79f601a",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UI 优化",
-      "text": "UI 合批条件：不能被打断、不能穿插、要一个图集"
+      "text": "UI 合批条件：不能被打断、不能穿插、要一个图集",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 174
     },
     {
-      "id": 175,
+      "qid": "d24180bd970d46e2",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UI 优化",
-      "text": "UI 元素重叠（图片+文字）会打断合批，增加 DrawCall"
+      "text": "UI 元素重叠（图片+文字）会打断合批，增加 DrawCall",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 175
     },
     {
-      "id": 176,
+      "qid": "3c13a959b8d13464",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UI 优化",
-      "text": "UI Rebuild 优化：减少 Canvas 网格重新构建，避免 CPU 频繁计算"
+      "text": "UI Rebuild 优化：减少 Canvas 网格重新构建，避免 CPU 频繁计算",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 176
     },
     {
-      "id": 177,
+      "qid": "8dc50c37bf0768ba",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "UI 优化",
-      "text": "一个复杂的 UI 场景里，两个静态 UI 之间有很多动态 UI 且有遮挡，按动静分离是不是要打很多子 Canvas"
+      "text": "一个复杂的 UI 场景里，两个静态 UI 之间有很多动态 UI 且有遮挡，按动静分离是不是要打很多子 Canvas",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 177
     },
     {
-      "id": 178,
+      "qid": "45484cc080de404c",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "物理系统",
-      "text": "Collider 和 Trigger 的区别"
+      "text": "Collider 和 Trigger 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 178
     },
     {
-      "id": 179,
+      "qid": "256bc90f03bcd026",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "物理系统",
-      "text": "如何使用 2D 射线检测到一个玩家"
+      "text": "如何使用 2D 射线检测到一个玩家",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 179
     },
     {
-      "id": 180,
+      "qid": "ee3454ecef9f943b",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "物理系统",
-      "text": "如何实现检测碰撞"
+      "text": "如何实现检测碰撞",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 180
     },
     {
-      "id": 181,
+      "qid": "ec4951134392b381",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "物理系统",
-      "text": "在 2D AI 物理移动时，为什么通常将逻辑写在 FixedUpdate 而不是 Update 中"
+      "text": "在 2D AI 物理移动时，为什么通常将逻辑写在 FixedUpdate 而不是 Update 中",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 181
     },
     {
-      "id": 182,
+      "qid": "386c8be90f92b324",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "物理系统",
-      "text": "FixedUpdate 是如何执行的？如果 FixedUpdate 的间隔特别短，如何保证严格根据物理时间执行"
+      "text": "FixedUpdate 是如何执行的？如果 FixedUpdate 的间隔特别短，如何保证严格根据物理时间执行",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 182
     },
     {
-      "id": 183,
+      "qid": "d16078e9f1441345",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "物理系统",
-      "text": "高速移动下的物体，如何避免穿模"
+      "text": "高速移动下的物体，如何避免穿模",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 183
     },
     {
-      "id": 184,
+      "qid": "853e6c02a9ee6e7e",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "物理系统",
-      "text": "Unity 物理系统的原理"
+      "text": "Unity 物理系统的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 184
     },
     {
-      "id": 185,
+      "qid": "1a3c053f14bb9b72",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "物理系统",
-      "text": "射线检测的原理，如何自己实现"
+      "text": "射线检测的原理，如何自己实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 185
     },
     {
-      "id": 186,
+      "qid": "ddb85aa8a12e9883",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "资源加载的方法"
+      "text": "资源加载的方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 186
     },
     {
-      "id": 187,
+      "qid": "72e36bd55d890ea9",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "同步加载和异步加载的区别"
+      "text": "同步加载和异步加载的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 187
     },
     {
-      "id": 188,
+      "qid": "88a9158f628bce1a",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "AB 包（打包注意什么、加载卸载要注意什么、引用计数）"
+      "text": "AB 包（打包注意什么、加载卸载要注意什么、引用计数）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 188
     },
     {
-      "id": 189,
+      "qid": "90c2812e0407e469",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "Unity 预制体记录资源引用的方式"
+      "text": "Unity 预制体记录资源引用的方式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 189
     },
     {
-      "id": 190,
+      "qid": "c91f1ae2c28eaa29",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "打包时如何获取到资源在哪个 AB 上面"
+      "text": "打包时如何获取到资源在哪个 AB 上面",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 190
     },
     {
-      "id": 191,
+      "qid": "efbcaa95376da609",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "读取 AB 时，如何知道资源属于哪个 AB"
+      "text": "读取 AB 时，如何知道资源属于哪个 AB",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 191
     },
     {
-      "id": 192,
+      "qid": "f6c23b11732f6f3e",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "AB 包的颗粒度是怎么拆分的"
+      "text": "AB 包的颗粒度是怎么拆分的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 192
     },
     {
-      "id": 193,
+      "qid": "8082accb69dac86e",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "同步加载和异步加载都会产生内存方面的问题，怎么优化？异步产生的内存用什么方式释放"
+      "text": "同步加载和异步加载都会产生内存方面的问题，怎么优化？异步产生的内存用什么方式释放",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 193
     },
     {
-      "id": 194,
+      "qid": "72e220a898aa0ffa",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "Unity 打包的流程和注意事项（AssetBundle 构建、资源冗余如何处理）"
+      "text": "Unity 打包的流程和注意事项（AssetBundle 构建、资源冗余如何处理）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 194
     },
     {
-      "id": 195,
+      "qid": "7ced757be9f4b816",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "Unity 什么操作会产生大量 GC"
+      "text": "Unity 什么操作会产生大量 GC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 195
     },
     {
-      "id": 196,
+      "qid": "f6b2543efb2ff330",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "资源管理与 AB 包",
-      "text": "类似 AssetBundle，什么操作会产生内存泄漏"
+      "text": "类似 AssetBundle，什么操作会产生内存泄漏",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 196
     },
     {
-      "id": 197,
+      "qid": "7e02143cf6980d9b",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "合批与渲染优化",
-      "text": "图集是怎么分类的？"
+      "text": "图集是怎么分类的？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 197
     },
     {
-      "id": 198,
+      "qid": "a5268a9f64573f4f",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "合批与渲染优化",
-      "text": "静态图集和动态图集的区别是什么"
+      "text": "静态图集和动态图集的区别是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 198
     },
     {
-      "id": 199,
+      "qid": "7c72823d7b51a40e",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "合批与渲染优化",
-      "text": "介绍一下 UI 合批"
+      "text": "介绍一下 UI 合批",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 199
     },
     {
-      "id": 200,
+      "qid": "11ffc36670f336bb",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "合批与渲染优化",
-      "text": "静态 / 动态合批及条件（动态小物体，不超过 300 顶点）"
+      "text": "静态 / 动态合批及条件（动态小物体，不超过 300 顶点）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 200
     },
     {
-      "id": 201,
+      "qid": "e100f0de071d8983",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "合批与渲染优化",
-      "text": "合批（静态 / 动态 / UI）"
+      "text": "合批（静态 / 动态 / UI）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 201
     },
     {
-      "id": 202,
+      "qid": "77865c735d3de1d9",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "动画系统",
-      "text": "Animator 和 Animation 的区别"
+      "text": "Animator 和 Animation 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 202
     },
     {
-      "id": 203,
+      "qid": "9e25d8bc241f0457",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "动画系统",
-      "text": "Unity 动画系统的原理"
+      "text": "Unity 动画系统的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 203
     },
     {
-      "id": 204,
+      "qid": "31a9f26f587622ca",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "动画系统",
-      "text": "Animation 和 Animator 的区别，在只有几个简单动画切换情况下哪种性能更好，为什么"
+      "text": "Animation 和 Animator 的区别，在只有几个简单动画切换情况下哪种性能更好，为什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 204
     },
     {
-      "id": 205,
+      "qid": "895eeda51ec1b63b",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "动画系统",
-      "text": "Unity 的 Animator 中的动画会全部加载到内存中吗？怎么优化"
+      "text": "Unity 的 Animator 中的动画会全部加载到内存中吗？怎么优化",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 205
     },
     {
-      "id": 206,
+      "qid": "e486181de5a937bb",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "动画系统",
-      "text": "Playable 相关"
+      "text": "Playable 相关",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 206
     },
     {
-      "id": 207,
+      "qid": "e9095d2ae2809492",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "寻路与 NavMesh",
-      "text": "NavMesh 是离线状态下烘焙好寻路网格的，遇到移动的障碍物如何让 NPC 不撞墙"
+      "text": "NavMesh 是离线状态下烘焙好寻路网格的，遇到移动的障碍物如何让 NPC 不撞墙",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 207
     },
     {
-      "id": 208,
+      "qid": "e9f441410a4df308",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "寻路与 NavMesh",
-      "text": "假设有两层楼，二楼有一个洞，如何让 NPC 从洞掉到一楼还能继续正常寻路"
+      "text": "假设有两层楼，二楼有一个洞，如何让 NPC 从洞掉到一楼还能继续正常寻路",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 208
     },
     {
-      "id": 209,
+      "qid": "8b00c256c03703db",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "寻路与 NavMesh",
-      "text": "Unity Navigation 寻路的原理"
+      "text": "Unity Navigation 寻路的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 209
     },
     {
-      "id": 210,
+      "qid": "9de16d27a8486e5c",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "ScriptableObject",
-      "text": "什么是 ScriptableObject？相比于在 Prefab 的 MonoBehaviour 面板上直接配置数值有什么优势"
+      "text": "什么是 ScriptableObject？相比于在 Prefab 的 MonoBehaviour 面板上直接配置数值有什么优势",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 210
     },
     {
-      "id": 211,
+      "qid": "15572241ccdbf369",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "ScriptableObject",
-      "text": "ScriptableObject 的优劣势，什么情况下用，什么情况下不用"
+      "text": "ScriptableObject 的优劣势，什么情况下用，什么情况下不用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 211
     },
     {
-      "id": 212,
+      "qid": "8ade6fb8fa90c0f4",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "碰撞检测",
-      "text": "AABB 包围盒和 OBB 包围盒的区别，在 Unity 中如何使用它们进行碰撞检测"
+      "text": "AABB 包围盒和 OBB 包围盒的区别，在 Unity 中如何使用它们进行碰撞检测",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 212
     },
     {
-      "id": 213,
+      "qid": "c0e4c49ad1b1b83b",
       "tags": [
         "Unity",
         "basic"
       ],
       "subtopic": "碰撞检测",
-      "text": "除了 AABB 和 OBB 还有什么碰撞检测方式？优缺点？适合什么情况"
+      "text": "除了 AABB 和 OBB 还有什么碰撞检测方式？优缺点？适合什么情况",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 213
     },
     {
-      "id": 214,
+      "qid": "a670ebb059fb29b6",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "碰撞检测",
-      "text": "在 Unity 中实现一个简单的碰撞检测系统，要求能检测球体、盒子、胶囊等碰撞体并处理响应"
+      "text": "在 Unity 中实现一个简单的碰撞检测系统，要求能检测球体、盒子、胶囊等碰撞体并处理响应",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 214
     },
     {
-      "id": 215,
+      "qid": "1f6b353abe020dbb",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
-      "text": "JobSystem"
+      "text": "JobSystem",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 215
     },
     {
-      "id": 216,
+      "qid": "cbe00d5a58c94db4",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
-      "text": "Burst"
+      "text": "Burst",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 216
     },
     {
-      "id": 217,
+      "qid": "a04e0812aee0210f",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
-      "text": "GPU Instancing，JobSystem，Burst，Drawcall 具体优化了多少？适合什么场景？依据什么判断的"
+      "text": "GPU Instancing，JobSystem，Burst，Drawcall 具体优化了多少？适合什么场景？依据什么判断的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 217
     },
     {
-      "id": 218,
+      "qid": "6ea10951a2ee2659",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
-      "text": "ECS 架构的原理，Component 在内存中的布局方式"
+      "text": "ECS 架构的原理，Component 在内存中的布局方式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 218
     },
     {
-      "id": 219,
+      "qid": "c4a0b0fa1f5e560b",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "摄像机",
-      "text": "在 3D 角色到墙角后，怎么调试可以让摄像机不被挤到外面或穿模"
+      "text": "在 3D 角色到墙角后，怎么调试可以让摄像机不被挤到外面或穿模",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 219
     },
     {
-      "id": 220,
+      "qid": "1828d52815af0132",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "摄像机",
-      "text": "摄像机避开障碍物的实现"
+      "text": "摄像机避开障碍物的实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 220
     },
     {
-      "id": 221,
+      "qid": "fd116bd51d4a324d",
       "tags": [
         "Unity",
         "Advanced"
       ],
       "subtopic": "技能与系统设计",
-      "text": "注：原「Unity 中的 Skill（技能系统）通常如何设计和实现」已归入 GameDesign"
+      "text": "注：原「Unity 中的 Skill（技能系统）通常如何设计和实现」已归入 GameDesign",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 221
     },
     {
-      "id": 222,
+      "qid": "58e6bdea2b686820",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "渲染管线的流程"
+      "text": "渲染管线的流程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 222
     },
     {
-      "id": 223,
+      "qid": "87e920d00b73f333",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "渲染管线，光栅化后输出的是什么"
+      "text": "渲染管线，光栅化后输出的是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 223
     },
     {
-      "id": 224,
+      "qid": "806ce13d60473771",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "图形渲染管线的各个阶段是什么？每个阶段的作用是什么"
+      "text": "图形渲染管线的各个阶段是什么？每个阶段的作用是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 224
     },
     {
-      "id": 225,
+      "qid": "e6389e4b5dd61383",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "什么是渲染管线？Unity 的 SRP 是什么？与传统渲染管线有什么区别"
+      "text": "什么是渲染管线？Unity 的 SRP 是什么？与传统渲染管线有什么区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 225
     },
     {
-      "id": 226,
+      "qid": "5c9bde938d7fee72",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "什么是双缓存"
+      "text": "什么是双缓存",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 226
     },
     {
-      "id": 227,
+      "qid": "e806709bb84b04ba",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "为什么有了 VAO 和 VBO 之后还有 IBO"
+      "text": "为什么有了 VAO 和 VBO 之后还有 IBO",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 227
     },
     {
-      "id": 228,
+      "qid": "962e21ce857f4a1f",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "渲染管线",
-      "text": "光栅化流程"
+      "text": "光栅化流程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 228
     },
     {
-      "id": 229,
+      "qid": "fe1be04116ec37fd",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "渲染管线",
-      "text": "CPU 和 GPU 间的通信"
+      "text": "CPU 和 GPU 间的通信",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 229
     },
     {
-      "id": 230,
+      "qid": "e69d4aa7a0b351a5",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "渲染管线",
-      "text": "渲染管线的各阶段在 Unity 中是如何实现的"
+      "text": "渲染管线的各阶段在 Unity 中是如何实现的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 230
     },
     {
-      "id": 231,
+      "qid": "b0a710a43bcba6fc",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "光照模型",
-      "text": "图形学中常见的光照模型"
+      "text": "图形学中常见的光照模型",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 231
     },
     {
-      "id": 232,
+      "qid": "8fbf626fe3a4035e",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "光照模型",
-      "text": "经典光照模型（漫反射-兰伯特/半兰伯特，高光反射-Phong/Blinn-Phong）与现代 PBR 的区别"
+      "text": "经典光照模型（漫反射-兰伯特/半兰伯特，高光反射-Phong/Blinn-Phong）与现代 PBR 的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 232
     },
     {
-      "id": 233,
+      "qid": "35f5c38f7c90de91",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "光照模型",
-      "text": "Blinn-Phong 光照模型"
+      "text": "Blinn-Phong 光照模型",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 233
     },
     {
-      "id": 234,
+      "qid": "48957a538817396d",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "光照模型",
-      "text": "Phong 光照模型和 Blinn-Phong 的区别是什么？为什么 Blinn-Phong 更快"
+      "text": "Phong 光照模型和 Blinn-Phong 的区别是什么？为什么 Blinn-Phong 更快",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 234
     },
     {
-      "id": 235,
+      "qid": "c1e176db8fdd987c",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "光照模型",
-      "text": "光照模型"
+      "text": "光照模型",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 235
     },
     {
-      "id": 236,
+      "qid": "9c64e6e98f06a89b",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "PBR",
-      "text": "辐射度量学的基本概念"
+      "text": "辐射度量学的基本概念",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 236
     },
     {
-      "id": 237,
+      "qid": "3f79147e9794b67d",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "PBR",
-      "text": "BRDF 的定义及作用"
+      "text": "BRDF 的定义及作用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 237
     },
     {
-      "id": 238,
+      "qid": "151415377691a839",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "PBR",
-      "text": "渲染方程"
+      "text": "渲染方程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 238
     },
     {
-      "id": 239,
+      "qid": "826a5a0be0e02a14",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "PBR",
-      "text": "反射方程"
+      "text": "反射方程",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 239
     },
     {
-      "id": 240,
+      "qid": "aabe95b2b1d93b06",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "PBR",
-      "text": "PBR 基础理念概括，PBR 的基本概念，BRDF"
+      "text": "PBR 基础理念概括，PBR 的基本概念，BRDF",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 240
     },
     {
-      "id": 241,
+      "qid": "afa597ebbd32427a",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "PBR",
-      "text": "PBR 的原理，金属度"
+      "text": "PBR 的原理，金属度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 241
     },
     {
-      "id": 242,
+      "qid": "d9dbe99fc170029d",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "PBR",
-      "text": "PBR 光照模型的核心原理"
+      "text": "PBR 光照模型的核心原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 242
     },
     {
-      "id": 243,
+      "qid": "357718a5e3bc04e7",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "阴影",
-      "text": "阴影（Light Map、Shadow Map 原理）"
+      "text": "阴影（Light Map、Shadow Map 原理）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 243
     },
     {
-      "id": 244,
+      "qid": "84ee413b6263e45e",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "抗锯齿",
-      "text": "锯齿产生的原因"
+      "text": "锯齿产生的原因",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 244
     },
     {
-      "id": 245,
+      "qid": "164165eeca110ff8",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "抗锯齿",
-      "text": "SSAA、MSAA、FXAA"
+      "text": "SSAA、MSAA、FXAA",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 245
     },
     {
-      "id": 246,
+      "qid": "122f4ab781e88f61",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "抗锯齿",
-      "text": "MSAA 的原理"
+      "text": "MSAA 的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 246
     },
     {
-      "id": 247,
+      "qid": "b796662544070c97",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "抗锯齿",
-      "text": "什么是抗锯齿？常见算法有哪些？优缺点是什么"
+      "text": "什么是抗锯齿？常见算法有哪些？优缺点是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 247
     },
     {
-      "id": 248,
+      "qid": "29aac2dd52310f5c",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "变换与坐标",
-      "text": "向量点乘、叉乘相关"
+      "text": "向量点乘、叉乘相关",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 248
     },
     {
-      "id": 249,
+      "qid": "65ad955d96d2ff8b",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "变换与坐标",
-      "text": "MVP 变换矩阵"
+      "text": "MVP 变换矩阵",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 249
     },
     {
-      "id": 250,
+      "qid": "124727ea4aaf6707",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "变换与坐标",
-      "text": "MVP 矩阵的作用及推导"
+      "text": "MVP 矩阵的作用及推导",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 250
     },
     {
-      "id": 251,
+      "qid": "9459b4336086af07",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "变换与坐标",
-      "text": "如何解决屏幕 2D 点击坐标转换成 3D 世界坐标的问题"
+      "text": "如何解决屏幕 2D 点击坐标转换成 3D 世界坐标的问题",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 251
     },
     {
-      "id": 252,
+      "qid": "014126f595b6efaf",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "变换与坐标",
-      "text": "欧拉角、四元数、旋转矩阵的区别和联系"
+      "text": "欧拉角、四元数、旋转矩阵的区别和联系",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 252
     },
     {
-      "id": 253,
+      "qid": "08b6a2e9556e9727",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "深度测试",
-      "text": "什么是深度测试？在渲染管线的哪个阶段进行"
+      "text": "什么是深度测试？在渲染管线的哪个阶段进行",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 253
     },
     {
-      "id": 254,
+      "qid": "10466eb9b88fed0f",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "深度测试",
-      "text": "深度测试是在什么阶段实现的"
+      "text": "深度测试是在什么阶段实现的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 254
     },
     {
-      "id": 255,
+      "qid": "f1d31248f5c0acb7",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "深度测试",
-      "text": "Early-Z 什么时候会失效"
+      "text": "Early-Z 什么时候会失效",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 255
     },
     {
-      "id": 256,
+      "qid": "ba0feaaa62defe90",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "透明混合",
-      "text": "透明混合"
+      "text": "透明混合",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 256
     },
     {
-      "id": 257,
+      "qid": "4211bfe82f38de7b",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "透明混合",
-      "text": "如果要实现半透明的话 Shader 代码怎么写"
+      "text": "如果要实现半透明的话 Shader 代码怎么写",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 257
     },
     {
-      "id": 258,
+      "qid": "d52e0aace14c8383",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "前向 / 延迟渲染",
-      "text": "前向渲染和延迟渲染的区别、各自优缺点、适用场景"
+      "text": "前向渲染和延迟渲染的区别、各自优缺点、适用场景",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 258
     },
     {
-      "id": 259,
+      "qid": "dde936ffb23f116a",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "前向 / 延迟渲染",
-      "text": "延迟渲染的原理、优缺点"
+      "text": "延迟渲染的原理、优缺点",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 259
     },
     {
-      "id": 260,
+      "qid": "e42c6dc85253c133",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "光线追踪",
-      "text": "光线追踪是什么？原理？与传统光栅化对比的优缺点？游戏中的应用场景"
+      "text": "光线追踪是什么？原理？与传统光栅化对比的优缺点？游戏中的应用场景",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 260
     },
     {
-      "id": 261,
+      "qid": "690eacc8cc0edb21",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "几何与检测",
-      "text": "AABB 包围盒和 OBB 包围盒的区别"
+      "text": "AABB 包围盒和 OBB 包围盒的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 261
     },
     {
-      "id": 262,
+      "qid": "df5b7614f1327693",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "几何与检测",
-      "text": "判断点在三角形内（叉积、重心坐标、面积法）"
+      "text": "判断点在三角形内（叉积、重心坐标、面积法）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 262
     },
     {
-      "id": 263,
+      "qid": "e5933d326e030444",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "几何与检测",
-      "text": "判断点是否在三角形内部"
+      "text": "判断点是否在三角形内部",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 263
     },
     {
-      "id": 264,
+      "qid": "e0d105b2ad317bcb",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "几何与检测",
-      "text": "射线检测的原理，如何自己实现"
+      "text": "射线检测的原理，如何自己实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 264
     },
     {
-      "id": 265,
+      "qid": "936b64c6b3181e94",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "法线贴图",
-      "text": "什么是法线贴图？它是如何工作的？为什么通常看起来是蓝色的"
+      "text": "什么是法线贴图？它是如何工作的？为什么通常看起来是蓝色的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 265
     },
     {
-      "id": 266,
+      "qid": "c790279a1ce0863b",
       "tags": [
         "Graphics",
         "Advanced"
       ],
       "subtopic": "法线贴图",
-      "text": "法线贴图（法线怎么存的、为什么多为蓝色）"
+      "text": "法线贴图（法线怎么存的、为什么多为蓝色）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 266
     },
     {
-      "id": 267,
+      "qid": "d69c619eae32f96e",
       "tags": [
         "Graphics",
         "basic"
       ],
       "subtopic": "其他",
-      "text": "什么是 Mipmap？如何工作？为什么能提高渲染性能和图像质量？Unity 中如何生成和使用"
+      "text": "什么是 Mipmap？如何工作？为什么能提高渲染性能和图像质量？Unity 中如何生成和使用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 267
     },
     {
-      "id": 268,
+      "qid": "1788ac98725479bc",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "常见排序算法 + 复杂度"
+      "text": "常见排序算法 + 复杂度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 268
     },
     {
-      "id": 269,
+      "qid": "62efc521e1b15365",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "你知道什么样的排序方式，最熟悉哪个"
+      "text": "你知道什么样的排序方式，最熟悉哪个",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 269
     },
     {
-      "id": 270,
+      "qid": "840f505ef1bb10b7",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "快速排序的原理"
+      "text": "快速排序的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 270
     },
     {
-      "id": 271,
+      "qid": "03912d35f582bd99",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "快速排序最坏、最优、平均时间复杂度"
+      "text": "快速排序最坏、最优、平均时间复杂度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 271
     },
     {
-      "id": 272,
+      "qid": "ff6b8a9960b2ec03",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "快速排序最差情况、空间复杂度"
+      "text": "快速排序最差情况、空间复杂度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 272
     },
     {
-      "id": 273,
+      "qid": "4daae5118d39b1d3",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "排序",
-      "text": "最差情况下都有 O(nlogn) 的排序算法"
+      "text": "最差情况下都有 O(nlogn) 的排序算法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 273
     },
     {
-      "id": 274,
+      "qid": "713f2045e7d665f6",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "哈希",
-      "text": "哈希冲突怎么解决？"
+      "text": "哈希冲突怎么解决？",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 274
     },
     {
-      "id": 275,
+      "qid": "3c9b84fc1668b460",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "哈希",
-      "text": "除了开放寻址和链地址还有吗（再哈希）"
+      "text": "除了开放寻址和链地址还有吗（再哈希）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 275
     },
     {
-      "id": 276,
+      "qid": "9a5bd656ec345df4",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "哈希",
-      "text": "哈希表最差情况复杂度，哈希冲突怎么解决"
+      "text": "哈希表最差情况复杂度，哈希冲突怎么解决",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 276
     },
     {
-      "id": 277,
+      "qid": "eac9f4e65ec0f225",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "A* 与寻路",
-      "text": "找最短路径用什么算法、数据结构（BFS、FIFO）"
+      "text": "找最短路径用什么算法、数据结构（BFS、FIFO）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 277
     },
     {
-      "id": 278,
+      "qid": "bf6566337454fc00",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "A* 与寻路",
-      "text": "A* 算法的原理"
+      "text": "A* 算法的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 278
     },
     {
-      "id": 279,
+      "qid": "e42f18916fceeaab",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "A* 与寻路",
-      "text": "A* 原理、优点"
+      "text": "A* 原理、优点",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 279
     },
     {
-      "id": 280,
+      "qid": "7b72a84e017f6f0b",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "A* 与寻路",
-      "text": "AStar（流程、是否最优）"
+      "text": "AStar（流程、是否最优）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 280
     },
     {
-      "id": 281,
+      "qid": "769bb7680038f78e",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "A* 与寻路",
-      "text": "A* 算法的优势"
+      "text": "A* 算法的优势",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 281
     },
     {
-      "id": 282,
+      "qid": "54a652e8b5828d8d",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "A* 与寻路",
-      "text": "A* 原理及与流场寻路对比"
+      "text": "A* 原理及与流场寻路对比",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 282
     },
     {
-      "id": 283,
+      "qid": "b5635ccd640a8032",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "链表",
-      "text": "链表与数组的区别"
+      "text": "链表与数组的区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 283
     },
     {
-      "id": 284,
+      "qid": "841b61bc117cc06d",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "链表",
-      "text": "判断链表是否有环、找到环入口（怎么证明）"
+      "text": "判断链表是否有环、找到环入口（怎么证明）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 284
     },
     {
-      "id": 285,
+      "qid": "591818f66f16b73c",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "链表",
-      "text": "不使用快慢指针呢？链表中每个节点值不同（存哈希表）"
+      "text": "不使用快慢指针呢？链表中每个节点值不同（存哈希表）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 285
     },
     {
-      "id": 286,
+      "qid": "6bb1777d95b44ea0",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "红黑树与平衡树",
-      "text": "平衡二叉树的概念、左右子树深度差值是多少"
+      "text": "平衡二叉树的概念、左右子树深度差值是多少",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 286
     },
     {
-      "id": 287,
+      "qid": "b530104f5ec1f78e",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "红黑树与平衡树",
-      "text": "AVL 树"
+      "text": "AVL 树",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 287
     },
     {
-      "id": 288,
+      "qid": "aaff3f4141695b54",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "红黑树与平衡树",
-      "text": "AVL 树如何保证平衡性质"
+      "text": "AVL 树如何保证平衡性质",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 288
     },
     {
-      "id": 289,
+      "qid": "c034d7c975657830",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "红黑树与平衡树",
-      "text": "手撕平衡二叉树的判断，要求自己构建树结构"
+      "text": "手撕平衡二叉树的判断，要求自己构建树结构",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 289
     },
     {
-      "id": 290,
+      "qid": "9c65e38ae39b4c16",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "红黑树与平衡树",
-      "text": "红黑树的原理"
+      "text": "红黑树的原理",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 290
     },
     {
-      "id": 291,
+      "qid": "5148224c7d1acd78",
       "tags": [
         "Algorithms",
         "basic"
       ],
       "subtopic": "Top-K",
-      "text": "Top-K 问题（找前 10 最小），复杂度"
+      "text": "Top-K 问题（找前 10 最小），复杂度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 291
     },
     {
-      "id": 292,
+      "qid": "ca3718bbcc36806d",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "Top-K",
-      "text": "有 1 万个玩家的排名数据（分数），想取前 100 名，有什么快速方法"
+      "text": "有 1 万个玩家的排名数据（分数），想取前 100 名，有什么快速方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 292
     },
     {
-      "id": 293,
+      "qid": "cfacfbd6cca3b46e",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "空间划分",
-      "text": "有一堆 2D 坐标，快速找有哪些落在半径为 r 的圆范围内"
+      "text": "有一堆 2D 坐标，快速找有哪些落在半径为 r 的圆范围内",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 293
     },
     {
-      "id": 294,
+      "qid": "973da645df54dc18",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "空间划分",
-      "text": "了解过空间划分吗"
+      "text": "了解过空间划分吗",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 294
     },
     {
-      "id": 295,
+      "qid": "51d724ae226bdf31",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "空间划分",
-      "text": "八叉树，AABB，SAT"
+      "text": "八叉树，AABB，SAT",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 295
     },
     {
-      "id": 296,
+      "qid": "a60db0dd16302416",
       "tags": [
         "Algorithms",
         "Advanced"
       ],
       "subtopic": "空间划分",
-      "text": "SAT（分离轴算法）三维实现：面检测 + 边检测，与 GJK 算法的联系（闵可夫斯基差空间）"
+      "text": "SAT（分离轴算法）三维实现：面检测 + 边检测，与 GJK 算法的联系（闵可夫斯基差空间）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 296
     },
     {
-      "id": 297,
+      "qid": "2954de181fe7752d",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "TCP / UDP",
-      "text": "TCP/UDP 区别是什么？在游戏中有哪些具体的应用场景？如何让 UDP 更可靠"
+      "text": "TCP/UDP 区别是什么？在游戏中有哪些具体的应用场景？如何让 UDP 更可靠",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 297
     },
     {
-      "id": 298,
+      "qid": "7584aa1692f23bfe",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "TCP / UDP",
-      "text": "TCP/UDP 区别"
+      "text": "TCP/UDP 区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 298
     },
     {
-      "id": 299,
+      "qid": "b98fbf84ea0278d2",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "TCP / UDP",
-      "text": "它们属于哪一层"
+      "text": "它们属于哪一层",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 299
     },
     {
-      "id": 300,
+      "qid": "5e06bfec8afa7aa1",
       "tags": [
         "Networking",
         "Advanced"
       ],
       "subtopic": "TCP / UDP",
-      "text": "如何实现一个轻量的可靠 UDP"
+      "text": "如何实现一个轻量的可靠 UDP",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 300
     },
     {
-      "id": 301,
+      "qid": "3bf996b6fb65a05e",
       "tags": [
         "Networking",
         "Advanced"
       ],
       "subtopic": "TCP / UDP",
-      "text": "UDP TCP 具体的应用，哪些模块适合用哪一种，具体游戏开发中如何保证可靠性"
+      "text": "UDP TCP 具体的应用，哪些模块适合用哪一种，具体游戏开发中如何保证可靠性",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 301
     },
     {
-      "id": 302,
+      "qid": "eb5386a2f8b0e803",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "可靠传输",
-      "text": "三次握手（TCP）"
+      "text": "三次握手（TCP）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 302
     },
     {
-      "id": 303,
+      "qid": "206c03afba69e0ea",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "可靠传输",
-      "text": "TCP 通过什么保证可靠连接"
+      "text": "TCP 通过什么保证可靠连接",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 303
     },
     {
-      "id": 304,
+      "qid": "6aaf0a23bb56cf4e",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "可靠传输",
-      "text": "讲讲 TCP 的四次挥手"
+      "text": "讲讲 TCP 的四次挥手",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 304
     },
     {
-      "id": 305,
+      "qid": "9f1f57dbd47624ea",
       "tags": [
         "Networking",
         "Advanced"
       ],
       "subtopic": "可靠传输",
-      "text": "TCP 的四次挥手能不能改成三次，为什么"
+      "text": "TCP 的四次挥手能不能改成三次，为什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 305
     },
     {
-      "id": 306,
+      "qid": "558c1c2523e8246c",
       "tags": [
         "Networking",
         "Advanced"
       ],
       "subtopic": "可靠传输",
-      "text": "既然 UDP 不可靠，有没有方式让它变得可靠一点"
+      "text": "既然 UDP 不可靠，有没有方式让它变得可靠一点",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 306
     },
     {
-      "id": 307,
+      "qid": "a17ac59d228da32d",
       "tags": [
         "Networking",
         "Advanced"
       ],
       "subtopic": "可靠传输",
-      "text": "超时重传失败后会怎样"
+      "text": "超时重传失败后会怎样",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 307
     },
     {
-      "id": 308,
+      "qid": "ff3045210d91ca9d",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "HTTP",
-      "text": "知道 HTTP 和 HTTPS 吗"
+      "text": "知道 HTTP 和 HTTPS 吗",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 308
     },
     {
-      "id": 309,
+      "qid": "c7f7609b15be7d70",
       "tags": [
         "Networking",
         "basic"
       ],
       "subtopic": "Socket 编程",
-      "text": "Socket 编程的基本流程（创建 socket、绑定端口、监听、接收连接、处理、关闭）"
+      "text": "Socket 编程的基本流程（创建 socket、绑定端口、监听、接收连接、处理、关闭）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 309
     },
     {
-      "id": 310,
+      "qid": "280819bb209edeb1",
       "tags": [
         "DesignPatterns",
         "basic"
       ],
       "subtopic": "观察者模式",
-      "text": "了解哪些设计模式"
+      "text": "了解哪些设计模式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 310
     },
     {
-      "id": 311,
+      "qid": "eff1e103d3e84b7d",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "观察者模式",
-      "text": "观察者模式什么时候使用、怎么使用、方法封装使用哪些 API"
+      "text": "观察者模式什么时候使用、怎么使用、方法封装使用哪些 API",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 311
     },
     {
-      "id": 312,
+      "qid": "c624a1d72e32b810",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "观察者模式",
-      "text": "观察者和单例，优缺点，在项目中的应用"
+      "text": "观察者和单例，优缺点，在项目中的应用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 312
     },
     {
-      "id": 313,
+      "qid": "f6e6884a4731773c",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "单例模式",
-      "text": "观察者和单例，优缺点，在项目中的应用"
+      "text": "观察者和单例，优缺点，在项目中的应用",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 313
     },
     {
-      "id": 314,
+      "qid": "7e3fcc6acb1f8c3c",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "单例模式",
-      "text": "单例模式有什么缺点"
+      "text": "单例模式有什么缺点",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 314
     },
     {
-      "id": 315,
+      "qid": "9d6370d7cb74e99a",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "享元模式",
-      "text": "享元模式怎么实现"
+      "text": "享元模式怎么实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 315
     },
     {
-      "id": 316,
+      "qid": "72ee3d07c68ad7ba",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "享元模式",
-      "text": "享元模式的其他数据存在哪里"
+      "text": "享元模式的其他数据存在哪里",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 316
     },
     {
-      "id": 317,
+      "qid": "5066c9d6e2ae16ad",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "对象池",
-      "text": "对象池要提供哪些接口"
+      "text": "对象池要提供哪些接口",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 317
     },
     {
-      "id": 318,
+      "qid": "a15eb8671f913ab5",
       "tags": [
         "DesignPatterns",
         "basic"
       ],
       "subtopic": "MVC / MVVM",
-      "text": "MVC"
+      "text": "MVC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 318
     },
     {
-      "id": 319,
+      "qid": "d905fc6c9bebf406",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "MVC / MVVM",
-      "text": "MVC 与 MVVM 区别"
+      "text": "MVC 与 MVVM 区别",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 319
     },
     {
-      "id": 320,
+      "qid": "6209e5666bc4aada",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "MVC / MVVM",
-      "text": "MVVM 怎么做到 UI 绑定的"
+      "text": "MVVM 怎么做到 UI 绑定的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 320
     },
     {
-      "id": 321,
+      "qid": "5e662b05b6afbb6b",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "工厂模式",
-      "text": "工厂模式的使用场景和实现方式"
+      "text": "工厂模式的使用场景和实现方式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 321
     },
     {
-      "id": 322,
+      "qid": "88a0dba92a67f0fb",
       "tags": [
         "DesignPatterns",
         "basic"
       ],
       "subtopic": "事件系统",
-      "text": "简单说一下你们的事件管理是怎么做的"
+      "text": "简单说一下你们的事件管理是怎么做的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 322
     },
     {
-      "id": 323,
+      "qid": "0a23413635cf5c3c",
       "tags": [
         "DesignPatterns",
         "Advanced"
       ],
       "subtopic": "事件系统",
-      "text": "数据驱动"
+      "text": "数据驱动",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 323
     },
     {
-      "id": 324,
+      "qid": "a27b2123dcd3dfb2",
       "tags": [
         "GameDesign",
         "basic"
       ],
       "subtopic": "FSM 与行为树",
-      "text": "介绍一下有限状态机"
+      "text": "介绍一下有限状态机",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 324
     },
     {
-      "id": 325,
+      "qid": "9f08e4efea1e893c",
       "tags": [
         "GameDesign",
         "basic"
       ],
       "subtopic": "FSM 与行为树",
-      "text": "有限状态机的好处：同一时间单一状态，节点跳转逻辑清晰，增删节点方便"
+      "text": "有限状态机的好处：同一时间单一状态，节点跳转逻辑清晰，增删节点方便",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 325
     },
     {
-      "id": 326,
+      "qid": "23db3e7bea1b312a",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "FSM 与行为树",
-      "text": "FSM 和行为树的差异，实现简单的巡逻保安 AI 会选择什么模式"
+      "text": "FSM 和行为树的差异，实现简单的巡逻保安 AI 会选择什么模式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 326
     },
     {
-      "id": 327,
+      "qid": "6e96cf4c48499b6c",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "FSM 与行为树",
-      "text": "多层级 FSM"
+      "text": "多层级 FSM",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 327
     },
     {
-      "id": 328,
+      "qid": "12d58848d7050a2c",
       "tags": [
         "GameDesign",
         "basic"
       ],
       "subtopic": "攻击判定",
-      "text": "获取攻击目标的方法是怎样的"
+      "text": "获取攻击目标的方法是怎样的",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 328
     },
     {
-      "id": 329,
+      "qid": "02df4020a32aa4e3",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "攻击判定",
-      "text": "两种近战攻击判定机制：碰撞器检测 vs 帧动画关键帧范围检测，优缺点"
+      "text": "两种近战攻击判定机制：碰撞器检测 vs 帧动画关键帧范围检测，优缺点",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 329
     },
     {
-      "id": 330,
+      "qid": "841fcdc0658b615a",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "攻击判定",
-      "text": "如果攻击判定依赖帧实现，网络波动导致攻击丢失怎么办"
+      "text": "如果攻击判定依赖帧实现，网络波动导致攻击丢失怎么办",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 330
     },
     {
-      "id": 331,
+      "qid": "5324cda276bad58e",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "攻击判定",
-      "text": "如果实现类似《空洞骑士》里面怪物遇到墙壁或走到平台边缘掉头，实现方法是什么"
+      "text": "如果实现类似《空洞骑士》里面怪物遇到墙壁或走到平台边缘掉头，实现方法是什么",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 331
     },
     {
-      "id": 332,
+      "qid": "bfe989a98261abdb",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "背包系统",
-      "text": "背包系统的实现"
+      "text": "背包系统的实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 332
     },
     {
-      "id": 333,
+      "qid": "7f940aecda8022b4",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "背包系统",
-      "text": "背包中使用了一个物品的逻辑"
+      "text": "背包中使用了一个物品的逻辑",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 333
     },
     {
-      "id": 334,
+      "qid": "c9a38c6af0dd8db3",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "Buff 系统",
-      "text": "Buff 系统怎么设计"
+      "text": "Buff 系统怎么设计",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 334
     },
     {
-      "id": 335,
+      "qid": "d36ca3991571510c",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "防作弊",
-      "text": "如果有人用外挂篡改客户端数据，怎么保证外挂无法得逞"
+      "text": "如果有人用外挂篡改客户端数据，怎么保证外挂无法得逞",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 335
     },
     {
-      "id": 336,
+      "qid": "846a825843d6d465",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "场景与内存",
-      "text": "一个跑酷游戏不断生成场景，怎么设置让内存不崩溃"
+      "text": "一个跑酷游戏不断生成场景，怎么设置让内存不崩溃",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 336
     },
     {
-      "id": 337,
+      "qid": "10c0421dec6ea1f8",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "技能系统",
-      "text": "技能系统通常如何设计和实现"
+      "text": "技能系统通常如何设计和实现",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 337
     },
     {
-      "id": 338,
+      "qid": "a8ffe88aedd03077",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "大世界",
-      "text": "大世界中应该怎么去做碰撞检测"
+      "text": "大世界中应该怎么去做碰撞检测",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 338
     },
     {
-      "id": 339,
+      "qid": "7adcf2b7be795564",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "帧同步与状态同步",
-      "text": "帧同步和状态同步"
+      "text": "帧同步和状态同步",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 339
     },
     {
-      "id": 340,
+      "qid": "e838eefb729aa29d",
       "tags": [
         "GameDesign",
         "Advanced"
       ],
       "subtopic": "帧同步与状态同步",
-      "text": "帧同步和状态同步向服务器端发送的内容"
+      "text": "帧同步和状态同步向服务器端发送的内容",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 340
     },
     {
-      "id": 341,
+      "qid": "5165a4ab04032e15",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "DrawCall 优化",
-      "text": "DrawCall 优化的方法"
+      "text": "DrawCall 优化的方法",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 341
     },
     {
-      "id": 342,
+      "qid": "f6863aa0530fb86d",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "DrawCall 优化",
-      "text": "一个游戏场景中有一百个人，要怎么渲染才能不卡顿"
+      "text": "一个游戏场景中有一百个人，要怎么渲染才能不卡顿",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 342
     },
     {
-      "id": 343,
+      "qid": "e2b33ed43212a4d3",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "DrawCall 优化",
-      "text": "战斗场景性能排查流程：Profiler 定位热点 → 针对性优化（渲染/物理/CPU）"
+      "text": "战斗场景性能排查流程：Profiler 定位热点 → 针对性优化（渲染/物理/CPU）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 343
     },
     {
-      "id": 344,
+      "qid": "48481c5e7b59bb5b",
       "tags": [
         "Performance",
         "basic"
       ],
       "subtopic": "CPU / GPU 瓶颈",
-      "text": "导致游戏卡顿的因素有哪些？如何定位和解决"
+      "text": "导致游戏卡顿的因素有哪些？如何定位和解决",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 344
     },
     {
-      "id": 345,
+      "qid": "e95f23b48eafa25d",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "CPU / GPU 瓶颈",
-      "text": "游戏开发中常见的 CPU 瓶颈原因"
+      "text": "游戏开发中常见的 CPU 瓶颈原因",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 345
     },
     {
-      "id": 346,
+      "qid": "9c8b3100a849ff6d",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "CPU / GPU 瓶颈",
-      "text": "我们要上线一个手游，在低端机上运行会发热，怎么解决"
+      "text": "我们要上线一个手游，在低端机上运行会发热，怎么解决",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 346
     },
     {
-      "id": 347,
+      "qid": "bc011df101bbe971",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "GC 优化",
-      "text": "Lua GC"
+      "text": "Lua GC",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 347
     },
     {
-      "id": 348,
+      "qid": "1e4a45cd36c4d831",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "场景管理",
-      "text": "碰撞检测优化：BVH / 空间划分（八叉树）"
+      "text": "碰撞检测优化：BVH / 空间划分（八叉树）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 348
     },
     {
-      "id": 349,
+      "qid": "6893b6a8ce5fe93f",
       "tags": [
         "Performance",
         "Advanced"
       ],
       "subtopic": "场景管理",
-      "text": "CPU 预裁剪：不提交视锥体外物体的 DrawCall"
+      "text": "CPU 预裁剪：不提交视锥体外物体的 DrawCall",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 349
+    },
+    {
+      "qid": "ee7940b38cf33c25",
+      "tags": [
+        "Java",
+        "basic"
+      ],
+      "subtopic": "语言与集合",
+      "text": "Java 中 equals 与 hashCode 为什么必须保持一致？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 350
+    },
+    {
+      "qid": "be92fa721f0d1b4f",
+      "tags": [
+        "Java",
+        "basic"
+      ],
+      "subtopic": "语言与集合",
+      "text": "ArrayList 与 LinkedList 的适用场景有什么区别？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 351
+    },
+    {
+      "qid": "884b90ffcd6eda11",
+      "tags": [
+        "Java",
+        "intermediate"
+      ],
+      "subtopic": "语言与集合",
+      "text": "HashMap 在发生哈希冲突时如何组织数据？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 352
+    },
+    {
+      "qid": "631792587211cb6a",
+      "tags": [
+        "Java",
+        "intermediate"
+      ],
+      "subtopic": "语言与集合",
+      "text": "checked exception 与 unchecked exception 应如何选择？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 353
+    },
+    {
+      "qid": "8a4fb3aeb68c92e1",
+      "tags": [
+        "Java",
+        "advanced"
+      ],
+      "subtopic": "语言与集合",
+      "text": "JVM 类加载过程和双亲委派模型解决了什么问题？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 354
+    },
+    {
+      "qid": "e3e3fcaa9e77d66e",
+      "tags": [
+        "Python",
+        "basic"
+      ],
+      "subtopic": "运行时与并发",
+      "text": "Python 的可变对象与不可变对象有什么区别？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 355
+    },
+    {
+      "qid": "18a4a03e582c71d1",
+      "tags": [
+        "Python",
+        "basic"
+      ],
+      "subtopic": "运行时与并发",
+      "text": "生成器相较于直接返回列表有什么优势？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 356
+    },
+    {
+      "qid": "811cf354a683b11f",
+      "tags": [
+        "Python",
+        "intermediate"
+      ],
+      "subtopic": "运行时与并发",
+      "text": "装饰器如何保留被包装函数的元数据？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 357
+    },
+    {
+      "qid": "748761d135b92c89",
+      "tags": [
+        "Python",
+        "intermediate"
+      ],
+      "subtopic": "运行时与并发",
+      "text": "GIL 对 CPU 密集和 IO 密集任务分别有什么影响？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 358
+    },
+    {
+      "qid": "0aad3fde9449c8b0",
+      "tags": [
+        "Python",
+        "advanced"
+      ],
+      "subtopic": "运行时与并发",
+      "text": "asyncio 事件循环如何调度协程？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 359
+    },
+    {
+      "qid": "3eaa0992b439d042",
+      "tags": [
+        "Database",
+        "basic"
+      ],
+      "subtopic": "事务与索引",
+      "text": "数据库事务的 ACID 分别表示什么？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 360
+    },
+    {
+      "qid": "6781cab7ea9077d1",
+      "tags": [
+        "Database",
+        "basic"
+      ],
+      "subtopic": "事务与索引",
+      "text": "B+ 树为什么适合作为数据库索引？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 361
+    },
+    {
+      "qid": "93411d9d13bd5fc2",
+      "tags": [
+        "Database",
+        "intermediate"
+      ],
+      "subtopic": "事务与索引",
+      "text": "联合索引的最左匹配原则是什么？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 362
+    },
+    {
+      "qid": "2ec2cd5e0dfdb14b",
+      "tags": [
+        "Database",
+        "intermediate"
+      ],
+      "subtopic": "事务与索引",
+      "text": "可重复读隔离级别如何处理幻读？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 363
+    },
+    {
+      "qid": "c547e29c08dc4ab5",
+      "tags": [
+        "Database",
+        "advanced"
+      ],
+      "subtopic": "事务与索引",
+      "text": "如何定位并优化一条慢 SQL？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 364
+    },
+    {
+      "qid": "9017b589ba172c07",
+      "tags": [
+        "Cache",
+        "basic"
+      ],
+      "subtopic": "缓存设计",
+      "text": "使用缓存时为什么要设置过期时间？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 365
+    },
+    {
+      "qid": "52e7280340960481",
+      "tags": [
+        "Cache",
+        "basic"
+      ],
+      "subtopic": "缓存设计",
+      "text": "缓存穿透、击穿和雪崩分别是什么？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 366
+    },
+    {
+      "qid": "1dccba40c1ea5545",
+      "tags": [
+        "Cache",
+        "intermediate"
+      ],
+      "subtopic": "缓存设计",
+      "text": "Cache Aside 模式如何保证数据库与缓存最终一致？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 367
+    },
+    {
+      "qid": "781229ba91b9acbf",
+      "tags": [
+        "Cache",
+        "intermediate"
+      ],
+      "subtopic": "缓存设计",
+      "text": "Redis 的常用数据结构分别适合什么场景？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 368
+    },
+    {
+      "qid": "b0eee3f5f01fbc50",
+      "tags": [
+        "Cache",
+        "advanced"
+      ],
+      "subtopic": "缓存设计",
+      "text": "热点 Key 和大 Key 应如何发现与治理？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 369
+    },
+    {
+      "qid": "a048018376b8ae51",
+      "tags": [
+        "DistributedSystems",
+        "basic"
+      ],
+      "subtopic": "一致性与可靠性",
+      "text": "水平扩展与垂直扩展有什么区别？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 370
+    },
+    {
+      "qid": "aadf4c68af2df91e",
+      "tags": [
+        "DistributedSystems",
+        "basic"
+      ],
+      "subtopic": "一致性与可靠性",
+      "text": "服务为什么需要限流、熔断和降级？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 371
+    },
+    {
+      "qid": "4d85bb9407431347",
+      "tags": [
+        "DistributedSystems",
+        "intermediate"
+      ],
+      "subtopic": "一致性与可靠性",
+      "text": "消息队列如何避免消息丢失和重复消费？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 372
+    },
+    {
+      "qid": "9b16d4321d5b266a",
+      "tags": [
+        "DistributedSystems",
+        "intermediate"
+      ],
+      "subtopic": "一致性与可靠性",
+      "text": "分布式锁需要满足哪些正确性条件？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 373
+    },
+    {
+      "qid": "e14515d8a07eddff",
+      "tags": [
+        "DistributedSystems",
+        "advanced"
+      ],
+      "subtopic": "一致性与可靠性",
+      "text": "如何在可用性与一致性之间做业务取舍？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 374
+    },
+    {
+      "qid": "343f4f1efa6f45db",
+      "tags": [
+        "BackendNetworking",
+        "basic"
+      ],
+      "subtopic": "API 与网络",
+      "text": "HTTP 的幂等性是什么，哪些方法通常应保持幂等？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 375
+    },
+    {
+      "qid": "778f9e24c0b78e56",
+      "tags": [
+        "BackendNetworking",
+        "basic"
+      ],
+      "subtopic": "API 与网络",
+      "text": "Cookie、Session 与 Token 的区别是什么？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 376
+    },
+    {
+      "qid": "06b51df3caff31f7",
+      "tags": [
+        "BackendNetworking",
+        "intermediate"
+      ],
+      "subtopic": "API 与网络",
+      "text": "REST API 如何设计分页、错误码和版本管理？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 377
+    },
+    {
+      "qid": "cd60abfe22ca68d0",
+      "tags": [
+        "BackendNetworking",
+        "intermediate"
+      ],
+      "subtopic": "API 与网络",
+      "text": "TCP 长连接需要如何处理心跳和断线重连？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 378
+    },
+    {
+      "qid": "11183fb2c7fca981",
+      "tags": [
+        "BackendNetworking",
+        "advanced"
+      ],
+      "subtopic": "API 与网络",
+      "text": "如何设计一个支持超时、重试和链路追踪的服务调用？",
+      "profiles": [
+        "backend"
+      ],
+      "id": 379
+    },
+    {
+      "qid": "e6634817b6fa734c",
+      "tags": [
+        "JavaScript",
+        "basic"
+      ],
+      "subtopic": "语言机制",
+      "text": "JavaScript 中原始类型和引用类型有什么区别？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 380
+    },
+    {
+      "qid": "d61e00b7958b647e",
+      "tags": [
+        "JavaScript",
+        "basic"
+      ],
+      "subtopic": "语言机制",
+      "text": "var、let 与 const 的作用域和提升行为有何不同？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 381
+    },
+    {
+      "qid": "e06cd44dd0359bcb",
+      "tags": [
+        "JavaScript",
+        "intermediate"
+      ],
+      "subtopic": "语言机制",
+      "text": "闭包是什么，使用不当会带来什么问题？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 382
+    },
+    {
+      "qid": "7191a8ff54d6b2a7",
+      "tags": [
+        "JavaScript",
+        "intermediate"
+      ],
+      "subtopic": "语言机制",
+      "text": "this 的绑定规则有哪些？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 383
+    },
+    {
+      "qid": "cd310533d4c5dda4",
+      "tags": [
+        "JavaScript",
+        "advanced"
+      ],
+      "subtopic": "语言机制",
+      "text": "Promise 链中的错误如何传播？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 384
+    },
+    {
+      "qid": "eb17b41c1d5838de",
+      "tags": [
+        "TypeScript",
+        "basic"
+      ],
+      "subtopic": "类型系统",
+      "text": "interface 与 type 的常见差异是什么？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 385
+    },
+    {
+      "qid": "3d981b7b61bef0cb",
+      "tags": [
+        "TypeScript",
+        "basic"
+      ],
+      "subtopic": "类型系统",
+      "text": "any、unknown 与 never 分别适合什么场景？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 386
+    },
+    {
+      "qid": "3e71cf93f5879878",
+      "tags": [
+        "TypeScript",
+        "intermediate"
+      ],
+      "subtopic": "类型系统",
+      "text": "泛型约束解决了什么问题？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 387
+    },
+    {
+      "qid": "3154691aad70cd3e",
+      "tags": [
+        "TypeScript",
+        "intermediate"
+      ],
+      "subtopic": "类型系统",
+      "text": "如何通过联合类型和类型守卫表达状态？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 388
+    },
+    {
+      "qid": "6467fcc59ab4827d",
+      "tags": [
+        "TypeScript",
+        "advanced"
+      ],
+      "subtopic": "类型系统",
+      "text": "条件类型和映射类型如何用于构建工具类型？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 389
+    },
+    {
+      "qid": "90758d9d5fad016e",
+      "tags": [
+        "Browser",
+        "basic"
+      ],
+      "subtopic": "浏览器原理",
+      "text": "从输入 URL 到页面显示经历了哪些主要步骤？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 390
+    },
+    {
+      "qid": "570aaf6be2f17ea9",
+      "tags": [
+        "Browser",
+        "basic"
+      ],
+      "subtopic": "浏览器原理",
+      "text": "浏览器同源策略限制了什么？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 391
+    },
+    {
+      "qid": "068153cc12714766",
+      "tags": [
+        "Browser",
+        "intermediate"
+      ],
+      "subtopic": "浏览器原理",
+      "text": "事件循环中宏任务与微任务如何执行？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 392
+    },
+    {
+      "qid": "6401406e0aa953dc",
+      "tags": [
+        "Browser",
+        "intermediate"
+      ],
+      "subtopic": "浏览器原理",
+      "text": "重排与重绘有什么区别，如何减少它们？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 393
+    },
+    {
+      "qid": "29a1a11b03ff36c5",
+      "tags": [
+        "Browser",
+        "advanced"
+      ],
+      "subtopic": "浏览器原理",
+      "text": "浏览器缓存协商过程如何工作？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 394
+    },
+    {
+      "qid": "c1df408649d410df",
+      "tags": [
+        "React",
+        "basic"
+      ],
+      "subtopic": "组件与状态",
+      "text": "props 与 state 的职责有什么区别？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 395
+    },
+    {
+      "qid": "b7cd8dbf41239f48",
+      "tags": [
+        "React",
+        "basic"
+      ],
+      "subtopic": "组件与状态",
+      "text": "列表渲染中的 key 为什么需要稳定？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 396
+    },
+    {
+      "qid": "60e9a6d054066a6b",
+      "tags": [
+        "React",
+        "intermediate"
+      ],
+      "subtopic": "组件与状态",
+      "text": "useEffect 的依赖项应如何确定？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 397
+    },
+    {
+      "qid": "a8f5bfcd7630f886",
+      "tags": [
+        "React",
+        "intermediate"
+      ],
+      "subtopic": "组件与状态",
+      "text": "受控组件与非受控组件如何选择？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 398
+    },
+    {
+      "qid": "60e42a5822900fb0",
+      "tags": [
+        "React",
+        "advanced"
+      ],
+      "subtopic": "组件与状态",
+      "text": "React 的协调过程如何决定复用或重建节点？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 399
+    },
+    {
+      "qid": "687c8efad7db45b2",
+      "tags": [
+        "FrontendEngineering",
+        "basic"
+      ],
+      "subtopic": "工程化与质量",
+      "text": "前端项目为什么需要构建工具？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 400
+    },
+    {
+      "qid": "d9513111d416640a",
+      "tags": [
+        "FrontendEngineering",
+        "basic"
+      ],
+      "subtopic": "工程化与质量",
+      "text": "单元测试、组件测试和端到端测试分别覆盖什么？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 401
+    },
+    {
+      "qid": "44db40f4b4090e71",
+      "tags": [
+        "FrontendEngineering",
+        "intermediate"
+      ],
+      "subtopic": "工程化与质量",
+      "text": "Tree Shaking 生效需要哪些条件？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 402
+    },
+    {
+      "qid": "eb087b8de350ae3a",
+      "tags": [
+        "FrontendEngineering",
+        "intermediate"
+      ],
+      "subtopic": "工程化与质量",
+      "text": "如何设计前端错误监控和 Source Map 管理？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 403
+    },
+    {
+      "qid": "4e1e52e80e36a1be",
+      "tags": [
+        "FrontendEngineering",
+        "advanced"
+      ],
+      "subtopic": "工程化与质量",
+      "text": "微前端方案需要处理哪些隔离和通信问题？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 404
+    },
+    {
+      "qid": "fecfc9dd15471594",
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "前端性能",
+      "text": "防抖和节流分别适合什么交互场景？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 405
+    },
+    {
+      "qid": "935977403bbbc2ac",
+      "tags": [
+        "Algorithms",
+        "basic"
+      ],
+      "subtopic": "前端性能",
+      "text": "如何对树形菜单数据进行深度优先遍历？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 406
+    },
+    {
+      "qid": "24ddbf76fd4ef482",
+      "tags": [
+        "Algorithms",
+        "intermediate"
+      ],
+      "subtopic": "前端性能",
+      "text": "虚拟列表如何只渲染可视区域？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 407
+    },
+    {
+      "qid": "e97172694469b1b3",
+      "tags": [
+        "Algorithms",
+        "intermediate"
+      ],
+      "subtopic": "前端性能",
+      "text": "如何检测对象图中的循环引用？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 408
+    },
+    {
+      "qid": "307dff021e105549",
+      "tags": [
+        "Algorithms",
+        "advanced"
+      ],
+      "subtopic": "前端性能",
+      "text": "如何设计前端请求调度器限制并发数？",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 409
+    },
+    {
+      "qid": "64d31c8b19fa2c67",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "资源与并发",
+      "text": "RAII 如何帮助管理客户端资源？",
+      "profiles": [
+        "client"
+      ],
+      "id": 410
+    },
+    {
+      "qid": "22728b4b3ac7d410",
+      "tags": [
+        "C++",
+        "basic"
+      ],
+      "subtopic": "资源与并发",
+      "text": "unique_ptr 与 shared_ptr 应如何选择？",
+      "profiles": [
+        "client"
+      ],
+      "id": 411
+    },
+    {
+      "qid": "f607a4431fff7e6f",
+      "tags": [
+        "C++",
+        "intermediate"
+      ],
+      "subtopic": "资源与并发",
+      "text": "UI 线程为什么不能执行耗时任务？",
+      "profiles": [
+        "client"
+      ],
+      "id": 412
+    },
+    {
+      "qid": "34549d1a6033477f",
+      "tags": [
+        "C++",
+        "intermediate"
+      ],
+      "subtopic": "资源与并发",
+      "text": "线程间传递对象时如何明确所有权？",
+      "profiles": [
+        "client"
+      ],
+      "id": 413
+    },
+    {
+      "qid": "8aa3d3b38a7bae0b",
+      "tags": [
+        "C++",
+        "advanced"
+      ],
+      "subtopic": "资源与并发",
+      "text": "如何排查客户端中的悬空指针和内存破坏？",
+      "profiles": [
+        "client"
+      ],
+      "id": 414
+    },
+    {
+      "qid": "ee6f5755f6e1551b",
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "值类型与引用类型在传参时有什么差异？",
+      "profiles": [
+        "client"
+      ],
+      "id": 415
+    },
+    {
+      "qid": "56db0071b646f791",
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "IDisposable 模式解决了什么问题？",
+      "profiles": [
+        "client"
+      ],
+      "id": 416
+    },
+    {
+      "qid": "02ce247031c6ac29",
+      "tags": [
+        "C#",
+        "intermediate"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "async 与 await 如何影响线程和执行上下文？",
+      "profiles": [
+        "client"
+      ],
+      "id": 417
+    },
+    {
+      "qid": "af55b44e17e278b5",
+      "tags": [
+        "C#",
+        "intermediate"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "委托、事件与观察者模式有什么联系？",
+      "profiles": [
+        "client"
+      ],
+      "id": 418
+    },
+    {
+      "qid": "9e9bf1771a3236d4",
+      "tags": [
+        "C#",
+        "advanced"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "如何减少高频交互中的 GC 压力？",
+      "profiles": [
+        "client"
+      ],
+      "id": 419
+    },
+    {
+      "qid": "37183d1f03f6743f",
+      "tags": [
+        "Android",
+        "basic"
+      ],
+      "subtopic": "生命周期与系统",
+      "text": "Activity 的主要生命周期回调有哪些？",
+      "profiles": [
+        "client"
+      ],
+      "id": 420
+    },
+    {
+      "qid": "b634fbda50f4fffd",
+      "tags": [
+        "Android",
+        "basic"
+      ],
+      "subtopic": "生命周期与系统",
+      "text": "dp、sp 与 px 分别适合什么场景？",
+      "profiles": [
+        "client"
+      ],
+      "id": 421
+    },
+    {
+      "qid": "fa90bcc47b7bfa91",
+      "tags": [
+        "Android",
+        "intermediate"
+      ],
+      "subtopic": "生命周期与系统",
+      "text": "配置变化时如何保存和恢复界面状态？",
+      "profiles": [
+        "client"
+      ],
+      "id": 422
+    },
+    {
+      "qid": "8a1b1bc31957f6a5",
+      "tags": [
+        "Android",
+        "intermediate"
+      ],
+      "subtopic": "生命周期与系统",
+      "text": "主线程 ANR 的常见原因和定位方式是什么？",
+      "profiles": [
+        "client"
+      ],
+      "id": 423
+    },
+    {
+      "qid": "8d8f90076693c756",
+      "tags": [
+        "Android",
+        "advanced"
+      ],
+      "subtopic": "生命周期与系统",
+      "text": "Android 进程被系统回收后应用应如何恢复？",
+      "profiles": [
+        "client"
+      ],
+      "id": 424
+    },
+    {
+      "qid": "065109d488da7841",
+      "tags": [
+        "Flutter",
+        "basic"
+      ],
+      "subtopic": "Widget 与状态",
+      "text": "StatelessWidget 与 StatefulWidget 如何选择？",
+      "profiles": [
+        "client"
+      ],
+      "id": 425
+    },
+    {
+      "qid": "6c5075460e5328e6",
+      "tags": [
+        "Flutter",
+        "basic"
+      ],
+      "subtopic": "Widget 与状态",
+      "text": "BuildContext 表示什么？",
+      "profiles": [
+        "client"
+      ],
+      "id": 426
+    },
+    {
+      "qid": "35ac33805b34a6d5",
+      "tags": [
+        "Flutter",
+        "intermediate"
+      ],
+      "subtopic": "Widget 与状态",
+      "text": "Widget、Element 与 RenderObject 的关系是什么？",
+      "profiles": [
+        "client"
+      ],
+      "id": 427
+    },
+    {
+      "qid": "425f31c89203acba",
+      "tags": [
+        "Flutter",
+        "intermediate"
+      ],
+      "subtopic": "Widget 与状态",
+      "text": "如何选择局部状态与全局状态管理方案？",
+      "profiles": [
+        "client"
+      ],
+      "id": 428
+    },
+    {
+      "qid": "70421c18a19bb37d",
+      "tags": [
+        "Flutter",
+        "advanced"
+      ],
+      "subtopic": "Widget 与状态",
+      "text": "Flutter 一帧的构建、布局和绘制流程是什么？",
+      "profiles": [
+        "client"
+      ],
+      "id": 429
+    },
+    {
+      "qid": "62625e78bf3a77e8",
+      "tags": [
+        "ClientArchitecture",
+        "basic"
+      ],
+      "subtopic": "架构与数据流",
+      "text": "MVC、MVP 与 MVVM 的职责划分有什么区别？",
+      "profiles": [
+        "client"
+      ],
+      "id": 430
+    },
+    {
+      "qid": "a20c0db9dab11b71",
+      "tags": [
+        "ClientArchitecture",
+        "basic"
+      ],
+      "subtopic": "架构与数据流",
+      "text": "客户端为什么需要明确的单向数据流？",
+      "profiles": [
+        "client"
+      ],
+      "id": 431
+    },
+    {
+      "qid": "28f8923567edffe0",
+      "tags": [
+        "ClientArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "架构与数据流",
+      "text": "离线缓存与服务端数据冲突时如何处理？",
+      "profiles": [
+        "client"
+      ],
+      "id": 432
+    },
+    {
+      "qid": "bde70e18c65570ff",
+      "tags": [
+        "ClientArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "架构与数据流",
+      "text": "如何设计可替换的网络层和持久化层？",
+      "profiles": [
+        "client"
+      ],
+      "id": 433
+    },
+    {
+      "qid": "a9fd783fbe089a5f",
+      "tags": [
+        "ClientArchitecture",
+        "advanced"
+      ],
+      "subtopic": "架构与数据流",
+      "text": "大型客户端如何进行模块化和依赖治理？",
+      "profiles": [
+        "client"
+      ],
+      "id": 434
+    },
+    {
+      "qid": "1d722305bc94c232",
+      "tags": [
+        "ClientPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "客户端冷启动时间由哪些部分组成？",
+      "profiles": [
+        "client"
+      ],
+      "id": 435
+    },
+    {
+      "qid": "30953c365923a375",
+      "tags": [
+        "ClientPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何避免图片加载导致内存峰值？",
+      "profiles": [
+        "client"
+      ],
+      "id": 436
+    },
+    {
+      "qid": "964e7eb2eb406520",
+      "tags": [
+        "ClientPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何定位卡顿发生在 CPU、GPU 还是 IO？",
+      "profiles": [
+        "client"
+      ],
+      "id": 437
+    },
+    {
+      "qid": "f3a1f78ee2ed164e",
+      "tags": [
+        "ClientPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "崩溃日志需要包含哪些诊断信息？",
+      "profiles": [
+        "client"
+      ],
+      "id": 438
+    },
+    {
+      "qid": "09f5d993ddb124f3",
+      "tags": [
+        "ClientPerformance",
+        "advanced"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何设计性能指标采集并控制采集开销？",
+      "profiles": [
+        "client"
+      ],
+      "id": 439
     }
   ],
   "手撕": [
     {
-      "id": 1,
+      "qid": "9af511090eaba132",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "手写快排"
+      "text": "手写快排",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 1
     },
     {
-      "id": 2,
+      "qid": "155e89d17f7b89fc",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "LeetCode35 搜索插入位置"
+      "text": "LeetCode35 搜索插入位置",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 2
     },
     {
-      "id": 3,
+      "qid": "5ce6142077f1be2c",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "LeetCode1302 层数最深叶子节点的和"
+      "text": "LeetCode1302 层数最深叶子节点的和",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 3
     },
     {
-      "id": 4,
+      "qid": "16235af53dc39297",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "链表找环入口（快慢指针、数学证明）"
+      "text": "链表找环入口（快慢指针、数学证明）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 4
     },
     {
-      "id": 5,
+      "qid": "2713476c66eea7b0",
       "tags": [
         "DesignPatterns"
       ],
       "subtopic": "",
-      "text": "手撕：单例模式"
+      "text": "手撕：单例模式",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 5
     },
     {
-      "id": 6,
+      "qid": "e2e5709a4f98a509",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "找到有环链表的入环口，然后反转从头到环口这一段（就是找环口+反转链表、数学证明）"
+      "text": "找到有环链表的入环口，然后反转从头到环口这一段（就是找环口+反转链表、数学证明）",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 6
     },
     {
-      "id": 7,
+      "qid": "65268335eae9d116",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "如果链表有奇数个结点, 反转中间结点的前面部分和后面部分, 如果有偶数个结点, 分别反转前半部分和后半部分"
+      "text": "如果链表有奇数个结点, 反转中间结点的前面部分和后面部分, 如果有偶数个结点, 分别反转前半部分和后半部分",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 7
     },
     {
-      "id": 8,
+      "qid": "17368601ff06a811",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "无重复最长字串"
+      "text": "无重复最长字串",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 8
     },
     {
-      "id": 9,
+      "qid": "00280e5e7df9a5e5",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "表达式计算 + - * /"
+      "text": "表达式计算 + - * /",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 9
     },
     {
-      "id": 10,
+      "qid": "9bb3fc66711abf35",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "写一下斐波那契数列前N项和"
+      "text": "写一下斐波那契数列前N项和",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 10
     },
     {
-      "id": 11,
+      "qid": "28e3f9cf8706ed7b",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "给出1~100一百个正整数作为卡牌，要求实现一百张牌的洗牌，每次传入的数组必须和输出的数组不一样。洗完牌后要求将该一百张牌分别发给四个人，要求第二个人的胜率达到26.8%，第二人幸运值为11，其余三人幸运值为10。有5分钟自由提问时间，提问结束后要求在25分钟之内完成这道题目。"
+      "text": "给出1~100一百个正整数作为卡牌，要求实现一百张牌的洗牌，每次传入的数组必须和输出的数组不一样。洗完牌后要求将该一百张牌分别发给四个人，要求第二个人的胜率达到26.8%，第二人幸运值为11，其余三人幸运值为10。有5分钟自由提问时间，提问结束后要求在25分钟之内完成这道题目。",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 11
     },
     {
-      "id": 12,
+      "qid": "cc0514e385d40812",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "O(1)空间实现链表升序排列"
+      "text": "O(1)空间实现链表升序排列",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 12
     },
     {
-      "id": 13,
+      "qid": "4faec84dead91415",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "39、组合总和"
+      "text": "39、组合总和",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 13
     },
     {
-      "id": 14,
+      "qid": "2b7de48e4d893c40",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "31、下一个排列。"
+      "text": "31、下一个排列。",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 14
     },
     {
-      "id": 15,
+      "qid": "2bbbafa36072f802",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "739. 每日温度"
+      "text": "739. 每日温度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 15
     },
     {
-      "id": 16,
+      "qid": "c5e0130acda37eda",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "排序双向链表"
+      "text": "排序双向链表",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 16
     },
     {
-      "id": 17,
+      "qid": "7f70bb63bba7d839",
       "tags": [
         "Algorithms"
       ],
       "subtopic": "",
-      "text": "二叉树的最大深度"
+      "text": "二叉树的最大深度",
+      "profiles": [
+        "unity-client"
+      ],
+      "id": 17
+    },
+    {
+      "qid": "6a24fb91527a9bbd",
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "实现一个支持过期时间的线程安全 LRU 缓存",
+      "profiles": [
+        "backend"
+      ],
+      "id": 18
+    },
+    {
+      "qid": "7b7a4b8334b35a4f",
+      "tags": [
+        "Database"
+      ],
+      "subtopic": "",
+      "text": "设计订单表、订单明细表及常用查询索引",
+      "profiles": [
+        "backend"
+      ],
+      "id": 19
+    },
+    {
+      "qid": "586b1bb463d6d821",
+      "tags": [
+        "DistributedSystems"
+      ],
+      "subtopic": "",
+      "text": "设计一个防止重复提交的幂等接口",
+      "profiles": [
+        "backend"
+      ],
+      "id": 20
+    },
+    {
+      "qid": "071c9c6a187c6ae6",
+      "tags": [
+        "Cache"
+      ],
+      "subtopic": "",
+      "text": "设计热点商品详情的多级缓存方案",
+      "profiles": [
+        "backend"
+      ],
+      "id": 21
+    },
+    {
+      "qid": "60a2b92bfefa4b93",
+      "tags": [
+        "BackendNetworking"
+      ],
+      "subtopic": "",
+      "text": "实现带指数退避和最大次数限制的重试器",
+      "profiles": [
+        "backend"
+      ],
+      "id": 22
+    },
+    {
+      "qid": "f07381292cc0cc11",
+      "tags": [
+        "DistributedSystems"
+      ],
+      "subtopic": "",
+      "text": "设计一个可水平扩展的短链接服务",
+      "profiles": [
+        "backend"
+      ],
+      "id": 23
+    },
+    {
+      "qid": "ccf962cbdc9c0fb4",
+      "tags": [
+        "JavaScript"
+      ],
+      "subtopic": "",
+      "text": "实现 Promise.all 的核心行为",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 24
+    },
+    {
+      "qid": "db09819cdfc3e345",
+      "tags": [
+        "JavaScript"
+      ],
+      "subtopic": "",
+      "text": "实现支持取消的防抖函数",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 25
+    },
+    {
+      "qid": "b9fb39e422ec349d",
+      "tags": [
+        "React"
+      ],
+      "subtopic": "",
+      "text": "设计一个可复用的异步数据加载 Hook",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 26
+    },
+    {
+      "qid": "8e3f21767ab1d389",
+      "tags": [
+        "Browser"
+      ],
+      "subtopic": "",
+      "text": "实现事件委托并说明边界情况",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 27
+    },
+    {
+      "qid": "e678db69ec2aa0ee",
+      "tags": [
+        "FrontendEngineering"
+      ],
+      "subtopic": "",
+      "text": "设计大型单页应用的错误监控方案",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 28
+    },
+    {
+      "qid": "2427013d9b2dfb51",
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "实现固定高度列表的虚拟滚动核心计算",
+      "profiles": [
+        "frontend"
+      ],
+      "id": 29
+    },
+    {
+      "qid": "48b341c2b1470703",
+      "tags": [
+        "Algorithms"
+      ],
+      "subtopic": "",
+      "text": "实现支持容量限制的图片内存缓存",
+      "profiles": [
+        "client"
+      ],
+      "id": 30
+    },
+    {
+      "qid": "d3ac2c1421c2dee0",
+      "tags": [
+        "ClientArchitecture"
+      ],
+      "subtopic": "",
+      "text": "设计可离线编辑并在联网后同步的数据层",
+      "profiles": [
+        "client"
+      ],
+      "id": 31
+    },
+    {
+      "qid": "755540ecb81bf845",
+      "tags": [
+        "C++"
+      ],
+      "subtopic": "",
+      "text": "实现一个只允许移动的资源句柄类型",
+      "profiles": [
+        "client"
+      ],
+      "id": 32
+    },
+    {
+      "qid": "ba450acee275adba",
+      "tags": [
+        "C#"
+      ],
+      "subtopic": "",
+      "text": "实现可取消且避免重复提交的异步命令",
+      "profiles": [
+        "client"
+      ],
+      "id": 33
+    },
+    {
+      "qid": "ecc13c6b6ca32258",
+      "tags": [
+        "Android"
+      ],
+      "subtopic": "",
+      "text": "设计配置变化后仍能保持状态的列表页面",
+      "profiles": [
+        "client"
+      ],
+      "id": 34
+    },
+    {
+      "qid": "d78cdeecb7adb46d",
+      "tags": [
+        "Flutter"
+      ],
+      "subtopic": "",
+      "text": "设计一个支持加载、成功、空数据和失败状态的页面组件",
+      "profiles": [
+        "client"
+      ],
+      "id": 35
     }
   ]
 }

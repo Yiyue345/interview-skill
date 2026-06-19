@@ -1,190 +1,156 @@
-"""一致性校验：检查 Codex、Claude Code Skill 与项目路径。"""
+"""校验岗位配置、题库索引和 Codex/Claude Skill 一致性。"""
 
+import json
 import re
 import sys
 from pathlib import Path
+from typing import Any, Dict, Iterable, Tuple
+
+from profiles import load_profiles
+from project_paths import INDEX_FILE, PROFILE_CONFIG, PROJECT_ROOT
 
 
-BASE = Path(__file__).resolve().parent.parent
-AGENTS_MD = BASE / "AGENTS.md"
-README_MD = BASE / "README.md"
 SKILL_ROOTS = {
-    "Codex": BASE / ".agents/skills",
-    "Claude Code": BASE / ".claude/skills",
+    "Codex": PROJECT_ROOT / ".agents/skills",
+    "Claude Code": PROJECT_ROOT / ".claude/skills",
 }
 SKILL_NAMES = ("build-knowledge", "interview", "interview-prep")
-
 ERRORS = []
 WARNINGS = []
 
 
-def err(msg: str):
-    ERRORS.append(msg)
-    print(f"  [ERROR] {msg}")
+def error(message: str) -> None:
+    ERRORS.append(message)
+    print("  [ERROR] {}".format(message))
 
 
-def warn(msg: str):
-    WARNINGS.append(msg)
-    print(f"  [WARN]  {msg}")
+def warning(message: str) -> None:
+    WARNINGS.append(message)
+    print("  [WARN]  {}".format(message))
 
 
-def ok(msg: str):
-    print(f"  [OK]    {msg}")
+def success(message: str) -> None:
+    print("  [OK]    {}".format(message))
 
 
-def check_file_exists(path: Path, label: str):
-    if path.is_file():
-        ok(f"{label} 存在")
-    else:
-        err(f"{label} 不存在: {path}")
-
-
-def iter_skill_files():
+def iter_skill_files() -> Iterable[Tuple[str, str, Path]]:
     for platform, root in SKILL_ROOTS.items():
         for skill_name in SKILL_NAMES:
             yield platform, skill_name, root / skill_name / "SKILL.md"
 
 
-def check_core_files():
-    check_file_exists(AGENTS_MD, "AGENTS.md")
-    check_file_exists(README_MD, "README.md")
-    for platform, skill_name, path in iter_skill_files():
-        check_file_exists(path, f"{platform} {skill_name}/SKILL.md")
-
-
-def check_directory_structure():
-    required_dirs = [
-        "src",
-        "knowledge-base",
-        "data",
-        "resumes",
-        "records",
-        ".agents/skills",
-        ".claude/skills",
+def check_core_files() -> None:
+    required = [
+        PROJECT_ROOT / "AGENTS.md",
+        PROJECT_ROOT / "README.md",
+        PROFILE_CONFIG,
+        INDEX_FILE,
+        PROJECT_ROOT / "src/project_paths.py",
+        PROJECT_ROOT / "src/profiles.py",
     ]
-    for relative_path in required_dirs:
-        path = BASE / relative_path
-        if path.is_dir():
-            ok(f"目录存在: {relative_path}/")
+    required.extend(path for _, _, path in iter_skill_files())
+    for path in required:
+        if path.is_file():
+            success("文件存在: {}".format(path.relative_to(PROJECT_ROOT)))
         else:
-            err(f"目录缺失: {relative_path}/")
+            error("文件不存在: {}".format(path))
 
 
-def check_skill_frontmatter():
-    pattern = re.compile(
+def check_profile_config(config: Dict[str, Any]) -> None:
+    required_keys = {
+        "display_name", "fundamentals", "coding_challenges", "tags",
+        "coverage_order", "related_tags", "evaluation_dimensions", "resume_keywords",
+    }
+    for profile_id, profile in config["profiles"].items():
+        missing = sorted(required_keys - set(profile))
+        if missing:
+            error("岗位 {} 缺少配置: {}".format(profile_id, ", ".join(missing)))
+            continue
+        source_files = profile["fundamentals"] + profile["coding_challenges"]
+        missing_files = [path for path in source_files if not (PROJECT_ROOT / path).is_file()]
+        if missing_files:
+            error("岗位 {} 题库不存在: {}".format(profile_id, ", ".join(missing_files)))
+        elif not profile["tags"] or not profile["coverage_order"] or not profile["evaluation_dimensions"]:
+            error("岗位 {} 的标签、覆盖顺序和评分维度不能为空".format(profile_id))
+        else:
+            success("岗位配置有效: {}".format(profile_id))
+
+
+def check_index(config: Dict[str, Any]) -> None:
+    try:
+        index = json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        error("索引无法读取: {}".format(exc))
+        return
+    if set(index) != {"八股", "手撕"}:
+        error("索引顶层必须仅包含八股和手撕")
+        return
+    for source, questions in index.items():
+        for question in questions:
+            if not question.get("qid") or not question.get("profiles"):
+                error("{}题目缺少 qid 或 profiles: {}".format(source, question.get("id")))
+                return
+    for profile_id in config["profiles"]:
+        fundamentals = sum(profile_id in q.get("profiles", []) for q in index["八股"])
+        challenges = sum(profile_id in q.get("profiles", []) for q in index["手撕"])
+        if fundamentals < 25 or challenges < 5:
+            error("岗位 {} 题量不足: 八股={} 手撕={}".format(profile_id, fundamentals, challenges))
+        else:
+            success("岗位题量: {} 八股={} 手撕={}".format(profile_id, fundamentals, challenges))
+
+
+def check_skills() -> None:
+    frontmatter = re.compile(
         r"\A---\s*\n(?=[\s\S]*?^name:\s*\S)(?=[\s\S]*?^description:\s*\S)[\s\S]*?\n---",
         re.MULTILINE,
     )
-    for platform, skill_name, path in iter_skill_files():
-        if not path.is_file():
-            continue
-        text = path.read_text(encoding="utf-8")
-        if pattern.search(text):
-            ok(f"{platform} {skill_name} frontmatter 有效")
-        else:
-            err(f"{platform} {skill_name} 缺少 name 或 description frontmatter")
-
-
-def check_command_refs():
-    for platform, root in SKILL_ROOTS.items():
-        interview_skill = root / "interview/SKILL.md"
-        if not interview_skill.is_file():
-            continue
-        text = interview_skill.read_text(encoding="utf-8")
-        refs = re.findall(r"python\s+src/pick\.py", text)
-        if refs:
-            ok(f"{platform} interview Skill 中有 {len(refs)} 处 src/pick.py 引用")
-        else:
-            err(f"{platform} interview Skill 中未找到 src/pick.py 引用")
-
-
-def check_markdown_refs():
     link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
     for platform, skill_name, path in iter_skill_files():
         if not path.is_file():
             continue
         text = path.read_text(encoding="utf-8")
-        for link_text, link_path in link_pattern.findall(text):
-            if link_path.startswith(("http://", "https://", "#")):
+        if not frontmatter.search(text):
+            error("{} {} frontmatter 无效".format(platform, skill_name))
+        if skill_name == "interview" and "python src/pick.py" not in text:
+            error("{} interview 未强制使用 pick.py".format(platform))
+        for label, target in link_pattern.findall(text):
+            if target.startswith(("http://", "https://", "#")):
                 continue
-            target = (path.parent / link_path).resolve()
-            if target.exists():
-                ok(f"{platform} {skill_name} 引用有效: {link_text} -> {link_path}")
-            else:
-                err(
-                    f"{platform} {skill_name} 引用不存在: "
-                    f"{link_text} -> {link_path}"
-                )
+            if not (path.parent / target).resolve().exists():
+                error("{} {} 引用不存在: {} -> {}".format(platform, skill_name, label, target))
+
+    for skill_name in SKILL_NAMES:
+        codex = SKILL_ROOTS["Codex"] / skill_name / "SKILL.md"
+        claude = SKILL_ROOTS["Claude Code"] / skill_name / "SKILL.md"
+        if codex.is_file() and claude.is_file() and codex.read_bytes() == claude.read_bytes():
+            success("双平台 Skill 同步: {}".format(skill_name))
+        else:
+            error("双平台 Skill 内容不一致: {}".format(skill_name))
 
 
-def check_pick_path():
-    pick_py = BASE / "src/pick.py"
-    if not pick_py.is_file():
-        err("pick.py 不存在")
-        return
-
-    text = pick_py.read_text(encoding="utf-8")
-    if "parent.parent" in text and "data" in text:
-        ok("pick.py 路径解析指向 parent.parent/data/")
-    else:
-        warn("pick.py 路径解析未使用 parent.parent/data/ 模式，请人工确认")
+def check_path_architecture() -> None:
+    for filename in ("build_index.py", "build_graph.py", "pick.py"):
+        text = (PROJECT_ROOT / "src" / filename).read_text(encoding="utf-8")
+        if "for _ in range(" in text:
+            error("{} 仍包含向上遍历查找根目录".format(filename))
+        elif "project_paths" in text:
+            success("{} 使用共享路径模块".format(filename))
+        else:
+            warning("{} 未显式使用共享路径模块".format(filename))
 
 
-def check_build_script():
-    script = BASE / "Build-Knowledge.ps1"
-    if not script.is_file():
-        err("Build-Knowledge.ps1 不存在")
-        return
-
-    text = script.read_text(encoding="utf-8")
-    if "src\\" in text or "src/" in text:
-        ok("Build-Knowledge.ps1 使用 src/ 路径")
-    else:
-        warn("Build-Knowledge.ps1 未使用 src/ 路径，请人工确认")
-    if "scripts" in text:
-        warn("Build-Knowledge.ps1 包含 scripts/ 引用（应为 src/）")
-
-
-def main():
-    print(f"=== 一致性校验: {BASE} ===\n")
-
-    print("--- 核心文件 ---")
+def main() -> int:
+    print("=== 一致性校验: {} ===".format(PROJECT_ROOT))
+    config = load_profiles(PROFILE_CONFIG)
     check_core_files()
-
-    print("\n--- 目录结构 ---")
-    check_directory_structure()
-
-    print("\n--- Skill frontmatter ---")
-    check_skill_frontmatter()
-
-    print("\n--- 命令引用 ---")
-    check_command_refs()
-
-    print("\n--- Skill 交叉引用 ---")
-    check_markdown_refs()
-
-    print("\n--- pick.py 路径 ---")
-    check_pick_path()
-
-    print("\n--- 构建脚本 ---")
-    check_build_script()
-
+    check_profile_config(config)
+    check_index(config)
+    check_skills()
+    check_path_architecture()
     print("\n=== 结果 ===")
-    if ERRORS:
-        print(f"错误: {len(ERRORS)} 项 - 请修复")
-        for message in ERRORS:
-            print(f"  {message}")
-    else:
-        print("无错误")
-    if WARNINGS:
-        print(f"警告: {len(WARNINGS)} 项 - 建议人工检查")
-        for message in WARNINGS:
-            print(f"  {message}")
-    else:
-        print("无警告")
-
+    print("错误: {}，警告: {}".format(len(ERRORS), len(WARNINGS)))
     return 1 if ERRORS else 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

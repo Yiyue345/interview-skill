@@ -16,6 +16,13 @@
 | W07 | DesignPatterns | | |
 | W08 | GameDesign | | |
 | W09 | Performance | | |
+| W10 | Java / Python | | |
+| W11 | Database / Cache | | |
+| W12 | DistributedSystems | | |
+| W13 | JavaScript / TypeScript | | |
+| W14 | Browser / React | | |
+| W15 | Android / Flutter | | |
+| W16 | ClientArchitecture | | |
 
 ## C++
 
@@ -52,3 +59,31 @@ _此区域记录游戏设计相关的薄弱知识点。_
 ## Performance
 
 _此区域记录性能优化相关的薄弱知识点。_
+
+## Java / Python
+
+_此区域记录后端语言相关的薄弱知识点。_
+
+## Database / Cache
+
+_此区域记录数据库与缓存相关的薄弱知识点。_
+
+## DistributedSystems
+
+_此区域记录分布式系统相关的薄弱知识点。_
+
+## JavaScript / TypeScript
+
+_此区域记录前端语言相关的薄弱知识点。_
+
+## Browser / React
+
+_此区域记录浏览器与 React 相关的薄弱知识点。_
+
+## Android / Flutter
+
+_此区域记录移动客户端相关的薄弱知识点。_
+
+## ClientArchitecture
+
+_此区域记录客户端架构相关的薄弱知识点。_

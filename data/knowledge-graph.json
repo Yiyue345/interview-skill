@@ -90,6 +90,41 @@
       "weight": 0.7
     },
     {
+      "from": "Android:生命周期与系统",
+      "to": "ClientArchitecture",
+      "label": "跨栈: ClientArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Android:生命周期与系统",
+      "to": "ClientPerformance",
+      "label": "跨栈: ClientPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "BackendNetworking:API 与网络",
+      "to": "DistributedSystems",
+      "label": "跨栈: DistributedSystems",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Browser:浏览器原理",
+      "to": "FrontendEngineering",
+      "label": "跨栈: FrontendEngineering",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Browser:浏览器原理",
+      "to": "JavaScript",
+      "label": "跨栈: JavaScript",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
       "from": "C#:GC 与内存管理",
       "to": "C++",
       "label": "跨栈: C++",
@@ -385,6 +420,41 @@
       "weight": 0.5
     },
     {
+      "from": "Cache:缓存设计",
+      "to": "Database",
+      "label": "跨栈: Database",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Cache:缓存设计",
+      "to": "DistributedSystems",
+      "label": "跨栈: DistributedSystems",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "ClientArchitecture:架构与数据流",
+      "to": "ClientPerformance",
+      "label": "跨栈: ClientPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Database:事务与索引",
+      "to": "Cache",
+      "label": "跨栈: Cache",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Database:事务与索引",
+      "to": "DistributedSystems",
+      "label": "跨栈: DistributedSystems",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
       "from": "DesignPatterns:MVC / MVVM",
       "to": "C#",
       "label": "跨栈: C#",
@@ -499,6 +569,34 @@
       "to": "Unity:UGUI",
       "label": "UI事件绑定",
       "weight": 0.5
+    },
+    {
+      "from": "DistributedSystems:一致性与可靠性",
+      "to": "BackendNetworking",
+      "label": "跨栈: BackendNetworking",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DistributedSystems:一致性与可靠性",
+      "to": "Database",
+      "label": "跨栈: Database",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Flutter:Widget 与状态",
+      "to": "ClientArchitecture",
+      "label": "跨栈: ClientArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Flutter:Widget 与状态",
+      "to": "ClientPerformance",
+      "label": "跨栈: ClientPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
     },
     {
       "from": "GameDesign:Buff 系统",
@@ -950,6 +1048,20 @@
       "from": "Performance:场景管理",
       "to": "Unity",
       "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "React:组件与状态",
+      "to": "FrontendEngineering",
+      "label": "跨栈: FrontendEngineering",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "React:组件与状态",
+      "to": "JavaScript",
+      "label": "跨栈: JavaScript",
       "weight": 0.6,
       "source": "关联注释"
     },

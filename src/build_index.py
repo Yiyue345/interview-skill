@@ -1,132 +1,134 @@
-"""从 fundamentals.md 和 coding-challenges.md 构建索引 JSON
-支持新版分层格式：
-  ## 技术栈
-  ### 子话题
-  - [技术栈][难度] 题目正文
-"""
-import re, json
+"""从岗位配置声明的 Markdown 题库构建统一索引。"""
+
+import argparse
+import hashlib
+import json
+import re
 from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional
+
+from profiles import load_profiles
+from project_paths import INDEX_FILE, PROFILE_CONFIG, PROJECT_ROOT
 
 
-def parse_questions_八股(file: Path) -> list[dict]:
-    """解析新版分层 markdown，返回题目列表"""
+def normalize_text(text: str) -> str:
+    return " ".join(text.split()).strip().lower()
+
+
+def make_qid(source: str, stack: str, subtopic: str, text: str) -> str:
+    raw = "|".join(
+        (source, normalize_text(stack), normalize_text(subtopic), normalize_text(text))
+    )
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+
+def parse_fundamentals(file_path: Path, profile_id: str) -> List[Dict[str, Any]]:
     questions = []
+    current_stack = ""
     current_subtopic = ""
-    valid_tags = {
-        "C++", "C#", "Lua", "Unity", "Graphics", "Algorithms",
-        "Networking", "DesignPatterns", "GameDesign", "Performance",
-        "basic", "Advanced", "intermediate", "advanced",
-    }
-
-    discarded_tags: set[str] = set()
-
-    for line in file.read_text(encoding="utf-8").splitlines():
+    for line in file_path.read_text(encoding="utf-8").splitlines():
         stripped = line.strip()
         if not stripped or stripped.startswith(">") or stripped.startswith("# "):
             continue
-
-        # 技术栈标题: ## C++
         if stripped.startswith("## ") and not stripped.startswith("### "):
+            current_stack = stripped[3:].strip()
             current_subtopic = ""
             continue
-
-        # 子话题标题: ### 多态
         if stripped.startswith("### "):
             current_subtopic = stripped[4:].strip()
             continue
-
-        # 题目行: - [C++][basic] 正文
-        m = re.match(r"^-\s+(\[[^\]]+\](?:\[[^\]]+\])*)\s*(.*)", stripped)
-        if not m:
+        match = re.match(r"^-\s+(\[[^\]]+\](?:\[[^\]]+\])*)\s*(.*)", stripped)
+        if not match:
             continue
-        
-        tags_str = m.group(1)
-        text = m.group(2).strip()
-        found_tags = re.findall(r"\[([^\]]+)\]", tags_str)
-        tags = []
-        for t in found_tags:
-            if t in valid_tags:
-                tags.append(t)
-            else:
-                discarded_tags.add(t)
-
+        text = match.group(2).strip()
         if not text:
             continue
-
+        tags = re.findall(r"\[([^\]]+)\]", match.group(1))
         questions.append({
-            "id": len(questions) + 1,
+            "qid": make_qid("八股", current_stack, current_subtopic, text),
             "tags": tags,
             "subtopic": current_subtopic,
             "text": text,
+            "profiles": [profile_id],
         })
-
-    if discarded_tags:
-        print(f"  Warning: {len(discarded_tags)} unknown tag(s) discarded: {sorted(discarded_tags)}")
-
     return questions
 
 
-def parse_questions_手撕(file: Path) -> list[dict]:
-    """笔试手撕保持原有平铺格式"""
+def parse_challenges(file_path: Path, profile_id: str) -> List[Dict[str, Any]]:
     questions = []
-    valid_tags = {
-        "C++", "C#", "Unity", "Graphics", "Algorithms",
-        "Networking", "DesignPatterns", "GameDesign", "Performance",
-    }
-    discarded_tags: set[str] = set()
-
-    for line in file.read_text(encoding="utf-8").splitlines():
+    for line in file_path.read_text(encoding="utf-8").splitlines():
         stripped = line.strip()
         if not stripped or stripped.startswith(">") or stripped.startswith("#"):
             continue
-        m = re.match(r"^(\d+)\.\s*(\[[^\]]+\](?:\[[^\]]+\])*)?\s*(.*)", stripped)
-        if not m:
+        match = re.match(r"^\d+\.\s*(\[[^\]]+\](?:\[[^\]]+\])*)?\s*(.*)", stripped)
+        if not match:
             continue
-        tags_str = m.group(2) or ""
-        text = m.group(3).strip()
+        text = match.group(2).strip()
         if not text:
             continue
-        found_tags = re.findall(r"\[([^\]]+)\]", tags_str)
-        tags = []
-        for t in found_tags:
-            if t in valid_tags:
-                tags.append(t)
-            else:
-                discarded_tags.add(t)
+        tags = re.findall(r"\[([^\]]+)\]", match.group(1) or "")
         questions.append({
-            "id": len(questions) + 1,
+            "qid": make_qid("手撕", ",".join(tags), "", text),
             "tags": tags,
             "subtopic": "",
             "text": text,
+            "profiles": [profile_id],
         })
-
-    if discarded_tags:
-        print(f"  Warning: {len(discarded_tags)} unknown tag(s) discarded: {sorted(discarded_tags)}")
-
     return questions
 
 
-def build(source_name: str, source_file: Path) -> list[dict]:
-    if source_name == "手撕":
-        return parse_questions_手撕(source_file)
-    return parse_questions_八股(source_file)
+def _merge_questions(groups: Iterable[List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
+    merged = {}
+    order = []
+    for questions in groups:
+        for question in questions:
+            qid = question["qid"]
+            if qid not in merged:
+                merged[qid] = question
+                order.append(qid)
+            else:
+                existing = merged[qid]
+                existing["profiles"] = sorted(set(existing["profiles"] + question["profiles"]))
+                existing["tags"] = list(dict.fromkeys(existing["tags"] + question["tags"]))
+
+    result = []
+    for number, qid in enumerate(order, start=1):
+        question = dict(merged[qid])
+        question["id"] = number
+        result.append(question)
+    return result
+
+
+def build_index(config_path: Optional[Path] = None) -> Dict[str, List[Dict[str, Any]]]:
+    config = load_profiles(config_path)
+    fundamental_groups = []
+    challenge_groups = []
+    for profile_id, profile in config["profiles"].items():
+        for relative_path in profile.get("fundamentals", []):
+            fundamental_groups.append(parse_fundamentals(PROJECT_ROOT / relative_path, profile_id))
+        for relative_path in profile.get("coding_challenges", []):
+            challenge_groups.append(parse_challenges(PROJECT_ROOT / relative_path, profile_id))
+    return {
+        "八股": _merge_questions(fundamental_groups),
+        "手撕": _merge_questions(challenge_groups),
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="构建多岗位面试题索引")
+    parser.add_argument("--config", default=str(PROFILE_CONFIG))
+    parser.add_argument("--output", default=str(INDEX_FILE))
+    args = parser.parse_args()
+
+    index = build_index(Path(args.config))
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("索引已生成: {}".format(output))
+    print("  八股题库: {} 题".format(len(index["八股"])))
+    print("  手撕题库: {} 题".format(len(index["手撕"])))
+    return 0
 
 
 if __name__ == "__main__":
-    # 向上搜索项目根目录（含 知识库/ 的上级目录）
-    root = Path(__file__).resolve()
-    for _ in range(6):  # 最多向上 6 层
-        if (root / "knowledge-base").is_dir():
-            break
-        root = root.parent
-    index = {
-        "八股": build("八股", root / "knowledge-base/fundamentals.md"),
-        "手撕": build("手撕", root / "knowledge-base/coding-challenges.md"),
-    }
-
-    out = root / "data/index.json"
-    with open(out, "w", encoding="utf-8") as f:
-        json.dump(index, f, ensure_ascii=False, indent=2)
-    print(f"索引已生成: {out}")
-    print(f"  八股题库: {len(index['八股'])} 题")
-    print(f"  手撕题库: {len(index['手撕'])} 题")
+    raise SystemExit(main())

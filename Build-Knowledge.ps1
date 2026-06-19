@@ -3,6 +3,9 @@
 # 用法: .\Build-Knowledge.ps1
 
 $Root = $PSScriptRoot
+$env:PYTHONUTF8 = "1"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 Write-Host "=== 构建题库索引 ==="
 python "$Root\src\build_index.py"

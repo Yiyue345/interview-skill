@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "unity-client": {
+      "display_name": "Unity 客户端",
+      "description": "Unity 游戏客户端开发岗位",
+      "fundamentals": ["knowledge-base/fundamentals.md"],
+      "coding_challenges": ["knowledge-base/coding-challenges.md"],
+      "tags": ["C++", "C#", "Lua", "Unity", "Graphics", "Algorithms", "Networking", "DesignPatterns", "GameDesign", "Performance"],
+      "coverage_order": ["C++", "C#", "Unity", "Graphics", "Algorithms", "DesignPatterns", "Performance", "Networking"],
+      "related_tags": {
+        "Unity": ["Performance", "Graphics", "GameDesign"],
+        "Performance": ["Unity", "Graphics"],
+        "Graphics": ["Unity"],
+        "GameDesign": ["Unity", "DesignPatterns"]
+      },
+      "evaluation_dimensions": ["C++ 基础", "C# 基础", "Unity 引擎", "图形学与渲染", "数据结构与算法", "网络与多线程", "游戏系统设计"],
+      "resume_keywords": {
+        "job_titles": ["unity", "游戏客户端", "unity客户端"],
+        "technologies": ["unity", "ugui", "shader", "lua", "assetbundle", "addressables"],
+        "general": ["游戏开发", "渲染", "帧同步"]
+      }
+    },
+    "backend": {
+      "display_name": "后端开发",
+      "description": "Java、Python 与分布式系统后端岗位",
+      "fundamentals": ["knowledge-base/backend-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/backend-challenges.md"],
+      "tags": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "Algorithms"],
+      "coverage_order": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "Algorithms"],
+      "related_tags": {
+        "Java": ["Database", "DistributedSystems"],
+        "Python": ["Database", "BackendNetworking"],
+        "Database": ["Cache", "DistributedSystems"],
+        "Cache": ["Database", "DistributedSystems"],
+        "DistributedSystems": ["BackendNetworking", "Database"]
+      },
+      "evaluation_dimensions": ["语言基础", "数据库与缓存", "分布式系统", "网络与接口设计", "数据结构与算法", "工程与可运维性"],
+      "resume_keywords": {
+        "job_titles": ["后端", "服务端", "java开发", "python开发", "backend"],
+        "technologies": ["java", "spring", "python", "django", "fastapi", "mysql", "redis", "kafka"],
+        "general": ["微服务", "分布式", "数据库", "接口开发"]
+      }
+    },
+    "frontend": {
+      "display_name": "Web 前端",
+      "description": "JavaScript、TypeScript 与 React 前端岗位",
+      "fundamentals": ["knowledge-base/frontend-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/frontend-challenges.md"],
+      "tags": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "Algorithms"],
+      "coverage_order": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "Algorithms"],
+      "related_tags": {
+        "JavaScript": ["TypeScript", "Browser"],
+        "TypeScript": ["JavaScript", "React"],
+        "Browser": ["FrontendEngineering", "JavaScript"],
+        "React": ["JavaScript", "FrontendEngineering"]
+      },
+      "evaluation_dimensions": ["JavaScript 与 TypeScript", "浏览器原理", "React", "前端工程化", "性能与可访问性", "数据结构与算法"],
+      "resume_keywords": {
+        "job_titles": ["前端", "web前端", "frontend"],
+        "technologies": ["javascript", "typescript", "react", "vue", "webpack", "vite", "html", "css"],
+        "general": ["浏览器", "前端工程化", "组件化"]
+      }
+    },
+    "client": {
+      "display_name": "通用客户端",
+      "description": "桌面、Android 与 Flutter 客户端岗位",
+      "fundamentals": ["knowledge-base/client-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/client-challenges.md"],
+      "tags": ["C++", "C#", "Android", "Flutter", "ClientArchitecture", "ClientPerformance", "Algorithms"],
+      "coverage_order": ["C++", "C#", "Android", "Flutter", "ClientArchitecture", "ClientPerformance", "Algorithms"],
+      "related_tags": {
+        "C++": ["ClientArchitecture", "ClientPerformance"],
+        "C#": ["ClientArchitecture", "ClientPerformance"],
+        "Android": ["Flutter", "ClientArchitecture"],
+        "Flutter": ["Android", "ClientArchitecture"],
+        "ClientArchitecture": ["ClientPerformance"]
+      },
+      "evaluation_dimensions": ["语言基础", "平台生命周期", "UI 与状态管理", "客户端架构", "性能与稳定性", "数据结构与算法"],
+      "resume_keywords": {
+        "job_titles": ["客户端", "移动端", "android", "flutter", "桌面开发"],
+        "technologies": ["android", "kotlin", "flutter", "dart", "wpf", "winui", "qt", "c++", "c#"],
+        "general": ["移动应用", "桌面应用", "客户端架构"]
+      }
+    }
+  }
+}
