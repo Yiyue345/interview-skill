@@ -10,6 +10,7 @@ from profiles import load_profiles
 from project_paths import INDEX_FILE, PROFILE_CONFIG, PROJECT_ROOT
 
 
+DIFFICULTY_LEVELS = {"basic", "intermediate", "advanced"}
 SKILL_ROOTS = {
     "Codex": PROJECT_ROOT / ".agents/skills",
     "Claude Code": PROJECT_ROOT / ".claude/skills",
@@ -47,6 +48,7 @@ def check_core_files() -> None:
         INDEX_FILE,
         PROJECT_ROOT / "src/project_paths.py",
         PROJECT_ROOT / "src/profiles.py",
+        PROJECT_ROOT / "src/difficulty.py",
     ]
     required.extend(path for _, _, path in iter_skill_files())
     for path in required:
@@ -57,6 +59,23 @@ def check_core_files() -> None:
 
 
 def check_profile_config(config: Dict[str, Any]) -> None:
+    policy = config.get("difficulty_policy", {})
+    company_sizes = policy.get("company_sizes", {})
+    position_levels = policy.get("position_levels", {})
+    matrix = policy.get("matrix", {})
+    if not company_sizes or not position_levels:
+        error("难度策略缺少公司规模或岗位等级配置")
+    else:
+        for company_size in company_sizes:
+            for position_level in position_levels:
+                weights = matrix.get(company_size, {}).get(position_level, {})
+                if set(weights) != DIFFICULTY_LEVELS or sum(weights.values()) != 100:
+                    error(
+                        "难度矩阵无效: {} × {}".format(company_size, position_level)
+                    )
+        if not ERRORS:
+            success("公司规模与岗位等级难度矩阵有效")
+
     required_keys = {
         "display_name", "fundamentals", "coding_challenges", "tags",
         "coverage_order", "related_tags", "evaluation_dimensions", "resume_keywords",
@@ -91,12 +110,29 @@ def check_index(config: Dict[str, Any]) -> None:
                 error("{}题目缺少 qid 或 profiles: {}".format(source, question.get("id")))
                 return
     for profile_id in config["profiles"]:
-        fundamentals = sum(profile_id in q.get("profiles", []) for q in index["八股"])
-        challenges = sum(profile_id in q.get("profiles", []) for q in index["手撕"])
+        profile_questions = {
+            source: [q for q in questions if profile_id in q.get("profiles", [])]
+            for source, questions in index.items()
+        }
+        fundamentals = len(profile_questions["八股"])
+        challenges = len(profile_questions["手撕"])
         if fundamentals < 25 or challenges < 5:
             error("岗位 {} 题量不足: 八股={} 手撕={}".format(profile_id, fundamentals, challenges))
         else:
             success("岗位题量: {} 八股={} 手撕={}".format(profile_id, fundamentals, challenges))
+        for source, questions in profile_questions.items():
+            levels = {
+                tag.lower()
+                for question in questions
+                for tag in question.get("tags", [])
+                if tag.lower() in DIFFICULTY_LEVELS
+            }
+            if levels != DIFFICULTY_LEVELS:
+                error(
+                    "岗位 {} 的{}缺少难度级别: {}".format(
+                        profile_id, source, ", ".join(sorted(DIFFICULTY_LEVELS - levels))
+                    )
+                )
 
 
 def check_skills() -> None:

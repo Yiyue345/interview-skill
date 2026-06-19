@@ -104,6 +104,48 @@
       "source": "关联注释"
     },
     {
+      "from": "AndroidArchitecture:Jetpack 架构",
+      "to": "AndroidPerformance",
+      "label": "跨栈: AndroidPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "AndroidData:数据与网络",
+      "to": "AndroidArchitecture",
+      "label": "跨栈: AndroidArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "AndroidLifecycle:组件生命周期",
+      "to": "AndroidData",
+      "label": "跨栈: AndroidData",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "AndroidLifecycle:组件生命周期",
+      "to": "AndroidUI",
+      "label": "跨栈: AndroidUI",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "AndroidUI:View 与 Compose",
+      "to": "AndroidArchitecture",
+      "label": "跨栈: AndroidArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "AndroidUI:View 与 Compose",
+      "to": "AndroidPerformance",
+      "label": "跨栈: AndroidPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
       "from": "BackendNetworking:API 与网络",
       "to": "DistributedSystems",
       "label": "跨栈: DistributedSystems",
@@ -571,6 +613,41 @@
       "weight": 0.5
     },
     {
+      "from": "DesktopArchitecture:架构与模块化",
+      "to": "DesktopPerformance",
+      "label": "跨栈: DesktopPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesktopSystem:操作系统集成",
+      "to": "DesktopArchitecture",
+      "label": "跨栈: DesktopArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesktopSystem:操作系统集成",
+      "to": "DesktopPerformance",
+      "label": "跨栈: DesktopPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesktopUI:UI 与交互",
+      "to": "DesktopArchitecture",
+      "label": "跨栈: DesktopArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "DesktopUI:UI 与交互",
+      "to": "DesktopPerformance",
+      "label": "跨栈: DesktopPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
       "from": "DistributedSystems:一致性与可靠性",
       "to": "BackendNetworking",
       "label": "跨栈: BackendNetworking",
@@ -595,6 +672,48 @@
       "from": "Flutter:Widget 与状态",
       "to": "ClientPerformance",
       "label": "跨栈: ClientPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterArchitecture:应用架构",
+      "to": "FlutterPerformance",
+      "label": "跨栈: FlutterPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterPlatform:平台集成",
+      "to": "FlutterArchitecture",
+      "label": "跨栈: FlutterArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterPlatform:平台集成",
+      "to": "FlutterPerformance",
+      "label": "跨栈: FlutterPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterState:状态管理",
+      "to": "FlutterArchitecture",
+      "label": "跨栈: FlutterArchitecture",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterWidgets:Widget 与渲染",
+      "to": "FlutterPerformance",
+      "label": "跨栈: FlutterPerformance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "FlutterWidgets:Widget 与渲染",
+      "to": "FlutterState",
+      "label": "跨栈: FlutterState",
       "weight": 0.6,
       "source": "关联注释"
     },

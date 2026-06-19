@@ -1,6 +1,6 @@
 ---
 name: interview-prep
-description: 通用软件面试答题指导。根据 Unity 客户端、后端、Web 前端或通用客户端岗位配置，从对应题库分析技术问题，提供考察意图、精炼回答、常见坑和追问预测。当用户询问答题指导、怎么回答、面试准备或面试攻略时使用。
+description: 通用软件面试答题指导。根据 Unity 客户端、后端、Web 前端、桌面客户端、Android 原生或 Flutter 岗位配置，并结合目标公司规模和应聘等级，从对应难度题库分析技术问题，提供考察意图、精炼回答、常见坑和追问预测。当用户询问答题指导、怎么回答、面试准备或面试攻略时使用。
 ---
 
 # 通用面试答题指导 Skill
@@ -19,14 +19,16 @@ python src/pick.py --resume resumes/template.md --detect-profile
 ```
 
 3. 返回 `needs_profile` 时，只询问一次岗位。
-4. 根据 profile 的 `fundamentals`、`tags` 与 `coverage_order` 定位相关题库。
-5. 读取 [统一索引](../../../data/index.json) 中同时匹配 profile 与话题的题目，并用 [知识图谱](../../../data/knowledge-graph.json) 预测关联追问。
+4. 岗位学习或模拟准备时，确认目标公司规模（小厂/中厂/大厂）和应聘等级（实习/正职）；信息不全时一次性询问。
+5. 根据 profile 的 `fundamentals`、`tags` 与 `coverage_order` 定位相关题库。
+6. 调用 `pick.py` 时传入 `--company-size` 与 `--position-level`，读取结果中的实际 `difficulty`；单题解析且用户未指定上下文时不强制追问。
+7. 读取 [统一索引](../../../data/index.json) 中同时匹配 profile、话题与难度的题目，并用 [知识图谱](../../../data/knowledge-graph.json) 预测关联追问。
 
 ## 输出结构
 
 ### 面试官意图
 
-说明题型、关键考察信号和建议回答时间。
+说明题型、实际难度、关键考察信号和建议回答时间。
 
 ### 精炼回答建议
 

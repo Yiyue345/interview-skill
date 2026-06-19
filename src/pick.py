@@ -10,6 +10,7 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 
+from difficulty import choose_difficulty, resolve_difficulty_context
 from profiles import detect_profile_from_file, load_profiles
 from project_paths import (
     DEFAULT_RESUME,
@@ -218,10 +219,36 @@ def resolve_profile(
     return detect_profile_from_file(resume_path, config)
 
 
+def resolve_requested_difficulty(
+    config: Dict[str, Any],
+    company_size: str,
+    position_level: str,
+    explicit_level: str,
+    rng: random.Random,
+) -> Dict[str, Any]:
+    if bool(company_size) != bool(position_level):
+        return {
+            "error": "incomplete_difficulty_context",
+            "required": ["company_size", "position_level"],
+        }
+    if not company_size:
+        return {
+            "level": explicit_level,
+            "source": "explicit" if explicit_level else "unspecified",
+        }
+
+    context = resolve_difficulty_context(config, company_size, position_level)
+    if context.get("error"):
+        return context
+    context["level"] = explicit_level or choose_difficulty(context, rng)
+    context["source"] = "explicit" if explicit_level else "policy"
+    return context
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="多岗位加权抽题")
+    parser = argparse.ArgumentParser(description="多岗位、分级别加权抽题")
     parser.add_argument("--source", choices=["八股", "手撕"], default="八股")
     parser.add_argument("--profile", default="", help="岗位 ID，显式指定时覆盖简历识别")
     parser.add_argument("--resume", default=str(DEFAULT_RESUME), help="用于识别岗位的简历路径")
@@ -229,6 +256,16 @@ def main() -> int:
     parser.add_argument("--tag", default="", help="技术标签，多个用逗号分隔")
     parser.add_argument(
         "--level", default="", choices=["", "basic", "intermediate", "advanced", "Advanced"]
+    )
+    parser.add_argument(
+        "--company-size",
+        default="",
+        help="目标公司规模，支持 small/medium/large 或小厂/中厂/大厂",
+    )
+    parser.add_argument(
+        "--position-level",
+        default="",
+        help="应聘岗位等级，支持 intern/full-time 或实习/正职",
     )
     parser.add_argument("--subtopic", default="")
     parser.add_argument("--asked", default="")
@@ -261,17 +298,28 @@ def main() -> int:
 
     profile_id = resolution["profile"]
     profile = config["profiles"][profile_id]
+    rng = random.Random(args.seed)
+    difficulty = resolve_requested_difficulty(
+        config,
+        args.company_size,
+        args.position_level,
+        args.level.lower() if args.level else "",
+        rng,
+    )
+    if difficulty.get("error"):
+        print(json.dumps(difficulty, ensure_ascii=False))
+        return 2
+
     history_path = Path(args.history_file)
     history = {"schema_version": 1, "profiles": {}} if args.no_history else load_history(history_path)
     profile_history = history.get("profiles", {}).get(profile_id, {})
-    rng = random.Random(args.seed)
     tags = [tag.strip() for tag in args.tag.split(",") if tag.strip()]
     question = pick_question(
         load_index(args.source, Path(args.index)),
         profile_id,
         profile,
         tags,
-        args.level.lower() if args.level else "",
+        difficulty["level"],
         parse_asked(args.asked),
         args.subtopic,
         args.fallback,
@@ -284,6 +332,7 @@ def main() -> int:
 
     result = dict(question)
     result["profile"] = profile_id
+    result["difficulty"] = difficulty
     if not args.no_history:
         record_exposure(history, profile_id, question)
         save_history(history_path, history)

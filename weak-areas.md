@@ -21,8 +21,9 @@
 | W12 | DistributedSystems | | |
 | W13 | JavaScript / TypeScript | | |
 | W14 | Browser / React | | |
-| W15 | Android / Flutter | | |
-| W16 | ClientArchitecture | | |
+| W15 | Desktop Client | | |
+| W16 | Android Native | | |
+| W17 | Flutter | | |
 
 ## C++
 
@@ -80,10 +81,14 @@ _此区域记录前端语言相关的薄弱知识点。_
 
 _此区域记录浏览器与 React 相关的薄弱知识点。_
 
-## Android / Flutter
+## Desktop Client
 
-_此区域记录移动客户端相关的薄弱知识点。_
+_此区域记录桌面客户端相关的薄弱知识点。_
 
-## ClientArchitecture
+## Android Native
 
-_此区域记录客户端架构相关的薄弱知识点。_
+_此区域记录 Android 原生开发相关的薄弱知识点。_
+
+## Flutter
+
+_此区域记录 Flutter 开发相关的薄弱知识点。_

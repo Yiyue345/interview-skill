@@ -26,7 +26,8 @@ Write-Host ""
 Write-Host "=== 一致性校验 ==="
 python "$Root\src\validate_consistency.py"
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "一致性校验发现警告，请查看上方输出" -ForegroundColor Yellow
+    Write-Host "一致性校验失败" -ForegroundColor Red
+    exit 1
 }
 
 Write-Host ""

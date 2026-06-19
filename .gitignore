@@ -2,7 +2,7 @@
 .interview-state/
 records/*.md
 !records/template.md
-resumes/*.md
+resumes/*
 !resumes/template.md
 
 # Test runtime

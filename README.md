@@ -6,9 +6,9 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-4A90D9)](#)
 [![License](https://img.shields.io/badge/License-MIT-green)](#)
 
-**可配置的通用软件技术面试系统。** 根据简历识别岗位，从对应题库加权抽题，覆盖技术深挖 → 项目深挖 → 编程/设计题全流程，并自动输出岗位化面试总结。
+**可配置的通用软件技术面试系统。** 根据简历识别岗位，结合公司规模与应聘等级确定难度，从对应题库加权抽题，覆盖技术深挖 → 项目深挖 → 编程/设计题全流程，并自动输出岗位化面试总结。
 
-内置 `unity-client`、`backend`、`frontend`、`client` 四个岗位预设，也可以只添加配置和 Markdown 题库扩展新岗位。
+内置 `unity-client`、`backend`、`frontend`、`desktop-client`、`android-native`、`flutter` 六个岗位预设，也可以只添加配置和 Markdown 题库扩展新岗位。
 
 ---
 
@@ -37,6 +37,7 @@
 ## 特点
 
 - **岗位识别** — 从期望岗位、技术栈和简历全文识别方向，歧义时只询问一次
+- **难度分层** — 按小厂/中厂/大厂与实习/正职组合生成基础、进阶、高级题比例
 - **加权命题** — 新题优先，近期高频题自动衰减，当前面试同题不重复
 - **自适应调整** — 根据候选人表现动态调整难度和领域覆盖
 - **标准化评估** — 概念题 / 原理题 / 设计题 / 编程题各有明确评分标准
@@ -60,7 +61,7 @@
 系统默认读取 `resumes/template.md` 识别岗位。也可以直接指定：
 
 ```powershell
-python src/pick.py --profile backend --source 八股 --tag Java --level basic --fallback
+python src/pick.py --profile backend --company-size large --position-level full-time --source 八股 --tag Java --fallback
 python src/pick.py --resume resumes/template.md --detect-profile
 ```
 
@@ -82,7 +83,7 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 ### 模拟面试
 
-在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。系统先识别岗位；无可靠结果时会请你从候选岗位中选择一次。面试按以下阶段进行：
+在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。系统先识别岗位，再确认目标公司规模（小厂/中厂/大厂）与应聘等级（实习/正职）；缺失的信息会一次性询问。面试按以下阶段进行：
 
 ```
 自我介绍 → 技术深挖 → 项目深挖 → 手撕代码 → 总结评估 → 反问 → 归档
@@ -92,10 +93,13 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 ```powershell
 # 技术深挖：按标签和难度抽题
-python src/pick.py --profile unity-client --source 八股 --tag C++ --level basic --fallback
+python src/pick.py --profile unity-client --company-size medium --position-level intern --source 八股 --tag C++ --fallback
 
-# 手撕代码：随机出编程题
-python src/pick.py --profile unity-client --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
+# 手撕代码：使用相同难度上下文
+python src/pick.py --profile unity-client --company-size medium --position-level intern --source 手撕 --tag Algorithms --asked 1,3,5-10 --fallback
+
+# 显式难度覆盖矩阵，用于根据现场表现临时升降级
+python src/pick.py --profile unity-client --company-size medium --position-level intern --source 八股 --tag C++ --level advanced --fallback
 ```
 
 ### 答题指导
@@ -114,7 +118,7 @@ python src/pick.py --profile unity-client --source 手撕 --tag Algorithms --ask
 | 文件 | 内容 | 格式 |
 |------|------|------|
 | `fundamentals.md` | 概念、原理、设计类问题 | `## 技术栈 → ### 子话题 → - [标签][难度] 题目` |
-| `coding-challenges.md` | 编程题 | `1. [标签] 题目描述` |
+| `coding-challenges.md` | 编程/设计题 | `1. [标签][难度] 题目描述` |
 
 修改后重新构建索引：
 
@@ -150,6 +154,7 @@ interview/                          # 项目根目录
 │
 ├── src/                            # Python 工具脚本
 │   ├── pick.py                     # 岗位过滤与加权抽题引擎
+│   ├── difficulty.py               # 公司规模与岗位等级难度策略
 │   ├── profiles.py                 # 简历岗位识别
 │   ├── project_paths.py            # 稳定项目路径
 │   ├── build_index.py              # 从 markdown 解析生成索引
@@ -160,7 +165,9 @@ interview/                          # 项目根目录
 │   ├── fundamentals.md             # Unity 客户端原有题库
 │   ├── backend-*.md                # 后端题库
 │   ├── frontend-*.md               # Web 前端题库
-│   └── client-*.md                 # 通用客户端题库
+│   ├── desktop-*.md                # 桌面客户端题库
+│   ├── android-*.md                # Android 原生题库
+│   └── flutter-*.md                # Flutter 题库
 │
 ├── data/                           # 自动生成的索引文件
 │   ├── index.json                  # 结构化题库索引
@@ -187,6 +194,10 @@ interview/                          # 项目根目录
 ### 面试阶段流转
 
 ```
+┌─────────────┐
+│  难度确认    │  ← 公司规模 + 实习/正职
+└─────┬───────┘
+      ▼
 ┌─────────────┐
 │  自我介绍    │  ← 面试者简述背景
 └─────┬───────┘
@@ -220,7 +231,15 @@ interview/                          # 项目根目录
 
 ### 自适应难度调整
 
-面试 AI 会根据候选人的回答质量动态调整策略：
+面试开始时先按目标环境确定基础难度分布：
+
+| 公司规模 | 实习：基础/进阶/高级 | 正职：基础/进阶/高级 |
+|----------|----------------------|----------------------|
+| 小厂 | 75% / 25% / 0% | 30% / 55% / 15% |
+| 中厂 | 45% / 45% / 10% | 15% / 55% / 30% |
+| 大厂 | 20% / 55% / 25% | 5% / 40% / 55% |
+
+每次抽题先按矩阵选择难度，再应用岗位、标签、当前面试去重和跨会话曝光衰减。固定 `--seed` 可复现难度与题目选择。面试 AI 还会根据候选人的回答质量临时调整下一题：
 
 | 表现 | AI 策略 |
 |------|---------|
@@ -228,6 +247,8 @@ interview/                          # 项目根目录
 | 连续答错 2 题以上 | 换基础领域或降低难度 |
 | 回答准确且深入 | 当前子话题出 Advanced 题 |
 | 回答不准确 | 回溯前置基础知识 |
+
+动态覆盖只作用于下一题，之后恢复公司规模与应聘等级对应的基础分布。
 
 ### 弱势追踪
 
@@ -237,7 +258,7 @@ interview/                          # 项目根目录
 
 ### 添加岗位预设
 
-在 `config/interview-profiles.json` 中新增 profile，声明简历关键词、题库文件、标签、覆盖顺序、相近领域和评分维度；题库使用现有 Markdown 格式。无需修改 Python 标签白名单。
+在 `config/interview-profiles.json` 中新增 profile，声明简历关键词、题库文件、标签、覆盖顺序、相近领域和评分维度；题库使用现有 Markdown 格式。无需修改 Python 标签白名单。通用难度比例位于同一文件的 `difficulty_policy`，可以扩展公司规模、岗位等级和组合权重。
 
 ### 修改面试官风格
 
@@ -246,6 +267,7 @@ interview/                          # 项目根目录
 ### 扩展题库
 
 - `knowledge-base/fundamentals.md`：添加技术栈（`##`）→ 子话题（`###`）→ 题目（`- [tag][level] text`）
+- `knowledge-base/*-challenges.md`：编程/设计题使用 `1. [tag][level] text`
 - 标签体系：`C++`、`C#`、`Unity`、`Graphics`、`Algorithms`、`Networking`、`DesignPatterns`、`GameDesign`、`Performance`
 - 难度分级：`basic`、`intermediate`、`Advanced`
 - 支持多标签：`- [C++][C#][Advanced] 题目描述`

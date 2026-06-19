@@ -1,6 +1,6 @@
 ---
 name: interview
-description: 通用软件技术面试流程管理。根据简历识别 Unity 客户端、后端、Web 前端或通用客户端岗位，从对应题库加权抽题，覆盖技术深挖、项目深挖和编程/设计题。每次出题必须调用 src/pick.py。当用户提及「面试」、模拟面试、技术面、面经或面试官等场景时，必须由本 skill 接管，禁止绕过题库直接提问。
+description: 通用软件技术面试流程管理。根据简历识别 Unity 客户端、后端、Web 前端、桌面客户端、Android 原生或 Flutter 岗位，并按公司规模和应聘等级确定基础难度，从对应题库加权抽题，覆盖技术深挖、项目深挖和编程/设计题。每次出题必须调用 src/pick.py。当用户提及「面试」、模拟面试、技术面、面经或面试官等场景时，必须由本 skill 接管，禁止绕过题库直接提问。
 ---
 
 # 通用软件面试 Skill
@@ -19,17 +19,23 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 2. 若返回 `profile`，读取 [config/interview-profiles.json](../../../config/interview-profiles.json) 中对应配置。
 3. 若返回 `needs_profile`，只询问一次用户选择哪个候选岗位；取得选择后始终传入 `--profile`。
-4. 初始化：
+4. 确认难度上下文：
+   - 用户已说明目标公司规模和应聘等级时直接使用。
+   - 信息不全时只询问一次：“目标公司规模是小厂、中厂还是大厂？应聘实习还是正职？”
+   - 规范化为 `company_size=small|medium|large` 和 `position_level=intern|full-time`。
+5. 初始化：
    - `profile_id`：当前岗位 ID
+   - `company_size`：目标公司规模
+   - `position_level`：应聘等级
    - `asked_ids=""`：已问题号
    - `covered_areas=[]`：已覆盖领域
    - `current_stage="技术深挖"`
    - `consecutive_correct=0`
    - `consecutive_wrong=0`
    - `same_subtopic_rounds=0`
-5. 让面试者做简短自我介绍。
+6. 让面试者做简短自我介绍。
 
-显式指定岗位时跳过识别。支持 `unity-client`、`backend`、`frontend`、`client`。
+显式指定岗位时跳过识别。支持 `unity-client`、`backend`、`frontend`、`desktop-client`、`android-native`、`flutter`。
 
 ## 数据源
 
@@ -46,13 +52,13 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 ```powershell
 # 技术题
-python src/pick.py --profile <profile_id> --source 八股 --tag <tag> --level <difficulty> --asked <asked_ids> --fallback
+python src/pick.py --profile <profile_id> --company-size <company_size> --position-level <position_level> --source 八股 --tag <tag> --asked <asked_ids> --fallback
 
 # 编程或设计题
-python src/pick.py --profile <profile_id> --source 手撕 --tag <tag> --asked <asked_ids> --fallback
+python src/pick.py --profile <profile_id> --company-size <company_size> --position-level <position_level> --source 手撕 --tag <tag> --asked <asked_ids> --fallback
 ```
 
-成功结果包含 `id`、`qid`、`profile`、`tags`、`subtopic`、`text`。将 `id` 追加到 `asked_ids`。返回 `{"empty": true}` 时更换标签后重试。
+成功结果包含 `id`、`qid`、`profile`、`difficulty`、`tags`、`subtopic`、`text`。`difficulty` 记录本题实际级别及难度上下文。将 `id` 追加到 `asked_ids`。返回 `{"empty": true}` 时更换标签后重试。
 
 严格遵循：
 
@@ -68,7 +74,8 @@ python src/pick.py --profile <profile_id> --source 手撕 --tag <tag> --asked <a
 - 不在题目中提供选项、答案线索或预设答题框架。
 - 同一子话题最多连续追问 2 轮，之后按岗位配置的 `coverage_order` 切换领域。
 - 优先覆盖薄弱领域，其次覆盖尚未涉及的领域。
-- 回答准确且深入时使用同子话题 advanced 题；回答不准确时降低难度或切换基础领域。
+- 默认不传 `--level`，由公司规模和应聘等级的配置矩阵确定题目难度。
+- 回答准确且深入或连续答对 3 题时，下一题显式传 `--level advanced`；连续答错 2 题时传 `--level basic` 或切换基础领域。动态调整只作用于下一题，之后回到配置矩阵。
 - 每次提问前内部确认：上一回答已评估、状态已更新、题目来自 `pick.py`、没有重复 ID、没有超过追问上限。
 
 ## 评估
@@ -88,7 +95,7 @@ python src/pick.py --profile <profile_id> --source 手撕 --tag <tag> --asked <a
 
 ## 总结与归档
 
-1. 从岗位配置读取 `evaluation_dimensions`，逐项给出 1–5 分；未考察项标记“未考察”。
+1. 记录公司规模、应聘等级和实际难度分布，并从岗位配置读取 `evaluation_dimensions`，逐项给出 1–5 分；未考察项标记“未考察”。
 2. 补充编码能力、沟通表达、亮点、主要短板和岗位建议。
 3. 保留原始问答与纠正内容，写入 `records/YYYY-MM-DD_候选人.md`。
 4. 将不完整或不准确的技术点按标签追加到 `weak-areas.md`，只记录题目，不记录答案。

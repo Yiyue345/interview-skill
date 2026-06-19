@@ -1,5 +1,45 @@
 {
   "schema_version": 1,
+  "difficulty_policy": {
+    "company_sizes": {
+      "small": {
+        "display_name": "小厂",
+        "aliases": ["small", "小厂", "小型公司"]
+      },
+      "medium": {
+        "display_name": "中厂",
+        "aliases": ["medium", "中厂", "中型公司"]
+      },
+      "large": {
+        "display_name": "大厂",
+        "aliases": ["large", "大厂", "大型公司"]
+      }
+    },
+    "position_levels": {
+      "intern": {
+        "display_name": "实习",
+        "aliases": ["intern", "internship", "实习", "实习生"]
+      },
+      "full-time": {
+        "display_name": "正职",
+        "aliases": ["full-time", "fulltime", "regular", "正职", "正式岗位", "校招", "社招"]
+      }
+    },
+    "matrix": {
+      "small": {
+        "intern": {"basic": 75, "intermediate": 25, "advanced": 0},
+        "full-time": {"basic": 30, "intermediate": 55, "advanced": 15}
+      },
+      "medium": {
+        "intern": {"basic": 45, "intermediate": 45, "advanced": 10},
+        "full-time": {"basic": 15, "intermediate": 55, "advanced": 30}
+      },
+      "large": {
+        "intern": {"basic": 20, "intermediate": 55, "advanced": 25},
+        "full-time": {"basic": 5, "intermediate": 40, "advanced": 55}
+      }
+    }
+  },
   "profiles": {
     "unity-client": {
       "display_name": "Unity 客户端",
@@ -62,25 +102,67 @@
         "general": ["浏览器", "前端工程化", "组件化"]
       }
     },
-    "client": {
-      "display_name": "通用客户端",
-      "description": "桌面、Android 与 Flutter 客户端岗位",
-      "fundamentals": ["knowledge-base/client-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/client-challenges.md"],
-      "tags": ["C++", "C#", "Android", "Flutter", "ClientArchitecture", "ClientPerformance", "Algorithms"],
-      "coverage_order": ["C++", "C#", "Android", "Flutter", "ClientArchitecture", "ClientPerformance", "Algorithms"],
+    "desktop-client": {
+      "display_name": "桌面客户端开发",
+      "description": "C++、C# 与跨平台桌面应用开发岗位",
+      "fundamentals": ["knowledge-base/desktop-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/desktop-challenges.md"],
+      "tags": ["C++", "C#", "DesktopUI", "DesktopArchitecture", "DesktopSystem", "DesktopPerformance", "Algorithms"],
+      "coverage_order": ["C++", "C#", "DesktopUI", "DesktopSystem", "DesktopArchitecture", "DesktopPerformance", "Algorithms"],
       "related_tags": {
-        "C++": ["ClientArchitecture", "ClientPerformance"],
-        "C#": ["ClientArchitecture", "ClientPerformance"],
-        "Android": ["Flutter", "ClientArchitecture"],
-        "Flutter": ["Android", "ClientArchitecture"],
-        "ClientArchitecture": ["ClientPerformance"]
+        "C++": ["DesktopSystem", "DesktopPerformance"],
+        "C#": ["DesktopUI", "DesktopArchitecture"],
+        "DesktopUI": ["DesktopArchitecture", "DesktopPerformance"],
+        "DesktopSystem": ["DesktopArchitecture", "DesktopPerformance"],
+        "DesktopArchitecture": ["DesktopPerformance"]
       },
-      "evaluation_dimensions": ["语言基础", "平台生命周期", "UI 与状态管理", "客户端架构", "性能与稳定性", "数据结构与算法"],
+      "evaluation_dimensions": ["C++ 与 C# 基础", "桌面 UI 与交互", "操作系统集成", "客户端架构", "性能与稳定性", "数据结构与算法"],
       "resume_keywords": {
-        "job_titles": ["客户端", "移动端", "android", "flutter", "桌面开发"],
-        "technologies": ["android", "kotlin", "flutter", "dart", "wpf", "winui", "qt", "c++", "c#"],
-        "general": ["移动应用", "桌面应用", "客户端架构"]
+        "job_titles": ["桌面开发", "桌面客户端", "pc客户端", "windows开发"],
+        "technologies": ["wpf", "winui", "qt", "mfc", "electron", "c++", "c#"],
+        "general": ["桌面应用", "系统托盘", "跨平台桌面"]
+      }
+    },
+    "android-native": {
+      "display_name": "Android 原生开发",
+      "description": "Kotlin 与 Android 原生应用开发岗位",
+      "fundamentals": ["knowledge-base/android-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/android-challenges.md"],
+      "tags": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "AndroidPerformance", "Algorithms"],
+      "coverage_order": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "AndroidPerformance", "Algorithms"],
+      "related_tags": {
+        "Kotlin": ["AndroidArchitecture", "AndroidLifecycle"],
+        "AndroidLifecycle": ["AndroidUI", "AndroidData"],
+        "AndroidUI": ["AndroidArchitecture", "AndroidPerformance"],
+        "AndroidData": ["AndroidArchitecture"],
+        "AndroidArchitecture": ["AndroidPerformance"]
+      },
+      "evaluation_dimensions": ["Kotlin 基础", "Android 生命周期", "UI 与交互", "数据与网络", "应用架构", "性能与稳定性"],
+      "resume_keywords": {
+        "job_titles": ["android原生", "android 原生", "android开发", "android 开发", "安卓原生", "安卓开发"],
+        "technologies": ["kotlin", "jetpack", "compose", "room", "viewmodel", "coroutines"],
+        "general": ["android sdk", "原生应用", "安卓应用"]
+      }
+    },
+    "flutter": {
+      "display_name": "Flutter 开发",
+      "description": "Dart 与 Flutter 跨平台应用开发岗位",
+      "fundamentals": ["knowledge-base/flutter-fundamentals.md"],
+      "coding_challenges": ["knowledge-base/flutter-challenges.md"],
+      "tags": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "FlutterPerformance", "Algorithms"],
+      "coverage_order": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "FlutterPerformance", "Algorithms"],
+      "related_tags": {
+        "Dart": ["FlutterState", "FlutterArchitecture"],
+        "FlutterWidgets": ["FlutterState", "FlutterPerformance"],
+        "FlutterState": ["FlutterArchitecture"],
+        "FlutterPlatform": ["FlutterArchitecture", "FlutterPerformance"],
+        "FlutterArchitecture": ["FlutterPerformance"]
+      },
+      "evaluation_dimensions": ["Dart 基础", "Widget 与渲染", "状态管理", "平台集成", "应用架构", "性能与稳定性"],
+      "resume_keywords": {
+        "job_titles": ["flutter开发", "flutter 开发", "flutter客户端", "跨平台开发"],
+        "technologies": ["flutter", "dart", "riverpod", "bloc", "provider", "methodchannel"],
+        "general": ["flutter应用", "跨平台应用", "widget"]
       }
     }
   }

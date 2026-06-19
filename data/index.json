@@ -95,7 +95,7 @@
       "qid": "3c686ef4bde5ec0b",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类与对象",
       "text": "继承（内存长什么样，有/无虚函数时又长什么样）",
@@ -108,7 +108,7 @@
       "qid": "7b7136577ef148ac",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "类与对象",
       "text": "菱形继承（有什么问题、虚继承、内存长什么样）",
@@ -121,7 +121,7 @@
       "qid": "6b5aa33daa41a663",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类与对象",
       "text": "菱形问题怎么解决",
@@ -134,7 +134,7 @@
       "qid": "cdf5674486c9e990",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "类与对象",
       "text": "如果类中添加了静态成员变量、函数、虚函数，类的内存布局会怎样",
@@ -160,7 +160,7 @@
       "qid": "acc87a2396886bd5",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "虚函数的实现原理（虚表 / 多态）",
@@ -173,7 +173,7 @@
       "qid": "bb94a29bdd99d16f",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多态",
       "text": "多态（静态/动态多态，虚函数，虚表，原理）",
@@ -186,7 +186,7 @@
       "qid": "c9d5d56ce896dbf6",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多态",
       "text": "虚函数指针存储在哪里",
@@ -199,7 +199,7 @@
       "qid": "3977e71856650cb2",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "虚函数表存储在哪里",
@@ -212,7 +212,7 @@
       "qid": "9711661c3231c281",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "虚函数表指针什么时候创建的",
@@ -225,7 +225,7 @@
       "qid": "0663152c6729e25e",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "虚函数表存储在内存中的哪个区域？",
@@ -238,7 +238,7 @@
       "qid": "863109654e6aaca5",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "多态里的虚函数底层是怎么实现的？",
@@ -251,7 +251,7 @@
       "qid": "3fdcbbcda1147b05",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多态",
       "text": "假如有十个同一个类的对象，虚函数表有几份",
@@ -264,7 +264,7 @@
       "qid": "85e4ffe574275077",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多态",
       "text": "构造函数能声明为虚函数吗？析构函数呢",
@@ -277,7 +277,7 @@
       "qid": "4412f459bc568954",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多态",
       "text": "父类构造函数调用父类 virtual 时，调用的是哪个函数（父的还是子类重写的）",
@@ -459,7 +459,7 @@
       "qid": "e849c796ed12e8dd",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "内存管理",
       "text": "内存对齐原理 + 计算",
@@ -472,7 +472,7 @@
       "qid": "4f6a58239a1ade36",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "内存对齐的规则",
@@ -485,7 +485,7 @@
       "qid": "463fc9b5b8464bd4",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "类大小计算（内存对齐）",
@@ -498,7 +498,7 @@
       "qid": "2aa38b5e377a573f",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "栈什么情况会爆",
@@ -511,7 +511,7 @@
       "qid": "bd6ca77586aece27",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "内存管理",
       "text": "内存碎片，怎么设计一个内存管理系统避免内存碎片",
@@ -524,7 +524,7 @@
       "qid": "29fda1e5c4786013",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "delete 是怎么知道要 delete 多少字节",
@@ -537,7 +537,7 @@
       "qid": "d1220285f9261be5",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "new int() 和 new int 的区别",
@@ -550,7 +550,7 @@
       "qid": "21a72fb36d0a2563",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "placement new",
@@ -563,7 +563,7 @@
       "qid": "70e65f9f3f6bfc1e",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "内存管理",
       "text": "如何检查内存泄漏",
@@ -576,7 +576,7 @@
       "qid": "09bb023598e58b35",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "内存管理",
       "text": "如何通过重载 new 和 delete 检测内存泄漏",
@@ -589,7 +589,7 @@
       "qid": "36a58582ba76eaf9",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "内存管理",
       "text": "C++ 的内存模型",
@@ -602,7 +602,7 @@
       "qid": "1bab90d186987117",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "内存管理",
       "text": "类的成员变量存储位置：类定义本身在代码区，实例化对象的成员在堆/栈上取决于对象分配方式",
@@ -654,7 +654,7 @@
       "qid": "743220e814326c1b",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "vector 是如何动态扩容的？",
@@ -667,7 +667,7 @@
       "qid": "d7aa21d28050deb3",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "vector 扩容机制",
@@ -680,7 +680,7 @@
       "qid": "46e4fe3be8794b33",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "vector 和 list 的区别（局部性、性能、结构）",
@@ -693,7 +693,7 @@
       "qid": "1da31d13c287bae1",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "vector 中去重（erase 会有什么问题、迭代器）",
@@ -706,7 +706,7 @@
       "qid": "05331a97bb3766c3",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "如果自己实现一个 vector，你会怎么考虑",
@@ -719,7 +719,7 @@
       "qid": "87285facf7b64089",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "map 的底层是什么，复杂度（红黑树）",
@@ -732,7 +732,7 @@
       "qid": "54b135313d08e484",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "unordered_map / map（底层结构、哈希冲突怎么解决）",
@@ -745,7 +745,7 @@
       "qid": "065b9dced8fac2eb",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "STL 的排序算法用的是什么？",
@@ -784,7 +784,7 @@
       "qid": "e45469a1721c7226",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "遍历数组和链表哪个更快（局部性、cache 命中、cacheline）",
@@ -797,7 +797,7 @@
       "qid": "f33acf175b79d42f",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "其他键值对存储结构：unordered_map，底层用哈希表",
@@ -810,7 +810,7 @@
       "qid": "fbcbc3b773c987d3",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "STL 容器",
       "text": "哈希表底层，map 底层存储结构，为什么要用红黑树？",
@@ -836,7 +836,7 @@
       "qid": "6682533ce2a1696c",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "STL 容器",
       "text": "map 迭代遍历结果是有序的（红黑树中序遍历）",
@@ -862,7 +862,7 @@
       "qid": "84e0e4725420df57",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "模板",
       "text": "模板的特化与偏特化",
@@ -875,7 +875,7 @@
       "qid": "6f0a00a613c16a6c",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "模板",
       "text": "模板能不能声明定义分开写",
@@ -888,7 +888,7 @@
       "qid": "e15c7fd6ac8a1743",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "模板",
       "text": "模板什么时候知道 T 的具体类型",
@@ -901,7 +901,7 @@
       "qid": "e070d6bb473fb53a",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "模板",
       "text": "模板在编译后在代码中是什么样子",
@@ -914,7 +914,7 @@
       "qid": "22620a055ace9ee6",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "Lambda 与函数对象",
       "text": "Lambda 表达式编译后的结果（编译为匿名类，捕获的变量转为成员变量）",
@@ -953,7 +953,7 @@
       "qid": "5b9377100c9495a8",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "智能指针",
       "text": "智能指针的引用计数原理，循环引用怎么解决",
@@ -966,7 +966,7 @@
       "qid": "738cd928b4fe49e9",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "智能指针",
       "text": "shared_ptr 的引用计数是线程安全的吗（控制块线程安全，指向的对象不保证）",
@@ -992,7 +992,7 @@
       "qid": "a57552a3187d4bcb",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "构造与析构",
       "text": "构造函数能不能为 virtual",
@@ -1005,7 +1005,7 @@
       "qid": "27e9f7a8ebd0a430",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "构造与析构",
       "text": "析构函数为什么要是虚函数",
@@ -1018,7 +1018,7 @@
       "qid": "e89a969af713a645",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "构造与析构",
       "text": "如果不通过 delete，离开作用域时自动销毁，会调用派生类的析构函数吗",
@@ -1031,7 +1031,7 @@
       "qid": "993489933d73129c",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "构造与析构",
       "text": "析构时先析构子还是父",
@@ -1122,7 +1122,7 @@
       "qid": "e1bdfba4dc4b429d",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "C++ 四种 cast",
@@ -1135,7 +1135,7 @@
       "qid": "4c811fdbd07451dd",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "static_cast 和 dynamic_cast 转换失败的区别（编译报错 / 指针返 null / 引用抛 bad_cast）",
@@ -1148,7 +1148,7 @@
       "qid": "4a785f3901239218",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "两个无关联的 class 如何互相转换（需提供构造函数或类型转换运算符）",
@@ -1174,7 +1174,7 @@
       "qid": "26633a9544832acb",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "i++ 和 ++i 哪个是左值哪个是右值",
@@ -1187,7 +1187,7 @@
       "qid": "6b01cc2259c74b18",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "左值右值、移动语义",
@@ -1200,7 +1200,7 @@
       "qid": "3a9f6a8a7bf8d427",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "类型与转换",
       "text": "移动构造后需要将原对象的指针置空",
@@ -1252,7 +1252,7 @@
       "qid": "198b30dd310384c4",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多线程与并发",
       "text": "原子操作与无锁队列：将取改写合并为一步，适用于高性能场景",
@@ -1265,7 +1265,7 @@
       "qid": "7fec58a9a035b9e3",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多线程与并发",
       "text": "多线程下避免频繁访问同一内存（缓存一致性导致缓存行失效，增加访问延迟）",
@@ -1317,7 +1317,7 @@
       "qid": "f63f09388db5210d",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "多线程与并发",
       "text": "系统调用会发生栈切换吗（用户态→内核态上下文切换需要切换栈）",
@@ -1330,7 +1330,7 @@
       "qid": "d75e1711e0c778e2",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多线程与并发",
       "text": "死锁，线程同步",
@@ -1343,7 +1343,7 @@
       "qid": "a35751e7f137e7fb",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多线程与并发",
       "text": "进程崩溃和线程崩溃有什么区别",
@@ -1356,7 +1356,7 @@
       "qid": "c0a2b4803f935520",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多线程与并发",
       "text": "进程访问的内存地址是实际的真实的内存地址吗",
@@ -1369,7 +1369,7 @@
       "qid": "d76d0c76e5c1a904",
       "tags": [
         "C++",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "多线程与并发",
       "text": "有没有使用过多线程编程",
@@ -1421,7 +1421,7 @@
       "qid": "8b9004c725cc8bea",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "编译与底层",
       "text": "动态链接库能被多个进程共享吗（代码段共享，数据段独立）",
@@ -1434,7 +1434,7 @@
       "qid": "e3d57c1174e0008e",
       "tags": [
         "C++",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "编译与底层",
       "text": "动态链接库分配的内存属于哪个进程（属于调用进程的堆空间）",
@@ -1525,7 +1525,7 @@
       "qid": "d1d01113e728baef",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "值类型与引用类型",
       "text": "结构体是否可以继承 / 实现接口？",
@@ -1538,7 +1538,7 @@
       "qid": "072462bfe5d9236c",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "值类型与引用类型",
       "text": "把一个实现接口的结构体实例赋值给接口变量可以吗？如果可以会产生什么问题？",
@@ -1551,7 +1551,7 @@
       "qid": "13736e1533be3a5f",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "值类型与引用类型",
       "text": "一个值类型可以存储在堆上吗",
@@ -1590,7 +1590,7 @@
       "qid": "9f1637694f6c3713",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "委托与事件",
       "text": "委托和事件的区别是什么？在实际项目中如何选择使用",
@@ -1603,7 +1603,7 @@
       "qid": "f03cd513bba2a5b2",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "委托与事件",
       "text": "委托怎么删除某个方法",
@@ -1642,7 +1642,7 @@
       "qid": "084e3acbc76a0cfd",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "GC 与内存管理",
       "text": "C# GC 的分代回收机制（0/1/2 三代，存活升级），大对象堆（LOH）单独管理、回收频率低",
@@ -1655,7 +1655,7 @@
       "qid": "bef41a96ca452437",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 与内存管理",
       "text": "假如有一个算法需要多次生成数组（每个 ~20 元素），如何避免频繁 GC",
@@ -1668,7 +1668,7 @@
       "qid": "9d60abdcde5ff3e6",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 与内存管理",
       "text": "GC 触发与实践中怎么避免？",
@@ -1681,7 +1681,7 @@
       "qid": "7002a0fd895f3289",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 与内存管理",
       "text": "C# 的 GC 是什么，平时有什么编码习惯可以减少 GC",
@@ -1694,7 +1694,7 @@
       "qid": "d3cf2db4a4b34e3c",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 与内存管理",
       "text": "C# 非托管内存",
@@ -1707,7 +1707,7 @@
       "qid": "b567dce9330efcec",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 与内存管理",
       "text": "如果对象 A 和对象 B 相互依赖并且确定要被 GC 收集，会发生什么",
@@ -1720,7 +1720,7 @@
       "qid": "da5a414420a42de1",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "GC 与内存管理",
       "text": "GC 原理，Unity GC 和 C# GC 有什么不同，循环引用，可达性分析，举例说明哪些场景能被 GC 清除",
@@ -1759,7 +1759,7 @@
       "qid": "780c158087466463",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "泛型与集合",
       "text": "泛型委托使用的方法",
@@ -1772,7 +1772,7 @@
       "qid": "f7545768fa8e7a2d",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "泛型与集合",
       "text": "C# 中 List 的底层实现，增删改的时间复杂度，不保证顺序时怎么优化删除",
@@ -1785,7 +1785,7 @@
       "qid": "bb360567af586308",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "泛型与集合",
       "text": "C# List 和 C++ vector 扩容区别：C# 不立即释放原数组（依赖 GC），C++ 立即 delete",
@@ -1798,7 +1798,7 @@
       "qid": "76cb22d3e6652b67",
       "tags": [
         "C#",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "泛型与集合",
       "text": "C# Dictionary 对标 C++ unordered_map（哈希表 O(1)），C++ map 为红黑树 O(logn)",
@@ -1811,7 +1811,7 @@
       "qid": "e4b357b0545cd9da",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "泛型与集合",
       "text": "Unity 字典 Dictionary 的底层实现",
@@ -1824,7 +1824,7 @@
       "qid": "e23b2a67b3290afc",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "泛型与集合",
       "text": "StringBuilder 底层是怎么实现拼接的",
@@ -1850,7 +1850,7 @@
       "qid": "710a153b6c451cbf",
       "tags": [
         "C#",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "反射",
       "text": "C# 反射的原理，怎么在实际项目中使用",
@@ -1876,7 +1876,7 @@
       "qid": "445d6c95be336f85",
       "tags": [
         "Lua",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "闭包与 upvalue",
       "text": "Lua 闭包的实现机制（upvalue，open 状态引用栈变量、close 状态拷贝到自身结构体）",
@@ -1902,7 +1902,7 @@
       "qid": "09a800fa33eda7fe",
       "tags": [
         "Lua",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "元表与元方法",
       "text": "Lua 如何用 table + 元表实现面向对象（__index 实现继承，重写元方法实现多态）",
@@ -1941,7 +1941,7 @@
       "qid": "4212cd8e228a3de6",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "生命周期",
       "text": "为什么 Awake 访问对象会是 null",
@@ -1954,7 +1954,7 @@
       "qid": "01cc1190f25fc13e",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "生命周期",
       "text": "如何解决初始化顺序问题",
@@ -2019,7 +2019,7 @@
       "qid": "12c1510bf17b1240",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "协程",
       "text": "Unity 的协程和线程、进程有啥区别？",
@@ -2032,7 +2032,7 @@
       "qid": "1770a8ff3626fe77",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "协程",
       "text": "100 个协程被挂起，现在有 10 个协程满足条件，应该先执行哪一个",
@@ -2110,7 +2110,7 @@
       "qid": "194aecde793ca514",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "UGUI",
       "text": "UGUI 的理解（底层 / 怎么用）",
@@ -2123,7 +2123,7 @@
       "qid": "9395ffa31d007bcd",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "UGUI 事件响应流程：点击屏幕 → 射线检测（Raycast） → 命中 UI 元素 → 触发 IPointerClickHandler 等回调",
@@ -2136,7 +2136,7 @@
       "qid": "945beaa4424c58ae",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "Mask 和 RectMask2D 的区别",
@@ -2149,7 +2149,7 @@
       "qid": "af824056d2707289",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "UGUI 中的 Mask 遮罩是怎么实现的",
@@ -2162,7 +2162,7 @@
       "qid": "526df55ea1958d80",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "UGUI 重绘",
@@ -2175,7 +2175,7 @@
       "qid": "b86ffc965f2e9733",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "Text 和 TextMeshPro 的区别是什么？TextMeshPro 是如何渲染一个汉字的？",
@@ -2188,7 +2188,7 @@
       "qid": "0a567d3b4effae26",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UGUI",
       "text": "动态循环列表是怎么实现的？为什么要用？有什么优点？",
@@ -2240,7 +2240,7 @@
       "qid": "dba19dc1c172da59",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UI 优化",
       "text": "UGUI 优化的方法",
@@ -2253,7 +2253,7 @@
       "qid": "bd7c94c3a79f601a",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "UI 优化",
       "text": "UI 合批条件：不能被打断、不能穿插、要一个图集",
@@ -2266,7 +2266,7 @@
       "qid": "d24180bd970d46e2",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "UI 优化",
       "text": "UI 元素重叠（图片+文字）会打断合批，增加 DrawCall",
@@ -2279,7 +2279,7 @@
       "qid": "3c13a959b8d13464",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UI 优化",
       "text": "UI Rebuild 优化：减少 Canvas 网格重新构建，避免 CPU 频繁计算",
@@ -2292,7 +2292,7 @@
       "qid": "8dc50c37bf0768ba",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "UI 优化",
       "text": "一个复杂的 UI 场景里，两个静态 UI 之间有很多动态 UI 且有遮挡，按动静分离是不是要打很多子 Canvas",
@@ -2344,7 +2344,7 @@
       "qid": "ec4951134392b381",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "物理系统",
       "text": "在 2D AI 物理移动时，为什么通常将逻辑写在 FixedUpdate 而不是 Update 中",
@@ -2357,7 +2357,7 @@
       "qid": "386c8be90f92b324",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "物理系统",
       "text": "FixedUpdate 是如何执行的？如果 FixedUpdate 的间隔特别短，如何保证严格根据物理时间执行",
@@ -2370,7 +2370,7 @@
       "qid": "d16078e9f1441345",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "物理系统",
       "text": "高速移动下的物体，如何避免穿模",
@@ -2383,7 +2383,7 @@
       "qid": "853e6c02a9ee6e7e",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "物理系统",
       "text": "Unity 物理系统的原理",
@@ -2396,7 +2396,7 @@
       "qid": "1a3c053f14bb9b72",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "物理系统",
       "text": "射线检测的原理，如何自己实现",
@@ -2435,7 +2435,7 @@
       "qid": "88a9158f628bce1a",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "AB 包（打包注意什么、加载卸载要注意什么、引用计数）",
@@ -2448,7 +2448,7 @@
       "qid": "90c2812e0407e469",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "Unity 预制体记录资源引用的方式",
@@ -2461,7 +2461,7 @@
       "qid": "c91f1ae2c28eaa29",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "打包时如何获取到资源在哪个 AB 上面",
@@ -2474,7 +2474,7 @@
       "qid": "efbcaa95376da609",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "读取 AB 时，如何知道资源属于哪个 AB",
@@ -2487,7 +2487,7 @@
       "qid": "f6c23b11732f6f3e",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "AB 包的颗粒度是怎么拆分的",
@@ -2500,7 +2500,7 @@
       "qid": "8082accb69dac86e",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "同步加载和异步加载都会产生内存方面的问题，怎么优化？异步产生的内存用什么方式释放",
@@ -2513,7 +2513,7 @@
       "qid": "72e220a898aa0ffa",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "Unity 打包的流程和注意事项（AssetBundle 构建、资源冗余如何处理）",
@@ -2526,7 +2526,7 @@
       "qid": "7ced757be9f4b816",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "Unity 什么操作会产生大量 GC",
@@ -2539,7 +2539,7 @@
       "qid": "f6b2543efb2ff330",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "资源管理与 AB 包",
       "text": "类似 AssetBundle，什么操作会产生内存泄漏",
@@ -2578,7 +2578,7 @@
       "qid": "7c72823d7b51a40e",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "合批与渲染优化",
       "text": "介绍一下 UI 合批",
@@ -2591,7 +2591,7 @@
       "qid": "11ffc36670f336bb",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "合批与渲染优化",
       "text": "静态 / 动态合批及条件（动态小物体，不超过 300 顶点）",
@@ -2604,7 +2604,7 @@
       "qid": "e100f0de071d8983",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "合批与渲染优化",
       "text": "合批（静态 / 动态 / UI）",
@@ -2630,7 +2630,7 @@
       "qid": "9e25d8bc241f0457",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "动画系统",
       "text": "Unity 动画系统的原理",
@@ -2643,7 +2643,7 @@
       "qid": "31a9f26f587622ca",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "动画系统",
       "text": "Animation 和 Animator 的区别，在只有几个简单动画切换情况下哪种性能更好，为什么",
@@ -2656,7 +2656,7 @@
       "qid": "895eeda51ec1b63b",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "动画系统",
       "text": "Unity 的 Animator 中的动画会全部加载到内存中吗？怎么优化",
@@ -2669,7 +2669,7 @@
       "qid": "e486181de5a937bb",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "动画系统",
       "text": "Playable 相关",
@@ -2695,7 +2695,7 @@
       "qid": "e9f441410a4df308",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "寻路与 NavMesh",
       "text": "假设有两层楼，二楼有一个洞，如何让 NPC 从洞掉到一楼还能继续正常寻路",
@@ -2708,7 +2708,7 @@
       "qid": "8b00c256c03703db",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "寻路与 NavMesh",
       "text": "Unity Navigation 寻路的原理",
@@ -2734,7 +2734,7 @@
       "qid": "15572241ccdbf369",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "ScriptableObject",
       "text": "ScriptableObject 的优劣势，什么情况下用，什么情况下不用",
@@ -2773,7 +2773,7 @@
       "qid": "a670ebb059fb29b6",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "碰撞检测",
       "text": "在 Unity 中实现一个简单的碰撞检测系统，要求能检测球体、盒子、胶囊等碰撞体并处理响应",
@@ -2786,7 +2786,7 @@
       "qid": "1f6b353abe020dbb",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
       "text": "JobSystem",
@@ -2799,7 +2799,7 @@
       "qid": "cbe00d5a58c94db4",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
       "text": "Burst",
@@ -2812,7 +2812,7 @@
       "qid": "a04e0812aee0210f",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
       "text": "GPU Instancing，JobSystem，Burst，Drawcall 具体优化了多少？适合什么场景？依据什么判断的",
@@ -2825,7 +2825,7 @@
       "qid": "6ea10951a2ee2659",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "JobSystem / Burst / ECS",
       "text": "ECS 架构的原理，Component 在内存中的布局方式",
@@ -2838,7 +2838,7 @@
       "qid": "c4a0b0fa1f5e560b",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "摄像机",
       "text": "在 3D 角色到墙角后，怎么调试可以让摄像机不被挤到外面或穿模",
@@ -2851,7 +2851,7 @@
       "qid": "1828d52815af0132",
       "tags": [
         "Unity",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "摄像机",
       "text": "摄像机避开障碍物的实现",
@@ -2864,7 +2864,7 @@
       "qid": "fd116bd51d4a324d",
       "tags": [
         "Unity",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "技能与系统设计",
       "text": "注：原「Unity 中的 Skill（技能系统）通常如何设计和实现」已归入 GameDesign",
@@ -2968,7 +2968,7 @@
       "qid": "fe1be04116ec37fd",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "渲染管线",
       "text": "CPU 和 GPU 间的通信",
@@ -2981,7 +2981,7 @@
       "qid": "e69d4aa7a0b351a5",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "渲染管线",
       "text": "渲染管线的各阶段在 Unity 中是如何实现的",
@@ -3124,7 +3124,7 @@
       "qid": "afa597ebbd32427a",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "PBR",
       "text": "PBR 的原理，金属度",
@@ -3137,7 +3137,7 @@
       "qid": "d9dbe99fc170029d",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "PBR",
       "text": "PBR 光照模型的核心原理",
@@ -3150,7 +3150,7 @@
       "qid": "357718a5e3bc04e7",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "阴影",
       "text": "阴影（Light Map、Shadow Map 原理）",
@@ -3267,7 +3267,7 @@
       "qid": "014126f595b6efaf",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "变换与坐标",
       "text": "欧拉角、四元数、旋转矩阵的区别和联系",
@@ -3306,7 +3306,7 @@
       "qid": "f1d31248f5c0acb7",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "深度测试",
       "text": "Early-Z 什么时候会失效",
@@ -3332,7 +3332,7 @@
       "qid": "4211bfe82f38de7b",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "透明混合",
       "text": "如果要实现半透明的话 Shader 代码怎么写",
@@ -3358,7 +3358,7 @@
       "qid": "dde936ffb23f116a",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "前向 / 延迟渲染",
       "text": "延迟渲染的原理、优缺点",
@@ -3371,7 +3371,7 @@
       "qid": "e42c6dc85253c133",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "光线追踪",
       "text": "光线追踪是什么？原理？与传统光栅化对比的优缺点？游戏中的应用场景",
@@ -3397,7 +3397,7 @@
       "qid": "df5b7614f1327693",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "几何与检测",
       "text": "判断点在三角形内（叉积、重心坐标、面积法）",
@@ -3410,7 +3410,7 @@
       "qid": "e5933d326e030444",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "几何与检测",
       "text": "判断点是否在三角形内部",
@@ -3423,7 +3423,7 @@
       "qid": "e0d105b2ad317bcb",
       "tags": [
         "Graphics",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "几何与检测",
       "text": "射线检测的原理，如何自己实现",
@@ -3449,7 +3449,7 @@
       "qid": "c790279a1ce0863b",
       "tags": [
         "Graphics",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "法线贴图",
       "text": "法线贴图（法线怎么存的、为什么多为蓝色）",
@@ -3566,7 +3566,7 @@
       "qid": "3c9b84fc1668b460",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "哈希",
       "text": "除了开放寻址和链地址还有吗（再哈希）",
@@ -3579,7 +3579,7 @@
       "qid": "9a5bd656ec345df4",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "哈希",
       "text": "哈希表最差情况复杂度，哈希冲突怎么解决",
@@ -3605,7 +3605,7 @@
       "qid": "bf6566337454fc00",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "A* 与寻路",
       "text": "A* 算法的原理",
@@ -3618,7 +3618,7 @@
       "qid": "e42f18916fceeaab",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "A* 与寻路",
       "text": "A* 原理、优点",
@@ -3631,7 +3631,7 @@
       "qid": "7b72a84e017f6f0b",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "A* 与寻路",
       "text": "AStar（流程、是否最优）",
@@ -3644,7 +3644,7 @@
       "qid": "769bb7680038f78e",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "A* 与寻路",
       "text": "A* 算法的优势",
@@ -3657,7 +3657,7 @@
       "qid": "54a652e8b5828d8d",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "A* 与寻路",
       "text": "A* 原理及与流场寻路对比",
@@ -3683,7 +3683,7 @@
       "qid": "841b61bc117cc06d",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "链表",
       "text": "判断链表是否有环、找到环入口（怎么证明）",
@@ -3696,7 +3696,7 @@
       "qid": "591818f66f16b73c",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "链表",
       "text": "不使用快慢指针呢？链表中每个节点值不同（存哈希表）",
@@ -3709,7 +3709,7 @@
       "qid": "6bb1777d95b44ea0",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "红黑树与平衡树",
       "text": "平衡二叉树的概念、左右子树深度差值是多少",
@@ -3735,7 +3735,7 @@
       "qid": "aaff3f4141695b54",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "红黑树与平衡树",
       "text": "AVL 树如何保证平衡性质",
@@ -3748,7 +3748,7 @@
       "qid": "c034d7c975657830",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "红黑树与平衡树",
       "text": "手撕平衡二叉树的判断，要求自己构建树结构",
@@ -3761,7 +3761,7 @@
       "qid": "9c65e38ae39b4c16",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "红黑树与平衡树",
       "text": "红黑树的原理",
@@ -3787,7 +3787,7 @@
       "qid": "ca3718bbcc36806d",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "Top-K",
       "text": "有 1 万个玩家的排名数据（分数），想取前 100 名，有什么快速方法",
@@ -3800,7 +3800,7 @@
       "qid": "cfacfbd6cca3b46e",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "空间划分",
       "text": "有一堆 2D 坐标，快速找有哪些落在半径为 r 的圆范围内",
@@ -3813,7 +3813,7 @@
       "qid": "973da645df54dc18",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "空间划分",
       "text": "了解过空间划分吗",
@@ -3826,7 +3826,7 @@
       "qid": "51d724ae226bdf31",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "空间划分",
       "text": "八叉树，AABB，SAT",
@@ -3839,7 +3839,7 @@
       "qid": "a60db0dd16302416",
       "tags": [
         "Algorithms",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "空间划分",
       "text": "SAT（分离轴算法）三维实现：面检测 + 边检测，与 GJK 算法的联系（闵可夫斯基差空间）",
@@ -3891,7 +3891,7 @@
       "qid": "5e06bfec8afa7aa1",
       "tags": [
         "Networking",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "TCP / UDP",
       "text": "如何实现一个轻量的可靠 UDP",
@@ -3904,7 +3904,7 @@
       "qid": "3bf996b6fb65a05e",
       "tags": [
         "Networking",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "TCP / UDP",
       "text": "UDP TCP 具体的应用，哪些模块适合用哪一种，具体游戏开发中如何保证可靠性",
@@ -3956,7 +3956,7 @@
       "qid": "9f1f57dbd47624ea",
       "tags": [
         "Networking",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "可靠传输",
       "text": "TCP 的四次挥手能不能改成三次，为什么",
@@ -3969,7 +3969,7 @@
       "qid": "558c1c2523e8246c",
       "tags": [
         "Networking",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "可靠传输",
       "text": "既然 UDP 不可靠，有没有方式让它变得可靠一点",
@@ -3982,7 +3982,7 @@
       "qid": "a17ac59d228da32d",
       "tags": [
         "Networking",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "可靠传输",
       "text": "超时重传失败后会怎样",
@@ -4034,7 +4034,7 @@
       "qid": "eff1e103d3e84b7d",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "观察者模式",
       "text": "观察者模式什么时候使用、怎么使用、方法封装使用哪些 API",
@@ -4047,7 +4047,7 @@
       "qid": "c624a1d72e32b810",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "观察者模式",
       "text": "观察者和单例，优缺点，在项目中的应用",
@@ -4060,7 +4060,7 @@
       "qid": "f6e6884a4731773c",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "单例模式",
       "text": "观察者和单例，优缺点，在项目中的应用",
@@ -4073,7 +4073,7 @@
       "qid": "7e3fcc6acb1f8c3c",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "单例模式",
       "text": "单例模式有什么缺点",
@@ -4086,7 +4086,7 @@
       "qid": "9d6370d7cb74e99a",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "享元模式",
       "text": "享元模式怎么实现",
@@ -4099,7 +4099,7 @@
       "qid": "72ee3d07c68ad7ba",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "享元模式",
       "text": "享元模式的其他数据存在哪里",
@@ -4112,7 +4112,7 @@
       "qid": "5066c9d6e2ae16ad",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "对象池",
       "text": "对象池要提供哪些接口",
@@ -4138,7 +4138,7 @@
       "qid": "d905fc6c9bebf406",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "MVC / MVVM",
       "text": "MVC 与 MVVM 区别",
@@ -4151,7 +4151,7 @@
       "qid": "6209e5666bc4aada",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "MVC / MVVM",
       "text": "MVVM 怎么做到 UI 绑定的",
@@ -4164,7 +4164,7 @@
       "qid": "5e662b05b6afbb6b",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "工厂模式",
       "text": "工厂模式的使用场景和实现方式",
@@ -4190,7 +4190,7 @@
       "qid": "0a23413635cf5c3c",
       "tags": [
         "DesignPatterns",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "事件系统",
       "text": "数据驱动",
@@ -4229,7 +4229,7 @@
       "qid": "23db3e7bea1b312a",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "FSM 与行为树",
       "text": "FSM 和行为树的差异，实现简单的巡逻保安 AI 会选择什么模式",
@@ -4242,7 +4242,7 @@
       "qid": "6e96cf4c48499b6c",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "FSM 与行为树",
       "text": "多层级 FSM",
@@ -4268,7 +4268,7 @@
       "qid": "02df4020a32aa4e3",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "攻击判定",
       "text": "两种近战攻击判定机制：碰撞器检测 vs 帧动画关键帧范围检测，优缺点",
@@ -4281,7 +4281,7 @@
       "qid": "841fcdc0658b615a",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "攻击判定",
       "text": "如果攻击判定依赖帧实现，网络波动导致攻击丢失怎么办",
@@ -4294,7 +4294,7 @@
       "qid": "5324cda276bad58e",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "攻击判定",
       "text": "如果实现类似《空洞骑士》里面怪物遇到墙壁或走到平台边缘掉头，实现方法是什么",
@@ -4307,7 +4307,7 @@
       "qid": "bfe989a98261abdb",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "背包系统",
       "text": "背包系统的实现",
@@ -4320,7 +4320,7 @@
       "qid": "7f940aecda8022b4",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "背包系统",
       "text": "背包中使用了一个物品的逻辑",
@@ -4333,7 +4333,7 @@
       "qid": "c9a38c6af0dd8db3",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "Buff 系统",
       "text": "Buff 系统怎么设计",
@@ -4346,7 +4346,7 @@
       "qid": "d36ca3991571510c",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "防作弊",
       "text": "如果有人用外挂篡改客户端数据，怎么保证外挂无法得逞",
@@ -4359,7 +4359,7 @@
       "qid": "846a825843d6d465",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "场景与内存",
       "text": "一个跑酷游戏不断生成场景，怎么设置让内存不崩溃",
@@ -4372,7 +4372,7 @@
       "qid": "10c0421dec6ea1f8",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "技能系统",
       "text": "技能系统通常如何设计和实现",
@@ -4385,7 +4385,7 @@
       "qid": "a8ffe88aedd03077",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "大世界",
       "text": "大世界中应该怎么去做碰撞检测",
@@ -4398,7 +4398,7 @@
       "qid": "7adcf2b7be795564",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "帧同步与状态同步",
       "text": "帧同步和状态同步",
@@ -4411,7 +4411,7 @@
       "qid": "e838eefb729aa29d",
       "tags": [
         "GameDesign",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "帧同步与状态同步",
       "text": "帧同步和状态同步向服务器端发送的内容",
@@ -4424,7 +4424,7 @@
       "qid": "5165a4ab04032e15",
       "tags": [
         "Performance",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "DrawCall 优化",
       "text": "DrawCall 优化的方法",
@@ -4437,7 +4437,7 @@
       "qid": "f6863aa0530fb86d",
       "tags": [
         "Performance",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "DrawCall 优化",
       "text": "一个游戏场景中有一百个人，要怎么渲染才能不卡顿",
@@ -4450,7 +4450,7 @@
       "qid": "e2b33ed43212a4d3",
       "tags": [
         "Performance",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "DrawCall 优化",
       "text": "战斗场景性能排查流程：Profiler 定位热点 → 针对性优化（渲染/物理/CPU）",
@@ -4476,7 +4476,7 @@
       "qid": "e95f23b48eafa25d",
       "tags": [
         "Performance",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "CPU / GPU 瓶颈",
       "text": "游戏开发中常见的 CPU 瓶颈原因",
@@ -4489,7 +4489,7 @@
       "qid": "9c8b3100a849ff6d",
       "tags": [
         "Performance",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "CPU / GPU 瓶颈",
       "text": "我们要上线一个手游，在低端机上运行会发热，怎么解决",
@@ -4502,7 +4502,7 @@
       "qid": "bc011df101bbe971",
       "tags": [
         "Performance",
-        "Advanced"
+        "intermediate"
       ],
       "subtopic": "GC 优化",
       "text": "Lua GC",
@@ -4515,7 +4515,7 @@
       "qid": "1e4a45cd36c4d831",
       "tags": [
         "Performance",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "场景管理",
       "text": "碰撞检测优化：BVH / 空间划分（八叉树）",
@@ -4528,7 +4528,7 @@
       "qid": "6893b6a8ce5fe93f",
       "tags": [
         "Performance",
-        "Advanced"
+        "advanced"
       ],
       "subtopic": "场景管理",
       "text": "CPU 预裁剪：不提交视锥体外物体的 DrawCall",
@@ -5318,28 +5318,28 @@
       "id": 409
     },
     {
-      "qid": "64d31c8b19fa2c67",
+      "qid": "955d35969ec8d198",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "资源与并发",
-      "text": "RAII 如何帮助管理客户端资源？",
+      "text": "RAII 如何帮助管理窗口、文件和系统句柄？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 410
     },
     {
-      "qid": "22728b4b3ac7d410",
+      "qid": "786a32e7244ddf10",
       "tags": [
         "C++",
         "basic"
       ],
       "subtopic": "资源与并发",
-      "text": "unique_ptr 与 shared_ptr 应如何选择？",
+      "text": "unique_ptr 与 shared_ptr 在桌面客户端中应如何选择？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 411
     },
@@ -5352,7 +5352,7 @@
       "subtopic": "资源与并发",
       "text": "UI 线程为什么不能执行耗时任务？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 412
     },
@@ -5365,35 +5365,22 @@
       "subtopic": "资源与并发",
       "text": "线程间传递对象时如何明确所有权？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 413
     },
     {
-      "qid": "8aa3d3b38a7bae0b",
+      "qid": "5df54febe6fb23c7",
       "tags": [
         "C++",
         "advanced"
       ],
       "subtopic": "资源与并发",
-      "text": "如何排查客户端中的悬空指针和内存破坏？",
+      "text": "如何排查悬空指针和跨模块内存释放问题？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 414
-    },
-    {
-      "qid": "ee6f5755f6e1551b",
-      "tags": [
-        "C#",
-        "basic"
-      ],
-      "subtopic": "运行时与异步",
-      "text": "值类型与引用类型在传参时有什么差异？",
-      "profiles": [
-        "client"
-      ],
-      "id": 415
     },
     {
       "qid": "56db0071b646f791",
@@ -5404,315 +5391,1109 @@
       "subtopic": "运行时与异步",
       "text": "IDisposable 模式解决了什么问题？",
       "profiles": [
-        "client"
+        "desktop-client"
+      ],
+      "id": 415
+    },
+    {
+      "qid": "e1b8c71074209a87",
+      "tags": [
+        "C#",
+        "basic"
+      ],
+      "subtopic": "运行时与异步",
+      "text": "委托与事件在桌面 UI 中分别承担什么职责？",
+      "profiles": [
+        "desktop-client"
       ],
       "id": 416
     },
     {
-      "qid": "02ce247031c6ac29",
+      "qid": "46f5a0c2ef558ab7",
       "tags": [
         "C#",
         "intermediate"
       ],
       "subtopic": "运行时与异步",
-      "text": "async 与 await 如何影响线程和执行上下文？",
+      "text": "async 与 await 如何避免阻塞 UI 线程？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 417
     },
     {
-      "qid": "af55b44e17e278b5",
+      "qid": "a9c048dc968fec76",
       "tags": [
         "C#",
         "intermediate"
       ],
       "subtopic": "运行时与异步",
-      "text": "委托、事件与观察者模式有什么联系？",
+      "text": "SynchronizationContext 如何影响异步回调？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 418
     },
     {
-      "qid": "9e9bf1771a3236d4",
+      "qid": "ca632424ffc04ea8",
       "tags": [
         "C#",
         "advanced"
       ],
       "subtopic": "运行时与异步",
-      "text": "如何减少高频交互中的 GC 压力？",
+      "text": "如何定位桌面应用中的托管内存泄漏？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 419
     },
     {
-      "qid": "37183d1f03f6743f",
+      "qid": "2bb500d5423aa466",
       "tags": [
-        "Android",
+        "DesktopUI",
         "basic"
       ],
-      "subtopic": "生命周期与系统",
-      "text": "Activity 的主要生命周期回调有哪些？",
+      "subtopic": "UI 与交互",
+      "text": "保留模式 UI 与立即模式 UI 有什么区别？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 420
     },
     {
-      "qid": "b634fbda50f4fffd",
+      "qid": "7118cfdd4ca3c25d",
       "tags": [
-        "Android",
+        "DesktopUI",
         "basic"
       ],
-      "subtopic": "生命周期与系统",
-      "text": "dp、sp 与 px 分别适合什么场景？",
+      "subtopic": "UI 与交互",
+      "text": "数据绑定可以减少哪些界面代码？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 421
     },
     {
-      "qid": "fa90bcc47b7bfa91",
+      "qid": "9e56106c690bdcd6",
       "tags": [
-        "Android",
+        "DesktopUI",
         "intermediate"
       ],
-      "subtopic": "生命周期与系统",
-      "text": "配置变化时如何保存和恢复界面状态？",
+      "subtopic": "UI 与交互",
+      "text": "大型列表如何使用虚拟化避免卡顿？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 422
     },
     {
-      "qid": "8a1b1bc31957f6a5",
+      "qid": "f7c7ad2c658ecdd7",
       "tags": [
-        "Android",
+        "DesktopUI",
         "intermediate"
       ],
-      "subtopic": "生命周期与系统",
-      "text": "主线程 ANR 的常见原因和定位方式是什么？",
+      "subtopic": "UI 与交互",
+      "text": "高 DPI 与多显示器环境需要处理哪些问题？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 423
     },
     {
-      "qid": "8d8f90076693c756",
+      "qid": "546c91c4baeca248",
       "tags": [
-        "Android",
+        "DesktopUI",
         "advanced"
       ],
-      "subtopic": "生命周期与系统",
-      "text": "Android 进程被系统回收后应用应如何恢复？",
+      "subtopic": "UI 与交互",
+      "text": "如何设计可测试且不依赖具体 UI 框架的交互逻辑？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 424
     },
     {
-      "qid": "065109d488da7841",
+      "qid": "edf9d8c2c733f112",
       "tags": [
-        "Flutter",
+        "DesktopSystem",
         "basic"
       ],
-      "subtopic": "Widget 与状态",
-      "text": "StatelessWidget 与 StatefulWidget 如何选择？",
+      "subtopic": "操作系统集成",
+      "text": "进程与线程的资源隔离有什么区别？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 425
     },
     {
-      "qid": "6c5075460e5328e6",
+      "qid": "148657f1ed928183",
       "tags": [
-        "Flutter",
+        "DesktopSystem",
         "basic"
       ],
-      "subtopic": "Widget 与状态",
-      "text": "BuildContext 表示什么？",
+      "subtopic": "操作系统集成",
+      "text": "文件锁和进程间互斥分别适合什么场景？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 426
     },
     {
-      "qid": "35ac33805b34a6d5",
+      "qid": "acddb5653bdc459f",
       "tags": [
-        "Flutter",
+        "DesktopSystem",
         "intermediate"
       ],
-      "subtopic": "Widget 与状态",
-      "text": "Widget、Element 与 RenderObject 的关系是什么？",
+      "subtopic": "操作系统集成",
+      "text": "桌面应用如何实现单实例启动？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 427
     },
     {
-      "qid": "425f31c89203acba",
+      "qid": "0c126ae3b56b1da0",
       "tags": [
-        "Flutter",
+        "DesktopSystem",
         "intermediate"
       ],
-      "subtopic": "Widget 与状态",
-      "text": "如何选择局部状态与全局状态管理方案？",
+      "subtopic": "操作系统集成",
+      "text": "进程间通信方案应如何选择？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 428
     },
     {
-      "qid": "70421c18a19bb37d",
+      "qid": "e9d9088d7e951b3e",
       "tags": [
-        "Flutter",
+        "DesktopSystem",
         "advanced"
       ],
-      "subtopic": "Widget 与状态",
-      "text": "Flutter 一帧的构建、布局和绘制流程是什么？",
+      "subtopic": "操作系统集成",
+      "text": "自动更新程序如何保证完整性与失败回滚？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 429
     },
     {
-      "qid": "62625e78bf3a77e8",
+      "qid": "e306d25a42f5c06f",
       "tags": [
-        "ClientArchitecture",
+        "DesktopArchitecture",
         "basic"
       ],
-      "subtopic": "架构与数据流",
+      "subtopic": "架构与模块化",
       "text": "MVC、MVP 与 MVVM 的职责划分有什么区别？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 430
     },
     {
-      "qid": "a20c0db9dab11b71",
+      "qid": "6237ce9cbbb210d8",
       "tags": [
-        "ClientArchitecture",
+        "DesktopArchitecture",
         "basic"
       ],
-      "subtopic": "架构与数据流",
-      "text": "客户端为什么需要明确的单向数据流？",
+      "subtopic": "架构与模块化",
+      "text": "为什么要将业务状态与窗口生命周期解耦？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 431
     },
     {
-      "qid": "28f8923567edffe0",
+      "qid": "e707f2b8ab5f918a",
       "tags": [
-        "ClientArchitecture",
+        "DesktopArchitecture",
         "intermediate"
       ],
-      "subtopic": "架构与数据流",
-      "text": "离线缓存与服务端数据冲突时如何处理？",
+      "subtopic": "架构与模块化",
+      "text": "如何设计可替换的网络层和持久化层？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 432
     },
     {
-      "qid": "bde70e18c65570ff",
+      "qid": "c81f75e13a12a06e",
       "tags": [
-        "ClientArchitecture",
+        "DesktopArchitecture",
         "intermediate"
       ],
-      "subtopic": "架构与数据流",
-      "text": "如何设计可替换的网络层和持久化层？",
+      "subtopic": "架构与模块化",
+      "text": "插件系统如何隔离接口、版本和故障？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 433
     },
     {
-      "qid": "a9fd783fbe089a5f",
+      "qid": "920aa1a220ad0b2a",
       "tags": [
-        "ClientArchitecture",
+        "DesktopArchitecture",
         "advanced"
       ],
-      "subtopic": "架构与数据流",
-      "text": "大型客户端如何进行模块化和依赖治理？",
+      "subtopic": "架构与模块化",
+      "text": "大型桌面客户端如何治理跨模块依赖？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 434
     },
     {
-      "qid": "1d722305bc94c232",
+      "qid": "c79b232bab508b29",
       "tags": [
-        "ClientPerformance",
+        "DesktopPerformance",
         "basic"
       ],
       "subtopic": "性能与稳定性",
-      "text": "客户端冷启动时间由哪些部分组成？",
+      "text": "桌面应用冷启动时间由哪些部分组成？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 435
     },
     {
-      "qid": "30953c365923a375",
+      "qid": "40d14ad70556fa50",
       "tags": [
-        "ClientPerformance",
+        "DesktopPerformance",
         "basic"
       ],
       "subtopic": "性能与稳定性",
-      "text": "如何避免图片加载导致内存峰值？",
+      "text": "如何避免图片和文档预览造成内存峰值？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 436
     },
     {
-      "qid": "964e7eb2eb406520",
+      "qid": "bfa27a130307ee56",
       "tags": [
-        "ClientPerformance",
+        "DesktopPerformance",
         "intermediate"
       ],
       "subtopic": "性能与稳定性",
-      "text": "如何定位卡顿发生在 CPU、GPU 还是 IO？",
+      "text": "如何区分 UI 卡顿来自 CPU、GPU 还是 IO？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 437
     },
     {
-      "qid": "f3a1f78ee2ed164e",
+      "qid": "f48922710fecb033",
       "tags": [
-        "ClientPerformance",
+        "DesktopPerformance",
         "intermediate"
       ],
       "subtopic": "性能与稳定性",
-      "text": "崩溃日志需要包含哪些诊断信息？",
+      "text": "崩溃转储需要包含哪些诊断信息？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 438
     },
     {
-      "qid": "09f5d993ddb124f3",
+      "qid": "e84842867af875f4",
       "tags": [
-        "ClientPerformance",
+        "DesktopPerformance",
         "advanced"
       ],
       "subtopic": "性能与稳定性",
-      "text": "如何设计性能指标采集并控制采集开销？",
+      "text": "如何设计低开销的性能与稳定性监控？",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 439
+    },
+    {
+      "qid": "e1626e8bd5fd52ac",
+      "tags": [
+        "Kotlin",
+        "basic"
+      ],
+      "subtopic": "语言与协程",
+      "text": "val 与 var 的语义有什么区别？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 440
+    },
+    {
+      "qid": "3b81c091848b4a84",
+      "tags": [
+        "Kotlin",
+        "basic"
+      ],
+      "subtopic": "语言与协程",
+      "text": "可空类型如何减少空指针异常？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 441
+    },
+    {
+      "qid": "62720da6275019cb",
+      "tags": [
+        "Kotlin",
+        "intermediate"
+      ],
+      "subtopic": "语言与协程",
+      "text": "data class 自动生成了哪些能力？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 442
+    },
+    {
+      "qid": "abd05b110c4a9585",
+      "tags": [
+        "Kotlin",
+        "intermediate"
+      ],
+      "subtopic": "语言与协程",
+      "text": "suspend 函数与普通函数有什么区别？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 443
+    },
+    {
+      "qid": "2c3829938fd0ee91",
+      "tags": [
+        "Kotlin",
+        "advanced"
+      ],
+      "subtopic": "语言与协程",
+      "text": "Kotlin 协程的结构化并发解决了什么问题？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 444
+    },
+    {
+      "qid": "eadc7b0aa7e3ae36",
+      "tags": [
+        "AndroidLifecycle",
+        "basic"
+      ],
+      "subtopic": "组件生命周期",
+      "text": "Activity 的主要生命周期回调有哪些？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 445
+    },
+    {
+      "qid": "b725dcac805b59c0",
+      "tags": [
+        "AndroidLifecycle",
+        "basic"
+      ],
+      "subtopic": "组件生命周期",
+      "text": "Fragment 的视图生命周期为什么独立存在？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 446
+    },
+    {
+      "qid": "b4303cb5e5d6d7fa",
+      "tags": [
+        "AndroidLifecycle",
+        "intermediate"
+      ],
+      "subtopic": "组件生命周期",
+      "text": "配置变化时如何保存和恢复界面状态？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 447
+    },
+    {
+      "qid": "f0514c0861a088b7",
+      "tags": [
+        "AndroidLifecycle",
+        "intermediate"
+      ],
+      "subtopic": "组件生命周期",
+      "text": "进程被系统回收后应用应如何恢复？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 448
+    },
+    {
+      "qid": "d05c80104cb2e87e",
+      "tags": [
+        "AndroidLifecycle",
+        "advanced"
+      ],
+      "subtopic": "组件生命周期",
+      "text": "如何避免生命周期与异步任务错配导致泄漏或崩溃？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 449
+    },
+    {
+      "qid": "ca6824ac98452905",
+      "tags": [
+        "AndroidUI",
+        "basic"
+      ],
+      "subtopic": "View 与 Compose",
+      "text": "dp、sp 与 px 分别适合什么场景？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 450
+    },
+    {
+      "qid": "26edadb08ed9e1c6",
+      "tags": [
+        "AndroidUI",
+        "basic"
+      ],
+      "subtopic": "View 与 Compose",
+      "text": "RecyclerView 的复用机制解决了什么问题？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 451
+    },
+    {
+      "qid": "8a44f6e447ca1790",
+      "tags": [
+        "AndroidUI",
+        "intermediate"
+      ],
+      "subtopic": "View 与 Compose",
+      "text": "Compose 重组在什么情况下发生？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 452
+    },
+    {
+      "qid": "ac68ed7fa4d35ef1",
+      "tags": [
+        "AndroidUI",
+        "intermediate"
+      ],
+      "subtopic": "View 与 Compose",
+      "text": "如何避免列表滚动中的重复布局和图片抖动？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 453
+    },
+    {
+      "qid": "7fe918f5acb54f5c",
+      "tags": [
+        "AndroidUI",
+        "advanced"
+      ],
+      "subtopic": "View 与 Compose",
+      "text": "如何设计同时支持无障碍和多尺寸屏幕的 UI？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 454
+    },
+    {
+      "qid": "7c5b496251b9c900",
+      "tags": [
+        "AndroidData",
+        "basic"
+      ],
+      "subtopic": "数据与网络",
+      "text": "SharedPreferences 与数据库分别适合存储什么？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 455
+    },
+    {
+      "qid": "9b6ce6cc158a4947",
+      "tags": [
+        "AndroidData",
+        "basic"
+      ],
+      "subtopic": "数据与网络",
+      "text": "Android 网络请求为什么需要在后台执行？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 456
+    },
+    {
+      "qid": "528bbfced906c2b2",
+      "tags": [
+        "AndroidData",
+        "intermediate"
+      ],
+      "subtopic": "数据与网络",
+      "text": "Room 如何处理数据库版本迁移？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 457
+    },
+    {
+      "qid": "4b9b3c14496468d6",
+      "tags": [
+        "AndroidData",
+        "intermediate"
+      ],
+      "subtopic": "数据与网络",
+      "text": "离线缓存与服务端数据冲突时如何处理？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 458
+    },
+    {
+      "qid": "e26b66e4d80e8899",
+      "tags": [
+        "AndroidData",
+        "advanced"
+      ],
+      "subtopic": "数据与网络",
+      "text": "如何设计支持分页、重试和离线读取的数据仓库？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 459
+    },
+    {
+      "qid": "05ab998604c24789",
+      "tags": [
+        "AndroidArchitecture",
+        "basic"
+      ],
+      "subtopic": "Jetpack 架构",
+      "text": "ViewModel 为什么能够跨配置变化保留状态？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 460
+    },
+    {
+      "qid": "85608fd227a09e45",
+      "tags": [
+        "AndroidArchitecture",
+        "basic"
+      ],
+      "subtopic": "Jetpack 架构",
+      "text": "单向数据流对复杂页面有什么帮助？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 461
+    },
+    {
+      "qid": "5e3d15dda7822aca",
+      "tags": [
+        "AndroidArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "Jetpack 架构",
+      "text": "StateFlow 与 SharedFlow 如何选择？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 462
+    },
+    {
+      "qid": "de27c894f562b188",
+      "tags": [
+        "AndroidArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "Jetpack 架构",
+      "text": "Repository 层应承担哪些职责？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 463
+    },
+    {
+      "qid": "b84fedd9f14e4cf5",
+      "tags": [
+        "AndroidArchitecture",
+        "advanced"
+      ],
+      "subtopic": "Jetpack 架构",
+      "text": "多模块 Android 工程如何划分依赖边界？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 464
+    },
+    {
+      "qid": "7f804b0036674e18",
+      "tags": [
+        "AndroidPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "ANR 的常见原因有哪些？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 465
+    },
+    {
+      "qid": "0b37320eaca17396",
+      "tags": [
+        "AndroidPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何避免 Bitmap 导致内存峰值？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 466
+    },
+    {
+      "qid": "144f1b8621ca6004",
+      "tags": [
+        "AndroidPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何定位启动、渲染和 IO 卡顿？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 467
+    },
+    {
+      "qid": "5a50de6a0f1b4d3f",
+      "tags": [
+        "AndroidPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何发现 Activity 或 Fragment 泄漏？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 468
+    },
+    {
+      "qid": "164cc3d62164c081",
+      "tags": [
+        "AndroidPerformance",
+        "advanced"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何设计 Android 性能指标采集并控制开销？",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 469
+    },
+    {
+      "qid": "757aea7cab36921b",
+      "tags": [
+        "Dart",
+        "basic"
+      ],
+      "subtopic": "语言与异步",
+      "text": "final 与 const 的语义有什么区别？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 470
+    },
+    {
+      "qid": "a0cd4c0e23ca14a3",
+      "tags": [
+        "Dart",
+        "basic"
+      ],
+      "subtopic": "语言与异步",
+      "text": "Dart 的空安全如何表达可空与非空类型？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 471
+    },
+    {
+      "qid": "f39221e4a291b806",
+      "tags": [
+        "Dart",
+        "intermediate"
+      ],
+      "subtopic": "语言与异步",
+      "text": "Future 与 Stream 分别适合什么异步场景？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 472
+    },
+    {
+      "qid": "586b9dbca4a9ff15",
+      "tags": [
+        "Dart",
+        "intermediate"
+      ],
+      "subtopic": "语言与异步",
+      "text": "mixin 与继承应如何选择？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 473
+    },
+    {
+      "qid": "0973265e331e0587",
+      "tags": [
+        "Dart",
+        "advanced"
+      ],
+      "subtopic": "语言与异步",
+      "text": "Isolate 的内存隔离对并发设计有什么影响？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 474
+    },
+    {
+      "qid": "55fad61365bf90d9",
+      "tags": [
+        "FlutterWidgets",
+        "basic"
+      ],
+      "subtopic": "Widget 与渲染",
+      "text": "StatelessWidget 与 StatefulWidget 如何选择？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 475
+    },
+    {
+      "qid": "18bfaa80aa4ab146",
+      "tags": [
+        "FlutterWidgets",
+        "basic"
+      ],
+      "subtopic": "Widget 与渲染",
+      "text": "BuildContext 表示什么？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 476
+    },
+    {
+      "qid": "e14672c3b150281e",
+      "tags": [
+        "FlutterWidgets",
+        "intermediate"
+      ],
+      "subtopic": "Widget 与渲染",
+      "text": "Widget、Element 与 RenderObject 的关系是什么？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 477
+    },
+    {
+      "qid": "dcacb6e685bc685b",
+      "tags": [
+        "FlutterWidgets",
+        "intermediate"
+      ],
+      "subtopic": "Widget 与渲染",
+      "text": "Key 在节点复用和状态保持中有什么作用？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 478
+    },
+    {
+      "qid": "11523475a9b787c9",
+      "tags": [
+        "FlutterWidgets",
+        "advanced"
+      ],
+      "subtopic": "Widget 与渲染",
+      "text": "Flutter 一帧的构建、布局、绘制和合成流程是什么？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 479
+    },
+    {
+      "qid": "77ecece6ee217c9b",
+      "tags": [
+        "FlutterState",
+        "basic"
+      ],
+      "subtopic": "状态管理",
+      "text": "setState 适合管理什么范围的状态？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 480
+    },
+    {
+      "qid": "a6b5fa28aacc4daf",
+      "tags": [
+        "FlutterState",
+        "basic"
+      ],
+      "subtopic": "状态管理",
+      "text": "局部状态与全局状态应如何划分？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 481
+    },
+    {
+      "qid": "8d86027e703d68e3",
+      "tags": [
+        "FlutterState",
+        "intermediate"
+      ],
+      "subtopic": "状态管理",
+      "text": "Provider、Riverpod 与 BLoC 的核心差异是什么？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 482
+    },
+    {
+      "qid": "9f74d55e64d3b1d7",
+      "tags": [
+        "FlutterState",
+        "intermediate"
+      ],
+      "subtopic": "状态管理",
+      "text": "如何避免状态变化引起大范围重建？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 483
+    },
+    {
+      "qid": "ecec0ad11b59a845",
+      "tags": [
+        "FlutterState",
+        "advanced"
+      ],
+      "subtopic": "状态管理",
+      "text": "如何用不可变状态设计可回放、可测试的数据流？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 484
+    },
+    {
+      "qid": "196cef862b3c8460",
+      "tags": [
+        "FlutterPlatform",
+        "basic"
+      ],
+      "subtopic": "平台集成",
+      "text": "MethodChannel 解决了什么问题？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 485
+    },
+    {
+      "qid": "1af6e08c517d4b9d",
+      "tags": [
+        "FlutterPlatform",
+        "basic"
+      ],
+      "subtopic": "平台集成",
+      "text": "Flutter 插件通常包含哪些平台部分？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 486
+    },
+    {
+      "qid": "a5c491c99aa01864",
+      "tags": [
+        "FlutterPlatform",
+        "intermediate"
+      ],
+      "subtopic": "平台集成",
+      "text": "如何处理 Android 与 iOS 生命周期差异？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 487
+    },
+    {
+      "qid": "9b99aa3ae6e71eda",
+      "tags": [
+        "FlutterPlatform",
+        "intermediate"
+      ],
+      "subtopic": "平台集成",
+      "text": "后台任务和通知能力为什么需要平台适配？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 488
+    },
+    {
+      "qid": "8786643a04ee90a5",
+      "tags": [
+        "FlutterPlatform",
+        "advanced"
+      ],
+      "subtopic": "平台集成",
+      "text": "如何设计可测试且支持多平台的原生能力抽象？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 489
+    },
+    {
+      "qid": "5e4b9f0478c2ebf9",
+      "tags": [
+        "FlutterArchitecture",
+        "basic"
+      ],
+      "subtopic": "应用架构",
+      "text": "页面、领域逻辑和数据访问应如何分层？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 490
+    },
+    {
+      "qid": "937a4978240ad43d",
+      "tags": [
+        "FlutterArchitecture",
+        "basic"
+      ],
+      "subtopic": "应用架构",
+      "text": "为什么要将导航和业务状态解耦？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 491
+    },
+    {
+      "qid": "14550dddd1a639ea",
+      "tags": [
+        "FlutterArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "应用架构",
+      "text": "如何设计可替换的网络层与本地存储层？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 492
+    },
+    {
+      "qid": "874649dffceaf84c",
+      "tags": [
+        "FlutterArchitecture",
+        "intermediate"
+      ],
+      "subtopic": "应用架构",
+      "text": "大型 Flutter 工程如何按 feature 模块化？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 493
+    },
+    {
+      "qid": "52f1e6f3add22296",
+      "tags": [
+        "FlutterArchitecture",
+        "advanced"
+      ],
+      "subtopic": "应用架构",
+      "text": "多 package 工程如何治理依赖与版本？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 494
+    },
+    {
+      "qid": "47113aeb96d9e4a0",
+      "tags": [
+        "FlutterPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "const Widget 如何减少无效对象创建？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 495
+    },
+    {
+      "qid": "7221a8481d82e647",
+      "tags": [
+        "FlutterPerformance",
+        "basic"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何避免大图造成内存峰值？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 496
+    },
+    {
+      "qid": "f623619cade8ea04",
+      "tags": [
+        "FlutterPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何定位 UI 线程与 Raster 线程卡顿？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 497
+    },
+    {
+      "qid": "d87d98258ac8a472",
+      "tags": [
+        "FlutterPerformance",
+        "intermediate"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "RepaintBoundary 在什么情况下有效？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 498
+    },
+    {
+      "qid": "71e1ee59f889794e",
+      "tags": [
+        "FlutterPerformance",
+        "advanced"
+      ],
+      "subtopic": "性能与稳定性",
+      "text": "如何设计 Flutter 崩溃、卡顿和启动指标监控？",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 499
     }
   ],
   "手撕": [
     {
       "qid": "9af511090eaba132",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "手写快排",
@@ -5724,7 +6505,8 @@
     {
       "qid": "155e89d17f7b89fc",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "basic"
       ],
       "subtopic": "",
       "text": "LeetCode35 搜索插入位置",
@@ -5736,7 +6518,8 @@
     {
       "qid": "5ce6142077f1be2c",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "basic"
       ],
       "subtopic": "",
       "text": "LeetCode1302 层数最深叶子节点的和",
@@ -5748,7 +6531,8 @@
     {
       "qid": "16235af53dc39297",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "链表找环入口（快慢指针、数学证明）",
@@ -5760,7 +6544,8 @@
     {
       "qid": "2713476c66eea7b0",
       "tags": [
-        "DesignPatterns"
+        "DesignPatterns",
+        "basic"
       ],
       "subtopic": "",
       "text": "手撕：单例模式",
@@ -5772,7 +6557,8 @@
     {
       "qid": "e2e5709a4f98a509",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "找到有环链表的入环口，然后反转从头到环口这一段（就是找环口+反转链表、数学证明）",
@@ -5784,7 +6570,8 @@
     {
       "qid": "65268335eae9d116",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "如果链表有奇数个结点, 反转中间结点的前面部分和后面部分, 如果有偶数个结点, 分别反转前半部分和后半部分",
@@ -5796,7 +6583,8 @@
     {
       "qid": "17368601ff06a811",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "无重复最长字串",
@@ -5808,7 +6596,8 @@
     {
       "qid": "00280e5e7df9a5e5",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "表达式计算 + - * /",
@@ -5820,7 +6609,8 @@
     {
       "qid": "9bb3fc66711abf35",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "basic"
       ],
       "subtopic": "",
       "text": "写一下斐波那契数列前N项和",
@@ -5832,7 +6622,8 @@
     {
       "qid": "28e3f9cf8706ed7b",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "给出1~100一百个正整数作为卡牌，要求实现一百张牌的洗牌，每次传入的数组必须和输出的数组不一样。洗完牌后要求将该一百张牌分别发给四个人，要求第二个人的胜率达到26.8%，第二人幸运值为11，其余三人幸运值为10。有5分钟自由提问时间，提问结束后要求在25分钟之内完成这道题目。",
@@ -5844,7 +6635,8 @@
     {
       "qid": "cc0514e385d40812",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "O(1)空间实现链表升序排列",
@@ -5856,7 +6648,8 @@
     {
       "qid": "4faec84dead91415",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "39、组合总和",
@@ -5868,7 +6661,8 @@
     {
       "qid": "2b7de48e4d893c40",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "31、下一个排列。",
@@ -5880,7 +6674,8 @@
     {
       "qid": "2bbbafa36072f802",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "739. 每日温度",
@@ -5892,7 +6687,8 @@
     {
       "qid": "c5e0130acda37eda",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "排序双向链表",
@@ -5904,7 +6700,8 @@
     {
       "qid": "7f70bb63bba7d839",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "basic"
       ],
       "subtopic": "",
       "text": "二叉树的最大深度",
@@ -5916,7 +6713,8 @@
     {
       "qid": "6a24fb91527a9bbd",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "实现一个支持过期时间的线程安全 LRU 缓存",
@@ -5928,7 +6726,8 @@
     {
       "qid": "7b7a4b8334b35a4f",
       "tags": [
-        "Database"
+        "Database",
+        "basic"
       ],
       "subtopic": "",
       "text": "设计订单表、订单明细表及常用查询索引",
@@ -5940,7 +6739,8 @@
     {
       "qid": "586b1bb463d6d821",
       "tags": [
-        "DistributedSystems"
+        "DistributedSystems",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "设计一个防止重复提交的幂等接口",
@@ -5952,7 +6752,8 @@
     {
       "qid": "071c9c6a187c6ae6",
       "tags": [
-        "Cache"
+        "Cache",
+        "advanced"
       ],
       "subtopic": "",
       "text": "设计热点商品详情的多级缓存方案",
@@ -5964,7 +6765,8 @@
     {
       "qid": "60a2b92bfefa4b93",
       "tags": [
-        "BackendNetworking"
+        "BackendNetworking",
+        "basic"
       ],
       "subtopic": "",
       "text": "实现带指数退避和最大次数限制的重试器",
@@ -5976,7 +6778,8 @@
     {
       "qid": "f07381292cc0cc11",
       "tags": [
-        "DistributedSystems"
+        "DistributedSystems",
+        "advanced"
       ],
       "subtopic": "",
       "text": "设计一个可水平扩展的短链接服务",
@@ -5988,7 +6791,8 @@
     {
       "qid": "ccf962cbdc9c0fb4",
       "tags": [
-        "JavaScript"
+        "JavaScript",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "实现 Promise.all 的核心行为",
@@ -6000,7 +6804,8 @@
     {
       "qid": "db09819cdfc3e345",
       "tags": [
-        "JavaScript"
+        "JavaScript",
+        "basic"
       ],
       "subtopic": "",
       "text": "实现支持取消的防抖函数",
@@ -6012,7 +6817,8 @@
     {
       "qid": "b9fb39e422ec349d",
       "tags": [
-        "React"
+        "React",
+        "intermediate"
       ],
       "subtopic": "",
       "text": "设计一个可复用的异步数据加载 Hook",
@@ -6024,7 +6830,8 @@
     {
       "qid": "8e3f21767ab1d389",
       "tags": [
-        "Browser"
+        "Browser",
+        "basic"
       ],
       "subtopic": "",
       "text": "实现事件委托并说明边界情况",
@@ -6036,7 +6843,8 @@
     {
       "qid": "e678db69ec2aa0ee",
       "tags": [
-        "FrontendEngineering"
+        "FrontendEngineering",
+        "advanced"
       ],
       "subtopic": "",
       "text": "设计大型单页应用的错误监控方案",
@@ -6048,7 +6856,8 @@
     {
       "qid": "2427013d9b2dfb51",
       "tags": [
-        "Algorithms"
+        "Algorithms",
+        "advanced"
       ],
       "subtopic": "",
       "text": "实现固定高度列表的虚拟滚动核心计算",
@@ -6058,76 +6867,238 @@
       "id": 29
     },
     {
-      "qid": "48b341c2b1470703",
+      "qid": "018fa1ea12174e63",
       "tags": [
-        "Algorithms"
+        "C++",
+        "basic"
       ],
       "subtopic": "",
-      "text": "实现支持容量限制的图片内存缓存",
+      "text": "实现一个只允许移动的系统资源句柄类型",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 30
     },
     {
-      "qid": "d3ac2c1421c2dee0",
+      "qid": "f315da5a1adf2a37",
       "tags": [
-        "ClientArchitecture"
+        "C#",
+        "basic"
       ],
       "subtopic": "",
-      "text": "设计可离线编辑并在联网后同步的数据层",
+      "text": "实现可取消且避免重复执行的异步命令",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 31
     },
     {
-      "qid": "755540ecb81bf845",
+      "qid": "bdbf81ed40c4a03a",
       "tags": [
-        "C++"
+        "DesktopUI",
+        "intermediate"
       ],
       "subtopic": "",
-      "text": "实现一个只允许移动的资源句柄类型",
+      "text": "设计支持十万行数据的虚拟化表格",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 32
     },
     {
-      "qid": "ba450acee275adba",
+      "qid": "a3c5304251077060",
       "tags": [
-        "C#"
+        "DesktopSystem",
+        "intermediate"
       ],
       "subtopic": "",
-      "text": "实现可取消且避免重复提交的异步命令",
+      "text": "设计带参数转发的单实例应用启动流程",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 33
     },
     {
-      "qid": "ecc13c6b6ca32258",
+      "qid": "8aa57411dbf6204b",
       "tags": [
-        "Android"
+        "DesktopArchitecture",
+        "advanced"
       ],
       "subtopic": "",
-      "text": "设计配置变化后仍能保持状态的列表页面",
+      "text": "设计可动态加载和卸载的插件系统",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 34
     },
     {
-      "qid": "d78cdeecb7adb46d",
+      "qid": "48a62e66c6a472b7",
       "tags": [
-        "Flutter"
+        "DesktopPerformance",
+        "advanced"
       ],
       "subtopic": "",
-      "text": "设计一个支持加载、成功、空数据和失败状态的页面组件",
+      "text": "设计桌面客户端崩溃采集与安全恢复方案",
       "profiles": [
-        "client"
+        "desktop-client"
       ],
       "id": 35
+    },
+    {
+      "qid": "14bae2f2ae4ce615",
+      "tags": [
+        "Kotlin",
+        "basic"
+      ],
+      "subtopic": "",
+      "text": "使用协程实现可取消且带超时的并发请求聚合",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 36
+    },
+    {
+      "qid": "765847f5db00369d",
+      "tags": [
+        "AndroidLifecycle",
+        "basic"
+      ],
+      "subtopic": "",
+      "text": "设计进程重建后仍能恢复状态的详情页面",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 37
+    },
+    {
+      "qid": "34591ff73ca64c07",
+      "tags": [
+        "AndroidUI",
+        "intermediate"
+      ],
+      "subtopic": "",
+      "text": "实现支持多类型条目的高性能列表",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 38
+    },
+    {
+      "qid": "3f90ebc98c0f5cd9",
+      "tags": [
+        "AndroidData",
+        "intermediate"
+      ],
+      "subtopic": "",
+      "text": "设计本地优先并在联网后同步的数据层",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 39
+    },
+    {
+      "qid": "79579002cad0c4c4",
+      "tags": [
+        "AndroidArchitecture",
+        "advanced"
+      ],
+      "subtopic": "",
+      "text": "设计按业务拆分的多模块 Android 工程",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 40
+    },
+    {
+      "qid": "6980efca283cba30",
+      "tags": [
+        "AndroidPerformance",
+        "advanced"
+      ],
+      "subtopic": "",
+      "text": "设计启动耗时、卡顿和 ANR 的监控方案",
+      "profiles": [
+        "android-native"
+      ],
+      "id": 41
+    },
+    {
+      "qid": "201098d006541c4c",
+      "tags": [
+        "Dart",
+        "basic"
+      ],
+      "subtopic": "",
+      "text": "实现可取消、带超时和错误聚合的异步任务组",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 42
+    },
+    {
+      "qid": "7fe1024e763d1717",
+      "tags": [
+        "FlutterWidgets",
+        "basic"
+      ],
+      "subtopic": "",
+      "text": "实现加载、成功、空数据和失败四态页面组件",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 43
+    },
+    {
+      "qid": "45ad8db37957f4a2",
+      "tags": [
+        "FlutterState",
+        "intermediate"
+      ],
+      "subtopic": "",
+      "text": "设计支持乐观更新与失败回滚的状态控制器",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 44
+    },
+    {
+      "qid": "47c1f88134deb48b",
+      "tags": [
+        "FlutterPlatform",
+        "intermediate"
+      ],
+      "subtopic": "",
+      "text": "设计跨平台剪贴板插件的 Dart 与原生接口",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 45
+    },
+    {
+      "qid": "b53e1e50ea7e0285",
+      "tags": [
+        "FlutterArchitecture",
+        "advanced"
+      ],
+      "subtopic": "",
+      "text": "设计可离线编辑并在联网后同步的数据层",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 46
+    },
+    {
+      "qid": "900189a94ad3fe35",
+      "tags": [
+        "FlutterPerformance",
+        "advanced"
+      ],
+      "subtopic": "",
+      "text": "设计长列表图片加载、缓存和回收策略",
+      "profiles": [
+        "flutter"
+      ],
+      "id": 47
     }
   ]
 }

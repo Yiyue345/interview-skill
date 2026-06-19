@@ -11,6 +11,9 @@ from profiles import load_profiles
 from project_paths import INDEX_FILE, PROFILE_CONFIG, PROJECT_ROOT
 
 
+DIFFICULTY_TAGS = {"basic", "intermediate", "advanced"}
+
+
 def normalize_text(text: str) -> str:
     return " ".join(text.split()).strip().lower()
 
@@ -67,8 +70,9 @@ def parse_challenges(file_path: Path, profile_id: str) -> List[Dict[str, Any]]:
         if not text:
             continue
         tags = re.findall(r"\[([^\]]+)\]", match.group(1) or "")
+        stable_tags = [tag for tag in tags if tag.lower() not in DIFFICULTY_TAGS]
         questions.append({
-            "qid": make_qid("手撕", ",".join(tags), "", text),
+            "qid": make_qid("手撕", ",".join(stable_tags), "", text),
             "tags": tags,
             "subtopic": "",
             "text": text,
