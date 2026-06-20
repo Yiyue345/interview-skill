@@ -15,14 +15,15 @@ description: 通用软件面试答题指导。根据 Unity 客户端、后端、
 2. 用户未明确岗位时，调用：
 
 ```powershell
-python src/pick.py --resume resumes/template.md --detect-profile
+python src/pick.py --detect-profile
 ```
 
-3. 返回 `needs_profile` 时，只询问一次岗位。
-4. 岗位学习或模拟准备时，确认目标公司规模（小厂/中厂/大厂）和应聘等级（实习/正职）；信息不全时一次性询问。
-5. 根据 profile 的 `fundamentals`、`tags` 与 `coverage_order` 定位相关题库。
-6. 调用 `pick.py` 时传入 `--company-size` 与 `--position-level`，以结果中的 `difficulty.level` 为实际难度；公共标签可能被岗位上限自动降低。单题解析且用户未指定上下文时不强制追问。
-7. 读取 [统一索引](../../../data/index.json) 中同时匹配 profile、话题与难度的题目，并用 [知识图谱](../../../data/knowledge-graph.json) 预测关联追问。
+3. 返回 `needs_resume` 时只询问一次简历文件；取得 `resume` 后，岗位学习或模拟准备必须读取完整简历正文并提取技术栈与项目事实，不能只看岗位分数。单题解析不强制读取简历。
+4. 返回 `needs_profile` 时，只询问一次岗位。
+5. 岗位学习或模拟准备时，确认目标公司规模（小厂/中厂/大厂）和应聘等级（实习/正职）；信息不全时一次性询问。
+6. 根据 profile 的 `fundamentals`、`tags` 与 `coverage_order` 定位相关题库。
+7. 调用 `pick.py` 时传入 `--company-size` 与 `--position-level`，以结果中的 `difficulty.level` 为实际难度；公共标签可能被岗位上限自动降低。单题解析且用户未指定上下文时不强制追问。
+8. 读取 [统一索引](../../../data/index.json) 中同时匹配 profile、话题与难度的题目，并用 [知识图谱](../../../data/knowledge-graph.json) 预测关联追问。
 
 ## 输出结构
 

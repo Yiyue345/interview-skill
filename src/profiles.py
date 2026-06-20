@@ -5,7 +5,10 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from project_paths import PROFILE_CONFIG
+from project_paths import DEFAULT_RESUME, PROFILE_CONFIG, PROJECT_ROOT, RESUMES_DIR
+
+
+SUPPORTED_RESUME_SUFFIXES = {".md", ".markdown", ".txt"}
 
 
 def load_profiles(path: Optional[Path] = None) -> Dict[str, Any]:
@@ -69,3 +72,55 @@ def detect_profile_from_file(path: Path, config: Dict[str, Any]) -> Dict[str, An
     except (OSError, UnicodeError):
         text = ""
     return detect_profile(text, config)
+
+
+def discover_resume_files(directory: Path = RESUMES_DIR) -> List[Path]:
+    resume_dir = Path(directory)
+    if not resume_dir.is_dir():
+        return []
+    return sorted(
+        (
+            path.resolve()
+            for path in resume_dir.iterdir()
+            if path.is_file()
+            and path.name.lower() != "template.md"
+            and path.suffix.lower() in SUPPORTED_RESUME_SUFFIXES
+        ),
+        key=lambda path: path.name.lower(),
+    )
+
+
+def resolve_resume_path(
+    explicit_path: str,
+    directory: Path = RESUMES_DIR,
+    default_path: Path = DEFAULT_RESUME,
+) -> Dict[str, Any]:
+    if explicit_path:
+        candidate = Path(explicit_path)
+        if not candidate.is_absolute():
+            candidate = PROJECT_ROOT / candidate
+        candidate = candidate.resolve()
+        if not candidate.is_file():
+            return {"error": "resume_not_found", "resume": str(candidate)}
+        if candidate.suffix.lower() not in SUPPORTED_RESUME_SUFFIXES:
+            return {
+                "error": "unsupported_resume_format",
+                "resume": str(candidate),
+                "supported_formats": sorted(SUPPORTED_RESUME_SUFFIXES),
+            }
+        return {"resume": str(candidate), "resume_source": "explicit"}
+
+    candidates = discover_resume_files(directory)
+    if len(candidates) == 1:
+        return {"resume": str(candidates[0]), "resume_source": "discovered"}
+    if len(candidates) > 1:
+        return {
+            "needs_resume": True,
+            "reason": "multiple_resumes",
+            "candidates": [str(path) for path in candidates],
+        }
+
+    fallback = Path(default_path).resolve()
+    if fallback.is_file():
+        return {"resume": str(fallback), "resume_source": "template"}
+    return {"error": "resume_not_found", "resume": str(fallback)}

@@ -42,7 +42,8 @@
 - **加权命题** — 新题优先，近期高频题自动衰减，当前面试同题不重复
 - **自适应调整** — 根据候选人表现动态调整难度和领域覆盖
 - **标准化评估** — 概念题 / 原理题 / 设计题 / 编程题各有明确评分标准
-- **知识图谱联动** — 知识点间的跨栈关联辅助面试官自然过渡话题
+- **知识图谱联动** — 回答后按边权自动跳转到相邻知识点，无法命中时退化为常规抽题
+- **会话状态外存** — 已问题目、覆盖领域、阶段和评估原子写入本地状态文件
 - **自动化归档** — 面试结束自动生成结构化总结，更新弱势技术栈
 - **答题指导** — 内置面试准备模式，帮助候选人理解答题思路
 - **可定制题库** — 按标签体系自由增删题目，一键重建索引
@@ -59,17 +60,20 @@
 
 > Codex 会从 `.agents/skills/` 加载 Skill，Claude Code 会从 `.claude/skills/` 加载 Skill。
 
-系统默认读取 `resumes/template.md` 识别岗位。也可以直接指定：
+系统会在 `resumes/` 中自动寻找非模板的 `.md`、`.markdown` 或 `.txt` 简历：只有一个时自动使用，存在多个时让用户选择，没有时才回退到 `template.md`。CLI 会返回实际读取的 `resume` 路径。
 
 ```powershell
 python src/pick.py --profile backend --company-size large --position-level full-time --source 八股 --tag Java --fallback
-python src/pick.py --resume resumes/template.md --detect-profile
+python src/pick.py --detect-profile
+python src/pick.py --resume resumes/candidate.md --detect-profile
+# 沿图谱从上一知识点自动抽取相邻题目
+python src/pick.py --profile backend --company-size medium --position-level intern --graph-traverse --graph-from "Java:集合" --fallback
 ```
 
 ### 首次使用 Checklist
 
 - [ ] 运行 `Build-Knowledge.ps1` 生成索引
-- [ ] 将面试信息填入 `resumes/template.md`
+- [ ] 将文本简历放入 `resumes/`（推荐保留一个非模板简历），或填写 `resumes/template.md`
 - [ ] 在 Codex 或 Claude Code 中输入 `开始面试` 或 `模拟面试`
 
 ## 前置条件
@@ -84,10 +88,10 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 ### 模拟面试
 
-在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。系统先识别岗位，再确认目标公司规模（小厂/中厂/大厂）与应聘等级（实习/正职）；缺失的信息会一次性询问。面试按以下阶段进行：
+在 Codex 或 Claude Code 中提及「面试」关键词即可自动触发。系统先选择并读取完整简历正文，从中提取技术栈和项目事实；再识别岗位，并确认目标公司规模（小厂/中厂/大厂）与应聘等级（实习/正职）。缺失的信息会一次性询问。面试按以下阶段进行：
 
 ```
-自我介绍 → 技术深挖 → 项目深挖 → 手撕代码 → 总结评估 → 反问 → 归档
+读取简历 → 自我介绍 → 技术深挖 → 项目深挖 → 手撕代码 → 总结评估 → 反问 → 归档
 ```
 
 参数参考（AI 内部自动调用，无需手动执行）：
@@ -158,6 +162,7 @@ interview/                          # 项目根目录
 │   ├── difficulty.py               # 公司规模与岗位等级难度策略
 │   ├── profiles.py                 # 简历岗位识别
 │   ├── project_paths.py            # 稳定项目路径
+│   ├── state.py                    # 面试会话状态的原子读写与评估更新
 │   ├── build_index.py              # 从 markdown 解析生成索引
 │   ├── build_graph.py              # 自动提取知识图谱关联
 │   └── validate_consistency.py     # 路径与引用一致性校验
@@ -183,6 +188,9 @@ interview/                          # 项目根目录
 │
 ├── records/                        # 面试记录（自动归档）
 │   └── template.md
+├── .interview-state/               # 本地运行状态（已加入 .gitignore）
+│   ├── question-history.json       # 跨会话题目曝光历史
+│   └── sessions/<session_id>.json  # 单次面试状态
 │
 ├── .agents/skills/                 # Codex Skill 定义
 │   ├── build-knowledge/SKILL.md    # 知识库构建 Skill
@@ -244,7 +252,7 @@ interview/                          # 项目根目录
 | 中厂 | 45% / 45% / 10% | 15% / 55% / 30% |
 | 大厂 | 20% / 55% / 25% | 5% / 40% / 55% |
 
-每次抽题先按矩阵选择难度，再应用岗位、标签、当前面试去重和跨会话曝光衰减。固定 `--seed` 可复现难度与题目选择。面试 AI 还会根据候选人的回答质量临时调整下一题：
+每次抽题先按矩阵选择难度，再应用岗位、标签、当前面试去重和跨会话曝光衰减。首题按岗位覆盖顺序选择；后续可使用 `--graph-traverse --graph-from "标签:子话题"`，按图谱路径权重优先抽取相邻知识点。图谱没有可用题目且指定 `--fallback` 时，自动回到常规标签策略。固定 `--seed` 可复现难度与题目选择。面试 AI 还会根据候选人的回答质量临时调整下一题：
 
 | 表现 | AI 策略 |
 |------|---------|
@@ -318,11 +326,14 @@ A: 核心选题脚本（`pick.py`）和索引构建（`build_index.py`）是纯 
 **Q: 题库如何导入已有的面试题？**
 A: 按照 `fundamentals.md` 的格式添加题目，确保标签和难度标记正确，然后运行 `Build-Knowledge.ps1` 重建索引即可。
 
+**Q: Skill 会真正读取简历正文吗？**
+A: 会。启动阶段先由 `pick.py --detect-profile` 返回实际简历路径，随后 Skill 必须调用文件读取工具读取全文并提取项目事实。当前直接支持 UTF-8 的 `.md`、`.markdown` 和 `.txt`；PDF、DOCX 需要先转换为文本简历。
+
 **Q: 面试记录保存在哪里？**
 A: 自动保存到 `records/` 目录，文件名格式为 `YYYY-MM-DD_面试者.md`。
 
 **Q: 如何重置状态（比如换一位面试者）？**
-A: 在 Codex 或 Claude Code 中开始新对话即可。所有面试状态（已问题号、计数器等）都是对话级的。
+A: 开始新面试时 Skill 会创建新的会话 ID，无需删除旧状态。单次面试的题目、阶段、计数器和评估保存在 `.interview-state/sessions/`，跨会话曝光历史保存在 `.interview-state/question-history.json`；整个目录不会提交到 Git。需要彻底重置时可在没有进行中的面试后删除对应本地状态文件。
 
 
 ## 贡献指南
@@ -355,17 +366,17 @@ python src/validate_consistency.py
 
 ### P1 能力缺失
 
-- [ ] **图谱驱动自动出题链路**
-  目前图谱只在 AI 联想时被动使用。
-  → `src/pick.py`（新增 `--graph-traverse` 模式）
+- [x] **图谱驱动自动出题链路**
+  `--graph-traverse` 按边权和深度寻找岗位内相邻知识点，命中结果返回图谱路径；支持失败后统一 fallback。
+  → `src/pick.py`
 
-- [ ] **添加单元测试**
-  `src/` 下 4 个脚本无测试。`pick.py` 的标签匹配、`build_index.py` 的 markdown 解析、`build_graph.py` 的边合并逻辑都是纯函数，适合 pytest。
+- [x] **添加单元测试**
+  使用标准库 `unittest` 覆盖路径、简历识别、索引解析、图谱合并与遍历、难度策略、历史权重、会话状态和 CLI 集成。
   → `tests/`
 
-- [ ] **对话状态外存化**
-  现在 `asked_ids`、计数器、评估记录全在 LLM 上下文中。长面试场景，上下文累积后一致性维护会退化。
-  → `src/state.py`（新增）
+- [x] **对话状态外存化**
+  `state.py` 原子保存已问题目、覆盖领域、阶段、连续表现和评估；`pick.py --session` 自动读取上下文并登记新题。
+  → `src/state.py`
 
 ### P2 增量改进
 

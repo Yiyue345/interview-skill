@@ -49,6 +49,7 @@ def check_core_files() -> None:
         PROJECT_ROOT / "src/project_paths.py",
         PROJECT_ROOT / "src/profiles.py",
         PROJECT_ROOT / "src/difficulty.py",
+        PROJECT_ROOT / "src/state.py",
     ]
     required.extend(path for _, _, path in iter_skill_files())
     for path in required:
@@ -179,6 +180,14 @@ def check_skills() -> None:
             error("{} {} frontmatter 无效".format(platform, skill_name))
         if skill_name == "interview" and "python src/pick.py" not in text:
             error("{} interview 未强制使用 pick.py".format(platform))
+        if skill_name == "interview" and "读取完整简历正文" not in text:
+            error("{} interview 未强制读取完整简历正文".format(platform))
+        if skill_name == "interview" and "--resume resumes/template.md --detect-profile" in text:
+            error("{} interview 仍固定使用简历模板".format(platform))
+        if skill_name == "interview" and "state.py evaluate" not in text:
+            error("{} interview 未使用外存会话状态".format(platform))
+        if skill_name == "interview" and "--graph-traverse" not in text:
+            error("{} interview 未启用图谱驱动抽题".format(platform))
         for label, target in link_pattern.findall(text):
             if target.startswith(("http://", "https://", "#")):
                 continue
@@ -195,7 +204,7 @@ def check_skills() -> None:
 
 
 def check_path_architecture() -> None:
-    for filename in ("build_index.py", "build_graph.py", "pick.py"):
+    for filename in ("build_index.py", "build_graph.py", "pick.py", "state.py"):
         text = (PROJECT_ROOT / "src" / filename).read_text(encoding="utf-8")
         if "for _ in range(" in text:
             error("{} 仍包含向上遍历查找根目录".format(filename))

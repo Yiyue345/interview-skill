@@ -15,14 +15,16 @@ from difficulty import (
     choose_difficulty,
     resolve_difficulty_context,
 )
-from profiles import detect_profile_from_file, load_profiles
+from profiles import detect_profile_from_file, load_profiles, resolve_resume_path
 from project_paths import (
     DEFAULT_RESUME,
     GRAPH_FILE,
     INDEX_FILE,
     PROFILE_CONFIG,
     QUESTION_HISTORY_FILE,
+    SESSION_STATE_DIR,
 )
+from state import load_state, record_question, save_state, session_path
 
 
 DIFFICULTY_ORDER = ["advanced", "intermediate", "basic"]
@@ -209,6 +211,93 @@ def pick_question(
     return None
 
 
+def load_graph_edges(graph_file: Path = GRAPH_FILE) -> List[Dict[str, Any]]:
+    try:
+        data = json.loads(Path(graph_file).read_text(encoding="utf-8"))
+        return data.get("edges", []) if isinstance(data.get("edges", []), list) else []
+    except (OSError, ValueError):
+        print("警告：知识图谱无法读取，将退化为普通抽题。", file=sys.stderr)
+        return []
+
+
+def graph_targets(
+    start: str,
+    edges: List[Dict[str, Any]],
+    valid_tags: Set[str],
+    max_depth: int = 1,
+) -> List[Dict[str, Any]]:
+    """按路径权重返回可用于题库筛选的相邻知识点。"""
+    adjacency = {}
+    for edge in edges:
+        adjacency.setdefault(edge.get("from", ""), []).append(edge)
+    frontier = [(start, 1.0, [])]
+    best = {}
+    for depth in range(1, max(max_depth, 1) + 1):
+        next_frontier = []
+        for node, path_weight, route in frontier:
+            for edge in adjacency.get(node, []):
+                target = edge.get("to", "")
+                tag = target.split(":", 1)[0]
+                if not target or tag not in valid_tags or target in route or target == start:
+                    continue
+                weight = path_weight * float(edge.get("weight", 0.5))
+                candidate = {
+                    "node": target,
+                    "tag": tag,
+                    "subtopic": target.split(":", 1)[1] if ":" in target else "",
+                    "weight": weight,
+                    "depth": depth,
+                    "route": route + [target],
+                }
+                if weight > best.get(target, {}).get("weight", -1):
+                    best[target] = candidate
+                next_frontier.append((target, weight, route + [target]))
+        frontier = next_frontier
+    return sorted(best.values(), key=lambda item: (-item["weight"], item["node"]))
+
+
+def pick_graph_question(
+    questions: List[Dict[str, Any]],
+    profile_id: str,
+    profile: Dict[str, Any],
+    level: str,
+    asked: Set[int],
+    profile_history: Dict[str, Any],
+    rng: random.Random,
+    start: str,
+    edges: List[Dict[str, Any]],
+    max_depth: int,
+) -> Optional[Dict[str, Any]]:
+    targets = graph_targets(start, edges, set(profile.get("tags", [])), max_depth)
+    for target in targets:
+        target_level = apply_tag_difficulty_cap(
+            level, [target["tag"]], profile
+        )["level"]
+        selected = pick_question(
+            questions,
+            profile_id,
+            profile,
+            [target["tag"]],
+            target_level,
+            asked,
+            target["subtopic"],
+            False,
+            profile_history,
+            rng,
+        )
+        if selected:
+            result = dict(selected)
+            result["graph"] = {
+                "from": start,
+                "to": target["node"],
+                "depth": target["depth"],
+                "path_weight": target["weight"],
+                "level": target_level,
+            }
+            return result
+    return None
+
+
 def resolve_profile(
     explicit_profile: str, resume_path: Path, config: Dict[str, Any]
 ) -> Dict[str, Any]:
@@ -255,7 +344,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="多岗位、分级别加权抽题")
     parser.add_argument("--source", choices=["八股", "手撕"], default="八股")
     parser.add_argument("--profile", default="", help="岗位 ID，显式指定时覆盖简历识别")
-    parser.add_argument("--resume", default=str(DEFAULT_RESUME), help="用于识别岗位的简历路径")
+    parser.add_argument(
+        "--resume",
+        default="",
+        help="用于识别岗位的文本简历路径；省略时自动发现 resumes 下的非模板简历",
+    )
     parser.add_argument("--detect-profile", action="store_true", help="仅识别岗位，不抽题")
     parser.add_argument("--tag", default="", help="技术标签，多个用逗号分隔")
     parser.add_argument(
@@ -275,6 +368,11 @@ def main() -> int:
     parser.add_argument("--asked", default="")
     parser.add_argument("--fallback", action="store_true")
     parser.add_argument("--graph-from", default="")
+    parser.add_argument("--graph-traverse", action="store_true")
+    parser.add_argument("--graph-depth", type=int, choices=[1, 2, 3], default=1)
+    parser.add_argument("--graph-file", default=str(GRAPH_FILE))
+    parser.add_argument("--session", default="", help="从持久化会话读取并更新面试状态")
+    parser.add_argument("--state-dir", default=str(SESSION_STATE_DIR))
     parser.add_argument("--config", default=str(PROFILE_CONFIG))
     parser.add_argument("--index", default=str(INDEX_FILE))
     parser.add_argument("--history-file", default=str(QUESTION_HISTORY_FILE))
@@ -282,17 +380,58 @@ def main() -> int:
     parser.add_argument("--seed", type=int)
     args = parser.parse_args()
 
-    if args.graph_from:
-        edges = []
-        if GRAPH_FILE.exists():
-            graph = json.loads(GRAPH_FILE.read_text(encoding="utf-8"))
-            edges = [edge for edge in graph.get("edges", []) if edge.get("from") == args.graph_from]
+    if args.graph_from and not args.graph_traverse:
+        edges = [
+            edge for edge in load_graph_edges(Path(args.graph_file))
+            if edge.get("from") == args.graph_from
+        ]
+        if edges:
             edges.sort(key=lambda edge: edge.get("weight", 0.5), reverse=True)
         print(json.dumps({"node": args.graph_from, "edges": edges}, ensure_ascii=False))
         return 0
 
+    session_state = None
+    session_file = None
+    if args.session:
+        try:
+            session_file = session_path(args.session, Path(args.state_dir))
+            session_state = load_state(session_file)
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            print(json.dumps({"error": str(exc), "session": args.session}, ensure_ascii=False))
+            return 2
+        context_fields = {
+            "profile": "profile",
+            "company_size": "company_size",
+            "position_level": "position_level",
+        }
+        for argument, state_key in context_fields.items():
+            supplied = getattr(args, argument)
+            stored = session_state.get(state_key, "")
+            if supplied and stored and supplied != stored:
+                print(json.dumps({
+                    "error": "session_context_mismatch",
+                    "field": argument,
+                    "expected": stored,
+                    "actual": supplied,
+                }, ensure_ascii=False))
+                return 2
+            if not supplied:
+                setattr(args, argument, stored)
+
     config = load_profiles(Path(args.config))
-    resolution = resolve_profile(args.profile, Path(args.resume), config)
+    resume_info = {}
+    resume_path = DEFAULT_RESUME
+    if args.detect_profile or not args.profile:
+        resume_info = resolve_resume_path(args.resume)
+        if resume_info.get("error") or resume_info.get("needs_resume"):
+            print(json.dumps(resume_info, ensure_ascii=False))
+            return 2
+        resume_path = Path(resume_info["resume"])
+
+    resolution = resolve_profile(args.profile, resume_path, config)
+    if resume_info:
+        resolution["resume"] = resume_info["resume"]
+        resolution["resume_source"] = resume_info["resume_source"]
     if args.detect_profile:
         print(json.dumps(resolution, ensure_ascii=False))
         return 2 if resolution.get("error") else 0
@@ -319,25 +458,56 @@ def main() -> int:
     history_path = Path(args.history_file)
     history = {"schema_version": 1, "profiles": {}} if args.no_history else load_history(history_path)
     profile_history = history.get("profiles", {}).get(profile_id, {})
-    question = pick_question(
-        load_index(args.source, Path(args.index)),
-        profile_id,
-        profile,
-        tags,
-        difficulty["level"],
-        parse_asked(args.asked),
-        args.subtopic,
-        args.fallback,
-        profile_history,
-        rng,
-    )
+    questions = load_index(args.source, Path(args.index))
+    asked = parse_asked(args.asked)
+    if session_state:
+        asked_qids = set(session_state.get("asked_qids", []))
+        questions = [question for question in questions if question.get("qid") not in asked_qids]
+    question = None
+    if args.graph_traverse:
+        if not args.graph_from:
+            print(json.dumps({"error": "graph_from_required"}, ensure_ascii=False))
+            return 2
+        question = pick_graph_question(
+            questions,
+            profile_id,
+            profile,
+            difficulty["level"],
+            asked,
+            profile_history,
+            rng,
+            args.graph_from,
+            load_graph_edges(Path(args.graph_file)),
+            args.graph_depth,
+        )
+    if not question and (not args.graph_traverse or args.fallback):
+        question = pick_question(
+            questions,
+            profile_id,
+            profile,
+            tags,
+            difficulty["level"],
+            asked,
+            args.subtopic,
+            args.fallback,
+            profile_history,
+            rng,
+        )
     if not question:
         print(json.dumps({"empty": True, "profile": profile_id}, ensure_ascii=False))
         return 0
 
     result = dict(question)
     result["profile"] = profile_id
+    if result.get("graph"):
+        difficulty.update(apply_tag_difficulty_cap(
+            difficulty["level"], [result["graph"]["to"].split(":", 1)[0]], profile
+        ))
     result["difficulty"] = difficulty
+    if session_state and session_file:
+        record_question(session_state, question)
+        save_state(session_file, session_state)
+        result["session"] = args.session
     if not args.no_history:
         record_exposure(history, profile_id, question)
         save_history(history_path, history)
