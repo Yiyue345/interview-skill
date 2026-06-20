@@ -109,6 +109,61 @@ class IndexTests(unittest.TestCase):
         self.assertEqual(basic["qid"], advanced["qid"])
         self.assertNotEqual(basic["tags"], advanced["tags"])
 
+    def test_mobile_crosscutting_questions_are_shared(self):
+        data = json.loads(project_paths.INDEX_FILE.read_text(encoding="utf-8"))
+        question = next(
+            item
+            for item in data["八股"]
+            if item["text"] == "ReAct Agent 的核心思想是什么？"
+        )
+        self.assertEqual(set(question["profiles"]), {"android-native", "flutter"})
+
+    def test_common_questions_are_shared_by_all_profiles(self):
+        data = json.loads(project_paths.INDEX_FILE.read_text(encoding="utf-8"))
+        expected_profiles = set(profiles.load_profiles()["profiles"])
+        algorithm = next(
+            item
+            for item in data["八股"]
+            if item["text"] == "时间复杂度和空间复杂度分别衡量什么？"
+        )
+        networking = next(
+            item
+            for item in data["八股"]
+            if item["text"] == "TCP 和 UDP 的主要区别是什么？"
+        )
+        challenge = next(
+            item
+            for item in data["手撕"]
+            if item["text"] == "实现二分查找，并说明循环边界如何确定"
+        )
+        self.assertEqual(set(algorithm["profiles"]), expected_profiles)
+        self.assertEqual(set(networking["profiles"]), expected_profiles)
+        self.assertEqual(set(challenge["profiles"]), expected_profiles)
+
+    def test_every_profile_can_pick_common_domains(self):
+        data = json.loads(project_paths.INDEX_FILE.read_text(encoding="utf-8"))
+        for profile_id in profiles.load_profiles()["profiles"]:
+            fundamentals = [
+                item
+                for item in data["八股"]
+                if profile_id in item["profiles"]
+            ]
+            challenges = [
+                item
+                for item in data["手撕"]
+                if profile_id in item["profiles"]
+            ]
+            self.assertTrue(
+                any("Algorithms" in item["tags"] for item in fundamentals), profile_id
+            )
+            self.assertTrue(
+                any("ComputerNetworking" in item["tags"] for item in fundamentals),
+                profile_id,
+            )
+            self.assertTrue(
+                any("Algorithms" in item["tags"] for item in challenges), profile_id
+            )
+
 
 class ProfileDetectionTests(unittest.TestCase):
     @classmethod
@@ -241,6 +296,47 @@ class DifficultyPolicyTests(unittest.TestCase):
             self.config, "large", "", "", random.Random(1)
         )
         self.assertEqual(result["error"], "incomplete_difficulty_context")
+
+    def test_mobile_networking_is_capped_at_intermediate(self):
+        profile = self.config["profiles"]["android-native"]
+        result = difficulty.apply_tag_difficulty_cap(
+            "advanced", ["ComputerNetworking"], profile
+        )
+        self.assertEqual(result["level"], "intermediate")
+        self.assertEqual(result["requested_level"], "advanced")
+        self.assertEqual(result["capped_by"], "ComputerNetworking")
+
+    def test_backend_networking_keeps_advanced_level(self):
+        profile = self.config["profiles"]["backend"]
+        result = difficulty.apply_tag_difficulty_cap(
+            "advanced", ["ComputerNetworking"], profile
+        )
+        self.assertEqual(result, {"level": "advanced"})
+
+    def test_cli_applies_profile_tag_cap(self):
+        completed = subprocess.run(
+            [
+                sys.executable,
+                str(SRC / "pick.py"),
+                "--profile", "android-native",
+                "--source", "八股",
+                "--tag", "ComputerNetworking",
+                "--level", "advanced",
+                "--no-history",
+                "--seed", "3",
+                "--fallback",
+            ],
+            cwd=str(RUNTIME_DIR),
+            text=True,
+            encoding="utf-8",
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["difficulty"]["level"], "intermediate")
+        self.assertEqual(result["difficulty"]["requested_level"], "advanced")
+        self.assertIn("intermediate", {tag.lower() for tag in result["tags"]})
 
     def test_cli_uses_policy_for_coding_challenge(self):
         completed = subprocess.run(

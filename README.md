@@ -38,6 +38,7 @@
 
 - **岗位识别** — 从期望岗位、技术栈和简历全文识别方向，歧义时只询问一次
 - **难度分层** — 按小厂/中厂/大厂与实习/正职组合生成基础、进阶、高级题比例
+- **公共基础题库** — 算法与计算机网络由六岗位共享，并按岗位限制最高难度
 - **加权命题** — 新题优先，近期高频题自动衰减，当前面试同题不重复
 - **自适应调整** — 根据候选人表现动态调整难度和领域覆盖
 - **标准化评估** — 概念题 / 原理题 / 设计题 / 编程题各有明确评分标准
@@ -167,7 +168,11 @@ interview/                          # 项目根目录
 │   ├── frontend-*.md               # Web 前端题库
 │   ├── desktop-*.md                # 桌面客户端题库
 │   ├── android-*.md                # Android 原生题库
-│   └── flutter-*.md                # Flutter 题库
+│   ├── flutter-*.md                # Flutter 题库
+│   ├── mobile-crosscutting.md      # Android / Flutter 共享架构、服务安全与 LLM 题库
+│   ├── common-algorithms.md        # 六岗位共享算法基础题
+│   ├── common-networking.md        # 六岗位共享计算机网络题
+│   └── common-algorithm-challenges.md # 六岗位共享算法编程题
 │
 ├── data/                           # 自动生成的索引文件
 │   ├── index.json                  # 结构化题库索引
@@ -250,6 +255,19 @@ interview/                          # 项目根目录
 
 动态覆盖只作用于下一题，之后恢复公司规模与应聘等级对应的基础分布。
 
+公共领域还会应用岗位难度上限，避免公司规模矩阵把非核心领域推得过深：
+
+| 岗位 | 公共算法上限 | 公共计网上限 |
+|------|--------------|--------------|
+| Unity 客户端 | advanced | intermediate |
+| 后端 | advanced | advanced |
+| Web 前端 | intermediate | intermediate |
+| 桌面客户端 | advanced | intermediate |
+| Android 原生 | intermediate | intermediate |
+| Flutter | intermediate | intermediate |
+
+`GameAlgorithms`、`FrontendAlgorithms`、`Networking` 等岗位专项标签不使用这张公共上限表。命中上限时，`pick.py` 返回的 `difficulty` 会同时包含原始请求难度和实际难度。
+
 ### 弱势追踪
 
 `weak-areas.md` 记录了历次面试中候选人答得不完整的技术点。下次面试同一候选人时，AI 会优先覆盖这些薄弱领域，并有针对性地增加 Advanced 题比例。
@@ -258,7 +276,7 @@ interview/                          # 项目根目录
 
 ### 添加岗位预设
 
-在 `config/interview-profiles.json` 中新增 profile，声明简历关键词、题库文件、标签、覆盖顺序、相近领域和评分维度；题库使用现有 Markdown 格式。无需修改 Python 标签白名单。通用难度比例位于同一文件的 `difficulty_policy`，可以扩展公司规模、岗位等级和组合权重。
+在 `config/interview-profiles.json` 中新增 profile，声明简历关键词、题库文件、标签、覆盖顺序、相近领域、`tag_difficulty_caps` 和评分维度；题库使用现有 Markdown 格式。无需修改 Python 标签白名单。通用难度比例位于同一文件的 `difficulty_policy`，可以扩展公司规模、岗位等级和组合权重。
 
 ### 修改面试官风格
 
@@ -269,8 +287,15 @@ interview/                          # 项目根目录
 - `knowledge-base/fundamentals.md`：添加技术栈（`##`）→ 子话题（`###`）→ 题目（`- [tag][level] text`）
 - `knowledge-base/*-challenges.md`：编程/设计题使用 `1. [tag][level] text`
 - 标签体系：`C++`、`C#`、`Unity`、`Graphics`、`Algorithms`、`Networking`、`DesignPatterns`、`GameDesign`、`Performance`
-- 难度分级：`basic`、`intermediate`、`Advanced`
-- 支持多标签：`- [C++][C#][Advanced] 题目描述`
+- 难度分级：`basic`、`intermediate`、`advanced`
+- 支持多标签：`- [C++][C#][advanced] 题目描述`
+
+题目表述应遵循：
+
+- 一道题只考察一个主要问题，追问拆成独立题目。
+- 优先使用常用中文；必要术语第一次出现时用括号简短解释。
+- 避免只有编号、项目背景或缺少主语的口语残句。
+- 避免用更多生僻术语解释一个术语。
 
 ### 添加跨栈关联
 

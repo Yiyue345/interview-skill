@@ -21,7 +21,7 @@ python src/pick.py --resume resumes/template.md --detect-profile
 3. 返回 `needs_profile` 时，只询问一次岗位。
 4. 岗位学习或模拟准备时，确认目标公司规模（小厂/中厂/大厂）和应聘等级（实习/正职）；信息不全时一次性询问。
 5. 根据 profile 的 `fundamentals`、`tags` 与 `coverage_order` 定位相关题库。
-6. 调用 `pick.py` 时传入 `--company-size` 与 `--position-level`，读取结果中的实际 `difficulty`；单题解析且用户未指定上下文时不强制追问。
+6. 调用 `pick.py` 时传入 `--company-size` 与 `--position-level`，以结果中的 `difficulty.level` 为实际难度；公共标签可能被岗位上限自动降低。单题解析且用户未指定上下文时不强制追问。
 7. 读取 [统一索引](../../../data/index.json) 中同时匹配 profile、话题与难度的题目，并用 [知识图谱](../../../data/knowledge-graph.json) 预测关联追问。
 
 ## 输出结构
@@ -55,4 +55,5 @@ python src/pick.py --resume resumes/template.md --detect-profile
 - 基础回答必须概念正确。
 - 进阶回答应解释机制、边界和复杂度。
 - 高质量回答应结合岗位场景说明方案权衡与实际经验。
+- 遇到专业术语时先用一句常用中文解释，再展开原理；不要用更多术语解释术语。
 - 不输出“请使用 pick.py 选题”，不要求用户现场作答，不修改 `weak-areas.md` 或 `records/`。

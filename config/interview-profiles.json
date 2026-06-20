@@ -44,16 +44,20 @@
     "unity-client": {
       "display_name": "Unity 客户端",
       "description": "Unity 游戏客户端开发岗位",
-      "fundamentals": ["knowledge-base/fundamentals.md"],
-      "coding_challenges": ["knowledge-base/coding-challenges.md"],
-      "tags": ["C++", "C#", "Lua", "Unity", "Graphics", "Algorithms", "Networking", "DesignPatterns", "GameDesign", "Performance"],
-      "coverage_order": ["C++", "C#", "Unity", "Graphics", "Algorithms", "DesignPatterns", "Performance", "Networking"],
+      "fundamentals": ["knowledge-base/fundamentals.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/coding-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["C++", "C#", "Lua", "Unity", "Graphics", "Algorithms", "GameAlgorithms", "ComputerNetworking", "Networking", "DesignPatterns", "GameDesign", "Performance"],
+      "coverage_order": ["C++", "C#", "Unity", "Graphics", "Algorithms", "GameAlgorithms", "DesignPatterns", "Performance", "ComputerNetworking", "Networking"],
       "related_tags": {
         "Unity": ["Performance", "Graphics", "GameDesign"],
         "Performance": ["Unity", "Graphics"],
         "Graphics": ["Unity"],
-        "GameDesign": ["Unity", "DesignPatterns"]
+        "GameDesign": ["Unity", "DesignPatterns", "GameAlgorithms"],
+        "Algorithms": ["GameAlgorithms"],
+        "GameAlgorithms": ["Algorithms", "Unity"],
+        "ComputerNetworking": ["Networking"]
       },
+      "tag_difficulty_caps": {"Algorithms": "advanced", "ComputerNetworking": "intermediate"},
       "evaluation_dimensions": ["C++ 基础", "C# 基础", "Unity 引擎", "图形学与渲染", "数据结构与算法", "网络与多线程", "游戏系统设计"],
       "resume_keywords": {
         "job_titles": ["unity", "游戏客户端", "unity客户端"],
@@ -64,17 +68,21 @@
     "backend": {
       "display_name": "后端开发",
       "description": "Java、Python 与分布式系统后端岗位",
-      "fundamentals": ["knowledge-base/backend-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/backend-challenges.md"],
-      "tags": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "Algorithms"],
-      "coverage_order": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "Algorithms"],
+      "fundamentals": ["knowledge-base/backend-fundamentals.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/backend-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "Algorithms", "ComputerNetworking"],
+      "coverage_order": ["Java", "Python", "Database", "Cache", "DistributedSystems", "BackendNetworking", "ComputerNetworking", "Algorithms"],
       "related_tags": {
         "Java": ["Database", "DistributedSystems"],
         "Python": ["Database", "BackendNetworking"],
         "Database": ["Cache", "DistributedSystems"],
         "Cache": ["Database", "DistributedSystems"],
-        "DistributedSystems": ["BackendNetworking", "Database"]
+        "DistributedSystems": ["BackendNetworking", "Database"],
+        "BackendNetworking": ["ComputerNetworking", "DistributedSystems"],
+        "ComputerNetworking": ["BackendNetworking", "DistributedSystems"],
+        "Algorithms": ["Java", "Python"]
       },
+      "tag_difficulty_caps": {"Algorithms": "advanced", "ComputerNetworking": "advanced"},
       "evaluation_dimensions": ["语言基础", "数据库与缓存", "分布式系统", "网络与接口设计", "数据结构与算法", "工程与可运维性"],
       "resume_keywords": {
         "job_titles": ["后端", "服务端", "java开发", "python开发", "backend"],
@@ -85,16 +93,20 @@
     "frontend": {
       "display_name": "Web 前端",
       "description": "JavaScript、TypeScript 与 React 前端岗位",
-      "fundamentals": ["knowledge-base/frontend-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/frontend-challenges.md"],
-      "tags": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "Algorithms"],
-      "coverage_order": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "Algorithms"],
+      "fundamentals": ["knowledge-base/frontend-fundamentals.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/frontend-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "FrontendAlgorithms", "Algorithms", "ComputerNetworking"],
+      "coverage_order": ["JavaScript", "TypeScript", "Browser", "React", "FrontendEngineering", "FrontendAlgorithms", "ComputerNetworking", "Algorithms"],
       "related_tags": {
         "JavaScript": ["TypeScript", "Browser"],
         "TypeScript": ["JavaScript", "React"],
         "Browser": ["FrontendEngineering", "JavaScript"],
-        "React": ["JavaScript", "FrontendEngineering"]
+        "React": ["JavaScript", "FrontendEngineering"],
+        "FrontendAlgorithms": ["JavaScript", "FrontendEngineering"],
+        "Algorithms": ["FrontendAlgorithms"],
+        "ComputerNetworking": ["Browser"]
       },
+      "tag_difficulty_caps": {"Algorithms": "intermediate", "ComputerNetworking": "intermediate"},
       "evaluation_dimensions": ["JavaScript 与 TypeScript", "浏览器原理", "React", "前端工程化", "性能与可访问性", "数据结构与算法"],
       "resume_keywords": {
         "job_titles": ["前端", "web前端", "frontend"],
@@ -105,17 +117,20 @@
     "desktop-client": {
       "display_name": "桌面客户端开发",
       "description": "C++、C# 与跨平台桌面应用开发岗位",
-      "fundamentals": ["knowledge-base/desktop-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/desktop-challenges.md"],
-      "tags": ["C++", "C#", "DesktopUI", "DesktopArchitecture", "DesktopSystem", "DesktopPerformance", "Algorithms"],
-      "coverage_order": ["C++", "C#", "DesktopUI", "DesktopSystem", "DesktopArchitecture", "DesktopPerformance", "Algorithms"],
+      "fundamentals": ["knowledge-base/desktop-fundamentals.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/desktop-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["C++", "C#", "DesktopUI", "DesktopArchitecture", "DesktopSystem", "DesktopPerformance", "Algorithms", "ComputerNetworking"],
+      "coverage_order": ["C++", "C#", "DesktopUI", "DesktopSystem", "DesktopArchitecture", "DesktopPerformance", "ComputerNetworking", "Algorithms"],
       "related_tags": {
         "C++": ["DesktopSystem", "DesktopPerformance"],
         "C#": ["DesktopUI", "DesktopArchitecture"],
         "DesktopUI": ["DesktopArchitecture", "DesktopPerformance"],
         "DesktopSystem": ["DesktopArchitecture", "DesktopPerformance"],
-        "DesktopArchitecture": ["DesktopPerformance"]
+        "DesktopArchitecture": ["DesktopPerformance"],
+        "Algorithms": ["C++", "DesktopPerformance"],
+        "ComputerNetworking": ["DesktopSystem"]
       },
+      "tag_difficulty_caps": {"Algorithms": "advanced", "ComputerNetworking": "intermediate"},
       "evaluation_dimensions": ["C++ 与 C# 基础", "桌面 UI 与交互", "操作系统集成", "客户端架构", "性能与稳定性", "数据结构与算法"],
       "resume_keywords": {
         "job_titles": ["桌面开发", "桌面客户端", "pc客户端", "windows开发"],
@@ -126,18 +141,25 @@
     "android-native": {
       "display_name": "Android 原生开发",
       "description": "Kotlin 与 Android 原生应用开发岗位",
-      "fundamentals": ["knowledge-base/android-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/android-challenges.md"],
-      "tags": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "AndroidPerformance", "Algorithms"],
-      "coverage_order": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "AndroidPerformance", "Algorithms"],
+      "fundamentals": ["knowledge-base/android-fundamentals.md", "knowledge-base/mobile-crosscutting.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/android-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "AndroidPerformance", "MobileArchitecture", "MobileNetworking", "BackendSecurity", "LLMIntegration", "Algorithms", "ComputerNetworking"],
+      "coverage_order": ["Kotlin", "AndroidLifecycle", "AndroidUI", "AndroidData", "AndroidArchitecture", "MobileArchitecture", "MobileNetworking", "ComputerNetworking", "BackendSecurity", "LLMIntegration", "AndroidPerformance", "Algorithms"],
       "related_tags": {
         "Kotlin": ["AndroidArchitecture", "AndroidLifecycle"],
         "AndroidLifecycle": ["AndroidUI", "AndroidData"],
         "AndroidUI": ["AndroidArchitecture", "AndroidPerformance"],
         "AndroidData": ["AndroidArchitecture"],
-        "AndroidArchitecture": ["AndroidPerformance"]
+        "AndroidArchitecture": ["AndroidPerformance", "MobileArchitecture"],
+        "MobileArchitecture": ["MobileNetworking", "AndroidArchitecture"],
+        "MobileNetworking": ["AndroidData", "BackendSecurity"],
+        "BackendSecurity": ["MobileNetworking", "LLMIntegration"],
+        "LLMIntegration": ["MobileNetworking", "BackendSecurity"],
+        "Algorithms": ["Kotlin", "AndroidArchitecture"],
+        "ComputerNetworking": ["MobileNetworking"]
       },
-      "evaluation_dimensions": ["Kotlin 基础", "Android 生命周期", "UI 与交互", "数据与网络", "应用架构", "性能与稳定性"],
+      "tag_difficulty_caps": {"Algorithms": "intermediate", "ComputerNetworking": "intermediate"},
+      "evaluation_dimensions": ["Kotlin 基础", "Android 生命周期", "UI 与交互", "数据与网络", "应用架构", "服务集成与安全", "性能与稳定性"],
       "resume_keywords": {
         "job_titles": ["android原生", "android 原生", "android开发", "android 开发", "安卓原生", "安卓开发"],
         "technologies": ["kotlin", "jetpack", "compose", "room", "viewmodel", "coroutines"],
@@ -147,18 +169,25 @@
     "flutter": {
       "display_name": "Flutter 开发",
       "description": "Dart 与 Flutter 跨平台应用开发岗位",
-      "fundamentals": ["knowledge-base/flutter-fundamentals.md"],
-      "coding_challenges": ["knowledge-base/flutter-challenges.md"],
-      "tags": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "FlutterPerformance", "Algorithms"],
-      "coverage_order": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "FlutterPerformance", "Algorithms"],
+      "fundamentals": ["knowledge-base/flutter-fundamentals.md", "knowledge-base/mobile-crosscutting.md", "knowledge-base/common-algorithms.md", "knowledge-base/common-networking.md"],
+      "coding_challenges": ["knowledge-base/flutter-challenges.md", "knowledge-base/common-algorithm-challenges.md"],
+      "tags": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "FlutterPerformance", "MobileArchitecture", "MobileNetworking", "BackendSecurity", "LLMIntegration", "Algorithms", "ComputerNetworking"],
+      "coverage_order": ["Dart", "FlutterWidgets", "FlutterState", "FlutterPlatform", "FlutterArchitecture", "MobileArchitecture", "MobileNetworking", "ComputerNetworking", "BackendSecurity", "LLMIntegration", "FlutterPerformance", "Algorithms"],
       "related_tags": {
         "Dart": ["FlutterState", "FlutterArchitecture"],
         "FlutterWidgets": ["FlutterState", "FlutterPerformance"],
         "FlutterState": ["FlutterArchitecture"],
         "FlutterPlatform": ["FlutterArchitecture", "FlutterPerformance"],
-        "FlutterArchitecture": ["FlutterPerformance"]
+        "FlutterArchitecture": ["FlutterPerformance", "MobileArchitecture"],
+        "MobileArchitecture": ["MobileNetworking", "FlutterArchitecture"],
+        "MobileNetworking": ["FlutterPlatform", "BackendSecurity"],
+        "BackendSecurity": ["MobileNetworking", "LLMIntegration"],
+        "LLMIntegration": ["MobileNetworking", "BackendSecurity"],
+        "Algorithms": ["Dart", "FlutterArchitecture"],
+        "ComputerNetworking": ["MobileNetworking"]
       },
-      "evaluation_dimensions": ["Dart 基础", "Widget 与渲染", "状态管理", "平台集成", "应用架构", "性能与稳定性"],
+      "tag_difficulty_caps": {"Algorithms": "intermediate", "ComputerNetworking": "intermediate"},
+      "evaluation_dimensions": ["Dart 基础", "Widget 与渲染", "状态管理", "平台集成", "应用架构", "服务集成与安全", "性能与稳定性"],
       "resume_keywords": {
         "job_titles": ["flutter开发", "flutter 开发", "flutter客户端", "跨平台开发"],
         "technologies": ["flutter", "dart", "riverpod", "bloc", "provider", "methodchannel"],

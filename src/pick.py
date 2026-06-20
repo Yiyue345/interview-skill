@@ -10,7 +10,11 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 
-from difficulty import choose_difficulty, resolve_difficulty_context
+from difficulty import (
+    apply_tag_difficulty_cap,
+    choose_difficulty,
+    resolve_difficulty_context,
+)
 from profiles import detect_profile_from_file, load_profiles
 from project_paths import (
     DEFAULT_RESUME,
@@ -310,10 +314,11 @@ def main() -> int:
         print(json.dumps(difficulty, ensure_ascii=False))
         return 2
 
+    tags = [tag.strip() for tag in args.tag.split(",") if tag.strip()]
+    difficulty.update(apply_tag_difficulty_cap(difficulty["level"], tags, profile))
     history_path = Path(args.history_file)
     history = {"schema_version": 1, "profiles": {}} if args.no_history else load_history(history_path)
     profile_history = history.get("profiles", {}).get(profile_id, {})
-    tags = [tag.strip() for tag in args.tag.split(",") if tag.strip()]
     question = pick_question(
         load_index(args.source, Path(args.index)),
         profile_id,

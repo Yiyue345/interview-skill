@@ -78,7 +78,8 @@ def check_profile_config(config: Dict[str, Any]) -> None:
 
     required_keys = {
         "display_name", "fundamentals", "coding_challenges", "tags",
-        "coverage_order", "related_tags", "evaluation_dimensions", "resume_keywords",
+        "coverage_order", "related_tags", "tag_difficulty_caps",
+        "evaluation_dimensions", "resume_keywords",
     }
     for profile_id, profile in config["profiles"].items():
         missing = sorted(required_keys - set(profile))
@@ -87,8 +88,22 @@ def check_profile_config(config: Dict[str, Any]) -> None:
             continue
         source_files = profile["fundamentals"] + profile["coding_challenges"]
         missing_files = [path for path in source_files if not (PROJECT_ROOT / path).is_file()]
+        invalid_caps = {
+            tag: level
+            for tag, level in profile.get("tag_difficulty_caps", {}).items()
+            if tag not in profile["tags"] or level not in DIFFICULTY_LEVELS
+        }
+        invalid_coverage = sorted(set(profile["coverage_order"]) - set(profile["tags"]))
         if missing_files:
             error("岗位 {} 题库不存在: {}".format(profile_id, ", ".join(missing_files)))
+        elif invalid_caps:
+            error("岗位 {} 的标签难度上限无效: {}".format(profile_id, invalid_caps))
+        elif invalid_coverage:
+            error(
+                "岗位 {} 的覆盖顺序包含未声明标签: {}".format(
+                    profile_id, ", ".join(invalid_coverage)
+                )
+            )
         elif not profile["tags"] or not profile["coverage_order"] or not profile["evaluation_dimensions"]:
             error("岗位 {} 的标签、覆盖顺序和评分维度不能为空".format(profile_id))
         else:
@@ -121,6 +136,21 @@ def check_index(config: Dict[str, Any]) -> None:
         else:
             success("岗位题量: {} 八股={} 手撕={}".format(profile_id, fundamentals, challenges))
         for source, questions in profile_questions.items():
+            question_tags = {
+                tag
+                for question in questions
+                for tag in question.get("tags", [])
+                if tag.lower() not in DIFFICULTY_LEVELS
+            }
+            unknown_tags = sorted(
+                question_tags - set(config["profiles"][profile_id]["tags"])
+            )
+            if unknown_tags:
+                error(
+                    "岗位 {} 的{}包含未声明标签: {}".format(
+                        profile_id, source, ", ".join(unknown_tags)
+                    )
+                )
             levels = {
                 tag.lower()
                 for question in questions

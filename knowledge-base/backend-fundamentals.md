@@ -51,8 +51,6 @@
 ## BackendNetworking
 
 ### API 与网络
-- [BackendNetworking][basic] HTTP 的幂等性是什么，哪些方法通常应保持幂等？
-- [BackendNetworking][basic] Cookie、Session 与 Token 的区别是什么？
 - [BackendNetworking][intermediate] REST API 如何设计分页、错误码和版本管理？
 - [BackendNetworking][intermediate] TCP 长连接需要如何处理心跳和断线重连？
 - [BackendNetworking][advanced] 如何设计一个支持超时、重试和链路追踪的服务调用？

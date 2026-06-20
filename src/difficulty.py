@@ -1,7 +1,7 @@
 """公司规模与岗位等级对应的面试难度策略。"""
 
 import random
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 
 DIFFICULTY_LEVELS = ("basic", "intermediate", "advanced")
@@ -79,3 +79,31 @@ def choose_difficulty(context: Dict[str, Any], rng: random.Random) -> str:
         weights=[weights[level] for level in DIFFICULTY_LEVELS],
         k=1,
     )[0]
+
+
+def apply_tag_difficulty_cap(
+    level: str, tags: List[str], profile: Dict[str, Any]
+) -> Dict[str, Any]:
+    if not level:
+        return {"level": level}
+
+    caps = profile.get("tag_difficulty_caps", {})
+    applicable = [
+        (tag, caps[tag])
+        for tag in tags
+        if tag in caps and caps[tag] in DIFFICULTY_LEVELS
+    ]
+    if not applicable:
+        return {"level": level}
+
+    capped_by, cap = min(
+        applicable, key=lambda item: DIFFICULTY_LEVELS.index(item[1])
+    )
+    if DIFFICULTY_LEVELS.index(level) <= DIFFICULTY_LEVELS.index(cap):
+        return {"level": level}
+    return {
+        "level": cap,
+        "requested_level": level,
+        "profile_cap": cap,
+        "capped_by": capped_by,
+    }

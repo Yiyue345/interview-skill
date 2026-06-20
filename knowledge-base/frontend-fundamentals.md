@@ -47,11 +47,11 @@
 - [FrontendEngineering][intermediate] 如何设计前端错误监控和 Source Map 管理？
 - [FrontendEngineering][advanced] 微前端方案需要处理哪些隔离和通信问题？
 
-## Algorithms
+## FrontendAlgorithms
 
 ### 前端性能
-- [Algorithms][basic] 防抖和节流分别适合什么交互场景？
-- [Algorithms][basic] 如何对树形菜单数据进行深度优先遍历？
-- [Algorithms][intermediate] 虚拟列表如何只渲染可视区域？
-- [Algorithms][intermediate] 如何检测对象图中的循环引用？
-- [Algorithms][advanced] 如何设计前端请求调度器限制并发数？
+- [FrontendAlgorithms][basic] 防抖和节流分别适合什么交互场景？
+- [FrontendAlgorithms][basic] 如何对树形菜单数据进行深度优先遍历？
+- [FrontendAlgorithms][intermediate] 虚拟列表如何只渲染可视区域？
+- [FrontendAlgorithms][intermediate] 如何检测对象图中的循环引用？
+- [FrontendAlgorithms][advanced] 如何设计前端请求调度器限制并发数？

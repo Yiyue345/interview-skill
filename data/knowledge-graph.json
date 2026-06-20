@@ -718,6 +718,27 @@
       "source": "关联注释"
     },
     {
+      "from": "GameAlgorithms:A* 与寻路",
+      "to": "GameDesign",
+      "label": "跨栈: GameDesign",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameAlgorithms:A* 与寻路",
+      "to": "Unity",
+      "label": "跨栈: Unity",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "GameAlgorithms:空间划分",
+      "to": "Performance",
+      "label": "跨栈: Performance",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
       "from": "GameDesign:Buff 系统",
       "to": "DesignPatterns:观察者模式",
       "label": "Buff事件通知",
@@ -1090,6 +1111,20 @@
       "to": "GameDesign:攻击判定",
       "label": "网络延迟下攻击判定",
       "weight": 0.5
+    },
+    {
+      "from": "Networking:弱网与可靠性",
+      "to": "GameDesign",
+      "label": "跨栈: GameDesign",
+      "weight": 0.6,
+      "source": "关联注释"
+    },
+    {
+      "from": "Networking:游戏网络传输",
+      "to": "GameDesign",
+      "label": "跨栈: GameDesign",
+      "weight": 0.6,
+      "source": "关联注释"
     },
     {
       "from": "Performance:CPU / GPU 瓶颈",

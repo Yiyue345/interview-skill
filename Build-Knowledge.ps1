@@ -1,34 +1,34 @@
 # Build-Knowledge.ps1
-# 一键构建题库索引 + 知识图谱
-# 用法: .\Build-Knowledge.ps1
+# Build the question index and knowledge graph.
+# Usage: .\Build-Knowledge.ps1
 
 $Root = $PSScriptRoot
 $env:PYTHONUTF8 = "1"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
-Write-Host "=== 构建题库索引 ==="
+Write-Host "=== Build question index ==="
 python "$Root\src\build_index.py"
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "索引构建失败" -ForegroundColor Red
+    Write-Host "Index build failed" -ForegroundColor Red
     exit 1
 }
 
 Write-Host ""
-Write-Host "=== 构建知识图谱 ==="
+Write-Host "=== Build knowledge graph ==="
 python "$Root\src\build_graph.py"
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "知识图谱构建失败" -ForegroundColor Red
+    Write-Host "Knowledge graph build failed" -ForegroundColor Red
     exit 1
 }
 
 Write-Host ""
-Write-Host "=== 一致性校验 ==="
+Write-Host "=== Validate consistency ==="
 python "$Root\src\validate_consistency.py"
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "一致性校验失败" -ForegroundColor Red
+    Write-Host "Consistency validation failed" -ForegroundColor Red
     exit 1
 }
 
 Write-Host ""
-Write-Host "全部完成" -ForegroundColor Green
+Write-Host "Build completed" -ForegroundColor Green

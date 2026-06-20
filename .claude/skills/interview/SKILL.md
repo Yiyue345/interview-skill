@@ -39,7 +39,7 @@ python src/pick.py --resume resumes/template.md --detect-profile
 
 ## 数据源
 
-- [岗位配置](../../../config/interview-profiles.json)：标签、覆盖顺序、相近领域、评分维度和题库路径
+- [岗位配置](../../../config/interview-profiles.json)：标签、覆盖顺序、公共标签难度上限、评分维度和题库路径
 - [统一索引](../../../data/index.json)：所有岗位的技术题与编程/设计题
 - [候选人简历](../../../resumes/template.md)：岗位识别与项目深挖
 - [知识图谱](../../../data/knowledge-graph.json)：跨领域过渡参考
@@ -58,7 +58,7 @@ python src/pick.py --profile <profile_id> --company-size <company_size> --positi
 python src/pick.py --profile <profile_id> --company-size <company_size> --position-level <position_level> --source 手撕 --tag <tag> --asked <asked_ids> --fallback
 ```
 
-成功结果包含 `id`、`qid`、`profile`、`difficulty`、`tags`、`subtopic`、`text`。`difficulty` 记录本题实际级别及难度上下文。将 `id` 追加到 `asked_ids`。返回 `{"empty": true}` 时更换标签后重试。
+成功结果包含 `id`、`qid`、`profile`、`difficulty`、`tags`、`subtopic`、`text`。始终以 `difficulty.level` 作为实际难度；命中岗位上限时还会返回 `requested_level`、`profile_cap` 和 `capped_by`。将 `id` 追加到 `asked_ids`。返回 `{"empty": true}` 时更换标签后重试。
 
 严格遵循：
 
@@ -74,8 +74,10 @@ python src/pick.py --profile <profile_id> --company-size <company_size> --positi
 - 不在题目中提供选项、答案线索或预设答题框架。
 - 同一子话题最多连续追问 2 轮，之后按岗位配置的 `coverage_order` 切换领域。
 - 优先覆盖薄弱领域，其次覆盖尚未涉及的领域。
+- `Algorithms` 与 `ComputerNetworking` 是六岗位共享领域；`GameAlgorithms`、`FrontendAlgorithms`、`Networking` 等是岗位专项领域，不得混用。
 - 默认不传 `--level`，由公司规模和应聘等级的配置矩阵确定题目难度。
-- 回答准确且深入或连续答对 3 题时，下一题显式传 `--level advanced`；连续答错 2 题时传 `--level basic` 或切换基础领域。动态调整只作用于下一题，之后回到配置矩阵。
+- 回答准确且深入或连续答对 3 题时，下一题显式传 `--level advanced`；连续答错 2 题时传 `--level basic` 或切换基础领域。`pick.py` 仍会应用岗位标签难度上限，动态调整只作用于下一题，之后回到配置矩阵。
+- 直接使用题库中的清晰问法；不要额外堆叠术语、缩写或多个子问题。
 - 每次提问前内部确认：上一回答已评估、状态已更新、题目来自 `pick.py`、没有重复 ID、没有超过追问上限。
 
 ## 评估
